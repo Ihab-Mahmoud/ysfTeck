@@ -1,0 +1,519 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(45 43 43);
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 400;
+  line-height: 1;
+}
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 5rem); /* Large heading */
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 3rem); /* Medium heading */
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 2.5rem); /* Small heading */
+}
+
+h4 {
+  font-size: clamp(1rem, 2vw, 2rem); /* Extra small heading */
+}
+
+h5 {
+  font-size: clamp(0.875rem, 1.5vw, 1.5rem); /* Tiny heading */
+}
+
+.container {
+  max-width: 100%;
+  width: 70%;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 77vh;
+}
+
+.chat-box {
+  flex: 1; /* Mevcut alanı doldur */
+  overflow-y: auto; /* Dikey kaydırma */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: transparent; /* kutu arka planını beyaz container ile ayarladık */
+  display: flex;
+  flex-direction: column; /* Mesajları dikey sıralar */
+  gap: 5px; /* Mesajlar arası boşluk */
+  overflow-x: hidden; /* YENİ: Yatay kaydırmayı engellemek için */
+}
+
+.chat-box::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+@media (max-width: 720px) {
+  .container {
+    width: 90%;
+  }
+  .message-assistant {
+    max-width: 100% !important;
+  }
+  .chat-box {
+    gap: 20px;
+  }
+  .form-container h2 {
+    font-size: 1rem !important;
+  }
+  .form-container {
+    padding: 0 !important;
+  }
+  .rap-dev {
+    display: flex;
+    gap: 14px;
+    flex-direction: column !important;
+  }
+}
+.chat-box::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: #555555;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0; /* for padding effect */
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+  background: #353333;
+}
+.admin-container::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.admin-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.admin-container::-webkit-scrollbar-thumb {
+  background: #555555;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0; /* for padding effect */
+}
+
+.admin-container::-webkit-scrollbar-thumb:hover {
+  background: #353333;
+}
+.form-container::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.form-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.form-container::-webkit-scrollbar-thumb {
+  background: #555555;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0; /* for padding effect */
+}
+
+.form-container::-webkit-scrollbar-thumb:hover {
+  background: #353333;
+}
+
+.message-user {
+  align-self: flex-end;
+  background-color: #d3d3d3; /* açık gri */
+  color: black;
+  border-radius: 20px;
+  padding: 10px 15px;
+  max-width: 60%;
+  word-wrap: break-word; /* Uzun kelimelerin taşımasını engeller */
+  box-sizing: border-box; /* Padding ve border'ın genişliğe dahil olmasını sağlar */
+}
+
+.message-assistant {
+  align-self: flex-start;
+  background-color: #555555;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 15px;
+  max-width: 60%;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.input-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  background-color: rgb(53 51 51);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.input-section2 {
+  position: relative;
+  display: flex;
+  border-radius: 9999px;
+  background-color: rgb(45 43 43);
+  justify-content: flex-end;
+  padding: 5px 0.5rem;
+  border: 1px solid #cccccc36;
+}
+.sub-btn {
+  color: white;
+  border: 0;
+  border-radius: 100%;
+  display: flex;
+  gap: 10px;
+  background-color: transparent;
+  align-items: center;
+  cursor: pointer;
+}
+.sub-btn2 {
+  padding: 8px;
+  border-radius: 100%;
+  background-color: #454444;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.arr-spec {
+  padding: 8px;
+  border-radius: 100%;
+  background-color: #353333;
+}
+.input-cus {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 9999px;
+  color: white;
+  background-color: rgb(53 51 51);
+  border: none;
+}
+.input-cus:focus {
+  outline: none;
+}
+input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* button {
+  background-color: rgb(69 68 68);
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius:100%;
+  border:none;
+  display:flex;
+  align-items:center;
+  color:rgb(161 160 160);
+} */
+.sub-btn {
+}
+/* Form Component Stilleri */
+.form-container {
+  padding: 20px;
+  /* background-color: #f8f6f5; */
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-grow: 1;
+  overflow-y: auto;
+  color: white;
+}
+
+.form-container h2 {
+  text-align: center;
+  /* color: #333; */
+  margin-bottom: 25px;
+  font-size: 1.5em;
+}
+
+/* Form inputları ve select için genel stil */
+.form-container input[type="text"],
+.form-container input[type="tel"],
+.form-container input[type="email"],
+.form-container select {
+  padding: 12px;
+  border: 1px solid #cccccc36;
+  border-radius: 9999px;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.2s;
+  background-color: rgb(53 51 51);
+  color: white;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rap-dev {
+  display: flex;
+  gap: 14px;
+}
+.form-container input:focus,
+.form-container select:focus {
+  border-color: #6678b2; /* Odaklandığında ana renk */
+}
+
+.form-container button[type="submit"] {
+  background-color: trasnparent;
+}
+
+.form-message {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+.form-message.error {
+  color: red;
+}
+
+/* Genel buton stilleri (form dışındaki butonlar için de) */
+.back-button,
+.form-button,
+.admin-button {
+  padding: 10px 15px;
+  border: none; /* Kenarlık kaldırıldı */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+  color: white; /* Varsayılan olarak beyaz */
+  font-size: 12px;
+  border-radius: 9999px;
+  background-color: #353333;
+}
+
+.back-button {
+  background-color: #6c757d; /* Gri */
+  align-self: flex-start; /* Sol alt köşede */
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+.form-button:hover {
+  background-color: #2d2b2b;
+}
+
+.admin-button {
+  background-color: #ffc107; /* Sarı */
+  color: #333; /* Sarı buton için daha iyi görünür */
+  align-self: center; /* Ortada */
+}
+
+.admin-button:hover {
+  background-color: #2d2b2b;
+}
+
+/* Admin Paneli Stilleri */
+.admin-container {
+  padding: 20px;
+  background-color: #181818;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  max-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-container h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.record-group {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fcfcfc;
+}
+
+.delete-selected-button {
+  margin: 10px 0px;
+  padding: 10px 20px;
+  background-color: rgb(220 53 69 / 66%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 11px;
+}
+.record-group h3 {
+  color: #6678b2;
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  display: flex;
+}
+
+select option {
+  color: #999;
+  font-size: 10px;
+}
+select {
+  color: #999;
+}
+input::placeholder {
+  color: #999;
+}
+.form-info {
+  background-color: #e6f7ff; /* Açık mavi arka plan */
+  border-left: 4px solid #3498db;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.form-info h4 {
+  margin-top: 0;
+  color: #3498db;
+}
+
+.form-info p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.chat-messages {
+  border: 1px solid #eee;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 200px; /* Sohbet geçmişi için scroll */
+  overflow-y: auto;
+}
+
+.chat-entry {
+  padding: 8px 0;
+  border-bottom: 1px dashed #eee;
+  font-size: 0.9em;
+}
+
+.chat-entry:last-child {
+  border-bottom: none;
+}
+
+.chat-entry.user strong {
+  color: #d3d3d3; /* Açık gri */
+}
+
+.chat-entry.assistant strong {
+  color: #555555; /* Koyu gri */
+}
+
+.chat-entry .timestamp {
+  font-size: 0.8em;
+  color: #999;
+  margin-left: 10px;
+}
+
+.admin-button,
+.back-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #a7b8f0;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.admin-button:hover,
+.back-button:hover {
+  background-color: #8c9ede;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+
+  cursor: pointer;
+}
+
+.select-wrapper::after {
+  content: "▼"; /* You can use SVG instead */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+  font-size: 14px;
+}
+
+.text-white {
+  color: white;
+}
+
+.header-holder {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}

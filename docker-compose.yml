@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  tubitak-assistant:
+    build: .
+    ports:
+      - "5001:5001"     # Backend port
+      - "5173:5173"     # (Optional) Vite dev port
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
+      - GROQ_API_KEY=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
