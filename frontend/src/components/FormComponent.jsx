@@ -111,7 +111,7 @@ function FormComponent({
           ? nationalityDetail
           : formData.nationality;
 
-      const res = await fetch("http://localhost:5001/submit-form", {
+      const res = await fetch("api/submit-form", {
         // Backend'deki yeni endpoint
         method: "POST",
         headers: { "Content-Type": "application/json" },

@@ -33,7 +33,7 @@ const MainChat = () => {
       setChat([
         {
           role: "assistant",
-          text: "Merhaba, ben ysfTech Asistan. Size nasıl yardımcı olabilirim?",
+          text: "Merhaba! 👋 Ben TÜBİ. TÜBİTAK destek programları konusunda sana yardımcı olmak için buradayım. İstersen sana uygun programları bulmam için birkaç soru sorabilirim.",
         },
       ]);
     }
@@ -48,7 +48,7 @@ const MainChat = () => {
     setSuggestedProgram("");
 
     try {
-      const res = await fetch("http://localhost:5001/ask", {
+      const res = await fetch("api/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
