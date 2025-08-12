@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { FaAlignLeft } from "react-icons/fa";
 // import { FaUserCircle, FaCaretDown } from "react-icons/fa";
 import { FaRegQuestionCircle } from "react-icons/fa";
@@ -13,7 +13,9 @@ const Navbar = ({ toggleSidebar }) => {
           <FaAlignLeft />
         </button>
         <div>
-          <Logo className="logo" />
+          <NavLink onClick={() => window.location.reload()}>
+            <Logo className="logo" />
+          </NavLink>
         </div>
         <div className="btn-container">
           <FaRegQuestionCircle />
