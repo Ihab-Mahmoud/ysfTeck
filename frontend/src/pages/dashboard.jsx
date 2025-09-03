@@ -19,8 +19,8 @@ import Navbar from "../components/navbar.jsx";
 
 
 const Dashboard = () => {
-  const isLoading = navigation.state === "loading";
-  const [showSidebar, setShowSidebar] = useState(false);
+  const isLoading = useNavigation.state === "loading";
+  const [showSidebar, setShowSidebar] = useState(true);
 
   
   const toggleSidebar = () => {

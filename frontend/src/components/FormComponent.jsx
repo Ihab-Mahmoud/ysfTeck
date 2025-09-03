@@ -4,12 +4,13 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function FormComponent({
   onFormSubmit,
-  onBackToChat,
   formData,
   setFormData,
   dateOfBirth,
   setDateOfBirth,
   chatSessionId,
+  showForm,
+  setShowForm
 }) {
   // Prop'ları aldık
 
@@ -111,7 +112,7 @@ function FormComponent({
           ? nationalityDetail
           : formData.nationality;
 
-      const res = await fetch("api/submit-form", {
+      const res = await fetch("http://localhost:5001/submit-form", {
         // Backend'deki yeni endpoint
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -131,123 +132,136 @@ function FormComponent({
       onFormSubmit(false); // Hata oluştu
     }
   };
-
+  if (!showForm) {
+    return
+  }
   return (
-    <div className="form-container">
-      <h2>Destek Programı Ön Kayıt Formu</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="fullName"
-          placeholder="Ad Soyad"
-          value={formData.fullName}
-          onChange={handleChange}
-          required
-        />
-        <div className="rap-dev">
-          <input
-            type="tel" // Telefon klavyesi için
-            name="phoneNumber"
-            placeholder="Telefon Numarası (Sadece Rakam)"
-            value={formData.phoneNumber}
-            onChange={handleChange}
-            required
-            pattern="[0-9]{10,}" // Sadece rakam ve minimum 10 karakter
-            title="Lütfen sadece rakam kullanarak telefon numaranızı girin (örneğin: 5XXXXXXXXX)."
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="E-posta"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        {/* YENİ: Doğum Tarihi Alanı */}
-        <input
-          type="text" // Metin olarak alıp formatı kontrol edeceğiz
-          name="dateOfBirth"
-          placeholder="Doğum Tarihi (GG.AA.YYYY)"
-          value={dateOfBirth} // Ayrı state'ten geliyor
-          onChange={handleChange}
-          required
-          pattern="\d{2}\.\d{2}\.\d{4}" // GG.AA.YYYY formatını zorlar
-          title="Lütfen doğum tarihinizi GG.AA.YYYY formatında girin (örneğin: 01.01.2000)."
-        />
-        <div className="select-wrapper">
-          <select
-            name="educationStatus"
-            value={formData.educationStatus}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Eğitim Durumu Seçin</option>
-            <option value="lise">Lise</option>
-            <option value="onlisans">Ön Lisans</option>
-            <option value="lisans">Lisans</option>
-            <option value="yuksek_lisans">Yüksek Lisans</option>
-            <option value="doktora">Doktora</option>
-          </select>
-        </div>
-        <input
-          type="text"
-          name="profession"
-          placeholder="Meslek"
-          value={formData.profession}
-          onChange={handleChange}
-          required
-        />
-        {/* Uyruk seçimi */}
-        <div className="select-wrapper">
-          <select
-            name="nationality"
-            value={formData.nationality}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Uyruk Seçin</option>
-            <option value="tc">Türkiye (T.C.)</option>
-            <option value="yabanci">Yabancı Uyruk</option>{" "}
-            {/* value 'yabanci' olarak kullanıldı */}
-          </select>
-        </div>
+      <div className="modal-backdrop">
+      
+    <div className="modal-content">
+      <div  style={{ backgroundColor:"transparent", color:"red" , fontSize:"30px" , fontWeight:"bolder" , textAlign:"end"}}>
+    <svg onClick={()=>setShowForm(false)} style={{cursor:"pointer" ,width:"40px", height:"40px", padding:"10px"}} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-label="Close">
+  <path d="M18 6L6 18M6 6l12 12"/>
+    </svg>
 
-        {/* Yabancı Uyruk seçildiğinde gösterilecek ek input alanı */}
-        {showNationalityDetail && (
-          <input
-            type="text"
-            name="nationalityDetail"
-            placeholder="Uyruğunuzu Belirtin (Örn: Suriye, Almanya)"
-            value={nationalityDetail}
-            onChange={handleChange}
-            required // Bu alan da zorunlu
-          />
-        )}
-        <input
-          type="text"
-          name="supportProgram"
-          placeholder="İlgilenilen Destek Programı"
-          value={formData.supportProgram}
-          onChange={handleChange}
-          readOnly // Bu alanı sadece önerilen programı göstermek için kullanıyoruz
-          required
-        />
-        <div className="flex justify-around">
-          <div className="input-section2">
-            <button className="sub-btn" type="submit" onClick={onBackToChat}>
-              <FaArrowLeft className="arr-spec text-black text-lg" />
-              Geri don
-            </button>
-          </div>
-          <div className="input-section2">
-            <button className="sub-btn" type="submit">
-              Gonder
-              <FaArrowRight className="arr-spec text-black text-lg" />
-            </button>
-          </div>
+      </div>
+        <div className="form-container">
+          <h2>Destek Programı Ön Kayıt Formu</h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Ad Soyad"
+              value={formData.fullName}
+              onChange={handleChange}
+              required
+            />
+            <div className="rap-dev">
+              <input
+                type="tel" // Telefon klavyesi için
+                name="phoneNumber"
+                placeholder="Telefon Numarası (Sadece Rakam)"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+                required
+                pattern="[0-9]{10,}" // Sadece rakam ve minimum 10 karakter
+                title="Lütfen sadece rakam kullanarak telefon numaranızı girin (örneğin: 5XXXXXXXXX)."
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="E-posta"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            {/* YENİ: Doğum Tarihi Alanı */}
+            <input
+              type="text" // Metin olarak alıp formatı kontrol edeceğiz
+              name="dateOfBirth"
+              placeholder="Doğum Tarihi (GG.AA.YYYY)"
+              value={dateOfBirth} // Ayrı state'ten geliyor
+              onChange={handleChange}
+              required
+              pattern="\d{2}\.\d{2}\.\d{4}" // GG.AA.YYYY formatını zorlar
+              title="Lütfen doğum tarihinizi GG.AA.YYYY formatında girin (örneğin: 01.01.2000)."
+            />
+            <div className="select-wrapper">
+              <select
+                name="educationStatus"
+                value={formData.educationStatus}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Eğitim Durumu Seçin</option>
+                <option value="lise">Lise</option>
+                <option value="onlisans">Ön Lisans</option>
+                <option value="lisans">Lisans</option>
+                <option value="yuksek_lisans">Yüksek Lisans</option>
+                <option value="doktora">Doktora</option>
+              </select>
+            </div>
+            <input
+              type="text"
+              name="profession"
+              placeholder="Meslek"
+              value={formData.profession}
+              onChange={handleChange}
+              required
+            />
+            {/* Uyruk seçimi */}
+            <div className="select-wrapper">
+              <select
+                name="nationality"
+                value={formData.nationality}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Uyruk Seçin</option>
+                <option value="tc">Türkiye (T.C.)</option>
+                <option value="yabanci">Yabancı Uyruk</option>{" "}
+                {/* value 'yabanci' olarak kullanıldı */}
+              </select>
+            </div>
+
+            {/* Yabancı Uyruk seçildiğinde gösterilecek ek input alanı */}
+            {showNationalityDetail && (
+              <input
+                type="text"
+                name="nationalityDetail"
+                placeholder="Uyruğunuzu Belirtin (Örn: Suriye, Almanya)"
+                value={nationalityDetail}
+                onChange={handleChange}
+                required // Bu alan da zorunlu
+              />
+            )}
+            <input
+              type="text"
+              name="supportProgram"
+              placeholder="İlgilenilen Destek Programı"
+              value={formData.supportProgram}
+              onChange={handleChange}
+              readOnly // Bu alanı sadece önerilen programı göstermek için kullanıyoruz
+              required
+            />
+            <div className="flex justify-around">
+              <div className="input-section2">
+                <button className="sub-btn" type="submit" onClick={()=>setShowForm(false)}>
+                  <FaArrowLeft className="arr-spec text-black text-lg" />
+                  Geri don
+                </button>
+              </div>
+              <div className="input-section2">
+                <button className="sub-btn" type="submit">
+                  Gonder
+                  <FaArrowRight className="arr-spec text-black text-lg" />
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
+    </div>
     </div>
   );
 }

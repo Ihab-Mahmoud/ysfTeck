@@ -1,5 +1,5 @@
 // frontend/src/App.jsx
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import FormComponent from "./FormComponent";
 import { v4 as uuidv4 } from "uuid";
 import { FaArrowRight } from "react-icons/fa";
@@ -13,7 +13,6 @@ const MainChat = () => {
   const [currentChatSessionId, setCurrentChatSessionId] = useState(() =>
     uuidv4()
   );
-  const ref = useRef(null);
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -25,11 +24,7 @@ const MainChat = () => {
     supportProgram: "",
   });
   const [dateOfBirth, setDateOfBirth] = useState("");
-  useEffect(() => {
-    if (ref.current) {
-      ref.current.scrollTop = ref.current.scrollHeight;
-    }
-  }, [chat]);
+
   // Uygulama yüklendiğinde veya sohbet oturumu değiştiğinde çalışır
   useEffect(() => {
     // Sohbet geçmişi boşsa (yani yeni bir oturum başlıyorsa)
@@ -188,7 +183,7 @@ const MainChat = () => {
               </div>
             )}
           </div>
-
+        
           <div>
             <div className="input-section">
               <input
@@ -198,7 +193,7 @@ const MainChat = () => {
                 onKeyDown={(e) => e.key === "Enter" && sendMessage()}
                 placeholder="Bir şey yaz..."
               />
-              <button className="sub-btn2" onClick={sendMessage}>
+                <button className="sub-btn2" onClick={sendMessage}>
                 <FaArrowRight className="text-black text-lg" />
               </button>
             </div>

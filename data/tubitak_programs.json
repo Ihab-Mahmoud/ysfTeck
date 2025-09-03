@@ -1,0 +1,962 @@
+[
+  {
+      "programId": "1001",
+      "programName": "1001 - Bilimsel ve Teknolojik Araştırma Projelerini Destekleme Programı",
+      "targetAudience": "Doktora/sanatta yeterlik/tıpta uzmanlık derecesine sahip kişiler",
+      "targetConditionsAndProcess":"Dönemli (Mart-Eylül) program, https://ardeb-pbs.tubitak.gov.tr/ üzerinden başvuru.\nSüre: En fazla 36 ay\nPersonel, makine ve teçhizat, sarf, hizmet alımı, seyahat vb. giderler desteklenir." ,
+      "SupportAmount":"Destek üst limiti (Burs dâhil, Proje Teşvik İkramiyesi (PTİ), ve Kurum hissesi hariç) yıllık bütçe sınırlaması olmaksızın 2.400.000 TL",
+      "deadline": "15.09.2025 (çevrim içi başvuru),\n18.09.2025 (e-imza)",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "Yeni bilgiler üretilmesi, bilimsel yorumların yapılması veya teknolojik problemlerin çözümlenmesi için bilimsel esaslara uygun olan projelerin desteklenmesi"
+    },
+        {
+      "programId": "1002-A",
+      "programName": "1002 - A - Hızlı Destek Modülü",
+      "targetAudience": "Doktora/sanatta yeterlik/tıpta uzmanlık derecesine sahip veya doktora/sanatta yeterlik/tıpta uzmanlık öğrenimine devam eden kişiler ile lisans derecesine sahip araştırma enstitüsü çalışanları",
+      "targetConditionsAndProcess":"Sürekli başvuruya açık program, https://ardeb-pbs.tubitak.gov.tr/ üzerinden başvuru.\nSüre: 12 ay\nPersonel, makine ve teçhizat, sarf, hizmet alımı, seyahat vb. giderler desteklenir." ,
+      "SupportAmount":"Destek üst limiti (Burs dahil) yıllık 100.000 TL",
+      
+      "deadline": "Başvurularda herhangi bir zaman kısıtlaması yoktur. Yıl boyunca başvuru yapılabilir.",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "Üniversitelerde, araştırma hastanelerinde ve araştırma enstitülerinde yürütülecek kısa süreli, küçük bütçeli, hızlı araştırma ihtiyaçlarına yönelik veya doktora tezi kapsamındaki araştırma ve geliştirme projelerine destek sağlamak"
+    },
+        {
+      "programId": "1002-B",
+      "programName": "1002 – B – Acil Destek Modülü",
+      "targetAudience": "Doktora/sanatta yeterlik/tıpta uzmanlık derecesine sahip kişiler ile lisans derecesine sahip araştırma enstitüsü çalışanları",
+      "targetConditionsAndProcess":"Sürekli başvuruya açık program, https://ardeb-pbs.tubitak.gov.tr/ üzerinden başvuru.\nSüre: 6 ay\nPersonel, makine ve teçhizat, sarf, hizmet alımı, seyahat vb. giderler desteklenir." ,
+      "SupportAmount":"Destek üst limiti (Burs dahil) yıllık 85.000 TL",
+      
+      "deadline": "Başvurularda herhangi bir zaman kısıtlaması yoktur. Yıl boyunca başvuru yapılabilir.",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "Beklenmedik bir şekilde gelişen, doğa veya insan kaynaklı olayların (jeolojik, klimatik, biyolojik, sosyal, teknolojik vb.) hemen sonrasında ortaya çıkan verinin temini açısından aciliyet içeren araştırma projelerini desteklemek"
+    },
+      {
+      "programId": "1003",
+      "programName": "1003 - Öncelikli Alanlar Ar-Ge Projeleri Destekleme Programı",
+      "targetAudience": "Doktora/sanatta yeterlik/tıpta uzmanlık derecesine sahip kişiler",
+      "targetConditionsAndProcess":"Çağrılı program, https://ardeb-pbs.tubitak.gov.tr/ üzerinden başvuru.\nSüre: Küçük Ölçekli projeler: en fazla 24 ay\nOrta ve Büyük Ölçekli projeler: en fazla 36 ay\nİki aşamalı program\nPersonel, makine ve teçhizat, sarf, hizmet alımı, seyahat vb. giderler desteklenir." ,
+      "SupportAmount":"Destek üst limiti (Burs dahil, Proje Teşvik İkramiyesi (PTİ) ve Kurum hissesi hariç)\nKüçük Ölçekli projeler: 750.000 TL,\nOrta Ölçekli projeler: \n1.500.000 TL (750.001-1.500.000),\nBüyük Ölçekli projeler: 3.750.000 TL (1.500.001-3.750.000)",
+      "deadline": "Belirli bir zaman aralığı bulunmamakla birlikte açılan çağrılara göre değişmektedir.",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "Ulusal Bilim Teknoloji ve Yenilik Stratejisi çerçevesinde belirlenecek öncelikli alanlarda sonuç odaklı, izlenebilir hedefleri olan, ilgili bilim/teknoloji alanlarının dinamiklerini gözeten ve yurt içinde yapılan Ar-Ge projelerini desteklemek ve bu projeler arasında eşgüdüm sağlamak"
+    },
+        {
+      "programId": "1004",
+      "programName": "1004 - Mükemmeliyet Merkezi Destek Programı",
+      "targetAudience": "Araştırma Üniversiteleri bünyesindeki araştırma altyapıları, 6550 Sayılı Kanun kapsamında yeterlik alan altyapılar, Yükseköğretim Kurulu (YÖK) tarafından kurulmaları uygun görülmüş,  yükseköğretim kurumları bünyesindeki uygulama ve araştırma merkezleri, 5746 sayılı kanun kapsamındaki Ar-Ge/Tasarım merkezleri, kamu Ar- Ge birimleri ve 5746 sayılı Kanun kapsamında olmayan özel kuruluşlar",
+      "targetConditionsAndProcess":"Çağrılı program, https://ardeb-pbs.tubitak.gov.tr/ üzerinden başvuru.\nSüre: En fazla 48 ay\nPersonel, makine ve teçhizat, sarf, hizmet alımı, seyahat vb. giderler desteklenir." ,
+      "SupportAmount":"Çağrıda belirtilir.",
+      "deadline": "Belirli bir zaman aralığı bulunmamakla birlikte açılan çağrılara göre değişmektedir.",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "Yükseköğretim kurumları araştırma altyapılarının, Ar-Ge/Tasarım merkezleri ve kamu Ar-Ge birimleri ile iş birliği yaparak ihtisaslaşması ve mükemmeliyet merkezi haline gelmesi için ulusal hedef ve politikalar kapsamında belirlenen öncelikli alanlarda, yurt içinde yapılan, izlenebilir hedefleri olan, bilimsel nitelikli, ticarileşme potansiyeli yüksek araştırma programlarını desteklemek"
+    },
+      {
+      "programId": "1005",
+      "programName": "1005 - Ulusal Yeni Fikirler ve Ürünler Araştırma Destek Programı",
+      "targetAudience": "Lisans derecesine sahip üniversite, kamu kurumu ve özel kuruluş çalışanları ile herhangi bir kurum/kuruluşta çalışmayan doktora/sanatta yeterlik/tıpta uzmanlık derecesine sahip kişiler",
+      "targetConditionsAndProcess":"Sürekli başvuruya açık program, https://ardeb-pbs.tubitak.gov.tr/ üzerinden başvuru.\nSüre: En fazla 18 ay\nPersonel, makine ve teçhizat, sarf, hizmet alımı, seyahat, temsil ve tanıtma vb. giderler desteklenir." ,
+      "SupportAmount":"Destek üst limiti (burs dahil, proje teşvik ikramiyesi (PTİ) ve kurum hissesi hariç) 950.000 TL",
+      "deadline": "Başvurularda herhangi bir zaman kısıtlaması yoktur. Yıl boyunca başvuru yapılabilir.",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "Ülkemizde ihtiyaç duyulan, teknolojik dışa bağımlılığımızı azaltacak ve/veya ülkemizin rekabet gücünü artıracak ulusal/uluslararası yeni bir ürün/süreç/yöntem/model geliştirme amacına yönelik uygulamalı araştırma ve/veya deneysel geliştirme projelerinin desteklenmesi"
+    },
+        {
+      "programId": "1007",
+      "programName": "1007 - Kamu Kurumları Araştırma ve Geliştirme Projelerini Destekleme Programı",
+      "targetAudience": "Kamu kurumları müşteri kurum olarak, kamu Ar-Ge birimi, üniversite ve/veya özel kuruluşlar ise “Proje Yürütücüsü Kuruluş” olarak programda yer alırlar.\nSavunma projeleri kapsamında ise Savunma ve Güvenlik alanında görevleri olan kamu kurumları (TSK, Emniyet Genel Md.lüğü vb.) müşteri kurum olarak, kamu Ar-Ge birimi, üniversite ve/veya özel kuruluşlar ise “Proje Yürütücüsü Kuruluş” olarak programda yer alırlar.",
+      "targetConditionsAndProcess":"Çağrılı program, https://ardeb-pbs.tubitak.gov.tr/ üzerinden başvuru.\nSüre: Ar-Ge süresi en fazla 48 ay\nİki aşamalı program\nPersonel, makine ve teçhizat, sarf, hizmet alımı, seyahat, Ar-Ge, kurum hissesi vb. giderler desteklenir." ,
+      "SupportAmount":"Çağrıda belirtilir.",
+      "deadline": "Belirli bir zaman aralığı bulunmamakla birlikte açılan çağrılara göre değişmektedir.",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "Program kapsamında desteklenen projeler ile Kamu kurumlarının Ar-Ge ile giderilebilecek ihtiyaçlarının karşılanması ya da sorunlarının çözümü"
+    }
+  ,
+        {
+      "programId": "1071",
+      "programName": "1071 - Uluslararası Araştırma Fonlarından Yararlanma Kapasitesinin ve Uluslararası Ar-Ge İşbirliklerine Katılımın Arttırılmasına Yönelik Destek Programı",
+      "targetAudience": "\"Araştırma Projeleri\" çağrılarında; \nYükseköğretim Kanunu kapsamında yer alan yükseköğretim kurumları, eğitim ve araştırma hastaneleri, kamu kurum ve kuruluşları, sektör ve büyüklüğüne bakılmaksızın firma düzeyinde katma değer yaratan ve ticaret sicil belgesi olan Türkiye’de yerleşik sermaye şirketleri (özel kuruluşlar) veya bunların oluşturduğu ortaklıklar\n\n\"Ar-Ge Yenilik Projeleri\" çağrılarında; \nSektör ve büyüklüğüne bakılmaksızın firma düzeyinde katma değer yaratan ve ticaret sicil belgesi olan Türkiye’de yerleşik sermaye şirketleri (özel kuruluşlar) ve bu özel kuruluşlarla birlikte başvuruda bulunacak olması şartıyla Yükseköğretim Kanunu kapsamında yer alan yükseköğretim kurumları",
+      "targetConditionsAndProcess":"Çağrılı program, https://uidb-pbs.tubitak.gov.tr  üzerinden başvuru.\nSüre: Çağrıda belirtilir." ,
+      "SupportAmount":"Çağrıda belirtilir.",
+      "deadline": "Belirli bir zaman aralığı bulunmamakla birlikte açılan çağrılara göre değişmektedir.",
+      "region": "Uluslararası",
+      "category": "Akademi",
+      "supportPurpose": "Ülkemiz araştırmacılarının uluslararası destek fonlarına başvuru kapasitesinin ve başvurularda başarı performansının iyileştirilmesi ile ikili ve çok taraflı uluslararası Ar-Ge işbirliklerine katılımın arttırılmasına yönelik belirlenecek çağrı başlıkları kapsamındaki projelerin desteklenmesi"
+    }
+  ,
+      {
+      "programId": "3005",
+      "programName": "3005 - Sosyal ve Beşeri Bilimlerde Yenilikçi Çözümler Araştırma Projeleri Destek Programı",
+      "targetAudience": "Lisans derecesine sahip üniversite, kamu kurumu ve özel kuruluş çalışanları ile herhangi bir kurum/kuruluşta çalışmayan doktora/sanatta yeterlik/tıpta uzmanlık derecesine sahip veya doktora/sanatta yeterlik/tıpta uzmanlık öğrenimine devam eden kişiler",
+      "targetConditionsAndProcess":"Sürekli başvuruya açık program, https://ardeb-pbs.tubitak.gov.tr/ üzerinden başvuru.\nSüre: En fazla 24 ay\nPersonel, makine ve teçhizat, sarf, hizmet alımı, seyahat, temsil ve tanıtma vb. giderler desteklenir." ,
+      "SupportAmount":"Destek üst limiti (burs dahil, proje teşvik ikramiyesi (PTİ) ve kurum hissesi hariç) yıllık bütçe sınırlaması olmaksızın 1.000.000 TL",
+      "deadline": "Başvurularda herhangi bir zaman kısıtlaması yoktur. Yıl boyunca başvuru yapılabilir.",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "• Beşeri bilimlerin veri toplama ve analiz yoluyla durum tespiti çalışmalarının bulguları ile bulgular ışığında bilime yenilikçi katkılar yapacak yöntemler, yaklaşımlar ve yorumların geliştirilmesi;\n• Kamu politikalarının geliştirilmesi süreçlerinde bilimsel temellerin oluşturulması; \n• Teknolojik ilerlemelerin sosyal etkilerinin ortaya konulması amacıyla yapılandırılmış\nçıktı ve etki odaklı sosyal ve beşeri bilim araştırma ve geliştirme faaliyetlerinin desteklenerek ülkemizde toplumsal ve kamusal fayda sağlanması"
+    }
+  ,
+      {
+      "programId": "3501",
+      "programName": "3501 - Kariyer Geliştirme Programı",
+      "targetAudience": "Başvuru tarihinden önceki 7 yıl içerisinde doktora derecesini almış, doçent ve altı akademik unvana sahip kişiler",
+      "targetConditionsAndProcess":"Sürekli başvuruya açık program, https://ardeb-pbs.tubitak.gov.tr/ üzerinden başvuru.\nSüre: 36 ay\nPersonel, makine ve teçhizat, sarf, hizmet alımı, seyahat, temsil ve tanıtma vb. giderler desteklenir." ,
+      "SupportAmount":"Destek üst limiti (Burs dahil, Proje Teşvik İkramiyesi (PTİ) ve Kurum hissesi hariç) yıllık bütçe sınırlaması olmaksızın 1.000.000 TL",
+      "deadline": "Başvurularda herhangi bir zaman kısıtlaması yoktur. Yıl boyunca başvuru yapılabilir.",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "Kariyerlerine yeni başlayan doktoralı bilim insanlarının çalışmalarını proje desteği vererek teşvik etmek"
+    }
+  ,
+        {
+      "programId": "2202",
+      "programName": "2202-Bilim Olimpiyatları Programı",
+      "targetAudience": "Ortaokul ve Lise Öğrencileri",
+      "targetConditionsAndProcess":"Astronomi-Astrofizik, Biyoloji, Coğrafya, Fizik, Kimya dallarında 8, 9,10 ve 11. sınıfa ve hazırlık sınıfına devam etmekte olan öğrenciler sınava başvurabilir.\n\nMatematik ve Bilgisayar dallarında 9,10 ve 11. sınıfa ve hazırlık sınıfına devam etmekte olan öğrenciler sınava başvurabilir. Lise son sınıfa devam eden öğrenciler programa başvuramaz. \n\nSÜREÇ\n\n1.Aşama Sınavı\nYaz Kampı\n2.Aşama Sınavı\nKış Kampı\nTakım Seçme Sınavları\nTakım Kampları\nBölgesel ve Uluslararası Olimpiyatlara Katılma" ,
+      "SupportAmount":"Ulusal Bilim Olimpiyatları\nLiseler İçin Ödül Miktarı (TL):\nAltın Madalya: 24.000\nGümüş Madalya: 19.000\nBronz Madalya: 14.000\n\nOrtaokullar İçin Ödül Miktarı (TL):\nAltın Madalya: 16.000\nGümüş Madalya: 13.500\nBronz Madalya: 11.000\n\nUluslararası Bilim Olimpiyatları / Bölgesel Bilim Olimpiyatları\nÖdül Miktarı (TL):\n\nAltın Madalya: 72.000 / 32.000\nGümüş Madalya: 57.000 / 27.000\nBronz Madalya: 42.000 / 22.000\nMansiyon: 28.500 / 13.500",
+      "deadline": "24-Nisan-2025",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "Ortaokul ve lise öğrencilerinin temel bilimler ve bilgisayar bilimleri alanlarına ilgilerini artırmak, çalışmalarını yönlendirmek ve bu alanlarda özel eğitim olanakları sağlamak yolu ile gelişmelerine katkıda bulunmak amacıyla her yıl Astronomi-Astrofizik, Coğrafya (yeni), Matematik, Fizik, Kimya, Biyoloji, Bilgisayar, Ortaokul Matematik ve Ortaokul Bilgisayar dallarında bilim olimpiyatları düzenlenmektedir.\n"
+    }
+  ,
+    {
+      "programId": "2204-B",
+      "programName": "2204-B-Ortaokul Öğrencileri Araştırma Projeleri Yarışmaları",
+      "targetAudience": "Ortaokul Öğrencileri",
+      "targetConditionsAndProcess":"Yarışmaya, Türkiye ve KKTC’de örgün ve açık öğretim sisteminde öğrenim gören tüm ortaokul öğrencileri katılabilir.\n\nYarışmaya her öğrenci yalnızca bir proje ile katılabilir ve her proje en çok üç öğrenci tarafından hazırlanır.\n\nBir projede sadece bir danışman görev alabilir ve danışman birden fazla projeye danışmanlık yapabilir. Danışman için alan sınırlaması yoktur. Projede danışman olması zorunludur.\n\nYarışmaya başvuruda bulunacak bir projedeki öğrenciler ve danışman farklı okullardan olabilir.\nYarışma; Biyoloji, Coğrafya, Değerler Eğitimi, Fizik, Kimya, Matematik, Tarih, Teknolojik Tasarım, Türkçe ve Yazılım olmak üzere 10 ana alanda düzenlenir.\n\nProjeler, ana alanların altında yer alan 63 farklı tematik alandan birini kapsayacak şekilde hazırlanır.\nSÜREÇ\nÖn değerlendirme aşaması\nBölge aşaması\nFinal aşaması\n" ,
+      "SupportAmount":"Bölge Yarışması Ödülleri\nBirincilik:\nÖğrenci Ödülü: 3.500 TL (kişi başına)\nDanışman Ödülü: 2.500 TL (proje başına)\n\nİkincilik:\nÖğrenci Ödülü: 2.500 TL (kişi başına)\nDanışman Ödülü: 2.000 TL (proje başına)\n\nÜçüncülük:\nÖğrenci Ödülü: 2.000 TL (kişi başına)\nDanışman Ödülü: 1.500 TL (proje başına)\n\n\nFinal Yarışması Ödülleri\nBirincilik:\nÖğrenci Ödülü: 14.000 TL (kişi başına)\nDanışman Ödülü: 12.000 TL (proje başına)\n\nİkincilik:\nÖğrenci Ödülü: 12.000 TL (kişi başına)\nDanışman Ödülü: 9.500 TL (proje başına)\n\nÜçüncülük:\nÖğrenci Ödülü: 9.000 TL (kişi başına)\nDanışman Ödülü: 8.000 TL (proje başına)\n\nTeşvik:\nÖğrenci Ödülü: 7.000 TL (kişi başına)\nDanışman Ödülü: 6.000 TL (proje başına)\n",
+      "deadline": "5-Şubat-2025",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "Ortaokul öğrenimine devam etmekte olan öğrencileri temel, sosyal ve uygulamalı bilim alanlarında çalışmalar yapmaya teşvik etmek, çalışmalarını yönlendirmek ve mevcut bilimsel çalışmalarının gelişimine katkı sağlamak amacıyla düzenlenmektedir."
+    }
+  ,
+    {
+      "programId": "2204-A",
+      "programName": "2204-A-Lise Öğrencileri Araştırma Projeleri Yarışmaları",
+      "targetAudience": "Lise Öğrencileri",
+      "targetConditionsAndProcess":"\n\nYarışmaya, Türkiye ve KKTC’de örgün ve açık öğretim sisteminde öğrenim gören tüm lise öğrencileri katılabilir.\n\nYarışmaya her öğrenci yalnızca bir proje ile katılabilir ve her proje en çok üç öğrenci tarafından hazırlanır.\n\nBir projede sadece bir danışman görev alabilir ve danışman birden fazla projeye danışmanlık yapabilir.\n\nYarışmaya katılacak öğrenciler 20 yaşından gün almamış olmalıdır.\n\nYarışma; Biyoloji, Coğrafya, Değerler Eğitimi, Fizik, Kimya, Matematik, Psikoloji, Sosyoloji, Tarih, Teknolojik Tasarım, Türk Dili ve Edebiyatı, Yazılım olmak üzere 12 ana alanda düzenlenir. Ana alanların altında yer alan 63 farklı tematik alanlardan birini kapsayacak şekilde projelerin hazırlayarak öğrenciler başvuruda bulunur.\nSÜREÇ\n\nÖn inceleme aşaması\nBölge Sergisi\nTürkiye Finali\n" ,
+      "SupportAmount":"Bölge Yarışması Ödülleri\n\nBirincilik:\nÖğrenci Ödülü: 6.000 TL (kişi başına)\nDanışman Ödülü: 3.500 TL  (proje başına)\n\nİkincilik:\nÖğrenci Ödülü: 3.500 TL (kişi başına)\nDanışman Ödülü: 3.000 TL  (proje başına)\n\nÜçüncülük:\nÖğrenci Ödülü: 2.000 TL (kişi başına)\nDanışman Ödülü: 2.000 TL   (proje başına)\n\nFinal Yarışması Ödülleri\n\nBirincilik:\nÖğrenci Ödülü: 22.000 TL (kişi başına)\nDanışman Ödülü: 16.000 TL   (proje başına)\n\nİkincilik:\nÖğrenci Ödülü: 18.000 TL (kişi başına)\nDanışman Ödülü: 13.500 TL  (proje başına)\n\nÜçüncülük:\nÖğrenci Ödülü: 14.000 TL (kişi başına)\nDanışman Ödülü: 11.000 TL   (proje başına)\n\nTeşvik Ödülü:\nÖğrenci Ödülü: 10.000 TL  (kişi başına)\nDanışman Ödülü: 8.000 TL (proje başına)",
+      "deadline": "15-Ocak-2025",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "Lise öğrenimine devam etmekte olan öğrencileri temel, sosyal ve uygulamalı bilim alanlarında çalışmalar yapmaya teşvik etmek, çalışmalarını yönlendirmek ve mevcut bilimsel çalışmalarının gelişimine katkı sağlamak amacıyla 2204-A-Lise Öğrencileri Araştırma Projeleri Yarışması düzenlenmektedir."
+    }
+  ,
+    {
+      "programId": "2204-C",
+      "programName": "2204-C-Lise Öğrencileri Kutup Araştırma Projeleri Yarışmaları",
+      "targetAudience": "Lise Öğrencileri",
+      "targetConditionsAndProcess":"Yarışmaya, Türkiye ve KKTC’de öğrenim gören tüm lise öğrencileri katılabilir.\n\nYarışmaya katılacak öğrenciler 20 yaşından gün almamış olmalıdır\nYarışma; Canlı Bilimleri, Fiziki Bilimler, Sosyal ve Beşerî Bilimler ve Yer Bilimleri olmak üzere 4 Ana Alan ve 14 Tematik Alan’da düzenlenmektedir.\nSÜREÇ\n\nBirinci Aşama Değerlendirmesi (Ön İnceleme)\nİkinci Aşama Değerlendirmesi\n\nTeknofestte sergisi yapılır\n" ,
+      "SupportAmount":"Final Yarışması Ödülleri\n\nBirincilik:\nÖğrenci Ödülü 70.000 TL  (proje başına)\nDanışman Ödülü: 9.000 TL  (proje başına)\n\nİkincilik:\nÖğrenci Ödülü: 60.000 TL  (proje başına)\nDanışman Ödülü: 7.500 TL (proje başına)\n\nÜçüncülük:\nÖğrenci Ödülü: 50.000 TL  (proje başına)\nDanışman Ödülü: 6.000 TL  (proje başına)\n",
+      "deadline": "20-Şubat-2025",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "Lise öğrenimine devam etmekte olan öğrencileri Antarktika ve Arktik bölgelerde kutup bilimleri konusunda çalışmalar yapmaya teşvik etmek, kutup bilimleri alanında araştırmalar yapmaya yönlendirmek amacıyla düzenlenmektedir."
+    }
+  ,
+      {
+      "programId": "2204-D",
+      "programName": "2204-D-Lise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışmaları",
+      "targetAudience": "Lise Öğrencileri",
+      "targetConditionsAndProcess":"Yarışmaya, Türkiye ve KKTC’de öğrenim gören tüm lise öğrencileri katılabilir.\n\nYarışmaya katılacak öğrenciler 20 yaşından gün almamış olmalıdır.\nYarışma; Çevre, Ekonomik Sektörler, Hava ve İklim, Su Araştırmaları, Sürdürülebilirlik ve Refah, Toplumsal Farkındalık olmak üzere 6 ana alan ve 22 Tematik Alanda düzenlenir.\nSÜREÇ\n\nBirinci Aşama Değerlendirmesi (Ön İnceleme)\nİkinci Aşama Değerlendirmesi\n\nTeknofestte sergisi yapılır" ,
+      "SupportAmount":"Final Yarışması Ödülleri\n\nBirincilik:\nÖğrenci Ödülü 70.000 TL  (proje başına)\nDanışman Ödülü: 9.000 TL  (proje başına)\n\nİkincilik:\nÖğrenci Ödülü: 60.000 TL  (proje başına)\nDanışman Ödülü: 7.500 TL  (proje başına)\n\nÜçüncülük:\nÖğrenci Ödülü: 50.000 TL  (proje başına)\nDanışman Ödülü: 6.000 TL  (proje başına)",
+      "deadline": "20-Şubat-2025",
+      "region": "Ulusal",
+      "category": "Akademi",
+      "supportPurpose": "Lise öğrencilerinin iklim değişikliği hakkında farkındalıklarını artırmak, ülkemizdeki doğal kaynakların sürdürülebilir şekilde kullanılması konusunda çalışmalar yapmaya teşvik etmek, bu konu hakkında toplum bilincini oluşturmak ve iklim değişikliğinin olumsuz etkilerine yönelik çözümler üretmelerini sağlamak amacıyla düzenlenmektedir."
+    }
+  ,
+      {
+        "programId": "2205",
+        "programName": "2205-Lisans Burs Programı:",
+        "targetAudience": "Lisans Öğrencileri",
+        "targetConditionsAndProcess":"T.C. vatandaşı veya 5901 sayılı kanunda geçen Mavi Kart sahibi olmak\n\nDaha önce bir lisans eğitimini bitirmemiş olmak\n\nYKS’de sayısal programlar için\nY-SAY veya sözel ve eşit ağırlıklı programlar için TYT puan türünde ilk 25.000’e girmek\n\nBursun devamı için (hazırlık süresi hariç), GANO en az 2,50/4 veya en az 65/100 olması ve aktif öğrenci olması gerekir.\n\nTemel bilimler harici bir programa kayıtlı olan öğrencilerin, lisans eğitimini tamamlamadan önce temel bilimlerde örgün öğretim programlarından birinde ÇAP’a kayıt yaptırmaları ve lisans anadalı normal eğitim-öğretim süresi tamamlanmadan önce YKS’de sayısal programlar için Y-SAY veya sözel ve eşit ağırlıklı programlar için TYT puan türünde ilk 25.000’e girmeleri gerekmektedir.\n\nÇift anadal bursiyerlerinin normal eğitim-öğretim süresine ek 1 yıl süre verilir. \n\nSÜREÇ\nBaşvuru\nDeğerlendirme \nDestek" ,
+        "SupportAmount":"Burs Miktarları\n\nİlk 1.000: 15.600 TL/ay\n1.001 - 5.000: 12.000 TL/ay\n5.001 - 10.000: 8.900 TL/ay\n10.001 - 20.000: 5.800 TL/ay\n20.001 - 25.000: 4.800 TL/ay\n\nÇAP bursu 4.800 TL/ay",
+        "deadline": "1. Dönem 30 Mayıs 2025\n2. Dönem 14 kasım 2025",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Lisans öğrencilerinin temel bilimler ile sosyal ve beşerî bilimlere yönelimini teşvik etmek, TÜBİTAK tarafından yürütülen bilim olimpiyatları ve proje yarışmalarında başarılı olan öğrencileri desteklemek, bilimsel düşünme ve araştırıcılığa yatkınlıklarını geliştirerek geleceğin bilim insanları olarak yetişmelerini sağlamaktır. "
+      }
+  ,
+      {
+        "programId": "2209-A",
+        "programName": "2209-A-Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı",
+        "targetAudience": "ön lisans ve lisans öğrencileri",
+        "targetConditionsAndProcess":"Başvuru sahibinin ön lisans veya lisans öğrenimi* görüyor olmalıdır\n\nProjenin akademik danışman rehberliğinde yapılıyor olmalıdır\n\nAynı dönemde birden fazla başvuruda ve/veya önceki dönemlerde desteği devam eden bir 2209-A ya da 2209-B projesinde yer alınmamalıdır.\n\nDaha önce aynı proje için TÜBİTAK’tan destek alınmamış olması gerekmektedir. \nÖğrenciler programa bireysel veya takım halinde başvuru yapabilirler.  Takım halinde başvuru yapılması durumunda öğrencilerden biri Proje Yürütücüsü olarak TÜBİTAK’a karşı sorumludur. \n\n* Açıköğretim ve hazırlık sınıfı öğrencileri başvuramazlar.\n\n** Araştırma görevlileri ve öğretim görevlileri de akademik danışman olabilir. \nBir projede proje yürütücüsü dışında en fazla 4 proje ortağı yer alabilir \n\nSÜREÇ\nBaşvuru\nÖn Değerlendirme \nBilimsel Değerlendirme\nDestek\n" ,
+        "SupportAmount":"Maksimum destek tutarı 9.000 TL’dir.",
+        "deadline": "Belli Değil",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Üniversitelerde öğrenim görmekte olan ön lisans ve lisans öğrencisinin/öğrencilerinin hazırladıkları araştırma projelerinin gerektirdiği makine/teçhizat, sarf malzemesi, seyahat, hizmet alımı giderleri için destek sağlanır."
+      }
+  ,
+      {
+        "programId": "2209-B",
+        "programName": "2209-B-Üniversite Öğrencileri Sanayiye Yönelik Araştırma Projeleri Destekleme Programı",
+        "targetAudience": "ön lisans ve lisans öğrencileri",
+        "targetConditionsAndProcess":"Başvuru sahibinin ön lisans veya lisans öğrenimi* görüyor olmalıdır\n\nProjenin akademik danışman rehberliğinde yapılıyor olmalıdır\n\nAynı dönemde birden fazla başvuruda ve/veya önceki dönemlerde desteği devam eden bir 2209-A ya da 2209-B projesinde yer alınmamalıdır.\n\nDaha önce aynı proje için TÜBİTAK’tan destek alınmamış olması gerekmektedir. \nÖğrenciler programa bireysel veya takım halinde başvuru yapabilirler.  Takım halinde başvuru yapılması durumunda öğrencilerden biri Proje Yürütücüsü olarak TÜBİTAK’a karşı sorumludur. \n\n* Açıköğretim ve hazırlık sınıfı öğrencileri başvuramazlar.\n\n** Araştırma görevlileri ve öğretim görevlileri de akademik danışman olabilir. \nSÜREÇ\nBaşvuru\nÖn Değerlendirme \nBilimsel Değerlendirme\nDestek" ,
+        "SupportAmount":"Maksimum destek tutarı 12.000 TL’dir.",
+        "deadline": "Belli Değil",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Ön lisans/Lisans öğrencilerinin hazırladıkları, sanayinin bir sorununu çözmeyi hedefleyen ve/veya sanayide uygulama potansiyeli olan ürün/yöntem/süreç iyileştirme ve/veya geliştirmeye yönelik araştırma konusuna sahip lisans projelerinin gerektirdiği makine/teçhizat, sarf malzemesi, kırtasiye giderleri, seyahat, hizmet alımı vb. giderler için destek sağlanır. "
+      }
+  ,
+      {
+        "programId": "2210-A",
+        "programName": "2210-A Genel Yurt İçi Yüksek Lisans Burs Programı",
+        "targetAudience": "Yüksek Lisans Öğrencileri",
+        "targetConditionsAndProcess":"Kayıt dondurulan dönemler hariç olmak üzere bilimsel hazırlık dâhil eğitiminin en geç 3. döneminde kayıtlı olmak (Bilimsel hazırlıkta programa başvuru yapılabilirken, yabancı dil hazırlık aşamasında programa başvuru yapılamaz).\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde ALES sınavından herhangi bir puan türünde en az 70 puan almış olmak\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde YDS, e-YDS, YÖKDİL, e-YÖKDİL, TIPDİL sınavlarından birinden İngilizce dilinde en az 60 puan veya son 2 yıl içerisinde ÖSYM tarafından eş değerliği kabul edilen yabancı dil sınavlarından birinden İngilizce dilinde muadil puan almış olmak \n\nYüksek lisans öğrenimini tezsiz yapanlar başvuru yapamaz\n\nDiğer kamu kurumları, sivil toplum kuruluşları, yetim maaşı, nafaka, KYK öğrenim kredisi veya burslarından yararlananlar, aynı anda bu programdan da faydalanabilir. \n\nDaha önce 2210-Yurt İçi Yüksek Lisans Burs Programlarından yüksek lisans bursu almamış olmak (Daha önce burs alıp, herhangi bir sebeple iade edenler başvuru yapamazlar. Ancak hiç burs ödemesi almadan bursiyerlik hakkından vazgeçenler başvuru yapabilirler). \n\nKamuda veya özel sektörde çalışan tezli yüksek lisans öğrencileri başvuru yapabilir.\n\nÖzel öğrenci statüsünde olanlar başvuru yapamaz\nBurslar, bursiyerin desteklenmeye başladığı başvuru dönemi esas alınarak 24 ay sonunda sona erdirilir.\n\n2211 Yurt İçi Lisansüstü Burs Programı’nın alt programlarına aynı başvuru dönemi içinde birden fazla başvuru yapılamaz. \n\nSÜREÇ\nBaşvuru\nDeğerlendirme \nDestek" ,
+        "SupportAmount":"Tam Burs: 13.800 TL/ay\nKısmi Burs: 4.000 TL/ay.\n",
+        "deadline": "1. Dönem 30 Mayıs 2025\n2. Dönem 14 kasım 2025",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Sürdürülebilir kalkınma ve teknolojik gelişime öncülük edecek insan kaynağının nicelik ve niteliğinin artırılması amacıyla yüksek lisans öğrenimi yapan üretken, duyarlı, yeniliklere açık ve araştırmacı öğrenciler desteklenir. "
+      }
+  ,
+      {
+        "programId": "2210-C",
+        "programName": "2210-C-Yurt İçi Öncelikli Alanlar Yüksek Lisans Burs Programı",
+        "targetAudience": "Yüksek Lisans Öğrencileri",
+        "targetConditionsAndProcess":"Kayıt dondurulan dönemler hariç olmak üzere bilimsel hazırlık dâhil eğitiminin en geç 3. döneminde kayıtlı olmak (Bilimsel hazırlıkta programa başvuru yapılabilirken, yabancı dil hazırlık aşamasında programa başvuru yapılamaz).\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde ALES sınavından herhangi bir puan türünde en az 70 puan almış olmak\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde YDS, e-YDS, YÖKDİL, e-YÖKDİL, TIPDİL sınavlarından birinden İngilizce dilinde en az 60 puan veya son 2 yıl içerisinde ÖSYM tarafından eş değerliği kabul edilen yabancı dil sınavlarından birinden İngilizce dilinde muadil puan almış olmak \n\nYüksek lisans öğrenimini tezsiz yapanlar başvuru yapamaz\n\nDiğer kamu kurumları, sivil toplum kuruluşları, yetim maaşı, nafaka, KYK öğrenim kredisi veya burslarından yararlananlar, aynı anda bu programdan da faydalanabilir. \n\nDaha önce 2210-Yurt İçi Yüksek Lisans Burs Programlarından yüksek lisans bursu almamış olmak (Daha önce burs alıp, herhangi bir sebeple iade edenler başvuru yapamazlar. Ancak hiç burs ödemesi almadan bursiyerlik hakkından vazgeçenler başvuru yapabilirler). \n\nKamuda veya özel sektörde çalışan tezli yüksek lisans öğrencileri başvuru yapabilir.\n\nÖzel öğrenci statüsünde olanlar başvuru yapamaz\nBurslar, bursiyerin desteklenmeye başladığı başvuru dönemi esas alınarak 24 ay sonunda sona erdirilir.\n\nTez önerisi enstitü tarafından kabul edilmiş olmak\n\nBurslar bursiyerin desteklenmeye başladığı başvuru dönemi esas alınarak 12 ay sonunda sona erdirilir.\n\nBaşvuran adayların enstitü tarafından kabul edilen tez önerileri dış danışman vasıtasıyla bilimsel değerlendirmeye tabi tutulur.\nSÜREÇ\nBaşvuru\nÖn Değerlendirme \nBilimsel Değerlendirme\nDestek\n\nÖncelikli Alanlar:\n1. Afet yönetimi teknolojileri\n2. Akıllı şebeke sistemleri\n3. Arıtma teknolojileri (su, atık su ve katı atık dâhil-çevre biyoteknolojisi)\n4. Bilim tarihi\n5. Bilişim hukuku\n6. Blokzincir teknolojileri\n7. Büyük veri ve bulut bilişim\n8. Deniz hukuku\n9. Eğitimde dijitalleşme ve yenilikçilik\n10. Enerji depolama teknolojileri\n11. Göç araştırmaları\n12. Güneş enerjisi teknolojileri\n13. Hava araçları (uçak, İHA vb.) tasarımı, testi ve performansı\n14. İlaç ve aşı teknolojileri\n15. İleri malzeme teknolojileri\n16. Kadın ve aile araştırmaları \n17. Karbondioksit yakalama, kullanma ve depolama (KYKD) teknolojileri\n18. Katmanlı imalat teknolojileri\n19. Kritik hammaddeler ve mineraller\n20. Kuantum teknolojileri\n21. Kutup araştırmaları\n22. Modelleme ve simülasyon teknolojileri\n23. Kültürel miras\n24. Mikro/Nano/Opto-Elektromekanik sistemler\n25. Motor teknolojileri\n26. Nesnelerin interneti\n27. Nükleer enerji teknolojileri\n28. Petrokimya ve polimer teknolojileri\n29. Robotik-mekatronik\n30. Rüzgâr enerjisi teknolojileri \n31. Sektörel ve bölgesel büyüme analizleri\n32. Siber güvenlik\n33. Sürdürülebilir ve alternatif finansal sistemler\n34. Tarım biyoteknolojisi (biopestisitler, genetik ıslah ve tohum geliştirme dâhil)\n35. Tıbbi cihaz teknolojileri\n36. Uydu, uzay araçları ve fırlatma teknolojileri\n37. Uzay hukuku\n38. Yapay zekâ\n39. Yarı iletken ve çip teknolojileri\n40. Yeni nesil haberleşme teknolojileri\n41. Yeşil hidrojen teknolojileri\n\n" ,
+        "SupportAmount":"Tam Burs: 15.870 TL\nKısmi Burs: 5.250 TL\n",
+        "deadline": "1. Dönem 30 Mayıs 2025\n2. Dönem 14 kasım 2025",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Sürdürülebilir kalkınma ve teknolojik gelişime öncülük edecek insan kaynağının nicelik ve niteliğinin artırılması amacıyla yüksek lisans öğrenimi yapan üretken, duyarlı, yeniliklere açık ve araştırmacı öğrenciler desteklenir. Bu doğrultuda, başarılı öğrencilerin yüksek lisans tezlerini ülkemizin ihtiyaç duyduğu öncelikli alanlarda hazırlamaları teşvik edilir. \n\n"
+      }
+  ,
+      {
+        "programId": "2210-D",
+        "programName": "2210-D-Yurt İçi Sanayiye Yönelik Yüksek Lisans Burs Programı",
+        "targetAudience": "Yüksek Lisans Öğrencileri",
+        "targetConditionsAndProcess":"Kayıt dondurulan dönemler hariç olmak üzere bilimsel hazırlık dâhil eğitiminin en geç 3. döneminde kayıtlı olmak (Bilimsel hazırlıkta programa başvuru yapılabilirken, yabancı dil hazırlık aşamasında programa başvuru yapılamaz).\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde ALES sınavından herhangi bir puan türünde en az 70 puan almış olmak\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde YDS, e-YDS, YÖKDİL, e-YÖKDİL, TIPDİL sınavlarından birinden İngilizce dilinde en az 60 puan veya son 2 yıl içerisinde ÖSYM tarafından eş değerliği kabul edilen yabancı dil sınavlarından birinden İngilizce dilinde muadil puan almış olmak \n\nYüksek lisans öğrenimini tezsiz yapanlar başvuru yapamaz\n\nDiğer kamu kurumları, sivil toplum kuruluşları, yetim maaşı, nafaka, KYK öğrenim kredisi veya burslarından yararlananlar, aynı anda bu programdan da faydalanabilir. \n\nDaha önce 2210-Yurt İçi Yüksek Lisans Burs Programlarından yüksek lisans bursu almamış olmak (Daha önce burs alıp, herhangi bir sebeple iade edenler başvuru yapamazlar. Ancak hiç burs ödemesi almadan bursiyerlik hakkından vazgeçenler başvuru yapabilirler). \n\nKamuda veya özel sektörde çalışan tezli yüksek lisans öğrencileri başvuru yapabilir.\n\nÖzel öğrenci statüsünde olanlar başvuru yapamaz\nBurslar, bursiyerin desteklenmeye başladığı başvuru dönemi esas alınarak 24 ay sonunda sona erdirilir.\n\n2211 Yurt İçi Lisansüstü Burs Programı’nın alt programlarına aynı başvuru dönemi içinde birden fazla başvuru yapılamaz. \n\n\nTez önerisi enstitü tarafından kabul edilmiş olmak\n\nBurslar bursiyerin desteklenmeye başladığı başvuru dönemi esas alınarak 12 ay sonunda sona erdirilir.\n\nSÜREÇ\nBaşvuru\nÖn Değerlendirme \nBilimsel Değerlendirme\nDestek\n" ,
+        "SupportAmount":"Tam Burs: 15.870 TL\nKısmi Burs: 5.250 TL\n\nBursiyerlerimiz, TÜBİTAK ARDEB veya TEYDEB projelerinde de görev almaları halinde bursları 19.000 TL/Ay tam burs, 5.250 TL/Ay kısmi burs olacak şekilde 2210 Programından ödenecektir.\n",
+        "deadline": "1. Dönem 30 Mayıs 2025\n2. Dönem 14 kasım 2025",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında, sürdürülebilir kalkınma ve teknolojik gelişime öncülük edecek insan kaynağının nicelik ve niteliğinin artırılması amacıyla yüksek lisans öğrenimi yapan üretken, duyarlı, yeniliklere açık ve araştırmacı öğrenciler desteklenir. Bu doğrultuda, başarılı öğrencilerin üniversite-sanayi iş birliğinde sanayinin ihtiyaç duyduğu alanlara yönelik yüksek lisans tezi hazırlamaları teşvik edilir."
+      }
+  ,
+      {
+        "programId": "2210-E",
+        "programName": "2210-E Doğrudan Yurt İçi Yüksek Lisans Burs Programı",
+        "targetAudience": "Yüksek Lisans Öğrencileri",
+        "targetConditionsAndProcess":"Kayıt dondurulan dönemler hariç olmak üzere bilimsel hazırlık dâhil eğitiminin en geç 3. döneminde kayıtlı olmak (Bilimsel hazırlıkta programa başvuru yapılabilirken, yabancı dil hazırlık aşamasında programa başvuru yapılamaz).\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde ALES sınavından herhangi bir puan türünde en az 70 puan almış olmak\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde YDS, e-YDS, YÖKDİL, e-YÖKDİL, TIPDİL sınavlarından birinden İngilizce dilinde en az 60 puan veya son 2 yıl içerisinde ÖSYM tarafından eş değerliği kabul edilen yabancı dil sınavlarından birinden İngilizce dilinde muadil puan almış olmak \n\nYüksek lisans öğrenimini tezsiz yapanlar başvuru yapamaz\n\nDiğer kamu kurumları, sivil toplum kuruluşları, yetim maaşı, nafaka, KYK öğrenim kredisi veya burslarından yararlananlar, aynı anda bu programdan da faydalanabilir. \n\nDaha önce 2210-Yurt İçi Yüksek Lisans Burs Programlarından yüksek lisans bursu almamış olmak (Daha önce burs alıp, herhangi bir sebeple iade edenler başvuru yapamazlar. Ancak hiç burs ödemesi almadan bursiyerlik hakkından vazgeçenler başvuru yapabilirler). \n\nKamuda veya özel sektörde çalışan tezli yüksek lisans öğrencileri başvuru yapabilir.\n\nÖzel öğrenci statüsünde olanlar başvuru yapamaz\nBurslar, bursiyerin desteklenmeye başladığı başvuru dönemi esas alınarak 24 ay sonunda sona erdirilir.\n\n2211 Yurt İçi Lisansüstü Burs Programı’nın alt programlarına aynı başvuru dönemi içinde birden fazla başvuru yapılamaz. \n\nBİDEB’in 2205 - Lisans Burs Programı bursiyeri iken öğrenimlerini başarıyla tamamlayıp takip eden yarıyılda, hiç ara vermeksizin yüksek lisans programına başlamak \n\nMezun oldukları dönemi takip eden dönemde doğrudan bursiyerlik başvurusu yapmak\n\nTezli yüksek lisans programına kayıt yaptıran adayların, BİDEB lisans bursiyeri olup başvuruda belirtilen lisans programını başarıyla tamamlayıp 4’lük not sistemi için en az 2,5; 100’lük not sistemi için en az 65 ortalama ile mezun olmak\n\nSÜREÇ\nBaşvuru\nDeğerlendirme \nDestek" ,
+        "SupportAmount":"Tam Burs: 13.800 TL/ay\nKısmi Burs: 4.000 TL/ay.\n\n\n",
+        "deadline": "1. Dönem 30 Mayıs 2025\n2. Dönem 14 kasım 2025",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Lisans eğitimleri sırasında BİDEB bursiyeri olan başarılı öğrencilerin lisanstan mezun oldukları dönemi takip eden dönemde yüksek lisans öğrenimine başlamaları teşvik edilir."
+      }
+  ,
+      {
+        "programId": "2211-A",
+        "programName": "2211-A Genel Yurt İçi Doktora Burs Programı",
+        "targetAudience": "Doktora öğrencileri",
+        "targetConditionsAndProcess":"T.C. vatandaşı veya 5901 sayılı kanunda geçen Mavi Kart sahibi olmak \n\nTürkiye’de bir doktora programında veya 2547 sayılı kanunda geçen doktoraya eş değer bir programda kayıtlı olmak\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde ALES sınavından herhangi bir puan türünde en az 70 puan almış olmak\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde YDS, e-YDS, YÖKDİL, e-YÖKDİL, TIPDİL sınavlarından birinden İngilizce dilinde en az 70 puan veya son 2 yıl içerisinde ÖSYM tarafından eş değerliği kabul edilen yabancı dil sınavlarından birinden İngilizce dilinde muadil puan almış olmak\n\nDaha önce 2211-Yurt İçi Doktora Burs Programlarından doktora bursu almamış olmak\n\nKamuda ya da özel sektörde çalışanlar da dâhil olmak üzere başvuru için aranan koşulları sağlayan tüm lisans sonrası bütünleşik doktora veya yüksek lisans sonrası doktora öğrencileri başvuru yapabilir.  \nÖzel öğrenci statüsünde olanlar başvuru yapamaz.\n\n2211 Yurt İçi Lisansüstü Burs Programı’nın alt programlarına aynı başvuru dönemi içinde birden fazla başvuru yapılamaz.\n\nYüksek lisans sonrası doktora bursları 48 ay, bütünleşik doktora bursları ise 60 ay sonunda sona erer.\nSÜREÇ\nBaşvuru\nDeğerlendirme \nDestek\n" ,
+        "SupportAmount":"Tam Burs: 27.500 TL/ay\nKısmi Burs: 7.250 TL/ay.\n\n\n",
+        "deadline": "1. Dönem 30 Mayıs 2025\n2. Dönem 14 kasım 2025",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında, sürdürülebilir kalkınma ve teknolojik gelişime öncülük edecek insan kaynağının nicelik ve niteliğinin artırılması amacıyla doktora öğrenimi yapan üretken, duyarlı, yeniliklere açık ve araştırmacı öğrenciler desteklenir."
+      }
+  ,
+      {
+        "programId": "2211-C",
+        "programName": "2211-C-Yurt İçi Öncelikli Alanlar Doktora Burs Programı",
+        "targetAudience": "Doktora öğrencileri",
+        "targetConditionsAndProcess":"T.C. vatandaşı veya 5901 sayılı kanunda geçen Mavi Kart sahibi olmak \n\nTürkiye’de bir doktora programında veya 2547 sayılı kanunda geçen doktoraya eş değer bir programda kayıtlı olmak\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde ALES sınavından herhangi bir puan türünde en az 70 puan almış olmak\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde YDS, e-YDS, YÖKDİL, e-YÖKDİL, TIPDİL sınavlarından birinden İngilizce dilinde en az 70 puan veya son 2 yıl içerisinde ÖSYM tarafından eş değerliği kabul edilen yabancı dil sınavlarından birinden İngilizce dilinde muadil puan almış olmak\n\nDaha önce 2211-Yurt İçi Doktora Burs Programlarından doktora bursu almamış olmak\n\nKamuda ya da özel sektörde çalışanlar da dâhil olmak üzere başvuru için aranan koşulları sağlayan tüm lisans sonrası bütünleşik doktora veya yüksek lisans sonrası doktora öğrencileri başvuru yapabilir.  \nÖzel öğrenci statüsünde olanlar başvuru yapamaz.\n\n2211 Yurt İçi Lisansüstü Burs Programı’nın alt programlarına aynı başvuru dönemi içinde birden fazla başvuru yapılamaz.\n\nYüksek lisans sonrası doktora bursları 48 ay, bütünleşik doktora bursları ise 60 ay sonunda sona erer.\nTez önerisi enstitü tarafından kabul edilmiş olmak\nSÜREÇ\nBaşvuru\nÖn Değerlendirme \nBilimsel Değerlendirme\nDestek\nÖncelikli Alanlar:\n1. Afet yönetimi teknolojileri\n2. Akıllı şebeke sistemleri\n3. Arıtma teknolojileri (su, atık su ve katı atık dâhil-çevre biyoteknolojisi)\n4. Bilim tarihi\n5. Bilişim hukuku\n6. Blokzincir teknolojileri\n7. Büyük veri ve bulut bilişim\n8. Deniz hukuku\n9. Eğitimde dijitalleşme ve yenilikçilik\n10. Enerji depolama teknolojileri\n11. Göç araştırmaları\n12. Güneş enerjisi teknolojileri\n13. Hava araçları (uçak, İHA vb.) tasarımı, testi ve performansı\n14. İlaç ve aşı teknolojileri\n15. İleri malzeme teknolojileri\n16. Kadın ve aile araştırmaları \n17. Karbondioksit yakalama, kullanma ve depolama (KYKD) teknolojileri\n18. Katmanlı imalat teknolojileri\n19. Kritik hammaddeler ve mineraller\n20. Kuantum teknolojileri\n21. Kutup araştırmaları\n22. Modelleme ve simülasyon teknolojileri\n23. Kültürel miras\n24. Mikro/Nano/Opto-Elektromekanik sistemler\n25. Motor teknolojileri\n26. Nesnelerin interneti\n27. Nükleer enerji teknolojileri\n28. Petrokimya ve polimer teknolojileri\n29. Robotik-mekatronik\n30. Rüzgâr enerjisi teknolojileri \n31. Sektörel ve bölgesel büyüme analizleri\n32. Siber güvenlik\n33. Sürdürülebilir ve alternatif finansal sistemler\n34. Tarım biyoteknolojisi (biopestisitler, genetik ıslah ve tohum geliştirme dâhil)\n35. Tıbbi cihaz teknolojileri\n36. Uydu, uzay araçları ve fırlatma teknolojileri\n37. Uzay hukuku\n38. Yapay zekâ\n39. Yarı iletken ve çip teknolojileri\n40. Yeni nesil haberleşme teknolojileri\n41. Yeşil hidrojen teknolojileri\n\n\n\n" ,
+        "SupportAmount":"Tam Burs: 27.500 TL/ay\nKısmi Burs: 7.250 TL/ay.\n\n\n",
+        "deadline": "1. Dönem 30 Mayıs 2025\n2. Dönem 14 kasım 2025",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında, sürdürülebilir kalkınma ve teknolojik gelişime öncülük edecek insan kaynağının nicelik ve niteliğinin artırılması amacıyla doktora öğrenimi yapan üretken, duyarlı, yeniliklere açık ve araştırmacı öğrenciler desteklenir. Bu doğrultuda, başarılı öğrencilerin doktora tezlerini ülkemizin ihtiyaç duyduğu öncelikli alanlarda hazırlamaları teşvik edilir."
+      }
+  ,
+      {
+        "programId": "2211-E",
+        "programName": "2211-E Doğrudan Yurt İçi Doktora Burs Programı",
+        "targetAudience": "Doktora öğrencileri",
+        "targetConditionsAndProcess":"T.C. vatandaşı veya 5901 sayılı kanunda geçen Mavi Kart sahibi olmak \n\nBİDEB’in 2205-Lisans Burs Programı veya 2210-E Yurt İçi Doğrudan Yüksek Lisans Burs Programı bursiyeri iken öğrenimlerini başarıyla tamamlayıp takip eden yarıyılda, hiç ara vermeksizin doktora programına veya 2547 sayılı kanunda geçen doktoraya eş değer bir programa başlamak\n\nMezun oldukları dönemi takip eden dönemde doğrudan bursiyerlik başvurusu yapmak\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde ALES sınavından herhangi bir puan türünde en az 70 puan almış olmak,\n\nBaşvuru yılı itibarıyla son 5 yıl içerisinde YDS, e-YDS, YÖKDİL, e-YÖKDİL, TIPDİL sınavlarından birinden İngilizce dilinde en az 70 puan veya son 2 yıl içerisinde ÖSYM tarafından eş değerliği kabul edilen yabancı dil sınavlarından birinden İngilizce dilinde muadil puan almış olmak\n\nLisans sonrası bütünleşik doktora programına kayıt yaptıran adaylar için, BİDEB lisans bursiyeri olup başvuruda belirtilen lisans programını başarıyla tamamlayıp 4’lük not sistemi için en az 2,80; 100’lük not sistemi için en az 72 ortalama ile mezun olmak\n\nYüksek lisans sonrası doktora programına kayıt yaptıran adaylar için, BİDEB yüksek lisans bursiyeri olup başvuruda belirtilen yüksek lisans programını başarıyla tamamlayıp 4’lük not sistemi için en az 3,50; 100’lük not sistemi için en az 88,33 ortalama ile mezun olmak\n\nÖzel öğrenci statüsünde olanlar başvuru yapamaz.\n\n2211 Yurt İçi Lisansüstü Burs Programı’nın alt programlarına aynı başvuru dönemi içinde birden fazla başvuru yapılamaz.\n\n\n\nSÜREÇ\nBaşvuru\nDeğerlendirme \nDestek" ,
+        "SupportAmount":"Tam Burs: 27.500 TL/ay\nKısmi Burs: 7.250 TL/ay.\n\nBu programdan desteklenen bursiyerler, ARDEB veya TEYDEB projelerinde görev alıyorsa, 2250-Lisansüstü Bursları Performans Programı mevzuatına uygun olarak aynı anda 2250 Programı’ndan da 8.700 TL/Ay'a kadar ek burs alabilir.\n",
+        "deadline": "1. Dönem 30 Mayıs 2025\n2. Dönem 14 kasım 2025",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Başarılı öğrencilerin lisans eğitimleri sırasında BİDEB bursiyeri olup lisanstan mezun oldukları dönemi takip eden dönemde bütünleşik doktora veya yüksek lisans eğitimleri sırasında BİDEB bursiyeri olup yüksek lisanstan mezun oldukları dönemi takip eden dönemde doktora öğrenimine başlamaları teşvik edilir. "
+      }
+  ,
+      {
+        "programId": "2213-A",
+        "programName": "2213-A Yurt Dışı Doktora Burs Programı",
+        "targetAudience": "Doktora öğrencileri",
+        "targetConditionsAndProcess":" Program kapsamında belirlenen araştırma alanlarında yurt dışında doktora eğitimi almayı amaçlayan, lisans öğreniminde son sınıfa geçmiş, lisans öğrenimini tamamlamış, bir lisansüstü programına kayıtlı ya da bir yüksek lisans programını tamamlayan kişiler başvuru yapabilir.\nBaşvuru yılı itibarıyla son 5 yılda YDS, e-YDS, YÖKDİL, e-YÖKDİL, TIPDİL'den en az 70 puan veya son 2 yılda ÖSYM’nin kabul ettiği eşdeğer bir sınavdan muadil puan almış olmak.\nYa da %100 yabancı dilde eğitim veren bir lisans/lisansüstü programından mezun olmak.\n\nLisans GANO: En az 2,50/4,00 veya 65/100.\n\nSon 3 yılda THE, QS veya Shanghai ARWU alan sıralamasında ilk 100’deki bir üniversitede doktora kabulü belgesi.\n\nSÜREÇ \nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek\n\n\nÖncelikli Alanlar:\n\nBilgi Güvenliği\nBilim Tarihi\nBiyoenerji\nBlok Zincir Teknolojileri\nBulut Bilişim\nEklemeli (Additive) İmalat\nEnerji Depolama Teknolojileri\nEnerji Verimliliği\nGeniş bant Teknolojileri (Kablolu/Kablosuz İletişim Teknolojileri, IP teknolojileri)\nGüneş Enerjisi\nKömür Teknolojileri\nKuantum Teknolojileri\nMikro/Nano/Opto-Elektromekanik Sistemler\nNesnelerin İnterneti\nRobotik, Mekatronik ve Otomasyon\nRüzgâr Enerjisi\nTarım ve Hayvan Biyoteknolojisi\nYapay Zekâ ve Makine Öğrenmesi\n\n" ,
+        "SupportAmount":"\nAylık 1.900 ABD ",
+        "deadline": "31-Aralık-2025",
+        "region": "Uluslararası ",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında, sürdürülebilir kalkınma ve teknolojik gelişime öncülük edecek insan kaynağının niteliğinin artırılması amacıyla öğrenimlerini tamamladıktan sonra Türkiye’ye dönmeleri kaydıyla yurt dışında doktora eğitimi almak isteyen üretken, duyarlı, yeniliklere açık ve araştırmacı öğrenciler desteklenir. Bilim, Teknoloji ve Yenilik Politikaları Kurulu tarafından belirlenen öncelikli alanlar ve buna bağlı olarak Yönetim Kurulu’nun belirlediği aşağıdaki tematik alanlarda yurt dışında doktora yapmak isteyen öğrencilere yurt dışındaki bir doktora programına kayıt yaptırmış olmaları şartıyla burs verilir."
+      }
+  ,
+      {
+        "programId": "2214-A",
+        "programName": "2214-A-Yurt Dışı Doktora Sırası Araştırma Burs Programı",
+        "targetAudience": "Doktora öğrencileri",
+        "targetConditionsAndProcess":"T.C. vatandaşı olmak,\n\nÜlkemiz yükseköğrenim kurumlarından birinde doktora/tıbbi bilimlerde uzmanlık/sanatta yeterlik programına kayıtlı olup, yeterliliği geçmiş ve tez önerisi ilgili birim tarafından kabul edilmiş olmak,\n\nBaşvuru sahibinin değerlendirileceği alanda, başvuru yılında QS (Quacquarelli Symonds), THE (Times Higher Education) Dünya Üniversite Sıralamasında ilk 200 ya da Scimago Kamu Araştırma Enstitüleri/Kurumları (Scimago Institutions Rankings-Government) Sıralamasında ilk 350’de yer alan bir kurum tarafından davet edilmiş olmak,\nVEYA\nCategory Normalized Citation Impact (CNCI) (Kategori Normalize Atıf Etkisi) veya Field-Weighted Citation Impact (FWCI) (Alan Ağırlıklı Atıf Etkisi) değeri 1.00 veya 1.00’den büyük ve en az doktora derecesine sahip yurt dışı danışmanı tarafından davet edilmiş olmak,\nBu programdan daha önce yararlanmamış olmak,\n\nAşağıda belirtilen yabancı dil yeterlik koşullarından birini sağlamak,\n•YDS, e-YDS, YÖKDİL, e-YÖKDİL veya TIPDİL sınavlarından birinden en az 65 puan veya ÖSYM tarafından eş değerliği kabul edilen yabancı dil sınavlarından birinden muadil puan almış olmak ya da\n•%100 yabancı dille öğretim yapan bir üniversitede lisans/yüksek lisans öğrenimi görmüş olmak\n\nTeziyle ilgili araştırma yapacak olmak,\n\nYüksek lisans sonrası doktora programına kayıtlı adaylar için doktora kayıt yılı ile başvuru yılı arasında dört yılı; bütünleşik doktora programına kayıtlı adaylar için doktora kayıt yılı ile başvuru yılı arasında beş yılı aşmamış olmak,\n\n\n\nSÜREÇ \nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek" ,
+        "SupportAmount":"\nAylık burs miktarı Birleşik Krallık için 1500 sterlin, Avrupa ülkeleri için en fazla 1.700 avro, diğer ülkeler için en fazla 1.900 Amerikan doları kadardır. \n",
+        "deadline": "5-Eylül-2025",
+        "region": "Uluslararası ",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında; ülkemizin öncelikli ihtiyaçları doğrultusunda, araştırmacıların bilimsel üretkenliğini artırmak, uluslararası işbirliklerini güçlendirmek ve alanlarında yenilikçi yöntem ve yaklaşımlar edinerek akademik yetkinliklerini geliştirmelerini sağlamak amacıyla doktora sırası araştırmacılara destek verilmektedir."
+      }
+  ,
+      {
+        "programId": "2216-B",
+        "programName": "2216-B-TÜBİTAK-TWAS Doktora Sırası ve Doktora Sonrası Araştırma Burs Programları",
+        "targetAudience": "Doktora öğrencileri ve Doktora sonrası araştırmacılar",
+        "targetConditionsAndProcess":"DR için: Başvuru yılının 31 Aralık tarihi itibariyle 35 yaşını doldurmamış olmak.\n\nDR Sonrası: Başvuru yılının 31 Aralık tarihi itibariyle 45 yaşını doldurmamış olmak.\n\n· Gelişmekte olan ülke vatandaşı olmak ve gelişmekte olan ülkelerde daimi ikamet ediyor olmak;\n· Halihazırda ev sahibi ülkede (Türkiye) ikamet etmiyor olmak;\n· Doğa ve ilgili uygulamalı bilimlerde araştırma yapıyor olmak;\n· Daha önce BİDEB 2216 programlarından yararlanmamış olmak;\n· Türkiye’deki akademik danışman en fazla 2 (iki) olabilir.\n\nTürkiye’de bulunan bir üniversiteden ya da TÜBİTAK Araştırma Merkez ve Enstitülerinden resmi kabul almış olmak\nBaşvuru Yapabilecek Alanlar:\nTarımsal Bilimleri\nYapısal, Hücre. & Moleküler Biyoloji\nBiyolojik Sistemler ve Organizmalar\nNörobilimler dahil Tıp ve Sağlık Bilimleri\nKimya Bilimleri\nMühendislik Bilimleri\nAstronomi, Uzay ve Yer Bilimi\nMatematik Bilimleri\nFizik\nBilgisayar ve Bilgi Teknolojileri\n\n\nSÜREÇ \nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek" ,
+        "SupportAmount":"\n\nDoktora öğrencileri için: Aylık 27.500 TL burs. \n\nDoktora sonrası araştırmacılar için: Aylık 36.500 TL burs. \n",
+        "deadline": "Belli Değil",
+        "region": "Uluslararası ",
+        "category": "Akademi",
+        "supportPurpose": "BİDEB-TÜBİTAK ve TWAS-UNESCO iş birliği ile hazırlanan programın amacı, gelişmekte olan ülkelerden Türkiye’ye gelecek olan doğa ve ilgili uygulamalı bilimlerde yurt dışında doktora programına halen kayıtlı olan veya doktorasını almış uluslararası araştırmacılara finansal destek sağlayarak, Türkiye'nin bilim ve teknoloji alanındaki uluslararası iş birliğini ilerletmektir."
+      }
+  ,
+      {
+        "programId": "2218",
+        "programName": "2218-Yurt İçi Doktora Sonrası Araştırma Burs Programı",
+        "targetAudience": "Doktora sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"Tam burs alan ve herhangi bir kurumda çalışmayan bursiyerlerin, isteğe bağlı sigorta yaptırmaları durumunda, en düşük sigorta priminin yarısı her ay bursa eklenir.\n\nTÜBİTAK’ın diğer programlarından burs, ücret, PTİ vb. hak kazananların, bu program kapsamında destek alabilmesi için diğer haklarından feragat etmesi gerekir. Projelerine devam edebilirler.\n\nBaşvuru tarihi itibariyle aşağıdaki Tablo'da yer alan kriterler kapsamında başvuru yapan kişinin asgari toplam 5 puan ve üzerinde puan almış olmak,\n\nAraştırmayı Tablo’da yer alan kriterler kapsamında son iki yıl içinde asgari toplam 5 puan ve üzerinde puan almış olan bir danışman ile yapacak olmak,\n-Araştırmalarını TÜBİTAK Merkez ve Enstitülerinde, 5746 sayılı Araştırma, Geliştirme ve Tasarım Faaliyetlerinin Desteklenmesi Hakkında Kanun kapsamında Ar-Ge veya tasarım merkezi belgesi almış Ar-Ge birimlerine sahip Türkiye’de yerleşik sermaye şirketleri veya 4691 sayılı Teknoloji Geliştirme Bölgeleri Kanunu kapsamındaki teknoparklar bünyesinde yerleşik sermaye şirketleri/ 6550 Araştırma Altyapılarının Desteklenmesine Dair Kanun kapsamındaki Araştırma Altyapılarında yürütecek araştırmacıların danışmanlarından Tablo 1’deki kriterler aranmaz.\n\n\nSÜREÇ \nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek" ,
+        "SupportAmount":"Tam Burs: 36.500 TL\nKısmi Burs: 10.000 TL\nAraştırma Desteği: En fazla 150.000 TL\nDanışmanlık Ücreti: 1.000 TL/rapor dönemi \n\nİsteğe bağlı sigorta bursu,\n\n",
+        "deadline": "5-Eylül-2025",
+        "region": "Ulusal ",
+        "category": "Akademi",
+        "supportPurpose": "ülkemizin öncelikli ihtiyaçları doğrultusunda, doktora sonrası araştırmacıların bilimsel üretkenliğini artırmak, ulusal işbirliklerini güçlendirmek ve alanlarında yenilikçi yöntem ve yaklaşımlar edinerek akademik yetkinliklerini geliştirmelerini sağlamak amacıyla; Türkiye’deki yükseköğretim kurumları, araştırma altyapıları , kamu araştırma enstitüleri, Ar-Ge ve tasarım merkezleri ile teknoparklardaki şirketlerde yürütülecek araştırma projelerine destek verilmektedir\n\n*Kadın başvuru sahiplerinde her doğum için bir yıl ilave edilir.\n"
+      },
+      {
+        "programId": "2219",
+        "programName": "2219-Yurt Dışı Doktora Sonrası Araştırma Burs Programı",
+        "targetAudience": "Doktora sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"T.C. vatandaşı olmak.\n\n-Doktora derecesi ya da tıpta, diş hekimliğinde, eczacılıkta ve veteriner hekimlikte uzmanlık veya sanatta yeterlik derecesi almış olmak,\n\n-Yurt dışında bir kurumda çalışmıyor olmak,\n\n-Emekli olmamak,  \n\n-Araştırmanın yürütüleceği ev sahibi kurumdan doktora derecesi almamış olmak.\n\n-QS/THE alan sıralamalarında ilk 100 veya Scimago kamu araştırma enstitüleri/kurumları sıralamasında ilk 250’deki bir kurumdan \nVEYA \nCNCI/FWCI değeri ≥1.00 olan doktoralı bir danışmandan davet almış olmak.\n\n-Yabancı dil şartını sağlamak (ÖSYM tarafından kabul edilen sınavlardan en az 65 puan veya eşdeğer yabancı dil sınavlarından eşdeğer puan almak; ya da araştırma dilinde eğitim veren bir kurumdan lisans/lisansüstü öğretim görmüş olmak.)\nDeğerlendirme Yöntemi\n\nÖn incelemeyi geçen başvurular bilimsel değerlendirmeye alınır. \n\nBilimsel değerlendirme, alanında uzman panelist/danışmanlar tarafından yapılmaktadır.\n\n\nSÜREÇ \nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek\n" ,
+        "SupportAmount":"Aylık burs miktarı\nAB: 2.350 avro, \nAmerika 2.600 doları, \nBirleşik Krallık 2.050 GBP \n",
+        "deadline": "1-Eylül-2025",
+        "region": "Uluslararası ",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında; ülkemizin öncelikli ihtiyaçları doğrultusunda, araştırmacıların bilimsel üretkenliğini artırmak, uluslararası işbirliklerini güçlendirmek ve alanlarında yenilikçi yöntem ve yaklaşımlar edinerek akademik yetkinliklerini geliştirmelerini sağlamak amacıyla doktora sonrası araştırmacılara destek verilmektedir."
+      },
+      {
+        "programId": "2221",
+        "programName": "2221-Konuk veya Akademik İzinli (Sabbatical) Bilim İnsanı Destekleme Programı",
+        "targetAudience": "Doktora sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"Konuk/akademik izinli bilim insanının, başvuru tarihi itibarıyla yurt dışında en az 4 yıl süreyle bir üniversite, araştırma merkezi veya özel sektörde doktora gerektiren bir işte çalışıyor olmalıdır.\nBaşvurunun, konuk bilim insanını davet eden TÜBİTAK’a karşı sorumlu bilim insanı tarafından yapılmalıdır (Her konuk için ayrı başvuru yapılmalıdır).\n\nKonuğun, davet eden kurum tarafından resmi olarak davet edilmiş olmalıdır.\n\nKonuk/akademik bilim insanının son 3 yılda toplamda 12 aydan fazla desteklenmemiş olmalıdır.\n\nProgram kapsamında destek almış bilim insanları aynı kişiyi yıl içerisinde davet süresi toplamda 12 ayı aşmamak üzere en çok 2 kez davet edebilir.\n\nSÜREÇ \nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek" ,
+        "SupportAmount":" Destekler\nTek seferlik geliş-dönüş yol giderleri\nGünlük/aylık yaşam gideri katkısı\n3-12 ay için sağlık sigortası giderleri \n\nKonuk Bilim İnsanı: En az 7gün en çok 12ay \nAkademik İzinli: En az 3 ay, en çok 12 ay\n\nKonuk Bilim İnsanı: 66.000 TL/ay\n\nAkademik İzinli: 84.000 TL/ay \n\n1 Aydan kısa süreli desteklerde aylık tutar 30'a bölünerek ödenecektir.\n",
+        "deadline": "1. Dönem 14 şubat 2025\n2. Dönem 31 Mart 2025\n3. Dönem 31 Mayıs 2025\n4. Dönem 31 Temmuz 2025\n5. Dönem 30 eylül 2025\n6. Dönem 30 Kasım 2025",
+        "region": "Uluslararası ",
+        "category": "Akademi",
+        "supportPurpose": "Yurt dışındaki öncü bilim insanlarının Türkiye’ye gelerek araştırma, laboratuvar çalışması, ürün geliştirme, konferans düzenleme, seminer verme, eğitim ve ortak proje yazma gibi akademik ve Ar-Ge faaliyetlerine katılımını teşvik eden programdır. Ayrıca, akademik izin (sabbatical) döneminde üniversite ve enstitülerde bu tür faaliyetlerin gerçekleştirilmesine destek sağlanır."
+      },
+      {
+        "programId": "2223-B",
+        "programName": "2223-B-Yurt İçi Bilimsel Etkinlik Düzenleme Desteği",
+        "targetAudience": "Doktora sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"Başvuru Koşulları:\n\na. Başvuru, yurt içinde ikamet eden, en az doktora derecesine sahip etkinlik yürütücüsü tarafından yapılmalıdır.\n\nb. Etkinlik yürütücüsü, görev yaptığı kurumdan etkinliği gerçekleştireceğine dair resmi yazı almalıdır.\n\nÜniversitelerde görev yapanlar: Rektör veya Rektörün yetki verdiği Rektör Yardımcısından,\n\nAraştırma merkezlerinde çalışanlar: Merkez Başkanı/Enstitü Müdürü.\nHastanelerde çalışanlar: Başhekim veya yetkili kişi c. Etkinlik, en az 100 katılımcıyla gerçekleştirilmelidir.\n\nd. Etkinlik, hakemli olmalıdır.\n\ne. En fazla 4 yıl aralıklarla düzenleniyor olmalıdır.\n\nf. En az 3. kez düzenleniyor olmalıdır.\n\n* Etkinlik türünün çalıştay veya kolokyum olması halinde c, d, e, f maddelerindeki şartlar aranmaz.\n\ng. Kendine özgü ve güncel bir internet sayfasına sahip olmalıdır. (İçeriği: düzenleme/ bilim kurulu üyeleri, etkinlik konusu, amacı, kapsamı, yeri ve tarihi.)\n\nh. Etkinlik düzenleme kurulu, TÜBİTAK ARBİS’e kayıtlı bilim insanlarından oluşmalıdır. (Yabancı katılımcılar için ARBİS üyeliği şartı yoktur.)\ni. Etkinlik yürütücüsü, son 1 yıl içinde bu destek programından bir defadan fazla yararlanmamış olmalıdır.\n\nj. Düzenleme kurulu, en az 3 farklı üniversite/araştırma kuruluşu mensubu bilim insanından oluşmalıdır.\n\nk. Etkinlik başlangıç tarihi, başvuru döneminin son tarihinden en az 60, en çok 270 gün sonra olmalıdır. (Etkinlik düzenlendikten sonra yapılan başvurular kabul edilmez.)\n\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek\n\n" ,
+        "SupportAmount":"Destek Üst Limiti: 117.000 TL\n\n\n",
+        "deadline": "1. Dönem 14 şubat 2025\n2. Dönem 2 mayıs 2025\n3. Dönem 1 Ağustos 2025\n4. Dönem 24 Ekim 2025",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında farklı kurumlarda görev yapan bilim insanlarının bir araya gelmesi, bilgi ve deneyim paylaşımı yapılması, çok disiplinli ve disiplinler arası çalışmalara zemin hazırlaması amacıyla yurt içinde düzenlenen kongre, konferans, kolokyum, sempozyum ve çalıştay türü (çevrim içi yapılacaklar dâhil) etkinliklere destek verilir. "
+      },
+      {
+        "programId": "2223-C",
+        "programName": "2223-C-Çok Katılımlı Uluslararası Etkinlik Düzenleme Desteği",
+        "targetAudience": "Doktora sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"Başvuru yapılacak bilimsel etkinliğin, Web of Science Conference Proceedings Citation Index (CPCI-S, CPCI-SSH) veya Scopus veri tabanlarında indeksleniyor olması gerekir.\n\na. Başvuru, yurt içinde ikamet eden ve üniversite/eğitim ve araştırma hastanesi/araştırma enstitüsünde çalışan, doktora derecesine sahip etkinlik yürütücüsü tarafından yapılmalıdır.\n\nb. Etkinlik yürütücüsü, görev yaptığı kurumdan etkinliği gerçekleştireceğine dair resmi yazı almalıdır \n\nc. Etkinlikte toplam katılımcı sayısı en az 250 kişi olmalıdır.\n\nç. Etkinlik hakemli olmalıdır.\n\nd. Etkinlik en fazla 4 yıl ara ile düzenleniyor olmalıdır.\n\ne. Etkinliğin en az 3. kez düzenleniyor olması gerekir \n\nf. Daha önce düzenlenmiş son 2 etkinlik yurt dışında gerçekleştirilmiş olmalıdır.\n\ng. Etkinliğin kendine özgü, güncel bir internet sayfası bulunmalıdır. (Sayfada düzenleme ve bilim kurulu üyeleri, etkinlik konusu, amacı, kapsamı, yeri ve tarihi açıkça belirtilmelidir.)\nh. Etkinlik yürütücüsü, etkinlik başlama tarihi itibarıyla son 1 yıl içinde aynı programdan bir defadan fazla yararlanmamış olmalıdır. \n\nı. Düzenleme Kurulu, en az 1’i yurt dışından olmak üzere 3 farklı üniversite/araştırma kuruluşu mensubu bilim insanından oluşmalıdır \n\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek\n" ,
+        "SupportAmount":"Destek Üst Limiti: 365.000 TL\n\n\n",
+        "deadline": "1. Dönem 14 şubat 2025\n2. Dönem 2 mayıs 2025\n3. Dönem 1 Ağustos 2025\n4. Dönem 24 Ekim 2025",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında farklı kurumlarda görev yapan bilim insanlarının bir araya gelmesi, bilgi ve deneyim paylaşımı yapılması, çok disiplinli ve disiplinler arası çalışmalara zemin hazırlaması amacıyla yurt içinde düzenlenen kongre, konferans, kolokyum ve sempozyum türü (çevrim içi yapılacaklar dahil) etkinliklere destek verilir. "
+      },
+      {
+        "programId": "2223-D",
+        "programName": "2223-D-İkili İş Birliği Anlaşmaları Çerçevesinde Etkinlik Düzenleme Desteği",
+        "targetAudience": "Doktora sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"Etkinlik yürütücüsü, en az doktora veya 10 yıl mesleki deneyime sahip olmalı\nKatılımcılar yalnızca çağrıda duyurulan ülkelerde veya Türkiye’de çalışıyor olmalı.\n\nKatılımcıların Türkiye’den olanları, kamu kurum/kuruluşları ve/veya üniversite/araştırma kuruluşlarında çalışmalı.\nEtkinliğe en az 30 katılımcı katılmalı.\n\nEtkinliğe ait güncel ve özgün bir internet sayfası olmalı.\nEtkinlik başlangıç tarihi, başvuru döneminin son tarihinden en az 60, en çok 270 gün sonra olmalıdır. \n\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek\n\n" ,
+        "SupportAmount":"Destek Üst Limiti: 195.000 TL",
+        "deadline": "1. Dönem 14 şubat 2025\n2. Dönem 2 mayıs 2025\n3. Dönem 1 Ağustos 2025\n4. Dönem 24 Ekim 2025",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Bilim, teknoloji ve yenilik alanlarında iş birliğini geliştirmek, ortak araştırma projeleri yapmak ve sürdürülebilir ortaklıklar kurmak amacıyla, Türkiye'nin ikili iş birliği anlaşmaları çerçevesinde yurt içinde düzenlenen çalıştay, seminer, panel, kolokyum gibi etkinliklere destek verilir (çevrim içi etkinlikler de dahil). "
+      },
+      { 
+        "programId": "2224-A",
+        "programName": "2224-A Yurt Dışı Bilimsel Etkinliklere Katılımı Destekleme Programı",
+        "targetAudience": "Önlisans Öğrencileri, Lisans Öğrencileri, Yüksek LisasÖğrencileri, Doktora Öğrencileri, Lisans Mezunları, Yüksek lisans Mezunları, Doktora Sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"Başvuru Koşulları:\n\nBaşvuru sahibinin en az önlisans öğrenimi görüyor/görmüş olması.\n\nBaşvurulacak bilimsel etkinlik, Web of Science Conference Proceedings Citation Index (CPCI-S, CPCI-SSH) veya Scopus veri tabanlarında indeksleniyor olmalı.\n\nBildiri, sözlü/poster sunum için etkinliğe gönderilmiş veya kabul edilmiş olmalı ya da davetli konuşmacı olunmalı.\n\n2224-A programından ilgili yıl içinde yararlanılmamış olması gerekmektedir.\nBildirinin sunulacağı dilde aşağıdaki yabancı dil koşullarından biri sağlanmalı:\n\n ÖSYM tarafından yapılan (YDS, e-YDS, YÖKDİL, e-YÖKDİL, TIPDİL vb.) sınavlardan birinden en az 70 puan veya ÖSYM tarafından eş değerliği kabul edilen yabancı dil sınavlarından birinden muadil puan almış olmak,\n\n %100 yabancı dille öğretim yapan bir üniversitede önlisans, lisans, yüksek lisans ya da doktora öğrenimi görüyor/görmüş olmak,\nSÜREÇ\nBaşvuru\nDeğerlendirme\nDestek" ,
+        "SupportAmount":"Destek Üst Limiti: 2.000 Dolar",
+        "deadline": "1. Dönem 14 şubat 2025\n2. Dönem 2 mayıs 2025\n3. Dönem 1 Ağustos 2025\n4. Dönem 24 Ekim 2025",
+        "region": "Uluslararası ",
+        "category": "Akademi",
+        "supportPurpose": "Bu program, araştırmacıların özgün çalışmalarını bilim dünyasıyla paylaşmalarını, geri bildirim alarak çalışmalarını geliştirmelerini ve alanlarındaki uzman bilim insanlarıyla etkileşim ve iş birliklerini artırmalarını amaçlar. Yurt dışında düzenlenen (çevrim içi etkinlikler dahil) bilimsel etkinliklere bildiri sunulması için destek verilir."
+      },
+      {
+        "programId": "2224-B",
+        "programName": "2224-B-Yurt İçi Bilimsel Etkinliklere Katılımı Destekleme Programı",
+        "targetAudience": "Önlisans Öğrencileri, Lisans Öğrencileri, Yüksek LisasÖğrencileri, Doktora Öğrencileri, Lisans Mezunları, Yüksek lisans Mezunları, Doktora Sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"Başvuru sahibinin aşağıdaki koşulları sağlaması gerekir:\n\nBaşvuru sahibinin en az önlisans öğrenimi görüyor/görmüş olması,\n\nBildirinin sözlü/poster sunum için etkinliğe gönderilmiş veya kabul edilmiş olması ya da davetli konuşmacı olunması,\n\n2224-B programından ilgili yıl içinde yararlanılmamış olması,\n\nÇok yazarlı bildirilerde yazarlardan birinin başvuru yapması gerekir. Çok yazarlı bildirilerde aynı bildiri için yalnızca bir yazar destek alabilir.\n\nİlk veya sorumlu yazar olunmaması durumunda ilk veya sorumlu yazardan feragat alınması gerekmektedir.\n\nYayınlanmış çalışmalar için bu program kapsamında destek verilmez\nSÜREÇ\nBaşvuru\nDeğerlendirme\nDestek" ,
+        "SupportAmount":" Destek Üst Limiti: 7.350 TL",
+        "deadline": "1. Dönem 14 şubat 2025\n2. Dönem 2 mayıs 2025\n3. Dönem 1 Ağustos 2025\n4. Dönem 24 Ekim 2025",
+        "region": "Ulusal",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında araştırmacıların kendi alanlarıyla ilgili bir konuda hazırladıkları özgün çalışmalarını bilim dünyasıyla paylaşmaları, geri bildirim ve bilimsel tartışmalar ile çalışmalarını geliştirmeleri, çalıştıkları alanlardaki uzman bilim insanlarıyla etkileşim ve iş birliklerini artırmaları amacıyla yurt içinde düzenlenen (çevrim içi yapılacaklar dahil) bilimsel etkinliklerde bildiri sunulması için destek verilir. "
+      },
+      {
+        "programId": "2224-C",
+        "programName": "2224-C-Uluslararası Anlaşmalar Çerçevesinde Yurt Dışındaki Bilimsel Etkinliklere Katılımı Destekleme Programı",
+        "targetAudience": "Lisans Öğrencileri\nYüksek Lisans Öğrencileri\nDoktora Öğrencileri\nDoktora Derecesine Sahip Araştırmacılar \n\n\n",
+        "targetConditionsAndProcess":"T.C. vatandaşı olmak.\nDaha önce 2224-C Programı ile yurt dışı etkinliklere katılmamış olmak. Son 5 yılda YDS, e-YDS, YÖKDİL vb. sınavlardan en az 60 puan almak veya eşdeğer puan.\nVeya %100 yabancı dilde öğrenim görmüş olmak.\nALES’ten en az 75 puan veya eşdeğer GRE/GMAT puanı. *\n(*Lisans ve DR. sonrası için ALES koşulu aranmaz.) \n\nTürkiye’de ilgili alanda eğitim/araştırma yapıyor olmak.\nEtkinlik tarihinde 35 yaşını aşmamış olmak.\nLisans: Min. ort. 2.75/4.00 veya 70.83/100.\nYL: Lisans ortalaması min. 2.75/4.00 veya 70.83/100.\nDoktora: YL ort. min. 3.20/4.00 veya 81.33/100.\nDoktora Sonrası: DR ort. min. 3.20/4.00 veya 81.33/100, mezuniyet üzerinden max. 5 yıl geçmiş olması.\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek\n\n" ,
+        "SupportAmount":" Desteklenecek kişilerin etkinlik katılım ücreti ve harcırah/konaklama giderleri protokol kapsamında belirlenen koşullara göre karşılanır.\n\nUçak bileti desteği talep edilmesi halinde TÜBİTAK tarafından sağlanır\n",
+        "deadline": "31-aralık-2025",
+        "region": "Uluslararası ",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında, Türkiye’de lisans veya lisansüstü eğitimlerine devam eden üstün başarılı öğrenciler ile gelecekte bilime ulusal ve uluslararası düzeyde önemli katkılarda bulunabilecek genç doktora araştırmacılarına, Nobel ödüllü bilim insanları ile genç araştırmacıları bir araya getiren “Lindau Nobel Ödüllü Bilim İnsanları Toplantıları”na katılım desteği sağlanır."
+      },
+      {
+        "programId": "2224-D",
+        "programName": "2224-D-Yurt Dışındaki Bilimsel Eğitim Etkinliklerine Katılımı Destekleme Programı",
+        "targetAudience": "Yurt içinde lise veya lisans öğrencisi olmak \n\nLisans öğrencisi için ek şartlar:\nEn az 2,50/4,00 veya 65/100 not ortalamasına sahip olmak.\nYDS’den en az 70 puan almak veya %100 yabancı dilde eğitim almak\n",
+        "targetConditionsAndProcess":"· 1, 2, 3, 4 veya 5 nolu maddelerden birini sağlaması: \n1. Yükseköğretim Kurumları Sınavı’nda (YKS) sayısal programlar için TYT veya Y-SAY; sözel ve eşit ağırlıklı programlar için TYT puan türünde ilk 25.000’e girmiş olması ve aşağıdaki koşullardan birini sağlaması: \n· Başvuru tarihinin son günü itibarıyla en az altı ay süreyle ARDEB/BİDEB/TEYDEB bursiyeri olması, \n· 2209-A Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı veya 2209-B Üniversite Öğrencileri Sanayiye Yönelik Araştırma Projeleri Desteği Programı’ndan birini başarı ile tamamlamış olması, \n· 2242 Üniversite Öğrencileri Araştırma Proje Yarışmaları Programının final aşamasında derece alması, \n· 2204-A Lise Öğrencileri Araştırma Projeleri Yarışması, 2204-C Lise Öğrencileri Kutup Araştırma Projeleri Yarışması veya 2204-D Lise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışması final aşamasında birincilik, ikincilik veya üçüncülük derecesi alması. \n2. 2202-Ulusal Bilim Olimpiyatları (ortaokul düzeyi hariç) ikinci aşama sınavı sonucunda altın, gümüş veya bronz madalya alması,\n3. 2202-Ulusal Bilim Olimpiyatları (ortaokul düzeyi hariç) ikinci aşama sınavı sonucunda başarılı olarak TÜBİTAK tarafından gönderildiği Uluslararası Bilim Olimpiyatlarında altın, gümüş veya bronz madalya alması, \n4. 2204-A Lise Öğrencileri Araştırma Projeleri Yarışması sonucunda başarılı olarak TÜBİTAK tarafından gönderildiği Uluslararası Proje Yarışmalarında ülkemiz adına yarışarak birincilik, ikincilik, üçüncülük, dördüncülük veya özel ödül derecesi alması, \n5.“2249-Bilim ve Teknoloji Okulları Programı” kapsamında TÜBİTAK Fen Lisesi öğrencisi olması.\nSÜREÇ\nBaşvuru\nDeğerlendirme\nDestek" ,
+        "SupportAmount":" Aylık 1900 Dolar\n",
+        "deadline": "31-Aralık-2025",
+        "region": "Uluslararası ",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında, lise veya lisans eğitimlerine devam eden üstün başarılı öğrencilere; sosyal ağlarını genişletmeleri, yeni kültürler tanımaları, mesleki ve teknik becerilerini geliştirmeleri, kariyerlerini şekillendirmeleri, eğitim aldıkları alanlarda edindikleri bilgi birikimini uygulama becerisi kazanmaları ve yeteneklerini belli konular üzerinde yoğunlaştırmaları amacıyla yurt dışında düzenlenen staj ve yaz/kış okulları gibi kısa süreli bilimsel eğitim etkinliklerine katılım için destek verilir. \n\n"
+      },
+        {
+        "programId": "2232-A",
+        "programName": "2232-A-Uluslararası Lider Araştırmacılar Programı\n",
+        "targetAudience": "Doktora sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"Deneyimli Araştırmacı:\nDoktorasını tamamlamış ve yurt dışında en az 4 yıl üniversitede veya kamu araştırma merkezinde öğretim üyesi, ekip lideri olarak çalışmış veya bağımsız araştırma yürütmüş,\nYurt dışında lisans sonrası en az 3 yılı özel sektörde çalışarak toplamda 6 yıl tam zamanlı araştırma deneyimi olan araştırmacılar\n\nGenç Araştırmacı (40* yaş altı):\nSon 4 yılda doktorasını tamamlamış ve yurt dışında en az 1 yıl doktora sonrası araştırma deneyimine sahip,\nÖzel sektörden başvuranlar için en az 1 yılı özel sektör olmak üzere lisans sonrası toplamda 4 yıl tam zamanlı çalışma deneyimine sahip araştırmacılar\nHer iki grup için de\nTezli yüksek lisans süresinin en fazla 1 yılı, doktora süresinin en fazla 3 yılı bu kapsama dahil edilebilir.\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek\n" ,
+        "SupportAmount":"Lider araştırmacılar 19.286.000 TL\nGenç Araştırmacılara ise 15.640.000 TL toplamda destek sağlanır\n",
+        "deadline": "Belli Değil",
+        "region": "Uluslararası ",
+        "category": "Akademi",
+        "supportPurpose": "Program, stratejik öneme sahip araştırma alanlarında projelere katkı sağlamak amacıyla, üst düzey bilimsel ve/veya teknolojik çalışmalarıyla öne çıkan, yurt dışı deneyimine sahip Türk bilim insanları başta olmak üzere başarılı araştırmacıların Türkiye’ye gelmelerini teşvik ederek çalışmalarını önde gelen üniversitelerde, araştırma altyapılarında, kamu enstitülerinde, Ar-Ge merkezlerinde veya teknoparklarda sürdürmeleri için destek sağlar."
+      },
+      {
+        "programId": "2232-B",
+        "programName": "2232-B-Uluslararası Genç Araştırmacılar Programı",
+        "targetAudience": "Doktora sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"Deneyimli Araştırmacı:\nDoktorasını tamamlamış ve yurt dışında en az 4 yıl üniversitede veya kamu araştırma merkezinde öğretim üyesi, ekip lideri olarak çalışmış veya bağımsız araştırma yürütmüş,\nYurt dışında lisans sonrası en az 3 yılı özel sektörde çalışarak toplamda 6 yıl tam zamanlı araştırma deneyimi olan araştırmacılar\n\nGenç Araştırmacı (40* yaş altı):\nSon 4 yılda doktorasını tamamlamış ve yurt dışında en az 1 yıl doktora sonrası araştırma deneyimine sahip,\nÖzel sektörden başvuranlar için en az 1 yılı özel sektör olmak üzere lisans sonrası toplamda 4 yıl tam zamanlı çalışma deneyimine sahip araştırmacılar\nHer iki grup için de\nTezli yüksek lisans süresinin en fazla 1 yılı, doktora süresinin en fazla 3 yılı bu kapsama dahil edilebilir.\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek\n" ,
+        "SupportAmount":"Lider araştırmacılar 19.286.000 TL\nGenç Araştırmacılara ise 15.640.000 TL toplamda destek sağlanır\n",
+        "deadline": "Belli Değil",
+        "region": "Uluslararası ",
+        "category": "Akademi",
+        "supportPurpose": "Program, stratejik öneme sahip araştırma alanlarında projelere katkı sağlamak amacıyla, üst düzey bilimsel ve/veya teknolojik çalışmalarıyla öne çıkan, yurt dışı deneyimine sahip Türk bilim insanları başta olmak üzere başarılı araştırmacıların Türkiye’ye gelmelerini teşvik ederek çalışmalarını önde gelen üniversitelerde, araştırma altyapılarında, kamu enstitülerinde, Ar-Ge merkezlerinde veya teknoparklarda sürdürmeleri için destek sağlar."
+      },
+      {
+        "programId": "2236",
+        "programName": "2236-Uluslararası Deneyimli Araştırmacı Dolaşımı Destek Programı",
+        "targetAudience": "Doktora sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"Programa başvurmak için herhangi bir yaş sınırı bulunmamaktadır ve tüm uyruklardan araştırmacılar başvuru yapabilir. Araştırmacıların geldikleri ülke veya gidecekleri yer açısından herhangi bir kısıtlama yoktur.\n\nBaşvuru sahiplerinin, başvurdukları CoCirculation3 çağrısının son başvuru tarihi itibarıyla (1 Aralık 2025) doktora sonrası araştırmacı olmaları, yani doktora derecesine sahip olmaları gerekmektedir.\n Başvuru sahiplerinin başvuru yaptıkları ilgili CoCirculation3 çağrısının son başvuru tarihinden önceki 36 ay içinde, Türkiye’de 12 aydan fazla ikamet etmemiş veya temel faaliyetlerini (çalışma, eğitim vb.) Türkiye’de yürütmemiş olmaları gerekir. Bir takvim yılında 20 günü aşmayan kısa süreli ziyaretler ve zorunlu askerlik hizmeti bu sürelere dâhil edilmez.\n\nProjelerin Yeşil Mutabakat (Green Deal) ve/veya Türkiye’nin “AB Yeşil Mutabakatı ve İklim Değişikliğine Uyum” sürecine ilişkin Yeşil Büyüme Teknoloji Yol Haritası ve öncelikli Araştırma, Geliştirme ve Yenilik (Ar-Ge/Yenilik) Konuları çerçevesindeki ulusal önceliklere uygun olması gerekmektedir*,\n\nDaha önce Co-Circulation veya CoCirculation2 programları kapsamında destek almış araştırmacılar bu çağrıya başvuru yapamazlar.\n\nDaha önce aldığı bir burs ve/veya destek nedeniyle Türkiye’de mecburi hizmet yükümlülüğü bulunan Türk vatandaşları CoCirculation3 programına başvuramazlar.\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDEstek" ,
+        "SupportAmount":"Aylık brüt 3980 Euro maaş,\n 600 Euro aile desteği\n 1000 Euro araştırma, eğitim ve ağ kurma desteği",
+        "deadline": "1-Aralık-2025",
+        "region": "Uluslararası ",
+        "category": "Akademi",
+        "supportPurpose": "2236-A programı kapsamında Avrupa Komisyonu tarafından Ufuk Avrupa MSCA COFUND programı 2023 yılı çağrısında desteklenen CoCirculation3 projesi için 2025, 2026 ve 2027 yılı olmak üzere 3 çağrıya çıkılacaktır. Bu program, dünyanın dört bir yanından deneyimli araştırmacıların Türkiye’nin önde gelen akademik ve akademi dışı kurumlarında yüksek nitelikli araştırmalar yürütmesini amaçlamaktadır."
+      },
+      {
+        "programId": "2236-B",
+        "programName": "2236-B-MSCA-COFUND Burs Programlarına Katkı Fonu Programı",
+        "targetAudience": "Araştırma Üniversitesi/Araştırma Alt yapısı",
+        "targetConditionsAndProcess":"Başvuru sahibinin Ufuk Avrupa Programı MSCA COFUND çağrısı kapsamında Avrupa Komisyonundan destek almış ve YÖK tarafından belirlenen Araştırma Üniversitesi veya 6550 sayılı Kanun kapsamında tüzel kişiliği olan Araştırma Altyapısı olması gereklidir.\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek" ,
+        "SupportAmount":"Doktora Öğrencisi\n2.800 € yaşam ve dolaşım gideri*,\n500 € araştırma gideri,\n650 € kurum hissesi,\n\nDoktora Sonrası Araştırmacılar\n3.980 € yaşam ve dolaşım gideri*,\n800 € araştırma gideri,\n650 € kurum hissesi\n",
+        "deadline":"31-Aralık-2025",
+        "region": "Uluslararası ",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında Ufuk Avrupa Programı “The Marie Skłodowska-Curie Actions COFUND (MSCA–COFUND)” çağrıları kapsamında araştırma projelerine yönelik burs ve destek mekanizması bulunan ya da böyle bir program oluşturmak isteyen Araştırma Üniversitelerine ve 6550 sayılı Kanun kapsamında tüzel kişiliği olan Araştırma Altyapılarının, Avrupa Komisyon desteğine ek olarak destek sağlanmaktadır."
+      },
+      {
+        "programId": "2237-A",
+        "programName": "2237-A-Bilimsel Eğitim Etkinlikleri Desteği",
+        "targetAudience": "Lisans Öğrencileri, yüksek Lisans Öğrencileri, Doktora Öğrencileri ve Doktora Sonrası araştırmacılar",
+        "targetConditionsAndProcess":"Başvuru Koşulları \n\n1. Başvuru, yurt içinde ikamet eden, üniversite/eğitim ve araştırma hastanesi/kamu araştırma enstitüsü/araştırma altyapısında çalışan, doktora mezunu etkinlik yürütücüsü tarafından yapılmalıdır.  \n\n2. Düzenleme kurulu, yurt içinden en az 3 farklı üniversite/eğitim ve araştırma hastanesi/kamu araştırma enstitüsü/araştırma altyapısı/özel sektör kuruluşu* mensubu bilim insanından,\noluşmalıdır.  \n3. Etkinliğin güncel ve özgün bir internet sayfası olmalıdır. 4. Eğiticinin ücretli ders saati, toplam ders saatinin %25’ini geçmemelidir.  \n\n5. Katılımcıların en az iki farklı üniversite/eğitim ve araştırma hastanesi/kamu araştırma enstitüsü/araştırma altyapısı/özel sektör kuruluşundan seçilmesi ve en az on beş kişiden oluşması gerekir. \n\n6. Etkinlik, başvuru tarihinden itibaren en az 60, en çok 270 gün içinde başlamalıdır.  \n\n7. Ders programı, birbirini takip eden günler şeklinde düzenlenmelidir (çevrimiçi etkinlikler hariç).  \n\n8. Ders verecek eğiticiler, en az lisans mezunu ve alanında uzman olmalıdır.  \n\n9. Katılımcıların yurt içinde öğrenim gören ön lisans, lisans, yüksek lisans, doktora öğrencileri veya üniversitelerde görevli öğretim elemanları, en az lisans derecesine sahip eğitim ve araştırma hastanesi/kamu araştırma enstitüsü/araştırma altyapısı/özel sektör kuruluşunda çalışan kişilerden oluşması gerekir.\n\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek" ,
+        "SupportAmount":"Destek üst limiti 195.000 TL",
+        "deadline":"1. Dönem 14 Şubat 2025\n2. Dönem 8 Ağustos 2025",
+        "region": "Ulusal ",
+        "category": "Akademi",
+        "supportPurpose": "Programın amacı, bilim ve teknoloji alanlarında yürütülecek bilimsel eğitim faaliyetlerini destekleyerek bu alanlarda gelişimi teşvik etmektir."
+      },
+      {
+        "programId": "2237-B",
+        "programName": "2237-B-Proje Eğitimi Etkinliklerini Destekleme Programı",
+        "targetAudience": "Lisans Öğrencileri, yüksek Lisans Öğrencileri, Doktora Öğrencileri ve Doktora Sonrası araştırmacılar",
+        "targetConditionsAndProcess":"Etkinlik yürütücüsünde ve eğiticilerde aranan koşullar\n\nEtkinlik Yürütücüsü: Yurt içinde ikamet eden, Üniversite veya araştırma altyapısında çalışan öğretim üyesi olmalı ve TÜBİTAK ARDEB tarafından desteklenen ulusal ve uluslararası projelerde yürütücülük/altyürütücülük yapmış/yapıyor en az doktoralı olmalıdır.\n\nEğiticiler: TÜBİTAK ARDEB destekli projelerde yürütücülük/altyürütücülük yapmış olmalı.\n\nEtkinlik Süresi: Etkinlik, başvuru tarihinden itibaren en az 60, en çok 270 gün içinde başlamalıdır.  (Düzenlenmiş etkinlikler için başvuru yapılmaz). Tekrar Başvuru Koşulu: Daha önce destek alan yürütücüler, etkinlik bitişinden sonraki 6 ay içinde katılımcıların en az %10’unun TÜBİTAK’a proje sunmuş olması şartıyla başvuru yapabilir.\n\nKatılımcılarda Aranan Koşullar:\n\nDoktora/sanatta yeterlik derecesine sahip olmak veya doktora/sanatta yeterlik öğrencisi olup yeterlilik almış olmak.\n\nEtkinliğe bir proje önerisiyle katılmak.\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek\n" ,
+        "SupportAmount":"Destek üst limiti 195.000 TL",
+        "deadline":"1. Dönem 14 Şubat 2025\n2. Dönem 8 Ağustos 2025",
+        "region": "Ulusal ",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında; TÜBİTAK’ın ulusal ve uluslararası programlarına yönelik Ar-Ge ve yenilik projelerinin nicelik ve niteliklerinin artırılması amacıyla düzenlenen teorik ve uygulamalı proje yazma eğitimleri desteklenir. Bu doğrultuda, proje hazırlama sürecinde yer alan bilimsel yaklaşımlar, proje yönetimi, bütçelendirme, değerlendirme aşamasında göz önünde bulundurulması gereken hususlar ile araştırma projesi hazırlama tekniklerinin öğretilmesine yönelik yurt içinde düzenlenen (çevrim içi etkinlikler dâhil) etkinliklere destek sağlanır."
+      },
+      {
+        "programId": "2242",
+        "programName": "2242-Üniversite Öğrencileri Araştırma Proje Yarışmaları",
+        "targetAudience": "ön lisans ve lisans öğrencileri",
+        "targetConditionsAndProcess":"Türkiye’de ve KKTC’de Üniversitelerde öğrenim görmekte olan ön lisans ve lisans öğrencilerini projeler yoluyla araştırma yapmaya teşvik etmek amacıyla yürütülmektedir.\nAkıllı Şehirler ve Ulaşım, Bilgi ve İletişim Teknolojileri, Eğitim, Enerji ve Çevre, Gıda ve Tarım, Makine İmalatı ve Otomotiv, Sağlık, Savunma, Uzay ve Havacılık, Sosyal Yenilikçilik ve Girişimcilik olmak üzere 9 ana alan ve 63 tematik alanda düzenlenir.\nSÜREÇ\n\nBirinci Aşama Değerlendirmesi (Ön İnceleme)\nİkinci Aşama Değerlendirmesi\n\nTeknofestte sergisi yapılır" ,
+        "SupportAmount":"Final Yarışması Ödülleri (Proje başına):\n\nBirinci: 80.000 TL\nİkinci: 70.000 TL\nÜçüncü: 60.000 TL\n",
+        "deadline":"1-Mart-2025",
+        "region": "Ulusal ",
+        "category": "Akademi",
+        "supportPurpose": "yarışmanın amacı, yarışmacıları araştırma projeleri aracılığıyla bilim temelli bilgi ve teknoloji üretimine katkıda bulunmaya teşvik ederek, ülkemizin Milli Teknoloji Hamlesi ve nitelikli insan kaynakları gelişimi süreçlerine destek sağlamaktır."
+      },
+      {
+        "programId": "2244",
+        "programName": "2244-Sanayi Doktora Programı",
+        "targetAudience": "Doktora Öğrencileri",
+        "targetConditionsAndProcess":"Programa üniversitelerimiz ya da araştırma altyapıları;\n\nAr-Ge veya Tasarım Merkezine Sahip Şirketler,\n\nTeknopark Şirketleri veya\n\nTÜBİTAK Projesi Sonuçlandırmış Şirketler ile protokol yaparak başvuru yapabilir.\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDestek" ,
+        "SupportAmount":"Tam burs: 25.800 TL/ay\nKısmi burs 7.200 TL/ay \n\n",
+        "deadline":"Belli Değil",
+        "region": "Ulusal ",
+        "category": "Akademi",
+        "supportPurpose": "Sanayi kuruluşlarında bilgi üstünlüğü ile rekabet etmek için ihtiyaç duyulan nitelikli insan kaynağının üniversite-sanayi iş birliği ile yetiştirilmesi ve sanayide doktoralı araştırmacı istihdamının teşvik edilmesi amacıyla yürütülmektedir."
+      },
+            {
+        "programId": "2247-A",
+        "programName": "2247-A-Ulusal Lider Araştırmacılar Programı",
+        "targetAudience": "Doktora sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"Programa başvuracak araştırmacıların başvurunun ilk günü itibariyle yurt içinde çalışıyor olması gerekmektedir.\n\nBaşvuruların ilk günü itibariyle aşağıdaki çalışma deneyimlerinin herhangi birinin sağlanması gerekir (Çalışma deneyimi süresi, eğer birden fazlaysa ilk tamamlanan ihtisas alanı mezuniyetinden itibaren dikkate alınacaktır.).\n\nAlınan doktora derecesi üzerinden 7 yıl geçmiş olan ve bir üniversitede en az öğretim üyesi veya kamu araştırma merkezinde ekip lideri veya bağımsız akademik araştırmalar yürüten*  araştırmacılardan en az 4 yıl süre ile araştırma deneyimine sahip olanlar\n\nÖzel sektörden başvuran araştırmacılardan lisans sonrası en az 3 yılı özel sektör bünyesinde çalışmak şartıyla 6 yıl tam zamanlı araştırma deneyimi olan araştırmacılar (tamamlanmış tezli yüksek lisans eğitimi süresinin en fazla 1 yılı ya da tamamlanmış doktora eğitimi süresinin en fazla 3 yılı bu kapsamda değerlendirilir).\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDeste" ,
+        "SupportAmount":"Üst limit 11.605.000 TL",
+        "deadline":"Belli Değil",
+        "region": "Ulusal ",
+        "category": "Akademi",
+        "supportPurpose": "Bilimin ve teknolojinin her alanında ülkemiz açısından çığır açıcı nitelikte gelişmeler sağlamaya yönelik hedefler içeren, alanında önemli boşlukları giderebilme ve araştırmacılara yeni bir bakış açısı kazandırabilme fırsatı sunan, önemli bir keşif ve/veya buluş yapma potansiyeli olan projelere ve bu projeleri gerçekleştirecek olan yurt içindeki deneyimli ve genç bilim insanlarına destek verilmektedir."
+      },
+      {
+        "programId": "2247-D",
+        "programName": "2247-D-Ulusal Genç Liderler Programı",
+        "targetAudience": "Doktora sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"Programa başvuracak araştırmacıların başvurunun ilk günü itibariyle yurt içinde çalışıyor olması gerekmektedir.\n\nBaşvuruların ilk günü itibariyle aşağıdaki çalışma deneyimlerinin herhangi birinin sağlanması gerekir (Çalışma deneyimi süresi, eğer birden fazlaysa ilk tamamlanan ihtisas alanı mezuniyetinden itibaren dikkate alınacaktır.).\n\nAlınan doktora derecesi üzerinden 7 yıl geçmiş olan ve bir üniversitede en az öğretim üyesi veya kamu araştırma merkezinde ekip lideri veya bağımsız akademik araştırmalar yürüten*  araştırmacılardan en az 4 yıl süre ile araştırma deneyimine sahip olanlar\n\nÖzel sektörden başvuran araştırmacılardan lisans sonrası en az 3 yılı özel sektör bünyesinde çalışmak şartıyla 6 yıl tam zamanlı araştırma deneyimi olan araştırmacılar (tamamlanmış tezli yüksek lisans eğitimi süresinin en fazla 1 yılı ya da tamamlanmış doktora eğitimi süresinin en fazla 3 yılı bu kapsamda değerlendirilir).\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDeste" ,
+        "SupportAmount":"Üst limit 11.605.000 TL",
+        "deadline":"Belli Değil",
+        "region": "Ulusal ",
+        "category": "Akademi",
+        "supportPurpose": "Bilimin ve teknolojinin her alanında ülkemiz açısından çığır açıcı nitelikte gelişmeler sağlamaya yönelik hedefler içeren, alanında önemli boşlukları giderebilme ve araştırmacılara yeni bir bakış açısı kazandırabilme fırsatı sunan, önemli bir keşif ve/veya buluş yapma potansiyeli olan projelere ve bu projeleri gerçekleştirecek olan yurt içindeki deneyimli ve genç bilim insanlarına destek verilmektedir."
+      },
+            {
+        "programId": "2247-B",
+        "programName": "2247-B-Avrupa Araştırma Konseyi (ERC) Projeleri Güçlendirme Desteği Programı",
+        "targetAudience": "Doktora sonrası Araştırmacılar",
+        "targetConditionsAndProcess":"ERC’ye sunulan ve son başvuru tarihi itibari ile 3 yıl içerisinde fonlanmamış (Başlangıç Desteği, Konsolide Desteği, Gelişmiş Destek ve Sinerji Destek) ancak son değerlendirme aşamasından “A” veya “B” puanı alan proje sahibi olmak \n\n-ERC’ye tekrar başvuruyu taahhüt etmek\n\n-Proje yürütücüsünün Türkiye’de yerleşik bir araştırma kurumunda çalışıyor ya da TÜBİTAK’tan alınacak desteğin başlama tarihi itibarıyla çalışacak olması\nProgram desteği sonrasında ERC desteği almaya hak kazanırsa projesini Türkiye’de yürütmek\n-Bu programdan bir yürütücüye reddedilen her bir ERC başvurusu için yalnızca bir kez destek verilebilir.\nSÜREÇ\nBaşvuru\nÖn Değerlendirme\nBilimsel Değerlendirme\nDeste" ,
+        "SupportAmount":"En fazla 2.400.000 TL",
+        "deadline":"31-Aralık-2025",
+        "region": "Ulusal ",
+        "category": "Akademi",
+        "supportPurpose": "Avrupa Birliği fonlarından ülkemize geri dönüş oranını artırmak için araştırmacıların önemli bir keşif ve/veya buluş yapma potansiyeli içeren ERC’ye yeniden sunacakları proje önerilerini iyileştirmek/güçlendirmek ve Avrupa Araştırma Konseyi (ERC)’den destek alabilmelerini sağlamak için program kapsamında, hibe desteği olarak 24 aya kadar araştırma projesi desteği sağlanır."
+      },
+      {
+        "programId": "2247-C",
+        "programName": "2247-C Stajyer Araştırmacı Burs Programı",
+        "targetAudience": "Lisans Öğrencileri  ve Öğretmenler",
+        "targetConditionsAndProcess":"STAR LİSANS\nTÜBİTAK Merkez ve Enstitülerinde yürütülen projeler ile TÜBİTAK tarafından desteklenen araştırma projelerinde veya YÖK Araştırma Üniversiteleri Destek Programı (ADEP) tarafından desteklenen araştırma projelerinde görev alacak lisans öğrencileri ve Öğretmenler için burs desteği sağlanacaktır.\n\nProgram 3 Aşamada Yürütülür.\n1.Aşama: Proje Yürütücüsü Talep Başvurusu\n2.Aşama: Öğrenci/Öğretmen Başvurusu\n3.Aşama: Proje Yürütücüsü Değerlendirmesi\n                   \n" ,
+        "SupportAmount":"STAR Lisans 5.250 (6 aylık)\nSTAR Öğretmen 4.400 Katılım Ödülü-Tek seferlika",
+        "deadline":"25-Temmuz-2025",
+        "region": "Ulusal ",
+        "category": "Akademi",
+        "supportPurpose": "Lisans düzeyinde örgün öğretim programlarına kayıtlı başarılı öğrencilerimizin Ar-Ge kültürlerinin oluşturulması, araştırma faaliyetlerine özendirilmesi ve araştırma yapmaya teşvik edilmesi amacıyla yürütülmektedir.\n\nÖğretmenlerin mesleki bilgi ve becerilerinin gelişimini desteklemek ve bilimsel araştırma süreçlerine dair bilgi, görgü ve deneyimini artırmak amacıyla bilimsel araştırma projelerinde bilimsel etik kurallarını gözeterek görev alması hedeflenmektedir.\n"
+      },
+      {
+        "programId": "2248",
+        "programName": "2248-Mentorluk Desteği Programı",
+        "targetAudience": "Ortaokul ve Lise Öğrencileri, Lisans Öğrencileri",
+        "targetConditionsAndProcess":"2205 Lisans Burs Programı \" kapsamında bursiyerlik süresinin sonuna kadar,\"2202 Bilim Olimpiyatları Programı\" kapsamında en son yapılan Birinci Aşama Sınavı’nda başarılı olanlar için bir sonraki Birinci Aşama Sınavı’na kadar,\"2249 Bilim ve Teknoloji Okulları Programı\" kapsamında 1. sınıftan lise mezuniyet tarihine kadardır." ,
+        "SupportAmount":"Bu program kapsamında Bilim Olimpiyatları ile TÜBİTAK Fen Lisesi öğrencilerine ve lisans bursiyerlerine, kariyer hedefleri doğrultusunda mentorluk desteği sağlanır.",
+        "deadline":"1.Dönem 16 mayıs 2025\n2 Dönem 17 Ekim 2025",
+        "region": "Ulusal ",
+        "category": "Akademi",
+        "supportPurpose": "Belli Değil"
+      },
+      {
+        "programId": "2250",
+        "programName": "2250-Lisansüstü Bursları Performans Programı",
+        "targetAudience": "Doktora öğrencileri ve Doktora sonrası araştırmacılar",
+        "targetConditionsAndProcess":"Başvuru yapılan burs döneminde (Ağustos-Ocak veya Şubat-Temmuz) yürürlükte olan TÜBİTAK destekli bir projede doktora öğrencisi veya doktora sonrası araştırmacı* olarak 1 ay içinde en az 10 gün bursiyer statüsünde görev alıyor/almış olmak,\n\nProje yürütücüsü (2218 programı için proje danışmanı) tarafından hesaplanan toplam performans puanının doktora öğrencileri ve doktora sonrası araştırmacılar için en az 70 puan olması gerekir.\n\n*Başvuru sahibinin TÜBİTAK kayıtlarına göre ilgili projedeki bursiyer statüsünün doktora öğrencisi veya doktora sonrası araştırmacı olması gerekmektedir.\nSÜREÇ\nBaşvuru\nDeğerlendirme\nDestek" ,
+        "SupportAmount":"Doktora Öğrencisi 8.700 TL aylık\n\nDoktora Sonrası Araştırmacılar 10.500 TL aylık\n\n",
+        "deadline":"1.Dönem 14 mart 2025\n2 Dönem 12 eylül 2025",
+        "region": "Ulusal ",
+        "category": "Akademi",
+        "supportPurpose": "Program kapsamında, bursiyerlerin araştırma yapmaya teşvik edilmesi, proje aidiyetlerinin sağlanması, performans ve motivasyonlarının artırılması ve araştırma ekosisteminin güçlendirilmesi amacıyla TÜBİTAK destekli projelerde bursiyer olarak yer alan doktora öğrencileri ile doktora sonrası araştırmacılara performansa dayalı burs desteği sağlanmasıdır."
+      },
+      {
+        "programId": "2249",
+        "programName": "2249-Bilim ve Teknoloji Okulları Programı",
+        "targetAudience": "Lise Öğrencileri",
+        "targetConditionsAndProcess":"TÜBİTAK Fen Lisesinde hazırlık sınıfından başlamak üzere öğrenim süresince aylık karşılıksız burs, TÜBİTAK Gebze yerleşkesinde konaklama hizmeti, Türkiye’nin en donanımlı ve uluslararası düzeydeki TÜBİTAK laboratuvarlarını kullanma imkânı, TÜBİTAK Merkez ve Enstitüleri’nde staj imkânı, kariyerleri boyunca mentorluk desteği, bilim söyleşileri, kulüp etkinlikleri, spor müsabakaları, teknik geziler ve daha pek çok imkân karşılıksız olarak öğrencilerimize sunulmaktadır. Öğrencilerimize bu önemli olanakların sunulduğu okulumuzda, gençlerin araştırmacı ve bilim insanı olması teşvik edilmektedir.\n\nGeleceğin Aziz Sancar’larını yetiştirecek olan TÜBİTAK Fen Lisesi 2024-2025 eğitim-öğretim hayatına 360 öğrenci ile devam etmektedir. LGS sonucunda genel yüzde birlik (% 1) başarı dilimi içerisinde yer alan öğrenciler arasından “TÜBİTAK Fen Lisesi”ne öğrenci seçmek amacıyla yapılacak yetenek sınavında başarılı belirlenen kontenjan içinde kalan öğrenciler.\n\n" ,
+        "SupportAmount":"Aylık 2.700 Burs",
+        "deadline":"16-Tem-25",
+        "region": "Ulusal ",
+        "category": "Akademi",
+        "supportPurpose": "Yetişmiş ve nitelikli insan gücü, güçlü altyapısı ve ileri düzey laboratuvarlarıyla Ar-Ge ve teknoloji dünyasının öncü araştırma merkezleri ve enstitülerini bünyesinde bulunduran TÜBİTAK Gebze Yerleşkesinde 2021-2022 eğitim-öğretim yılında TÜBİTAK Fen Lisesi kurulmuştur. "
+      },
+      {
+        "programId": "1501",
+        "programName": "1501 - Sanayi Ar-Ge Projeleri Destekleme Programı",
+        "targetAudience": "Türkiye’de yerleşik KOBİ ölçeğindeki sermaye şirketleri ",
+        "targetConditionsAndProcess":"Çağrılı program, PRODIS üzerinden başvuru. En fazla 2 proje hakkı. Süre: 24 ay (36 aya uzatılabilir). Personel, ekipman, yazılım, danışmanlık vb. giderler desteklenir. Yerli malında oran artar." ,
+        "SupportAmount":"%75 hibe, yerli malı kullanımında %90. Üst limit yok.",
+        "deadline":"25.09.2025 (ön kayıt), 29.09.2025 (proje önerisi)",
+        "region": "Ulusal ",
+        "category": "Sanayi",
+        "supportPurpose": "KOBİ’lerin Ar-Ge ve yenilikçilik kapasitesini artırmak, yeni ürün/süreç geliştirmek."
+      },
+      {
+        "programId": "4001",
+        "programName": "4001-Ulusal ve Uluslararası Yarışma/Etkinlik Katılım Desteği",
+        "targetAudience": "Öğrenimi devam eden lise öğrencileri ile lise ve üzeri eğitim düzeyine sahip öğrenci ve mezunlar",
+        "targetConditionsAndProcess":"Çağrılı Program- Destek verilecek kişilerin en az lise öğrencisi olması, T.C. vatandaşı olması (veya mavi karta sahip olması) ve tüm başvuru sahiplerinin Türkiye’de ikamet etmesi gerekmektedir.\n •Demirbaş ve sarf malzeme desteği \n•Yarışma/Etkinlik başvuru/kayıt ücreti desteği \n•Ulaşım desteği (Marka işbirliği kapsamında Türk Hava Yolları tarafından)\n•Harcırah desteği \n•Yarışma/Etkinlik çerçevesindeki diğer harcamalara ilişkin destekler " ,
+        "SupportAmount":"Üst limiti (ulaşım hariç) 245.000 TL (KDV dâhil)’dir.",
+        "deadline":"Açık Çağrı",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "Desteğin amacı, öğrenimi devam eden lise öğrencileri ile lise ve üzeri eğitim düzeyine sahip öğrenci ve mezunların proje üretmelerini, geri bildirimler yoluyla projelerini geliştirmelerini, geliştirdikleri projelere yönelik düzenlenen yurt dışı bilimsel ve/veya teknolojik yarışmalara ve ilgili etkinliklere katılmalarını teşvik ederek Milli Teknoloji Hamlesinin ana bileşenlerinden olan beşeri sermaye gelişimine katkı sağlamak."
+      },
+      {
+        "programId": "4004",
+        "programName": "4004 Doğa Eğitimi ve Bilim Okulları Destekleme Programı  ",
+        "targetAudience": "Okul öncesi, ilkokul, ortaokul, lise ve dengi okul, ön lisans, lisans ve lisansüstü öğrencileri, öğretmenler veya bilim merkezleri çalışanları",
+        "targetConditionsAndProcess":"Çağrılı Program, Hedef kitlenin bilimsel kavramlar ile süreçleri anlaması ve bunları uygulaması için gerekli olan ortamların oluşturulmasını ve yaygınlaştırılmasını amaçlayan ve hedef kitleye ekoloji, çevre okuryazarlığı, sürdürülebilirlik vb. konular çerçevesinde bilgi, beceri ve farkındalık kazandırmayı amaçlayan etkileşimli faaliyetleri içeren projeler desteklenmektedir.\n" ,
+        "SupportAmount":"Destek üst limiti 360.000 TL’dir.",
+        "deadline":"Güz dönemi (Eylül, Ekim, Kasım)",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "Bilimsel bilginin toplum ile buluşturulmasını ve yaygınlaştırılmasını, bilginin mümkün olduğunca görselleştirilerek, etkileşimli uygulamalarla anlaşılır bir biçimde kazandırılmasını ve katılımcıların bilimsel olguları fark etmelerini sağlayarak, merak duygularının, araştırma, sorgulama ve öğrenme isteklerinin teşvik edilmesi"
+      },
+      {
+        "programId": "4005",
+        "programName": "4005 Yenilikçi Eğitim Uygulamaları Destekleme Programı",
+        "targetAudience": "Lisansüstü Öğrenciler, Öğretim Elemanları, Öğretmenler veya Bilim Merkezleri Çalışanları",
+        "targetConditionsAndProcess":"Çağrılı Program,Çağrı Alanları başlığı altında belirtilen alanlarda olmak üzere, katılımcılara kendi branşlarına yönelik ilgi ve merak uyandırmayı, yenilikçi yaklaşım, yöntem ve tekniklere yönelik bilgi ve becerileri yenilikçi yaklaşımlar aracılığıyla kazandırmayı amaçlayan etkileşimli faaliyetleri kapsar." ,
+        "SupportAmount":"Destek üst limiti 360.000 TL’dir.",
+        "deadline":"Güz dönemi (Eylül, Ekim, Kasım)",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "Hedef kitleye, kendi branşlarında eğitim ve öğretime özgü yenilikçi yaklaşım, strateji, yöntem ve tekniklerin etkileşimli olarak kazandırılması, kullanılması ve yaygınlaştırılması"
+      },
+      {
+        "programId": "4006",
+        "programName": "4006-TÜBİTAK Bilim Fuarları Destekleme Programı",
+        "targetAudience": "Ortaokul ve lise öğrencileri",
+        "targetConditionsAndProcess":"Çağrılı Program- 5–12. sınıf öğrencilerinin, arkadaşlarıyla iş birliği içinde ve öğretmenlerinin rehberliğinde bilimsel projeler hazırlayıp sunmalarını destekleyen, bilimsel yaklaşım ve düşünme becerilerini geliştirmeyi amaçlayan bir destek programıdır. Desteklenen projeler sonucunda ilgili okullarda 2 gün süresince herkesin katılımına açık bir bilim fuarı düzenlenir." ,
+        "SupportAmount":"2024 yılında yayınlanan çağrı kapsamında destek üst limiti bilim fuarı başına 20.000 TL idi, 2025-2026 çağrısı henüz yayınlanmamıştır.",
+        "deadline":"Genellikle eğitim-öğretim yılının başında çağrıya çıkılır (Eylül, Ekim).",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "5-12. sınıf öğrencilerinin program çağrısında belirtilen ana alan ve tematik konular arasından kendi ilgileri doğrultusunda seçtikleri konular üzerine araştırma yaparak araştırmalarının sonuçlarını sergileyebilecekleri, okuldaki diğer öğrenciler ve katılımcılarla birlikte eğlenerek öğrenebilecekleri bir ortamın oluşturulmasını amaçlamaktadır.\n"
+      },
+      {
+        "programId": "4006-C",
+        "programName": "4006-C Bilim Fuarları Festivali Desteği",
+        "targetAudience": "Desteğin hedef kitlesi; toplumun her kesiminden farklı yaş ve eğitim düzeyinde vatandaşlardır.",
+        "targetConditionsAndProcess":"Çağrılı program: Festival süreci ile öğrencilerin ve öğretmenlerin bilimsel üretimlerini paylaşabilecekleri, yenilikçi fikirlerini sergileyebilecekleri ve farklı paydaşlarla etkileşim kurabilecekleri bir platform oluşturulması hedeflenmektedir. Aynı zamanda, çocukların ve gençlerin bilimsel düşünme becerilerini geliştirmeleri, proje tabanlı öğrenme süreçlerine aktif katılım sağlamaları ve bilimin günlük yaşamla olan bağlantısını keşfetmeleri teşvik edilmektedir. " ,
+        "SupportAmount":"10 Bilim Fuarı İçin 50.000\n20 Bilim Fuarı İçin: 75.000\n30 Bilim Fuarı İçin: 100.000",
+        "deadline":"İlk çağrı bu yıl Mayıs ayında yayınlanmıştır. Önümüzdeki çağrının da benzer şekilde bahar döneminde (Nisan ayı gibi) yayınlanması planlanmaktadır.",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "Bilim Fuarları Festivali Desteği ile 4006-TÜBİTAK Bilim Fuarları Destekleme Programı kapsamında desteklenen ve sergilenen projelerin il/ilçe ölçeğinde düzenlenecek festivaller aracılığıyla toplumun daha geniş kesimleriyle buluşturulması hedeflenmektedir. Bu kapsamda, bilimsel çalışmaların ve yenilikçi projelerin daha geniş kitlelere ulaşması sağlanarak toplumda bilim ve teknolojiye olan ilginin artırılması "
+      },
+      {
+        "programId": "4007",
+        "programName": "4007 Bilim Şenlikleri Destekleme Programı",
+        "targetAudience": "Toplumun her kesiminden farklı yaş ve eğitim düzeyinde vatandaşlardır.",
+        "targetConditionsAndProcess":"Çağrılı Program: Bilim Şenlikleri Destekleme Programı çağrı metninde belirtilen çağrı alanlarında hazırlanan, katılımcılarda bilime ve bilim insanına yönelik olumlu bakış açısı kazandıran, aynı zamanda katılımcıların bilimsel düşünme becerilerinin gelişmesine katkı sağlayan etkileşimli uygulamalardan oluşmaktadır." ,
+        "SupportAmount":"•\tA kategorisi için 600.001 - 1.250.000 TL (KDV dâhil), \n•\tB kategorisi için 360.001 - 600.000 TL (KDV dâhil), \n•\tC kategorisi için üst limit 360.000 TL (KDV dâhil)’dir.",
+        "deadline":"Kış dönemi (Ocak-Şubat)",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "Toplumun tüm kesimlerinde bilim ve teknoloji farkındalığı oluşturmak, ülkemizin kalkınmasında kritik öneme sahip bilim ve teknolojinin toplum tarafından benimsenmesi ve sahiplenilmesini sağlamak"
+      },
+      {
+        "programId": "4008",
+        "programName": "4008-Özel Gereksinimli Bireylere Yönelik Kapsayıcı Toplum Uygulamaları Destek Programı",
+        "targetAudience": "Belli Değil",
+        "targetConditionsAndProcess":"Çağrılı Program: Özel gereksinimli bireylerde farkındalık oluşturmak, bu bireylere, eğitim ve bağımsız yaşam konularında destek sağlayarak toplumla bütünleşmelerini kolaylaştırmak ve özel gereksinimli bireylere hizmet sunan kişiler ve özel gereksinimli bireyler arasında bilimsel uygulamaların yaygınlaşmasını sağlamak" ,
+        "SupportAmount":"2024 yılında çıkılan çağrı kapsamında destek üst limiti 360.000 TL’dir.",
+        "deadline":"Çağrıya genel olarak Dünya Engelliler Günü olan 3 Aralık tarihinde çıkılmaktadır. Destek süresi 12 aydır",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "Program, özel gereksinimli bireylerin eğitim ve bağımsız yaşam alanlarında desteklenerek topluma katılımlarının kolaylaştırılmasını ve bu bireylere hizmet sunan kişilerle özel gereksinimli bireyler arasında bilimsel uygulamaların yaygınlaşması"
+      },
+      {
+        "programId": "4003-T",
+        "programName": "4003-T Milli Teknoloji Atölyeleri Destek Programı",
+        "targetAudience": "Ulusal ve uluslararası bilim ve teknoloji yarışmalarına hazırlanan lise, üniversite, yüksek lisans, doktora öğrencileri ve mezunları",
+        "targetConditionsAndProcess":"Üniversiteler ve TÜBİTAK destekli bilim merkezlerinde kurulacak atölyeler, takımlara makine, teçhizat ve sarf malzeme desteği sağlayacaktır. Ayrıca Ulusal ve uluslararası bilim ve teknoloji yarışmalarına hazırlık\nGenç girişimcilere yönelik mesleki ve teknik eğitim süreçlerinin desteklenmesi\nÜniversite ve bilim merkezlerinde öğrenci takımlarına altyapı sağlanması destekleri verilmektedir. " ,
+        "SupportAmount":"Atölye ile ilgili her türlü mal ve hizmet alımı için 30.000.000 TL destek aktarımı sağlanmaktadır. \n",
+        "deadline":"Açık çağrı olup başvuruda bulunmak isteyen tüm kurum/kuruluşlar talep ettikleri tarihlerde başvurularını gerçekleştirebilirler.",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "Milli Teknoloji Atölyeleri, öğrencilerin bilim ve teknoloji yarışmalarına hazırlanabileceği ve teknik donanımı kullanabileceği alanlar sunacaktır. Bu atölyeler, gençlerimize yerli ve milli teknolojiler geliştirme imkânı tanıyarak sanayimizin ihtiyaç duyduğu nitelikli insan kaynağını yetiştirmeyi hedeflemektedir. "
+      },
+      {
+        "programId": "",
+        "programName": "Milli Teknoloji Kulüpler Birliği Desteği",
+        "targetAudience": "Üniversitelerde faaliyet gösteren öğrenci kulüpleri",
+        "targetConditionsAndProcess":"Çağrılı Program:  •\tEtkinlik Organizasyon Giderleri: Teknoloji zirveleri, hackathonlar, yarışmalar, seminerler vb. organizasyonlar,\n•\tKonuşmacı/Mentor Giderleri: Alanında uzman mentor veya konuşmacıların etkinliklere katılımı, (ulaşım, konaklama, danışmanlık vb.)\n•\tAr-Ge Proje İhtiyaçları: Laboratuvar malzemeleri, teknik ekipman, yazılım veya donanım ihtiyaçları gibi araştırma ve geliştirme faaliyetlerine yönelik gereksinimler olmak üzere üç başlık altında destekler verilmektedir. " ,
+        "SupportAmount":"Üst limit: 150.000 TL",
+        "deadline":"Açık Çağrı",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "Üniversitelerde faaliyet gösteren, belirlenen yetkinlik ölçütlerini sağlayan, teknoloji ve teknoloji girişimciliği alanında faaliyet gösteren kulüplerinin oluşturduğu iş birliği ve koordinasyon platformu ile kulüplerin teknoloji ve yenilik ekosisteminde daha etkin yer almasını sağlamak"
+      },
+      {
+        "programId": "",
+        "programName": " TÜBİTAK Bilim Kampları",
+        "targetAudience": "TÜBİTAK Bilim Kamplarının hedef kitlesi 2008-2010 doğum tarihleri arasında bulunan lise öğrencilerine yöneliktir.\n",
+        "targetConditionsAndProcess":"Çağrılı Program: TÜBİTAK Bilim Kamplarında öğrencilere konaklama ve tüm öğünleri kapsayan yeme-içme imkânı sağlanmakta olup kamp süresince ihtiyaç duyacakları eğitim materyalleri temin edilmektedir. Öğrenciler, alanında uzman eğitmenler ve bilim insanları tarafından yönlendirilmektedir ve mentorluk desteği almaktadır. " ,
+        "SupportAmount":"Belli Değil",
+        "deadline":"Çağrı takvimi dönemsel olarak güncellenmekte olup ilgili kamp dönemlerine göre ilan edilir. Her kamp için başvurular, ilgili kampın başlangıç tarihinden yaklaşık 10 gün öncesine kadar kabul edilmektedir.",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "TÜBİTAK Bilim Kampları, öğrencilerin temel bilimlerde farkındalık artırmak, kariyer hedeflerine yönelik motivasyon sağlamak, yenilikçi teknoloji alanlarını tanıtmak ve yetenek keşfini desteklemek, bilimi eğlenceli, tarihsel ve uygulamalı yöntemlerle öğretmek, öğrencilerin sosyal bağlar kurmasını sağlamak "
+      },
+              {
+        "programId": "",
+        "programName": "DENEYAP TEKNOLOJİ ATÖLYELERİ",
+        "targetAudience": "Ortaokul ve lise düzeyinde öğrenim gören, teknolojiye ilgi duyan 10–17 yaş grubu öğrenciler\n•  Gelecekte mühendislik, yazılım, yapay zekâ, robotik gibi alanlarda uzmanlaşmak isteyen gençler\n•  Teknoloji üretme yetkinliğini geliştirmek isteyen, proje temelli öğrenmeye meraklı öğrenciler\n•  Ulusal ve uluslararası teknoloji yarışmalarına katılmayı hedefleyen gençler",
+        "targetConditionsAndProcess":"Çağrılı Program:  Türkiye’nin 81 ilinde kurulan atölyelerde ortaokul ve lise öğrencilerine ücretsiz, uzun soluklu ve uygulamalı teknoloji eğitimleri sunmaktadır. Program; tasarım ve üretim, elektronik programlama ve nesnelerin interneti, yazılım teknolojileri, siber güvenlik, enerji teknolojileri, havacılık ve uzay teknolojileri, malzeme bilimi ve nanoteknoloji, ileri robotik, yapay zekâ, mobil uygulama geliştirme ve akıllı tarım olmak üzere toplam 11 dersten oluşmaktadır. " ,
+        "SupportAmount":"Destek tutarı ortalama 4.000.000",
+        "deadline":"Kasım 2025-Ocak 2026",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "Deneyap Teknoloji Atölyeleri, Türkiye’nin dört bir yanında teknolojiye ilgi duyan gençlerin çağın gerektirdiği teknik ve sosyal becerilerle donatılmasını amaçlamaktadır. Program; yapay zekâ, robotik, ileri üretim, yazılım, elektronik programlama, nesnelerin interneti gibi alanlarda uygulamalı eğitimler sunarak öğrencilerin üretken, yenilikçi ve girişimci bireyler olarak yetişmeleri"
+      },
+      {
+        "programId": "4003-A",
+        "programName": "4003-A Büyük Ölçekli Bilim Merkezi Kurulum Desteği",
+        "targetAudience": "İlkokul, lise, üniversite, girişimci, genel ziyaretçi vb.\n\nİlkokul, ortaokul, lise öğrencileri ve genel ziyaretçi\n",
+        "targetConditionsAndProcess":"Bilim merkezlerinin kuruluma yönelik destek sağlanmaktadır. Sergi alanlarının temini, atölye içerikleri ve gerekli malzemelerin temini, planetaryum teknik ekipman ve içeriklerin temini, personel eğitimi vb. desteklenmektedir\n" ,
+        "SupportAmount":"Üst limit 100.000.000 TL ",
+        "deadline":"Açık çağrı olup başvuruda bulunmak isteyen tüm kurum/kuruluşlar talep ettikleri tarihlerde başvurularını gerçekleştirebilirler.",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "Toplumu bilimle buluşturmayı, bilim ve teknolojiyi anlaşılır ve ulaşılır kılmayı, deneysel ve uygulamalı etkinlikler yoluyla bilim ve teknoloji alanında farkındalık yaratmayı, bireyleri denemeye ve keşfetmeye teşvik etmek"
+      },
+      {
+        "programId": "4003-A",
+        "programName": "4003-A Büyük Ölçekli Bilim Merkezi Sürdürülebilirlik ve Kapasite Artırımı Desteği",
+        "targetAudience": "İlkokul, lise, üniversite, girişimci, genel ziyaretçi vb.\n\nİlkokul, ortaokul, lise öğrencileri ve genel ziyaretçi\n",
+        "targetConditionsAndProcess":"4003-A Küçük Ölçekli Bilim Merkezi Sürdürülebilirlik ve Kapasite Artırımı Desteği kapsamında bilim merkezlerinin kuruluma yönelik destek sağlanmaktadır. Atölye ekipmanları, personel eğitimi ve çağrıya uygun diğer kalemler desteklenebilmektedir. " ,
+        "SupportAmount":"Üst Limit: 30.000.000",
+        "deadline":"4003 - B Küçük Ölçekli Bilim Merkezi Sürdürülebilirlik ve Kapasite Artırımı Çağrısı Aralık ve Mayıs aylarında başvurular alınmaktadır.",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "Toplumu bilimle buluşturmayı, bilim ve teknolojiyi anlaşılır ve ulaşılır kılmayı, deneysel ve uygulamalı etkinlikler yoluyla bilim ve teknoloji alanında farkındalık yaratmayı, bireyleri denemeye ve keşfetmeye teşvik etmek"
+      },
+      {
+        "programId": "4003-B",
+        "programName": "4003-B Küçük Ölçekli Bilim Merkezi Kurulum Desteği",
+        "targetAudience": "İlkokul, lise, üniversite, girişimci, genel ziyaretçi vb.\n\nİlkokul, ortaokul, lise öğrencileri ve genel ziyaretçi\n",
+        "targetConditionsAndProcess":"Atölye içerikleri ve gerekli malzemelerin temini, atölye tefrişi, personel eğitimi vb. desteklenmektedir. Destek miktarı, projenin kapsamına göre belirlenmektedir." ,
+        "SupportAmount":"Belli Değil",
+        "deadline":"Açık çağrı olup başvuruda bulunmak isteyen tüm kurum/kuruluşlar talep ettikleri tarihlerde başvurularını gerçekleştirebilirler.",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "Toplumu bilimle buluşturmayı, bilim ve teknolojiyi anlaşılır ve ulaşılır kılmayı, deneysel ve uygulamalı etkinlikler yoluyla bilim ve teknoloji alanında farkındalık yaratmayı, bireyleri denemeye ve keşfetmeye teşvik etmek"
+      },
+      {
+        "programId": "4003-B",
+        "programName": "4003-B Küçük Ölçekli Bilim Merkezi Sürdürülebilirlik ve Kapasite Artırımı Desteği",
+        "targetAudience": "İlkokul, lise, üniversite, girişimci, genel ziyaretçi vb.\n\nİlkokul, ortaokul, lise öğrencileri ve genel ziyaretçi\n",
+        "targetConditionsAndProcess":"4003-B Küçük Ölçekli Bilim Merkezi Sürdürülebilirlik ve Kapasite Artırımı Desteği kapsamında bilim merkezlerinin sürdürülebilirliğine yönelik destek sağlanmaktadır. Atölye ekipmanları, personel eğitimi ve çağrıya uygun diğer kalemler desteklenebilmektedir. " ,
+        "SupportAmount":"Üst Limit: 21.000.000 TL",
+        "deadline":"4003 - B Küçük Ölçekli Bilim Merkezi Sürdürülebilirlik ve Kapasite Artırımı Çağrısı Aralık ve Mayıs aylarında başvurular alınmaktadır.",
+        "region": "Ulusal ",
+        "category": "Belli Değil",
+        "supportPurpose": "Toplumu bilimle buluşturmayı, bilim ve teknolojiyi anlaşılır ve ulaşılır kılmayı, deneysel ve uygulamalı etkinlikler yoluyla bilim ve teknoloji alanında farkındalık yaratmayı, bireyleri denemeye ve keşfetmeye teşvik etmek"
+      },
+      {
+        "programId": "1812",
+        "programName": "1812 - Yatırım Tabanlı Girişimcilik Destek Programı (BiGG Yatırım)",
+        "targetAudience": "Çağrıda belirtilen nitelikleri taşıyan, ön başvuru tarihi itibariyle üniversitelerin herhangi bir ön lisans, lisans, yüksek lisans veya doktora programına kayıtlı öğrenci ya da bu programlardan mezun kişiler ",
+        "targetConditionsAndProcess":"İş fikri başvuruları 22/8/2025 tarihine kadar 149 Uygulayıcı Kuruluş tarafından alınmaktadır.Uygulayıcı Kuruluşlar tarafından 2. Aşamaya geçmesi onaylanan iş planları 1/9/2025–11/9/2025 tarihleri arasında PRODİS üzerinden TÜBİTAK’a sunulabilir.\nSüre: 18 ay" ,
+        "SupportAmount":"%3 hisse karşılığında BiGG Fonu tarafından yapılan 900.000 TL yatırım",
+        "deadline":"1. aşama başvurları için son tarih: 22.08.2025\n2. aşam başvuruları: 1.09.2025-11.09.2025",
+        "region": "Ulusal ",
+        "category": "Sanayi",
+        "supportPurpose": "Girişimcilerin, teknoloji ve yenilik odaklı iş fikirlerini katma değer ve nitelikli istihdam yaratma potansiyeli yüksek teşebbüslere dönüştürebilmeleri için, fikir aşamasından pazara kadar olan faaliyetlerinin desteklenmesi ve program ile Türkiye'de yerleşik sermaya şirketinin kurulması "
+      },
+      {
+        "programId": "1711",
+        "programName": "1711 - Yapay Zeka Ekosistem Çağrısı",
+        "targetAudience": "TÜRKİYE'de yerleşik sermaye şirketleri, Üniversiteler, Kamu Araştırma Merkezleri",
+        "targetConditionsAndProcess":"Çağrılı program, PRODIS üzerinden başvuru. Süre: en fazla 24 ay. Personel, seyahat, alet teçhizat, hizmet alımı, mazleme giderleri desteklenir. Yerli malında oran artar. Bütçe üst sınırı 7.500.000 TL." ,
+        "SupportAmount":"Müşteri Kuruluş büyük ölçekli kuruluş ise; izleme aşamasında dönem raporunda Teknoloji Sağlayıcı Kuruluş(lar) tarafından beyan edilen giderin %20’sini Teknoloji Sağlayıcı Kuruluş(lar)a öder. TÜBİTAK giderleri değerlendirir ve belirleyeceği “kabul edilen harcama tutarının” %60’ını Teknoloji Sağlayıcı Kuruluş(lar)a hibe destek olarak verir. Kalan kısmı Teknoloji Sağlayıcı Kuruluş(ların) kendisi karşılamış olur.\nMüşteri Kuruluş KOBİ ise; izleme aşamasında dönem raporunda Teknoloji Sağlayıcı Kuruluş(lar) tarafından beyan edilen giderin %10’unu Teknoloji Sağlayıcı Kuruluş(lar)a öder. TÜBİTAK giderleri değerlendirir ve belirleyeceği “kabul edilen harcama tutarının” %70’ini Teknoloji Sağlayıcı Kuruluş(lar)a hibe destek olarak verir. Kalan kısmı Teknoloji Sağlayıcı Kuruluşu(ların) kendisi karşılamış olur.\nMüşteri Kuruluş izleme aşamasında dönem raporunda personel giderini (Bakınız Madde 10.2) TÜBİTAK’a sunabilir. TÜBİTAK gideri değerlendirir ve belirleyeceği “kabul edilen harcama tutarının” %60’ını Müşteri Kuruluşa hibe destek olarak verir. Kalan kısmı Müşteri Kuruluş kendisi karşılamış olur.\nDestek oranı, genel bütçe kapsamındaki kamu idareleri ile özel bütçeli idareler ve vakıf üniversiteleri, eğitim ve araştırma hastanesi, kamu araştırma merkez ve enstitüleri için %100’dür. TÜBİTAK dönemlerde beyan edilen harcamaları değerlendirir ve “kabul edilen harcama tutarını” belirler. Müşteri kuruluş, büyük ölçekli kuruluş ise bu tutarının %20’sini;  Müşteri Kuruluş KOBİ ise bu tutarın %10’unu karşılar. Geri kalan kısmını TÜBİTAK hibe destek olarak verir.",
+        "deadline":"27.08.2025 (ön kayıt)\n31.08.2025 (proje önerisi)",
+        "region": "Ulusal ",
+        "category": "Sanayi",
+        "supportPurpose": "Bu çağrı ile Yapay zekâ gibi yüksek bir teknolojinin, müşteri kuruluşların ihtiyaçları doğrultusunda ürün ya da çözümlere dönüştürülmesi hedeflenmektedir.\nDestek modelinde bir Müşteri ile onun ihtiyacını karşılayacak en az bir Üniversite / Kamu Araştırma Merkezi ve en az bir KOBİ’nin birlikte çalışması beklenmektedir.\n"
+      },
+      {
+        "programId": "1501",
+        "programName": "1501 - Sanayi Ar-Ge Projeleri Destekleme Programı",
+        "targetAudience": "Türkiye’de yerleşik KOBİ ölçeğindeki sermaye şirketleri ",
+        "targetConditionsAndProcess":"Çağrılı program, PRODİS üzerinden başvuru. Aynı çağrıya en fazla 2 proje hakkı. Süre: 24 ay (36 aya uzatılabilir). Personel, ekipman, yazılım, danışmanlık vb. giderler desteklenir." ,
+        "SupportAmount":"%75 hibe, yerli malı belgeli  alet/teçhizat/yazılım kullanımında %15’i oranında ek destek tutarı ilave edilir. Üst limit yok.",
+        "deadline":"25.09.2025 (ön kayıt), 29.09.2025 (proje önerisi)",
+        "region": "Ulusal ",
+        "category": "Sanayi",
+        "supportPurpose": "KOBİ’lerin Ar-Ge ve yenilikçilik kapasitesini artırmak, yeni ürün/süreç geliştirmek."
+      },
+      {
+        "programId": "1832",
+        "programName": "1832 - Sanayide Yeşil Dönüşüm",
+        "targetAudience": "Türkiye’de yerleşik KOBİ ölçeğindeki sermaye şirketleri ",
+        "targetConditionsAndProcess":"Çağrılı program, PRODIS üzerinden başvuru. THS5-6 arası desteklenir. Başvuru aşamasında firmanın elinde ticarileşmemiş bir prototip olmalı. En fazla 2 proje hakkı. Süre: 24 ay. Personel, ekipman, yazılım, danışmanlık vb. giderler desteklenir." ,
+        "SupportAmount":"Proje bütçesi üst limiti: \nMikro/küçük KOBİ 10.000.000 TL\nOrta KOBİ 16.000.000 TL\nBüyük ölçekli: 30.000.000 TL\n\nKabul edilen bütçenin büyük ölçekli kuruluşlar için %70’i, KOBİ’ler için %80 ve deprem bölgesindeki KOBİ'ler için %90’ı TÜBİTAK tarafından geri ödemeli destek olarak kuruluşa ödenir.\n\nAlınan desteğin en fazla %50'si proje bittikten 1 yıl sonra taksitler halinde faizsiz olarak TÜBİTAK'a geri ödenir. ",
+        "deadline":"24.09.2025 (ön kayıt), 30.09.2025 (proje önerisi)",
+        "region": "Ulusal ",
+        "category": "Sanayi",
+        "supportPurpose": "Sanayinin yeşil dönüşümüne yönelik Ar-Ge ve yenilik projelerinin desteklenmesi "
+      },
+      {
+        "programId": "1507",
+        "programName": "1507 - TÜBİTAK KOBİ Ar-Ge Başlangıç Destek Programı",
+        "targetAudience": "Türkiye’de yerleşik KOBİ ölçeğindeki sermaye şirketleri ",
+        "targetConditionsAndProcess":"Çağrılı program, PRODIS üzerinden başvuru. Aynı çağrıya en fazla 2 proje hakkı. İkisi ortaklı olmak kaydıyla firmanın ilk 5 projesi desteklenir. Süre: en fazla 18 ay. Personel, seyahat, alet/teçhizat/yazılım/yayın, danışmanlık ve hizmet, malzeme giderleri desteklenir. " ,
+        "SupportAmount":"Proje bütçesi üst sınırı 3.000.000 TL. %75 hibe.",
+        "deadline":"18.09.2025 (ön kayıt), 22.09.2025 (proje önerisi)",
+        "region": "Ulusal ",
+        "category": "Sanayi",
+        "supportPurpose": "KOBİ ölçeğindeki kuruluşları Ar-Ge ve yenilik içeren projeler yapmaya özendirmek."
+      },
+      {
+        "programId": "1719",
+        "programName": "1719 – Eureka Network Tematik Çağrıları",
+        "targetAudience": "Türkiye’de yerleşik sermaye şirketleri (özellikle sanayi kuruluşları) (yürütücü/başvuru sahibi)\nUluslararası ortaklı Ar-Ge projeleri yürüten kuruluşlar (EUREKA Network Çağrıları) \nTürkiye’de yerleşik sermaye şirketleri \nYükseköğretim kurumları\nKamu araştırma merkez ve enstitüleri\nEğitim ve araştırma hastaneleri\n6550 sayılı kanun kapsamındaki araştırma altyapıları \n",
+        "targetConditionsAndProcess":"En az bir sermaye şirketi ortak olmalı; diğer paydaşlar iş birliği içinde yer alabilir\nUluslararası çağrılar çerçevesinde oluşturulan konsorsiyumlar (en az iki ülkeden)\nProje, çağrıya uygun tematik alana odaklanmalı ve teknoloji ile yenilik içermeli\nProjede en az bir lisans mezunu teknik personelin yer alması\n" ,
+        "SupportAmount":"KOBİ’ler için %75, büyük şirketler için %60 destek oranı\nSermaye şirketi dışındaki Kamu ve araştırma kuruluşlarına %100 destek\n\n",
+        "deadline":"Çağrı takvimi ve başvuru tarihleri, ilgili çağrı başlıkları ve tematik öncelikler doğrultusunda değişiklik göstermektedir.",
+        "region": "Uluslararası ",
+        "category": "Sanayi",
+        "supportPurpose": "Özel sektörün öncülüğünde, üniversite ve kamu iş birliği çerçevesinde uluslararası konsorsiyumlar kurarak teknoloji transferini hızlandırmak, teknik yeterliliği artırmak ve firmaların küresel pazarda rekabet gücünü yükseltmek."
+      }
+      ,
+      {
+        "programId": "1709",
+        "programName": "1709 – Eureka Eurostars Çağrıları",
+        "targetAudience": "Türkiye’de yerleşik sermaye şirketleri (özellikle sanayi kuruluşları) (yürütücü/başvuru sahibi)\nUluslararası ortaklı Ar-Ge projeleri yürüten kuruluşlar (EUREKA Network Çağrıları) \nTürkiye’de yerleşik sermaye şirketleri \nYükseköğretim kurumları\nKamu araştırma merkez ve enstitüleri\nEğitim ve araştırma hastaneleri\n6550 sayılı kanun kapsamındaki araştırma altyapıları \n",
+        "targetConditionsAndProcess":"En az bir sermaye şirketi ortak olmalı; diğer paydaşlar iş birliği içinde yer alabilir\nUluslararası çağrılar çerçevesinde oluşturulan konsorsiyumlar (en az iki ülkeden)\nProje, çağrıya uygun tematik alana odaklanmalı ve teknoloji ile yenilik içermeli\nProjede en az bir lisans mezunu teknik personelin yer alması\n" ,
+        "SupportAmount":"KOBİ’ler için %75, büyük şirketler için %60 destek oranı\nSermaye şirketi dışındaki Kamu ve araştırma kuruluşlarına %100 destek\n\n",
+        "deadline":"Çağrı takvimi ve başvuru tarihleri, ilgili uluslararası Eurostars doğrultusunda değişiklik göstermektedir.",
+        "region": "Uluslararası ",
+        "category": "Sanayi",
+        "supportPurpose": "Özel sektörün öncülüğünde, üniversite ve kamu iş birliği çerçevesinde uluslararası konsorsiyumlar kurarak teknoloji transferini hızlandırmak, teknik yeterliliği artırmak ve firmaların küresel pazarda rekabet gücünü yükseltmek."
+      },
+      {
+        "programId": "1505",
+        "programName": "1505 Üniversite-Sanayi İşbirliği Destek Programı",
+        "targetAudience": "Türkiye’de yerleşik sermaye şirketleri, üniversiteler, araştırma altyapıları, kamu araştırma merkezleri/enstitüleri.",
+        "targetConditionsAndProcess":"Bir yürütücü kuruluş ve bir müşteri kuruluş olmak üzere ortaklı başvurudur. Başvurular yürütücü luruluş tarafından yapılır. Müşteri kuruluş Türkiye'de yerleşik sermaye şirketleri olabilir.  Personel, ekipman, hizmet alımı, malzeme vb. giderler desteklenir.\nSüre en fazla 24 ay.\n" ,
+        "SupportAmount":"Bütçe üst limiti yoktur. TÜBİTAK destek limiti 2 Milyon TL'dir.\nKOBİ’ler için %75\nBüyük ölçekli firmalar için %60 ",
+        "deadline":"Sürekli açık",
+        "region": "Uluslararası ",
+        "category": "Sanayi",
+        "supportPurpose": "Üniversite, araştırma altyapısı, kamu araştırma merkez ve enstitülerindeki bilgi birikimi ve teknolojinin, Türkiye'de yerleşik ve proje sonuçlarını Türkiye'de uygulamayı taahhüt eden kuruluşların ihtiyaçları doğrultusunda, ürüne ya da sürece dönüştürülerek sanayiye aktarılması yoluyla ticarileştirilmesine katkı sağlamak"
+      },
+      {
+        "programId": "1702",
+        "programName": "1702 - Patent Tabanlı Teknoloji Transferi Destekleme Çağrısı",
+        "targetAudience": "Türkiye’de yerleşik sermaye şirketleri, üniversiteler, araştırma altyapıları, teknoloji geliştirme bölgesi şirketleri, teknoloji transfer ofisleri",
+        "targetConditionsAndProcess":"Üniversiteler, araştırma altyapıları, teknoloji geliştirme bölgesi şirketleri ve teknoloji transfer ofisleri Teknoloji Sağlayıcı Kuruluş olarak nitelendirilmektedir. Müşteri Kuruluş ise Teknoloji Sağlayıcı Kuruluşun hak sahibi olduğu ve ulusal veya uluslararası patentler ile korunan teknolojileri lisanslama ya da devir yolu ile edinerek ekonomik değer oluşturmayı hedefleyen ve Türkiye’de yerleşik sermaye şirketidir. Bir Müşteri Kuruluş ve en az bir Teknoloji Sağlayıcı Kuruluşun ortak başvuruları kabul edilir. Başvurular müşteri kuruluş tarafından yapılır. Proje konusu patentli teknolojinin lisans/devir bedeli, patent değerleme hizmeti, kavram doğrulama, prototip geliştirme, vb giderler desteklenir. \nSüre en fazla 60 ay." ,
+        "SupportAmount":"Projelerin bütçesi en fazla 4 M TL\n\n\nKOBİ: %75\nBüyük: %60\n\nKavram doğrulama,\nprototip geliştirme ve test-analiz hizmet alımları: 500 Bin TL\n\nPatent değerleme: 100 Bin TL\n\n",
+        "deadline":"Sürekli açık",
+        "region": "Ulusal",
+        "category": "Sanayi",
+        "supportPurpose": "Üniversitelerde, araştırma kurumlarında ve teknoloji geliştirme bölgelerinde geliştirilen patentli teknolojilerin sanayiye aktarılması amaçlanmaktadır. "
+      },
+      {
+        "programId": "1613",
+        "programName": "1613-Teknoloji Transfer Profesyoneli İstihdamı Desteği Çağrısı",
+        "targetAudience": "Üniversiteler, teknoloji transfer ofisleri, teknoloji geliştirme bölgeleri yönetici şirketleri, araştırma altyapıları",
+        "targetConditionsAndProcess":"Personel (1 TTP), hizmet alımı, genel giderler desteklenir. Süre 24 ay." ,
+        "SupportAmount":"Personel bütçesi, döneme ait brüt asgari ücretin maksimum 6 katıdır.\nPersonel giderinin % 5’i oranında hizmet gideri, personel ve hizmet giderleri toplamının %5’i oranında genel giderden oluşur.\n\n\nTÜBİTAK Payı: \n\n1513 Devamı Başvurular: \nMevcut personel için %40, \nYeni personel için %60 \n\nDiğer:\nMevcut personel için % 60\nYeni personel için %80 \n\n",
+        "deadline":"Sürekli açık",
+        "region": "Ulusal",
+        "category": "Sanayi",
+        "supportPurpose": "TTO’lar tarafından yeni Teknoloji Transfer Profesyonelleri (TTP) istihdam edilmesi veya mevcut TTP’lerinin istihdamının devamlılığına katkı sunarak ulusal teknoloji transfer ekosisteminin gelişimine katkı sağlanması amaçlanmaktadır. "
+      },
+      {
+        "programId": "1831",
+        "programName": "1831 - Yeşil İnovasyon Teknoloji Mentörlük Çağrısı",
+        "targetAudience": "Türkiye’de yerleşik sermaye şirketi statüsündeki tüm KOBİ'ler",
+        "targetConditionsAndProcess":"Yeşil İnovasyon Teknoloji Mentörlük Programı Niyet Beyanı çağrılarında TÜBİTAK tarafından onay alan ve çözüm ortağı olarak belirlenen web sitemizde yayınlanan çözüm ortaklarından alınan yeşil dönüşüm çerçevesinde, danışmanlık, rehberlik ve mentörlük hizmetleri desteklenir.  \n\nProjeler kapsamında firmaların faaliyet alanları kapsamında Yeşil Dönüşümün önemi, mevcut durum analizi, karbon ayak izi ölçümü, yol haritası oluşturulması vb. çalışmaları içerebilen mentörlük faaliyetlerinin Yeşil Dönüşüm kapsamında firmaya sağlayacağı katkılardan bahsedilmesi beklenmektedir. \n\nProje süreleri 3-6 ay olup KOBİ’ler -her bir başvurunun gerekçesini ve beklenen etkilerini proje özelinde ayrıştırmak koşuluyla- aynı Çözüm Ortağı ile en fazla 2, toplamda en fazla 3 ayrı proje ile bu program kapsamında destek alabilir.\n" ,
+        "SupportAmount":"Bütçe üst limiti 280.000 TL \nDestek oranı: %90 (KDV hariç) hibe",
+        "deadline":"Sürekli açık",
+        "region": "Ulusal",
+        "category": "Sanayi",
+        "supportPurpose": "KOBİ’lerin yeşil dönüşüm sürecinde teknoloji ve yenilik ihtiyaçlarının belirlenmesi amacıyla, başvurusu TÜBİTAK tarafından onaylanan çözüm ortaklarından uzman desteği alınması, yeşil dönüşüm çerçevesinde iş modellerini, tedarik ve değer zincirlerini, ürün ve hizmetlerini gözden geçirmek isteyen KOBİ'lere teknik yardım sağlanmasıdır."
+      },
+      {
+        "programId": "1602",
+        "programName": "1602 Patent Destek Programı ",
+        "targetAudience": "Türkiye’de yerleşik sermaye şirketleri ve üniversiteler",
+        "targetConditionsAndProcess":"TÜRKPATENT veya WIPO’ya başvuru yaparak, başvuru numarası alan Türkiye Cumhuriyeti vatandaşları veya ülkemizde yerleşik olan şirketler, üniversiteler, kamu kurum ve kuruluşları Destek Programından faydalanabilirler. Ancak, kanuni ve iş merkezi yurtdışında bulunan işletmelerin dar mükellefiyet statüsündeki Türkiye’de yerleşik temsilcilik ve şubeleri ile vakıflar (kanunla kurulmuş vakıflar hariç), dernekler ve bunların iktisadi işletmeleri bu program kapsamında destek başvurusu yapamazlar.\n\nDestek ve Ödül Sınırlamaları:\n\nGerçek kişiler bir takvim yılı içerisinde en fazla 5 (beş) patent başvurusu için, Tüzel kişiler bir takvim yılı içerisinde en fazla 20 (yirmi) patent başvurusu için desteklerden faydalanabilirler.\n\nUlusal Patent Tescil Ödülü ve Uluslararası Patent Tescil Ödüllerine sadece gerçek kişiler, üniversiteler ile KOBİ ölçeğindeki şirketler başvurabilir.\n" ,
+        "SupportAmount":"Uluslararası Patent Başvuruları:\n\nUluslararası Araştırma İnceleme Otoritesi olarak Türk Patent ve Marka Kurumu seçilmesi halinde araştırma ücretinin tamamı, aksi durumda %50’si karşılanır\n\nUluslararası İnceleme Raporu: \n\nUSPTO:  40.000 TL\nEPO: 40.000 TL\nJPO: 80.000 TL\nCNIPA: 40.000 TL\nKIPO: 40.000 TL\n\nUluslararası Tescil Ödülü: \n\n55.000 TL \n(EPO, JPO, USPTO, KIPO, CNIPA tarafından tescil edilen her bir patent için)\n\n*Bir patente ilişkin alınabilecek olan Uluslararası Patent İnceleme Raporu Destek tutarlarının\ntoplamı 240.000-TL’yi geçemez.\n\n\n\n",
+        "deadline":"Sürekli açık",
+        "region": "Ulusal",
+        "category": "Sanayi",
+        "supportPurpose": "1602 TÜBİTAK Patent Destek Programı, ülkemiz kaynaklı ulusal ve uluslararası patent başvuru sayısının artırılması ve ülkemizdeki patent sayısının artırılmasını hedeflemektedir.\n\n"
+      },
+      {
+        "programId": "1833",
+        "programName": "1833- SAYEM YEŞİL DÖNÜŞÜM ÇAĞRISI",
+        "targetAudience": "Türkiye’de yerleşik KOBİ ve büyük ölçekli sermaye şirketleri ve üniversiteler, araştırma enstitüleri ve kamu kurumları",
+        "targetConditionsAndProcess":"Çağrılı program, PRODIS üzerinden başvuru. En az 4 en fazla 10 ortaklı başvuru alınmaktadır. THS5-9 arası desteklenir. Başvuru aşamasında firmanın elinde ticarileşmemiş bir prototip olmalı. En fazla 2 proje hakkı. Süre: 36 ay. Personel, ekipman, yazılım, danışmanlık vb. giderler desteklenir." ,
+        "SupportAmount":"Proje bütçesi üst limiti: 350 milyon TL'dir.\nKOBİ ölçeğinde firma: 18 milyon TL\nBüyük ölçekli firma: 70 milyon TL\nKurumlar: 11 milyon TL\n\nKabul edilen bütçenin büyük ölçekli kuruluşlar için %70’i, KOBİ’ler için %80 ve deprem bölgesindeki KOBİ'ler için %90’ı TÜBİTAK tarafından geri ödemeli destek olarak kuruluşa ödenir.\nAlınan desteğin en fazla %50'si proje bittikten 1 yıl sonra taksitler halinde faizsiz olarak TÜBİTAK'a geri ödenir. ",
+        "deadline":"24.09.2025 (ön kayıt), 30.09.2025 (proje önerisi)",
+        "region": "Ulusal",
+        "category": "Sanayi, Kamu, Üniversite",
+        "supportPurpose": "4-10 ortaklı platformların Sanayinin yeşil dönüşümüne yönelik Ar-Ge ve yenilik projelerinin desteklenmesi "
+      },
+      {
+        "programId": "1707",
+        "programName": "1707 - Siparişe Dayalı Ar-Ge Projeleri için KOBİ Destekleme Çağrısı",
+        "targetAudience": "TÜRKİYE'de yerleşik sermaye şirketleri",
+        "targetConditionsAndProcess":"Çağrılı program, PRODIS üzerinden başvuru. Süre: en fazla 24 ay. Tedarikçi kuruluş için; Personel, seyahat, alet teçhizat, hizmet alımı, mazleme giderleri desteklenir. Müşteri kuruluş için: Sipariş Ar-Ge çağrılarında, Müşteri Kuruluşun yönetim, kalite, test, validasyon ürünün sahada doğrulanması gibi faaliyetlerini yapan proje personelinin giderleri (bu desteğin üst sınırı 18 adam ay işgücünü geçmeyecektir.) ve şehirlerarası seyahat giderleri desteklenir.Bütçe üst sınırı 7.500.000 TL." ,
+        "SupportAmount":" Müşteri Kuruluş dönemsel olarak gerçekleşen proje giderlerinin %40’ını Tedarikçi Kuruluşa ödeyecek, TÜBİTAK giderleri değerlendirdikten sonra “kabul edilen harcama tutarının” %40’ını Tedarikçi Kuruluşa hibe destek olarak verecektir. BİGG Ortaklı Sipariş Ar-Ge çağrısı kapsamındaki projelerde TÜBİTAK desteği %50 olacaktır.",
+        "deadline":"11.07.2025 (ön kayıt)\n14.07.2025 (proje önerisi)",
+        "region": "Ulusal",
+        "category": "Sanayi",
+        "supportPurpose": "Ülkemizdeki sanayi kuruluşlarının büyük kısmını oluşturan KOBİ’lerin potansiyel müşterisi olan yenilikçi ürünleri/süreçleri geliştireceği Müşteri Kuruluş ortaklı Ar-Ge projelerinin desteklenmesi; bu sayede işbirliklerinin artması, Ar-Ge destekleri için ayrılan kamu kaynaklarının daha etkin kullanılması "
+      },
+      {
+        "programId": "1515",
+        "programName": "1515 - Öncül Ar-Ge Laboratuvarları Destekleme Programı",
+        "targetAudience": "Türkiye’de yerleşik veya uluslararası sermaye şirketleri (özellikle sanayi kuruluşları) (yürütücü/başvuru sahibi)\nOrtak Kuruluşlar:\nTürkiye’de yerleşik sermaye şirketleri \nYükseköğretim kurumları\nKamu araştırma merkez ve enstitüleri \n",
+        "targetConditionsAndProcess":"Kurulacak laboratuvarda yer alacak araştırmacıların toplamının en az 1/3'ünün doktoralı olması gerekmektedir.\nBaşvuru yapacak kuruluşun 2022 yılı için Ar-Ge harcamasının 15 milyon TL ve üzerinde olması, 2023 yılı için 24.715.500 TL ve üzerinde olması veya 2024 yılı için 35.684.238 TL ve üzerinde olması beklenmektedir. Koşulda belirtilen Ar-Ge harcaması tutarları bir önceki yıl sonu TÜFE ortalama yüzde değişimi oranında her yılın Ocak ayında artırılır.\n" ,
+        "SupportAmount":" Destek miktarı üst limit: 13.000.000 TL (yıllık)\nDestek Oranları: Personel Giderleri için %75, Tersine Beyin Göçü ile laboratuvara katılan araştırmacı için %100\nDanışmanlık Giderleri için %75\nGenel Giderler için destek kapsamına alınan personel giderlerinin %5'i kadar",
+        "deadline":"Sürekli açık",
+        "region": "Ulusal/Uluslararası",
+        "category": "Sanayi",
+        "supportPurpose": "Türk bilim insanlarının araştırma niteliklerinin yükseltilmesi ve \nülkemizin belirli bilim ve teknoloji alanlarında küresel çekim merkezi olmasının sağlanması"
+      },
+      {
+        "programId": "1511",
+        "programName": "1511 - TÜBİTAK Öncelikli Alanlar Araştırma Teknoloji Geliştirme ve Yenilik P. D. P.(Teknoloji Odaklı Sanayi Hamlesi Programı)",
+        "targetAudience": "Türkiye’de yerleşik sermaye şirketleri",
+        "targetConditionsAndProcess":"Teknoloji Odaklı Sanayi Hamlesi Programı, Türkiye’de katma değerli üretimin artırılması amacı doğrultusunda, Sanayi ve Teknoloji Bakanlığı, TÜBİTAK ve KOSGEB tarafından sağlanan destek ve teşviklerin orta-yüksek ve yüksek teknoloji seviyeli sektörlere yoğunlaştırılmasına yönelik özel bir programdır.\nProgram kapsamında Öncelikli Ürün Listesinde yer alan ürünleri üretmeyi amaçlayan projelere Ar-Ge ihtiyacı olması durumunda TÜBİTAK tarafından 1511 Programı kapsamında hibe destek sağlanmaktadır.\nPrograma sektör ve büyüklüğüne bakılmaksızın kuruluş düzeyinde katma değer üreten Türkiye’de yerleşik bütün sermaye şirketleri çağrı konusuna uygun projeleriyle başvuru yapabilmektedir.\nBaşvurular, Teknoloji Odaklı Sanayi Hamlesi Programı web sitesinde Program Portali uygulaması üzerinden çevrim içi olarak alınmaktadır. \nProje bütçesi üst sınırı ve proje süresi Sanayi ve Teknoloji Bakanlığı tarafından çağrıya özel belirlenmeltedir.\n\n" ,
+        "SupportAmount":"Proje harcamaları kapsamında büyük ölçekli kuruluşlar için %60 hibe destek verilmektedir. KOBİ’ler için %75 hibe destek verilmektedir. ",
+        "deadline":"T.C. Sanayi ve Teknoloji Bakanlığı tarafından belirlenen takvime göre çağrılar açılmaktadır.",
+        "region": "Ulusal",
+        "category": "Sanayi",
+        "supportPurpose": "Türkiye’de orta-yüksek ve yüksek teknoloji seviyeli, katma değeri yüksek ürünlerin ve bu sektörlerin gelişimi için kritik önemi haiz ürünlerin üretiminin artırılması ve bu çerçevede yeni üretim imkan ve kabiliyetlerinin ülkemize kazandırılması amaçlanmaktadır."
+      }
+]

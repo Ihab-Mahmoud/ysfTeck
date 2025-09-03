@@ -12,7 +12,7 @@ function AdminPanel() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("api/admin/chat-history"); // Backend endpoint
+      const res = await fetch('http://localhost:5001/admin/chat-history'); // Backend endpoint
       if (!res.ok) {
         throw new Error(`Veriler çekilemedi. Durum kodu: ${res.status}`);
       }
@@ -78,16 +78,13 @@ function AdminPanel() {
       console.log("Gönderilecek session ID'ler:", Array.from(selectedSessionIds));
       // ---- DEBUGGING LOGLARI SONU ----
 
-      const response = await fetch(
-        'api/admin/chat-sessions',
-        {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ sessionIds: Array.from(selectedSessionIds) }), // Set'i diziye çeviriyoruz
-        }
-      );
+      const response = await fetch('http://localhost:5001/admin/chat-sessions', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ sessionIds: Array.from(selectedSessionIds) }), // Set'i diziye çeviriyoruz
+      });
 
       // ---- DEBUGGING LOGLARI BAŞLANGICI ----
       console.log("Fetch isteği tamamlandı. Yanıt durumu:", response.status);

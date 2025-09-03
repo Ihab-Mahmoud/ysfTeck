@@ -1,9 +1,8 @@
-import React from "react";
+import React from "react"
 import { FaAlignLeft } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
 // import { FaUserCircle, FaCaretDown } from "react-icons/fa";
 import { FaRegQuestionCircle } from "react-icons/fa";
-
+import { NavLink, useNavigate } from "react-router-dom";
 import Wrapper from "../assets/Navbar.js";
 import Logo from "../components/Logo.jsx";
 const Navbar = ({ toggleSidebar }) => {
@@ -14,7 +13,7 @@ const Navbar = ({ toggleSidebar }) => {
           <FaAlignLeft />
         </button>
         <div>
-          <NavLink onClick={() => window.location.reload()}>
+          <NavLink to="/">
             <Logo className="logo" />
           </NavLink>
         </div>

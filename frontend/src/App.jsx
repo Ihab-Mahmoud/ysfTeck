@@ -13,29 +13,8 @@ import Error from "./pages/Error.jsx"
 import Dashboard from "./pages/dashboard.jsx";
 import ErrorElement from "./components/ErrorElement.jsx";
 import "./index.css"
-''
-// Sohbet ve Form mantığını içeren yeni bileşen
-
-
-// Ana App bileşeni, yönlendirmeyi yönetir
-// function App() {
-//   return (
-//     <Router>
-//       <Navbar/>
-//       <Routes>
-//         <Route path="/" element={<MainChat />} />{" "}
-//         {/* Ana sohbet ve form sayfası */}
-//         <Route
-//           path="/admin"
-//           element={<AdminPanel onBackToChat={() => window.history.back()} />} // Admin paneli
-//         />
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
+import KVKK from "./pages/KVKK.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 
 
 const router = createBrowserRouter([
@@ -50,30 +29,21 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <MainChat />,
-            // action: addjobSubmit(queryClient),
+            element: <KVKK />,
             errorElement: <ErrorElement />,
           },
-          // {
-          //   path: "help",
-          //   element: <Help />,
-          //   // loader: StatsLoader(queryClient),
-          //   errorElement: <ErrorElement />,
-          // },
+          {
+            path: "main-chat",
+            element:<ProtectedRoute>
+            <MainChat />
+            </ProtectedRoute>,
+            errorElement: <ErrorElement />,
+          },
         ],
       },
     ],
   },
 ]);
-
-// const App = () => {
-//   return (
-//     <QueryClientProvider client={queryClient}>
-//       <RouterProvider router={router} />
-//       <ReactQueryDevtools initialIsOpen={false} />
-//     </QueryClientProvider>
-//   );
-// };
 
 const App = () => {
   return <RouterProvider router={router} />;

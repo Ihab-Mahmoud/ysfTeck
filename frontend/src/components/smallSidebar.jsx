@@ -10,17 +10,17 @@ const SmallSidebar = ({ showSidebar, toggleSidebar, user, logoutUser }) => {
     <Wrapper>
       <div
         className={
-          showSidebar ? "sidebar-container show-sidebar" : "sidebar-container"
+          showSidebar ? "sidebar-container " : "sidebar-container show-sidebar"
         }
       >
         <div className="content">
           <div className=" header-holder">
-          <button className="close-btn" onClick={toggleSidebar}>
-            <FaTimes />
-          </button>
+            <button className="close-btn" onClick={toggleSidebar}>
+              <FaTimes />
+            </button>
             <Logo />
           </div>
-        <AdminPanel />
+          <AdminPanel />
         </div>
       </div>
     </Wrapper>
