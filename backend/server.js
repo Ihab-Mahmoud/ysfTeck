@@ -3,7 +3,6 @@
   import bodyParser from "body-parser";
   import * as dotenv from "dotenv";
   dotenv.config();
-  import Groq from "groq-sdk";
   import { initializeDatabase, db } from "./database.js"; 
   import OpenAI from "openai";
   import path from "path";
@@ -35,12 +34,12 @@
   app.use(bodyParser.json());
 
   const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: ,
   });
 
   const client = new OpenAI({ 
 
-      apiKey: "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",
+      apiKey: process.env.OPENAI_API_KEY,
 
     });
 
@@ -196,104 +195,79 @@
 
 function scoreBoostForProfile(program, profile) {
   const text = `${program.programName} ${program.supportPurpose} ${program.targetAudience}`.toLowerCase();
-  const dept   = (profile?.department || "").toLowerCase();
-  const job    = (profile?.dream_job || "").toLowerCase();
-  const edu    = (profile?.education_level || "").toLowerCase().trim(); 
+  const edu = (profile?.education_level || "").toLowerCase();
 
-  // Parse career dreams safely
-  let dreams = [];
-  let focusAreas = [];
-  try {
-    const cd = profile?.career_dreams;
-    if (cd?.mainJob) dreams = cd.mainJob.map(j => j.toLowerCase());
-    if (cd?.focusAreas) focusAreas = cd.focusAreas.map(f => f.toLowerCase());
-  } catch (err) {
-    dreams = [];
-    focusAreas = [];
-  }
-
-  // Merge jobs + focus areas
-  const jobHas = (t) =>
-    job.includes(t) ||
-    dreams.some(d => d.includes(t)) ||
-    focusAreas.some(f => f.includes(t));
-
-  const has    = (t) => text.includes(t);
-  const depHas = (t) => dept.includes(t);
-
-  // 🚫 Exclusion Rule: Return -1 if the user's education level is too high for the program's target audience.
-  // This prevents recommending primary/secondary school programs to university students or graduates.
-  const higherEducationLevels = ["önlisans", "lisans", "yüksek lisans", "doktora", "tıpta uzmanlık", "sanatta yeterlilik"];
   const lowerEducationPrograms = ["okul öncesi", "ilkokul", "ortaokul", "lise"];
+  const higherEducationLevels = ["önlisans", "lisans", "yüksek lisans", "doktora", "tıpta uzmanlık", "sanatta yeterlilik"];
 
-  if (higherEducationLevels.some(level => edu.includes(level)) && lowerEducationPrograms.some(level => text.includes(level))) {
+  // Exclude lower-edu programs for higher-edu users
+  if (higherEducationLevels.some(h => edu.includes(h)) && lowerEducationPrograms.some(l => text.includes(l))) {
     return -1;
   }
 
+  // Exclude higher-edu programs for lower-edu users
+  if (lowerEducationPrograms.some(l => edu.includes(l)) && higherEducationLevels.some(h => text.includes(h))) {
+    return -1;
+  }
+
+  // Department
+  const dept = (profile?.department || "").toLowerCase();
+
+  // Career dream + dream job combined
+  const combinedDreams = [
+    profile?.dream_job || "",
+    profile?.career_dreams || ""
+  ].join(" ").toLowerCase();
+
+  const jobHas = (t) => combinedDreams.includes(t);
+  const has = (t) => text.includes(t);
+  const depHas = (t) => dept.includes(t);
+
   let boost = 0;
 
-  // Entrepreneurship / BiGG / Investment
-  if (jobHas("girişim") || jobHas("startup") || jobHas("kurucu") || jobHas("kendi işim")) {
-    if (has("girişim") || has("bigg") || has("yatırım")) boost += 0.12;
+  // 🔹 Career / Job-related boosts
+  if (jobHas("girişim") && (has("girişim") || has("bigg") || has("yatırım") || has("start-up") || has("innovasyon"))) boost += 0.35;
+  if (jobHas("araştır") && (has("ar-ge") || has("araştırma") || /\b1001\b/.test(text) || has("laboratuvar") || has("tez") || has("araştırmacı"))) boost += 0.30;
+  if (jobHas("sanayi") && (has("kobi") || has("sanayi") || has("teydeb") || has("üretim") || has("imalat") || has("endüstri"))) boost += 0.30;
+  if ((depHas("çevre") || jobHas("sürdürü") || jobHas("iklim") || jobHas("yeşil") || jobHas("ekoloji")) &&
+      (has("yeşil") || has("dönüşüm") || has("sürdürülebilir") || has("ekoloji") || has("çevre") || has("iklim değişikliği"))) boost += 0.35;
+  if (jobHas("teknoloji") && (has("yazılım") || has("programlama") || has("ai") || has("ml") || has("iot") || has("robotik"))) boost += 0.25;
+  if (jobHas("veri") && (has("analiz") || has("big data") || has("istatistik") || has("data science") || has("yapay zeka"))) boost += 0.25;
+  if (jobHas("sağlık") && (has("tıpta uzmanlık") || has("hekim") || has("sağlık teknolojisi") || has("biyomedikal"))) boost += 0.30;
+  if (jobHas("mühendislik") && (has("tasarım") || has("elektrik") || has("mekanik") || has("makine") || has("inşaat") || has("robotik"))) boost += 0.25;
+  if (jobHas("akademi") && (has("üniversite") || has("öğretim") || has("araştırma") || has("bilim") || has("doktora") || has("tez"))) boost += 0.25;
+  if (jobHas("öğretmen") && (has("okul") || has("eğitim") || has("pedagoji") || has("ders") || has("sınıf"))) boost += 0.30;
+  if (jobHas("tasarım") && (has("grafik") || has("ui") || has("ux") || has("endüstriyel tasarım") || has("3d"))) boost += 0.25;
+  if (jobHas("finans") && (has("yatırım") || has("bankacılık") || has("hisse") || has("portföy") || has("ekonomi"))) boost += 0.25;
+  if (jobHas("hukuk") && (has("avukat") || has("kanun") || has("mahkeme") || has("dava"))) boost += 0.20;
+  if (jobHas("psikoloji") && (has("rehberlik") || has("danışmanlık") || has("psikoterapi") || has("insan kaynakları"))) boost += 0.20;
+  if (jobHas("biyoloji") && (has("laboratuvar") || has("genetik") || has("biyoteknoloji") || has("ekoloji"))) boost += 0.25;
+  if (jobHas("kimya") && (has("laboratuvar") || has("analiz") || has("formül") || has("sentez"))) boost += 0.25;
+  if (jobHas("fizik") && (has("deney") || has("laboratuvar") || has("teori") || has("simülasyon"))) boost += 0.25;
+  if (jobHas("matematik") && (has("analiz") || has("istatistik") || has("algoritma") || has("modelleme"))) boost += 0.25;
+  if (jobHas("yönetim") && (has("proje") || has("ekip") || has("strateji") || has("planlama") || has("liderlik"))) boost += 0.20;
+  if (jobHas("sanat") && (has("müzik") || has("resim") || has("performans") || has("yeterlilik") || has("yaratıcı"))) boost += 0.25;
+  if (jobHas("yazılım") && (has("full-stack") || has("frontend") || has("backend") || has("react") || has("node") || has("javascript"))) boost += 0.25;
+  if (jobHas("robotik") && (has("sensör") || has("arduino") || has("microcontroller") || has("otomasyon"))) boost += 0.25;
+  if (jobHas("biyomedikal") && (has("cihaz") || has("medikal") || has("laboratuvar") || has("teknoloji"))) boost += 0.25;
+  if (jobHas("yapay zeka") && (has("ml") || has("ai") || has("deeplearning") || has("nlp"))) boost += 0.25;
+  if (jobHas("çevre mühendisliği") && (has("su") || has("hava") || has("atık") || has("sürdürülebilir"))) boost += 0.25;
+  if (jobHas("tarım") && (has("bitki") || has("hayvancılık") || has("gıda") || has("tarım teknolojisi"))) boost += 0.20;
+
+  // Education level boost
+  const programEducationLevels = text.match(/(doktora mezunları|lise mezunları|yüksek lisans mezunları|lisans mezunları|tıpta uzmanlık derecesine sahip kişiler|tıpta uzmanlık öğrencileri|sanatta yeterliliğe sahip kişiler|okul öncesi|ilkokul öğrencileri|ilkokul mezunları|ortaokul öğrencileri|ortaokul mezunları|lise öğrencileri|yüksek lisans öğrencileri|önlisans öğrencileri|önlisans mezunları|lisans öğrencileri|doktora öğrencileri|doktora yapmış araştırmacılar)/gi);
+
+  if (programEducationLevels?.some(level => edu.includes(level.toLowerCase()))) {
+    if (lowerEducationPrograms.some(l => edu.includes(l)) || ["okul öncesi,lise,ilk okul,orta okul,uzmanlık öğrencisi", "uzmanlık derecesine", "sanatta yeterliliğe"].some(s => edu.includes(s))) {
+      boost += 0.20;
+    } else {
+      boost += 0.10;
+    }
   }
-
-  // Academic / Research oriented
-  if (jobHas("araştır") || jobHas("akadem") || jobHas("öğretim") || jobHas("bilim insan")) {
-    if (has("ar-ge") || has("araştırma") || /\b1001\b/.test(text)) boost += 0.10;
-  }
-
-  // SME / Industry / Production
-  if (jobHas("sanayi") || jobHas("üretim") || jobHas("mühendis") || jobHas("teknik")) {
-    if (has("kobi") || has("sanayi") || has("teydeb")) boost += 0.08;
-  }
-
-  // Green transition / Sustainability / Climate
-  if (
-    depHas("çevre") || depHas("enerji") || depHas("kimya") ||
-    jobHas("sürdürü") || jobHas("iklim") || jobHas("yeşil")
-  ) {
-    if (has("yeşil") || has("dönüşüm") || has("sürdürülebilir")) boost += 0.12;
-  }
-
-//  Corrected and improved education level alignment logic
-// const eduLevelBoosts = {
-//   "okulöncesi":0.25,
-//   "ilkokulöğrencisi":0.25,
-//   "ortaokulöğrencisi":0.25,
-//   "liseöğrencisi":0.25,
-//   "lisemezunu":0.10,
-//   "önlisansöğrencisi":0.10,
-//   "önlisansmezunu":0.10,
-//   "lisansöğrencisi":0.10,
-//   "lisansmezunu":0.10,
-//   "yükseklisansöğrencisi":0.10,
-//   "yükseklisansmezunu":0.10,
-//   "doktoraöğrencisi":0.10,
-//   "doktoramezunu":0.10,
-//   "doktorayapmışaraştırmacılar":0.10,
-//   "tıptauzmanlıköğrencisi":0.10,
-//   "tıptauzmanlıkderecesinesahiplişiler":0.10,
-//   "sanattayeterliliğesahipkişiler":0.10
-// };
-const eduLevelBoosts = {
-  "ortaokul":0.25,
-  "ilkokul":0.25,
-  "lise":0.25,
-  "lisans":0.25,
-  "yüksek lisans":0.25,
-  "doktora":0.25,
-};
-
-// Check for direct education level matches
-// const programEducationLevel = text.match(/(okulöncesi|ilkokulöğrencisi|ortaokulöğrencisi|liseöğrencisi|lisemezunu|önlisansöğrencisi|önlisansmezunu|lisansöğrencisi|lisansmezunu|yükseklisansöğrencisi|yükseklisansmezunu|doktoraöğrencisi|doktoramezunu|doktorayapmışaraştırmacılar|tıptauzmanlıköğrencisi|tıptauzmanlıkderecesinesahiplişiler|sanattayeterliliğesahipkişiler)/);
-const programEducationLevel = text.match(/(lisans|ortaokul|lise|yüksek lisans|doktora|ilkokul|önlisansmezunu|lisansöğrencisi|lisansmezunu|yükseklisansöğrencisi|yükseklisansmezunu|doktoraöğrencisi|doktoramezunu|doktorayapmışaraştırmacılar|tıptauzmanlıköğrencisi|tıptauzmanlıkderecesinesahiplişiler|sanattayeterliliğesahipkişiler)/);
-if (programEducationLevel && edu.includes(programEducationLevel[0])) {
-  boost += eduLevelBoosts[programEducationLevel[0]];
-}
-
 
   return boost;
 }
+
 
 
 
@@ -511,7 +485,8 @@ if (programEducationLevel && edu.includes(programEducationLevel[0])) {
         if (maybeName) {
           await updateProfile(chatSessionId, { name: maybeName });
           responseText = `Merhaba ${maybeName}, Tanıştığımıza memnun oldum. Hangi seviyede eğitim aldın ya da alıyorsun?
-          Örneğin; ön lisans öğrencisiyim veya lise mezunuyum diyebilirsin.`;
+
+Örneğin; ön lisans öğrencisiyim veya lise mezunuyum diyebilirsin.`;
         } else {
           responseText = "Sana hitap edebilmek için ismini öğrenebilir miyim?";
         }
@@ -526,7 +501,7 @@ if (programEducationLevel && edu.includes(programEducationLevel[0])) {
                 const lowerLevel = maybeeducationLevel.toLowerCase();
                 console.log(lowerLevel);
                 
-                if (lowerLevel == "okul öncesi" || lowerLevel == "ilkokul Öğrencisi" || lowerLevel == "ortaokul öğrencisi" || lowerLevel == "lise öğrencisi" || lowerLevel == "lise mezunu" ) {
+                if (lowerLevel == "okul öncesi" || lowerLevel == "ilkokul Öğrencileri" || lowerLevel == "ortaokul öğrencileri" || lowerLevel == "lise öğrencileri" || lowerLevel == "lise mezunları" ) {
                   await updateProfile(chatSessionId, { education_level: maybeeducationLevel, stage: 1 });
                   responseText = "Kaç yaşındasınız?";
                 }else{
@@ -536,23 +511,23 @@ if (programEducationLevel && edu.includes(programEducationLevel[0])) {
 
               } else {
                 responseText = `Tam olarak anlayamadım. Bu listeden senin için uygun olanı bana yazabilir misin?
-                * Okul Öncesi
-                * İlkokul Öğrencisi
-                * Ortaokul Öğrencisi
-                * Lise Öğrencisi
-                * Lise Mezunu
-                * Ön Lisans Öğrencisi
-                * Ön Lisans Mezunu
-                * Lisans Öğrencisi
-                * Lisans Mezunu
-                * Yüksek Lisans Öğrencisi
-                * Yüksek Lisans Mezunu
-                * Doktora Öğrencisi
-                * Doktora Mezunu
-                * Doktora Yapmış Araştırmacılar
-                * Tıpta Uzmanlık Öğrencisi
-                * Tıpta Uzmanlık Derecesine Sahip Kişiler
-                * Sanatta Yeterliliğe Sahip Kişiler `
+* Okul Öncesi
+* İlkokul Öğrencisi
+* Ortaokul Öğrencisi
+* Lise Öğrencisi
+* Lise Mezunu
+* Ön Lisans Öğrencisi
+* Ön Lisans Mezunu
+* Lisans Öğrencisi
+* Lisans Mezunu
+* Yüksek Lisans Öğrencisi
+* Yüksek Lisans Mezunu
+* Doktora Öğrencisi
+* Doktora Mezunu
+* Doktora Yapmış Araştırmacılar
+* Tıpta Uzmanlık Öğrencisi
+* Tıpta Uzmanlık Derecesine Sahip Kişiler
+* Sanatta Yeterliliğe Sahip Kişiler `               
               }
         }
     
@@ -582,7 +557,7 @@ if (programEducationLevel && edu.includes(programEducationLevel[0])) {
 
       // 4) Career dreams (student path) or worker path
       else if (profile.stage === 3 && !profile.career_dreams) {
-        const structuredDreams = await detectCareerDreams(prompt);
+        const structuredDreams = prompt;
         if (structuredDreams) {
           await updateProfile(chatSessionId, { career_dreams: JSON.stringify(structuredDreams) , stage: 3 });
           profile = await getOrCreateProfile(chatSessionId);
@@ -694,6 +669,7 @@ if (programEducationLevel && edu.includes(programEducationLevel[0])) {
 async function validateEducationLevel(text) {
   const res = await client.chat.completions.create({
     model: "gpt-4o-mini",
+    
     messages: [
       {
         role: "system",
@@ -702,20 +678,20 @@ async function validateEducationLevel(text) {
           Match the input to EXACTLY ONE of the following options:
 
           * Okul Öncesi
-          * İlkokul Öğrencisi
-          * Ortaokul Öğrencisi
-          * Lise Öğrencisi
-          * Lise Mezunu
-          * Ön Lisans Öğrencisi
-          * Ön Lisans Mezunu
-          * Lisans Öğrencisi
-          * Lisans Mezunu
-          * Yüksek Lisans Öğrencisi
-          * Yüksek Lisans Mezunu
+          * İlkokul Öğrencileri
+          * Ortaokul Öğrencileri
+          * Lise Öğrencileri
+          * Lise mezunları
+          * Önlisans Öğrencileri
+          * Önlisans mezunları
+          * Lisans Öğrencileri
+          * Lisans mezunları
+          * Yüksek Lisans Öğrencileri
+          * Yüksek Lisans mezunları
           * Doktora Öğrencisi
-          * Doktora Mezunu
+          * Doktora mezunları
           * Doktora Yapmış Araştırmacılar
-          * Tıpta Uzmanlık Öğrencisi
+          * Tıpta Uzmanlık Öğrencileri
           * Tıpta Uzmanlık Derecesine Sahip Kişiler
           * Sanatta Yeterliliğe Sahip Kişiler
 
@@ -724,12 +700,13 @@ async function validateEducationLevel(text) {
           - If nothing valid is found, return ONLY "INVALID".  
 
           ✅ Examples:
-          - "lisedeyim" → "Lise Öğrencisi"
-          - "liseyi bitirdim" → "Lise Mezunu"
-          - "üniversite okuyorum" → "Lisans Öğrencisi"
-          - "master yaptım" → "Yüksek Lisans Mezunu"
+          - "lisedeyim" → "Lise Öğrencileri"
+          - "liseyi bitirdim" → "Lise mezunları"
+          - "üniversite okuyorum" → "Lisans Öğrencileri"
+          - "master yaptım" → "Yüksek Lisans mezunları"
+          - "lise öğrecisi" → "lise Öğrencileri"
           - "şu an doktora yapıyorum" → "Doktora Öğrencisi"
-          - "mezunum" (genel) → "Lise Mezunu" (varsayılan eğer açık değilse)
+          - "mezunum" (genel) → "Lise mezunları" (varsayılan eğer açık değilse)
         `
       },
       { role: "user", content: text }
