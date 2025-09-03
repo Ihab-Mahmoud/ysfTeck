@@ -34,7 +34,7 @@
   app.use(bodyParser.json());
 
   const openai = new OpenAI({
-    apiKey: ,
+    apiKey:process.env.OPENAI_API_KEY ,
   });
 
   const client = new OpenAI({ 
