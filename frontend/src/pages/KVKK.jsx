@@ -18,8 +18,7 @@ const KVKK = () => {
 
   const handleSubmit = async () => {
     if (!accepted) return;
-    localStorage.setItem("kvkkAccepted","true")
-    navigate("/main-chat")
+    navigate("/user-type")
   };
 
   return (

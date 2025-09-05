@@ -7,6 +7,7 @@
   import OpenAI from "openai";
   import path from "path";
   import fs from "fs";
+import { log } from "console";
   dotenv.config({ path: ".env" });
 
   const app = express();
@@ -34,12 +35,12 @@
   app.use(bodyParser.json());
 
   const openai = new OpenAI({
-    apiKey:process.env.OPENAI_API_KEY ,
+    apiKey:"",
   });
 
   const client = new OpenAI({ 
 
-      apiKey: process.env.OPENAI_API_KEY,
+      apiKey: "",
 
     });
 
@@ -48,6 +49,10 @@
   const EMBEDDED_PROGRAMS_PATH = path.join(
     DATA_DIR,
     "tubitak_programs_with_embeddings.json"
+  );
+  const EMBEDDED_PROGRAMS_PATH_REC = path.join(
+    DATA_DIR,
+    "tubitak_programs_with_embeddings_rec.json"
   );
 
   /* ----------------------- Utilities ----------------------- */
@@ -192,6 +197,41 @@
       res.status(500).json({ error: "Indexing failed" });
     }
   });
+  app.post("/admin/index-programs-rec", async (req, res) => {
+  try {
+    ensureDataDir();
+
+    if (!fs.existsSync(RAW_PROGRAMS_PATH)) {
+      return res.status(400).json({ error: "Missing data/tubitak_programs.json" });
+    }
+
+    const raw = JSON.parse(fs.readFileSync(RAW_PROGRAMS_PATH, "utf-8"));
+    const withEmbeddings = [];
+
+
+    for (const p of raw) {
+      // Only use core fields for embedding
+      const text = `${p.programName} ${p.supportPurpose} ${p.targetAudience}`;
+
+      const emb = await openai.embeddings.create({
+        model: "text-embedding-3-small",
+        input: text,
+      });
+
+      withEmbeddings.push({
+        ...p,
+        embedding: emb.data[0].embedding,
+      });
+    }
+
+    fs.writeFileSync(EMBEDDED_PROGRAMS_PATH_REC, JSON.stringify(withEmbeddings, null, 2));
+    res.json({ ok: true, count: withEmbeddings.length });
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ error: "Indexing failed" });
+  }
+});
+
 
 function scoreBoostForProfile(program, profile) {
   const text = `${program.programName} ${program.supportPurpose} ${program.targetAudience}`.toLowerCase();
@@ -214,10 +254,11 @@ function scoreBoostForProfile(program, profile) {
   const dept = (profile?.department || "").toLowerCase();
 
   // Career dream + dream job combined
-  const combinedDreams = [
-    profile?.dream_job || "",
-    profile?.career_dreams || ""
-  ].join(" ").toLowerCase();
+const combinedDreams = (
+  (profile?.dream_job || "") + " " + (profile?.career_dreams || "")
+).toLowerCase();
+
+console.log(combinedDreams);
 
   const jobHas = (t) => combinedDreams.includes(t);
   const has = (t) => text.includes(t);
@@ -225,34 +266,67 @@ function scoreBoostForProfile(program, profile) {
 
   let boost = 0;
 
-  // 🔹 Career / Job-related boosts
-  if (jobHas("girişim") && (has("girişim") || has("bigg") || has("yatırım") || has("start-up") || has("innovasyon"))) boost += 0.35;
-  if (jobHas("araştır") && (has("ar-ge") || has("araştırma") || /\b1001\b/.test(text) || has("laboratuvar") || has("tez") || has("araştırmacı"))) boost += 0.30;
-  if (jobHas("sanayi") && (has("kobi") || has("sanayi") || has("teydeb") || has("üretim") || has("imalat") || has("endüstri"))) boost += 0.30;
-  if ((depHas("çevre") || jobHas("sürdürü") || jobHas("iklim") || jobHas("yeşil") || jobHas("ekoloji")) &&
-      (has("yeşil") || has("dönüşüm") || has("sürdürülebilir") || has("ekoloji") || has("çevre") || has("iklim değişikliği"))) boost += 0.35;
-  if (jobHas("teknoloji") && (has("yazılım") || has("programlama") || has("ai") || has("ml") || has("iot") || has("robotik"))) boost += 0.25;
-  if (jobHas("veri") && (has("analiz") || has("big data") || has("istatistik") || has("data science") || has("yapay zeka"))) boost += 0.25;
-  if (jobHas("sağlık") && (has("tıpta uzmanlık") || has("hekim") || has("sağlık teknolojisi") || has("biyomedikal"))) boost += 0.30;
-  if (jobHas("mühendislik") && (has("tasarım") || has("elektrik") || has("mekanik") || has("makine") || has("inşaat") || has("robotik"))) boost += 0.25;
-  if (jobHas("akademi") && (has("üniversite") || has("öğretim") || has("araştırma") || has("bilim") || has("doktora") || has("tez"))) boost += 0.25;
-  if (jobHas("öğretmen") && (has("okul") || has("eğitim") || has("pedagoji") || has("ders") || has("sınıf"))) boost += 0.30;
-  if (jobHas("tasarım") && (has("grafik") || has("ui") || has("ux") || has("endüstriyel tasarım") || has("3d"))) boost += 0.25;
-  if (jobHas("finans") && (has("yatırım") || has("bankacılık") || has("hisse") || has("portföy") || has("ekonomi"))) boost += 0.25;
-  if (jobHas("hukuk") && (has("avukat") || has("kanun") || has("mahkeme") || has("dava"))) boost += 0.20;
-  if (jobHas("psikoloji") && (has("rehberlik") || has("danışmanlık") || has("psikoterapi") || has("insan kaynakları"))) boost += 0.20;
-  if (jobHas("biyoloji") && (has("laboratuvar") || has("genetik") || has("biyoteknoloji") || has("ekoloji"))) boost += 0.25;
-  if (jobHas("kimya") && (has("laboratuvar") || has("analiz") || has("formül") || has("sentez"))) boost += 0.25;
-  if (jobHas("fizik") && (has("deney") || has("laboratuvar") || has("teori") || has("simülasyon"))) boost += 0.25;
-  if (jobHas("matematik") && (has("analiz") || has("istatistik") || has("algoritma") || has("modelleme"))) boost += 0.25;
-  if (jobHas("yönetim") && (has("proje") || has("ekip") || has("strateji") || has("planlama") || has("liderlik"))) boost += 0.20;
-  if (jobHas("sanat") && (has("müzik") || has("resim") || has("performans") || has("yeterlilik") || has("yaratıcı"))) boost += 0.25;
-  if (jobHas("yazılım") && (has("full-stack") || has("frontend") || has("backend") || has("react") || has("node") || has("javascript"))) boost += 0.25;
-  if (jobHas("robotik") && (has("sensör") || has("arduino") || has("microcontroller") || has("otomasyon"))) boost += 0.25;
-  if (jobHas("biyomedikal") && (has("cihaz") || has("medikal") || has("laboratuvar") || has("teknoloji"))) boost += 0.25;
-  if (jobHas("yapay zeka") && (has("ml") || has("ai") || has("deeplearning") || has("nlp"))) boost += 0.25;
-  if (jobHas("çevre mühendisliği") && (has("su") || has("hava") || has("atık") || has("sürdürülebilir"))) boost += 0.25;
-  if (jobHas("tarım") && (has("bitki") || has("hayvancılık") || has("gıda") || has("tarım teknolojisi"))) boost += 0.20;
+// Akademisyen veya Araştırmacı
+if ((jobHas("araştırmacı", "araştırma projesi") && (has("araştırma"))) ||
+    (jobHas("akademisyen", "yayın") && (has("akademi") || has("akademik"))) ||
+    (jobHas("doktora", "bilimsel çalışma") && (has("üniversite") || has("laboratuvar") || has("bilim"))))
+{
+    boost += 0.25;
+}
+
+// Sanayici
+if ((jobHas("sanayici") && jobHas("ar-ge projesi") && (has("ar-ge") || has("teknoloji"))) ||
+    (jobHas("sanayici") && jobHas("yeni ürün geliştirme") && (has("üretim") || has("kobi") || has("sanayi"))) ||
+    (jobHas("imalat", "kobi geliştirme") && (has("üretim") || has("kobi"))))
+{
+    boost += 0.25;
+}
+
+// Çevre Mühendisi veya İklim Aktivisti
+if ((jobHas("çevre mühendisi", "çevre projesi") && (has("sürdürülebilir") || has("yeşil"))) ||
+    (jobHas("iklim aktivisti", "sürdürülebilirlik çalışması") && (has("iklim") || has("sürdürülebilir"))))
+{
+    boost += 0.25;
+}
+if (profile.programId==1711) {
+  console.log(text);
+  console.log(combinedDreams);
+  
+}
+// Yazılımcı / Teknoloji Uzmanı
+if ((jobHas("yazılımcı") && jobHas("yazılım projesi") && (has("yazılım"))) ||
+    (jobHas("yazılımcı") && jobHas( "robotik proje") && (has("robotik"))) ||
+    ( jobHas("yazılımcı") && jobHas("ai uygulaması") && (has("yapay") || has("zeka"))) ||
+    ( jobHas("yazılımcı") && jobHas("ai hayali") && (has("büyük") || has("veri") || has("nesnelerin"))))
+{
+    boost += 0.25;
+}
+
+// Sağlık Alanı (Doktor, Hekim)
+if ((jobHas("doktor") && jobHas("klinik araştırma") && (has("tıpta") || has("uzmanlık"))) ||
+    (jobHas("doktor") &&  jobHas("tedavi projesi") && (has("tıpta") || has("uzmanlık"))) ||
+    (jobHas("hekim", "sağlık kampanyası") && (has("tıpta") || has("uzmanlık"))))
+{
+    boost += 0.25;
+}
+
+// Eğitim / Sosyal Bilimler
+if ((jobHas("öğretmen", "eğitim projesi") && (has("eğitim") || has("öğretim"))) ||
+    (jobHas("pedagog", "öğrenci çalışması") && (has("okul") || has("eğitim"))) ||
+    (jobHas("eğitimci", "eğitim projesi") && (has("eğitim") || has("öğretim"))))
+{
+    boost += 0.20;
+}
+
+// Doğa Bilimleri (Biyolog, Fizikçi, Kimyager, Matematikçi)
+if ((jobHas("biyolog", "bilimsel proje") && (has("biyoloji") || has("analiz"))) ||
+    (jobHas("fizikçi", "araştırma çalışması") && (has("fizik") || has("analiz"))) ||
+    (jobHas("kimyager", "bilimsel proje") && (has("kimya") || has("analiz"))) ||
+    (jobHas("matematikçi", "araştırma çalışması") && (has("matematik") || has("analiz"))))
+{
+    boost += 0.25;
+}
+
 
   // Education level boost
   const programEducationLevels = text.match(/(doktora mezunları|lise mezunları|yüksek lisans mezunları|lisans mezunları|tıpta uzmanlık derecesine sahip kişiler|tıpta uzmanlık öğrencileri|sanatta yeterliliğe sahip kişiler|okul öncesi|ilkokul öğrencileri|ilkokul mezunları|ortaokul öğrencileri|ortaokul mezunları|lise öğrencileri|yüksek lisans öğrencileri|önlisans öğrencileri|önlisans mezunları|lisans öğrencileri|doktora öğrencileri|doktora yapmış araştırmacılar)/gi);
@@ -267,52 +341,79 @@ function scoreBoostForProfile(program, profile) {
 
   return boost;
 }
+// Example with OpenAI embeddings (pseudo-code)
+async function getProgramScores(profile, programs) {
+  const lowerEducationLevels = [
+  "okul öncesi",
+  "ilkokul öğrencileri",
+  "ortaokul öğrencileri",
+  "lise öğrencileri",
+  "lise mezunları"
+];
 
+let profileText = "";
 
+// Convert profile education level to lowercase for comparison
+const eduLevel = (profile.education_level || "").toLowerCase();
+const careerDreams = (profile.career_dreams || "").toLowerCase();
 
+if (lowerEducationLevels.includes(eduLevel)) {
+  // Only include education level
+  profileText = profile.education_level;
+} else {
+  // Include everything
+  profileText = `${profile.education_level || ""} ${(profile.dream_job || "")} ${(profile.career_dreams || "")}`;
+}
 
+const scoredPrograms = [];
+for (let program of programs) {
+  let score = await computeSemanticScore(profileText, program.embedding);
+  if (eduLevel=="okul öncesi" && program.programId=="4004" ) {
+    score = 1
+  }
+  if (careerDreams.includes("bilim merkezi çalışanları") && program.programId=="4004" ) {
+    score = 1
+  }
+  if (eduLevel=="lise mezunları" && program.programId=="4001" ) {
+    score = 1
+  }
+  if (eduLevel=="lise mezunları" && program.programId=="4003-T" ) {
+    score = 1
+  }
+  scoredPrograms.push({ ...program, score });
+}
 
-  /* --------------- Retrieval Helper --------------- */
+return scoredPrograms.sort((a, b) => b.score - a.score);
+}
 
-  async function recommendProgramsForProfile(profile, { topK = 3 } = {}) {
+// Function to get embedding
+async function getEmbedding(text) {
+  const response = await openai.embeddings.create({
+    model: "text-embedding-3-small",
+    input: text,
+  });
+  return response.data[0].embedding;
+}
+
+// Cosine similarity
+
+// Compute semantic score
+async function computeSemanticScore(profileText, programText) {
+  const profileVec = await getEmbedding(profileText);
+  // const programVec = await getEmbedding(programText);
+  return cosineSimilarity(profileVec, programText); // 0-1
+}
+
+/* --------------- Retrieval Helper --------------- */
+  async function recommendProgramsForProfile(profile, { topK = 3 } = {}) {  
     ensureDataDir();
-    if (!fs.existsSync(EMBEDDED_PROGRAMS_PATH)) {
+    if (!fs.existsSync(EMBEDDED_PROGRAMS_PATH_REC)) {
       return { message: "Program verisi bulunamadı.", recommended: [] };
     }
 
-    const all = JSON.parse(fs.readFileSync(EMBEDDED_PROGRAMS_PATH, "utf-8"));
+    const all = JSON.parse(fs.readFileSync(EMBEDDED_PROGRAMS_PATH_REC, "utf-8"));
 
-    const mainJobs = (profile?.career_dreams?.mainJob || []).join(", ");
-    const focusAreas = (profile?.career_dreams?.focusAreas || []).join(", ");
-    const  careerDreamsText = `Kariyer hayalleri: ${mainJobs}${focusAreas ? " | " + focusAreas : ""}`;
-
-    
-    // Build a single query from the profile
-    const profileQuery = [
-      profile?.department ? `Bölüm: ${profile.department}` : "",
-      profile?.dream_job ? `Meslek: ${profile.dream_job}` : "",
-      profile?.career_dreams ? `${careerDreamsText}` : "",
-      "Profilime en uygun TÜBİTAK destek programları hangileri?"
-    ].filter(Boolean).join(" | ");
-
-    console.log(profileQuery);
-    
-    // Embed the profile query
-    const embRes = await openai.embeddings.create({
-      model: "text-embedding-3-small",
-      input: profileQuery,
-    });
-    const qEmb = embRes.data[0].embedding;
-
-    // Score = cosine + heuristic boost
-    const scored = all.map(p => {
-      const base = cosineSimilarity(qEmb, p.embedding);
-      const boost = scoreBoostForProfile(p, profile);
-      return { ...p, score: base + boost };
-    }).filter(p => p.score !== -1)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, topK);
-
+    const scored = (await getProgramScores(profile,all)).slice(0,topK)
     // Pretty, compact Markdown list
     const lines = [];
     let eg;
@@ -322,12 +423,12 @@ function scoreBoostForProfile(program, profile) {
     } else {
       for (const p of scored) {
         lines.push(
-          `- **${p.programName}**\n` +
+          `  - ${p.programName}\n` +
           `  • hedef kitlesi: ${truncate(p.targetAudience, 180)}\n` 
         
         );
       }
-      eg = scored[0]?.programId ? scored[0].programId : "1001";
+      eg = scored[0]?.programId ? scored[0].programId : scored[1].programId;
       lines.push(`\nBir programı seçerseniz destek programı numarasını (örn. **${eg}**) veya adını yazarak detay sorabilirsiniz.`);
     }
     
@@ -464,7 +565,7 @@ function scoreBoostForProfile(program, profile) {
 
   app.post("/ask", async (req, res) => {
     try {
-      const { prompt, chatSessionId } = req.body;
+      const { prompt, chatSessionId,userType } = req.body;
 
       // Save user message
       await database.run(
@@ -478,15 +579,64 @@ function scoreBoostForProfile(program, profile) {
       let responseText="";
       let hasProgram=false;
       let prog=null;
-
+      let options = []
         // 1) Ask name
       if (!profile.name) {
         const maybeName = await detectName(prompt); 
         if (maybeName) {
-          await updateProfile(chatSessionId, { name: maybeName });
-          responseText = `Merhaba ${maybeName}, Tanıştığımıza memnun oldum. Hangi seviyede eğitim aldın ya da alıyorsun?
+              if (userType == "bireysel") {
+                
+                await updateProfile(chatSessionId, { name: maybeName,stage:0 });
+                responseText = `Merhaba ${maybeName}, Tanıştığımıza memnun oldum. Hangi seviyede eğitim aldın ya da alıyorsun?
+                `;
+                
+                options = [
+                  "Okul Öncesi",
+                  "İlkokul Öğrencileri",
+                  "Ortaokul Öğrencileri",
+                  "Lise Öğrencileri",
+                  "Lise Mezunları",
+                  "Önlisans Öğrencileri",
+                  "Önlisans Mezunları",
+                  "Lisans Öğrencileri",
+                  "Lisans Mezunları",
+                  "Yüksek Lisans Öğrencileri",
+                  "Yüksek Lisans Mezunları",
+                  "Doktora Öğrencileri",
+                  "Doktora Mezunları",
+                  "Doktora Yapmış Araştırmacılar",
+                  "Tıpta Uzmanlık Öğrencileri",
+                  "Tıpta Uzmanlık Derecesine Sahip Kişiler",
+                  "Sanatta Yeterliliğe Sahip Kişiler"];
+                }else{
+                  await updateProfile(chatSessionId, { name: maybeName,stage:2 }); 
+                  responseText = `Kurumsal olarak hangi tür çalışmalarda bulunuyorsunuz?`;
+                  options = [
+                            "Araştırma Üniversiteleri Bünyesindeki Araştırma Altyapıları",
+                            "Uygulama ve Araştırma Merkezleri",
+                            "Ar-Ge/Tasarım Merkezleri",
+                            "Kamu Ar-Ge Birimleri",
+                            "Savunma ve Güvenlik Alanında Görevleri Olan Kamu Kurumları",
+                            "Yükseköğretim Kurumları",
+                            "Eğitim ve Araştırma Hastaneleri",
+                            "Kamu Kurum ve Kuruluşları",
+                            "Sermaye Şirketleri",
+                            "Büyük Ölçekli Sermaye Şirketleri",
+                            "KOBİ",
+                            "Üniversiteler",
+                            "Kamu Araştırma Merkezleri",
+                            "Kamu Araştırma Merkez ve Enstitüleri",
+                            "Araştırma Enstitüleri",
+                            "Araştırma Altyapıları",
+                            "Teknoloji Geliştirme Bölgesi Şirketleri",
+                            "Teknoloji Transfer Ofisleri",
+                            "Teknoloji Geliştirme Bölgeleri Yönetici Şirketleri",
+                            "Uluslararası ortaklı Ar-Ge projeleri yürüten kuruluşlar",
+                            "Bilim Merkezi Kurumları",
+                            "Başka"
+                          ];
 
-Örneğin; ön lisans öğrencisiyim veya lise mezunuyum diyebilirsin.`;
+                }
         } else {
           responseText = "Sana hitap edebilmek için ismini öğrenebilir miyim?";
         }
@@ -498,7 +648,7 @@ function scoreBoostForProfile(program, profile) {
         const maybeeducationLevel = await validateEducationLevel(prompt);
         
           if (maybeeducationLevel) {
-                const lowerLevel = maybeeducationLevel.toLowerCase();
+                  const lowerLevel = maybeeducationLevel.toLowerCase();
                 console.log(lowerLevel);
                 
                 if (lowerLevel == "okul öncesi" || lowerLevel == "ilkokul Öğrencileri" || lowerLevel == "ortaokul öğrencileri" || lowerLevel == "lise öğrencileri" || lowerLevel == "lise mezunları" ) {
@@ -507,27 +657,45 @@ function scoreBoostForProfile(program, profile) {
                 }else{
                   await updateProfile(chatSessionId, { education_level: maybeeducationLevel, stage: 2 });
                   responseText = "Peki bir işte çalışıyorsan ne iş yaptığını söyler misin?";
-                }
+                      options = [
+                      "Öğretmenler",
+                      "Araştırma Görevlisi",
+                      "Öğretim Görevlisi",
+                      "Öğretim Elemanları",
+                      "Doktor Öğretim Üyesi",
+                      "Doçent",
+                      "Uzman",
+                      "Lisans Mezunu Enstitüsü Çalışanları",
+                      "Lisans Mezunu Üniversite Çalışanı",
+                      "Lisans Mezunu Kamu Kurumu Çalışanı",
+                      "Lisans Mezunu Özel Kuruluş Çalışanları",
+                      "Bilim Merkezi Çalışanları",
+                      "Başka"
 
+                    ];
+                }           
               } else {
-                responseText = `Tam olarak anlayamadım. Bu listeden senin için uygun olanı bana yazabilir misin?
-* Okul Öncesi
-* İlkokul Öğrencisi
-* Ortaokul Öğrencisi
-* Lise Öğrencisi
-* Lise Mezunu
-* Ön Lisans Öğrencisi
-* Ön Lisans Mezunu
-* Lisans Öğrencisi
-* Lisans Mezunu
-* Yüksek Lisans Öğrencisi
-* Yüksek Lisans Mezunu
-* Doktora Öğrencisi
-* Doktora Mezunu
-* Doktora Yapmış Araştırmacılar
-* Tıpta Uzmanlık Öğrencisi
-* Tıpta Uzmanlık Derecesine Sahip Kişiler
-* Sanatta Yeterliliğe Sahip Kişiler `               
+                responseText = `Tam olarak anlayamadım. Bu listeden senin için uygun olanı bana yazabilir misin?`    
+                
+                options = [
+                  "Okul Öncesi",
+                  "İlkokul Öğrencisi",
+                  "Ortaokul Öğrencisi",
+                  "Lise Öğrencisi",
+                  "Lise Mezunu",
+                  "Ön Lisans Öğrencisi",
+                  "Ön Lisans Mezunu",
+                  "Lisans Öğrencisi",
+                  "Lisans Mezunu",
+                  "Yüksek Lisans Öğrencisi",
+                  "Yüksek Lisans Mezunu",
+                  "Doktora Öğrencisi",
+                  "Doktora Mezunu",
+                  "Doktora Yapmış Araştırmacılar",
+                  "Tıpta Uzmanlık Öğrencisi",
+                  "Tıpta Uzmanlık Derecesine Sahip Kişiler",
+                  "Sanatta Yeterliliğe Sahip Kişiler"];
+
               }
         }
     
@@ -544,25 +712,75 @@ function scoreBoostForProfile(program, profile) {
           }
       }
       else if (profile.stage === 2 && !profile.dream_job) {
-   
-          const maybeJob = await validateJob(prompt);
+        let maybeJob;  
+        if (userType=="bireysel") {
+            maybeJob = await validateJob(prompt);
+        }else{
+            maybeJob = await enterpriseJobVal(prompt);
+          }
           if (maybeJob) {
             await updateProfile(chatSessionId, { dream_job: maybeJob, stage: 3 });
             responseText = "Destek alarak hangi planını hayata geçirmek istiyorsun? Detaylı şekilde anlatır mısın?";
           } else {
-            responseText = "Peki bir işte çalışıyorsan ne iş yaptığını söyler misin?";
+
+                  if (userType=="bireysel") {
+                      responseText = `Tam olarak anlayamadım. Bu listeden senin için uygun olanı bana yazabilir misin?`;
+                    options = [
+                      "Öğretmenler",
+                      "Araştırma Görevlisi",
+                      "Öğretim Görevlisi",
+                      "Öğretim Elemanları",
+                      "Doktor Öğretim Üyesi",
+                      "Doçent",
+                      "Uzman",
+                      "Lisans Mezunu Enstitüsü Çalışanları",
+                      "Lisans Mezunu Üniversite Çalışanı",
+                      "Lisans Mezunu Kamu Kurumu Çalışanı",
+                      "Lisans Mezunu Özel Kuruluş Çalışanları",
+                      "Bilim Merkezi Çalışanları",
+                      "Başka"
+
+                    ];
+
+                  } else{
+                          responseText = `Tam olarak anlayamadım. Bu listeden senin için uygun olanı bana yazabilir misin?`;
+                        options = [
+                            "Araştırma Üniversiteleri Bünyesindeki Araştırma Altyapıları",
+                            "Uygulama ve Araştırma Merkezleri",
+                            "Ar-Ge/Tasarım Merkezleri",
+                            "Kamu Ar-Ge Birimleri",
+                            "Savunma ve Güvenlik Alanında Görevleri Olan Kamu Kurumları",
+                            "Yükseköğretim Kurumları",
+                            "Eğitim ve Araştırma Hastaneleri",
+                            "Kamu Kurum ve Kuruluşları",
+                            "Sermaye Şirketleri",
+                            "Büyük Ölçekli Sermaye Şirketleri",
+                            "KOBİ",
+                            "Üniversiteler",
+                            "Kamu Araştırma Merkezleri",
+                            "Kamu Araştırma Merkez ve Enstitüleri",
+                            "Araştırma Enstitüleri",
+                            "Araştırma Altyapıları",
+                            "Teknoloji Geliştirme Bölgesi Şirketleri",
+                            "Teknoloji Transfer Ofisleri",
+                            "Teknoloji Geliştirme Bölgeleri Yönetici Şirketleri",
+                            "Uluslararası ortaklı Ar-Ge projeleri yürüten kuruluşlar",
+                            "Bilim Merkezi Kurumları",
+                            "Başka"
+                          ];
+
+                    }
 
           }
       }
 
       // 4) Career dreams (student path) or worker path
       else if (profile.stage === 3 && !profile.career_dreams) {
+        
         const structuredDreams = prompt;
         if (structuredDreams) {
-          await updateProfile(chatSessionId, { career_dreams: JSON.stringify(structuredDreams) , stage: 3 });
+            await updateProfile(chatSessionId, { career_dreams: JSON.stringify(structuredDreams), stage: 4 });
           profile = await getOrCreateProfile(chatSessionId);
-          
-          
           console.log(profile);
           
           const { message, programId } = await recommendProgramsForProfile(profile, { topK: 3 });
@@ -596,7 +814,7 @@ function scoreBoostForProfile(program, profile) {
         ["assistant", responseText, chatSessionId]
       );
 
-      res.json({ response: responseText,hasProgram,programId:prog });
+      res.json({ response: responseText,hasProgram,programId:prog ,options});
     } catch (err) {
       console.error("Hata:", err);
       res.status(500).json({ error: "Sunucu hatası" });
@@ -617,25 +835,7 @@ function scoreBoostForProfile(program, profile) {
     return answer !== "NONE" ? answer : null;
   }
 
-  async function validateDepartment(text) {
-    const res = await client.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [
-        { role: "system", content: `
-          Identify the university department mentioned in the text.  
-          The department name may appear anywhere in the sentence (ör. "Bilgisayar Mühendisliği okumak istiyorum", "hayalim Tıp fakültesi", "Ekonomi okumak").  
 
-          - If a valid department is found, return ONLY the clean department name (e.g., "Computer Engineering", "Medicine", "Economics").  
-          - If no valid department is found, return ONLY "INVALID".  
-
-          The input text will be in Turkish.
-  ` },
-        { role: "user", content: text }
-      ]
-    });
-    const answer = res.choices[0].message.content.trim();
-    return answer !== "INVALID" ? answer : null;
-  }
 
   async function validateAge(text) {
   const res = await client.chat.completions.create({
@@ -669,45 +869,46 @@ function scoreBoostForProfile(program, profile) {
 async function validateEducationLevel(text) {
   const res = await client.chat.completions.create({
     model: "gpt-4o-mini",
-    
     messages: [
       {
         role: "system",
         content: `
-          Identify the **specific education level** mentioned in the text (in Turkish).  
-          Match the input to EXACTLY ONE of the following options:
+You are a strict classifier.  
+Identify the **specific education level** mentioned in the text.  
+It must match EXACTLY ONE of these options (verbatim):
 
-          * Okul Öncesi
-          * İlkokul Öğrencileri
-          * Ortaokul Öğrencileri
-          * Lise Öğrencileri
-          * Lise mezunları
-          * Önlisans Öğrencileri
-          * Önlisans mezunları
-          * Lisans Öğrencileri
-          * Lisans mezunları
-          * Yüksek Lisans Öğrencileri
-          * Yüksek Lisans mezunları
-          * Doktora Öğrencisi
-          * Doktora mezunları
-          * Doktora Yapmış Araştırmacılar
-          * Tıpta Uzmanlık Öğrencileri
-          * Tıpta Uzmanlık Derecesine Sahip Kişiler
-          * Sanatta Yeterliliğe Sahip Kişiler
+  • Okul Öncesi
+	•	İlkokul Öğrencileri
+	•	Ortaokul Öğrencileri
+	•	10-17 Yaşlarındaki Ortaokul Öğrencileri
+	•	Lise Öğrencileri
+	•	15-17 Yaşındaki Lise Öğrencileri
+	•	Lise Mezunları
+	•	Önlisans Öğrencileri
+	•	Önlisans Mezunları
+	•	Lisans Öğrencileri
+	•	Lisans Mezunları
+	•	Yüksek Lisans Öğrencileri
+	•	Yüksek Lisans Mezunları
+	•	Doktora Öğrencileri
+	•	Doktora Mezunları
+	•	Doktora Yapmış Araştırmacılar
+	•	Tıpta Uzmanlık Öğrencileri
+	•	Tıpta Uzmanlık Derecesine Sahip Kişiler
+	•	Sanatta Yeterliliğe Sahip Kişiler
 
-          ✅ Rules:
-          - If the text clearly matches one of the above, return ONLY that option (verbatim).  
-          - If nothing valid is found, return ONLY "INVALID".  
 
-          ✅ Examples:
-          - "lisedeyim" → "Lise Öğrencileri"
-          - "liseyi bitirdim" → "Lise mezunları"
-          - "üniversite okuyorum" → "Lisans Öğrencileri"
-          - "master yaptım" → "Yüksek Lisans mezunları"
-          - "lise öğrecisi" → "lise Öğrencileri"
-          - "şu an doktora yapıyorum" → "Doktora Öğrencisi"
-          - "mezunum" (genel) → "Lise mezunları" (varsayılan eğer açık değilse)
-        `
+⚠️ Rules:
+- If the input **clearly matches** one of the above, return ONLY that option.  
+- If the input is vague, incomplete, or doesn’t exactly map (e.g. "mezun", "lisans", "üniversite"), return ONLY "INVALID".  
+- Do not guess or make assumptions.  
+- The input will be in Turkish.
+
+✅ Examples:
+- "mezunum" → "INVALID"  
+- "lisans" → "INVALID"  
+- "üniversite" → "INVALID"
+`
       },
       { role: "user", content: text }
     ]
@@ -718,45 +919,92 @@ async function validateEducationLevel(text) {
 }
 
 
-  async function validateJob(text) {
-    const res = await client.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [
-        { role: "system", content: `
-          Identify the profession/occupation mentioned in the text.  
-          The profession name may appear anywhere in the sentence (ör. "hayalimdeki iş doktor", "ben yazar olmak istiyorum", "pilot olmak isterim").  
+async function validateJob(text) {
+  const res = await client.chat.completions.create({
+    model: "gpt-4o-mini",
+    messages: [
+      {
+        role: "system",
+        content: `
+You are a strict classifier.  
+Your task is to extract a profession from user text, but it MUST be one of the following exactly (no variations, no synonyms):
 
-          - If a valid profession is found, return ONLY the profession name (a single word or profession phrase).  
-          - If no valid profession is found, return ONLY "INVALID".  
+- Öğretmenler
+- Araştırma Görevlisi
+- Öğretim Görevlisi
+- Öğretim Elemanları
+- Doktor Öğretim Üyesi
+- Doçent
+- Uzman
+- Lisans Mezunu Enstitüsü Çalışanları
+- Lisans Mezunu Üniversite Çalışanı
+- Lisans Mezunu Kamu Kurumu Çalışanı
+- Lisans Mezunu Özel Kuruluş Çalışanları
+- Bilim Merkezi Çalışanları
+- Başka 
 
-          The input text will be in Turkish.
-          ` },
-        { role: "user", content: text }
-      ]
-    });
-    const answer = res.choices[0].message.content.trim();
-    return answer !== "INVALID" ? answer : null;
-  }
-  async function detectStudentOrProfession(text) {
-    const res = await client.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [
-        { role: "system",  content: `
-        The input text is in Turkish. 
-        Detect whether the user is a student, has a profession, or neither.
+Rules:
+- If the input clearly matches one of these, return ONLY that exact phrase.  
+- If no clear match, return ONLY "INVALID".  
+- Do not return explanations, multiple options, or anything else.  
+- The input will be in Turkish.
+`
+      },
+      { role: "user", content: text }
+    ]
+  });
 
-        - If the text clearly indicates the user is a student (e.g., "öğrenciyim", "üniversitedeyim"), return "STUDENT".
-        - If the text clearly indicates a profession (e.g., "doktorum", "mühendis"), return "PROFESSION".
-        - If neither is clear, return "UNKNOWN".
+  const answer = res.choices[0].message.content.trim();
+  return answer === "INVALID" ? null : answer;
+}
+async function enterpriseJobVal(text) {
+  const res = await client.chat.completions.create({
+    model: "gpt-4o-mini",
+    messages: [
+      {
+        role: "system",
+        content: `
+You are a strict classifier.  
+Your task is to extract an enterprise type from user text, but it MUST be one of the following exactly (no variations, no synonyms):
 
-        Output ONLY one of these three values: STUDENT, PROFESSION, UNKNOWN.
-        ` },
-        { role: "user", content: text }
-      ]
-    });
-    const answer = res.choices[0].message.content.trim();
-    return answer !== "INVALID" ? answer : null;
-  }
+- Araştırma Üniversiteleri Bünyesindeki Araştırma Altyapıları
+- Uygulama ve Araştırma Merkezleri
+- Ar-Ge/Tasarım Merkezleri
+- Kamu Ar-Ge Birimleri
+- Savunma ve Güvenlik Alanında Görevleri Olan Kamu Kurumları
+- Yükseköğretim Kurumları
+- Eğitim ve Araştırma Hastaneleri
+- Kamu Kurum ve Kuruluşları
+- Sermaye Şirketleri
+- Büyük Ölçekli Sermaye Şirketleri
+- KOBİ
+- Üniversiteler
+- Kamu Araştırma Merkezleri
+- Kamu Araştırma Merkez ve Enstitüleri
+- Araştırma Enstitüleri
+- Araştırma Altyapıları
+- Teknoloji Geliştirme Bölgesi Şirketleri
+- Teknoloji Transfer Ofisleri
+- Teknoloji Geliştirme Bölgeleri Yönetici Şirketleri
+- Uluslararası ortaklı Ar-Ge projeleri yürüten kuruluşlar
+- Bilim Merkezi Kurumları
+- Başka 
+
+Rules:
+- If the input clearly matches one of these, return ONLY that exact phrase.  
+- If no clear match, return ONLY "INVALID".  
+- Do not return explanations, multiple options, or anything else.  
+- The input will be in Turkish.
+        `
+      },
+      { role: "user", content: text }
+    ]
+  });
+
+  const answer = res.choices[0].message.content.trim();
+  return answer === "INVALID" ? null : answer;
+}
+
   async function detectCareerDreams(text) {
     const res = await client.chat.completions.create({
       model: "gpt-4o-mini",
@@ -798,6 +1046,33 @@ async function validateEducationLevel(text) {
 
     return structuredDreams;
   }
+async function generateCareerRecommendation(profile) {
+  const text = profile?.career_dreams || "";
+
+
+  const res = await client.chat.completions.create({
+    model: "gpt-4o-mini",
+    messages: [
+      {
+        role: "system",
+        content: `You are an assistant that summarizes a user's career dream and then makes a recommendation.
+        Rules:
+        - If the input is vague, meaningless, or not a valid career dream, ONLY return "INVALID".
+        - Otherwise: 
+          1. Write 1–2 sentences describing the dream positively in Turkish. 
+          2. Then add one sentence that starts with "Buna dayanarak..." and give a clear, encouraging recommendation.`
+      },
+      {
+        role: "user",
+        content: `Kariyer hayali: ${text}`
+      }
+    ]
+  });
+    const answer = res.choices[0].message.content.trim();
+    return answer !== "INVALID" ? answer : null;
+}
+
+
 
   /* --------------- /ask Route (integrated flow) --------------- */
 

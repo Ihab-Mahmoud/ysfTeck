@@ -1,19 +1,22 @@
 // frontend/src/App.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import FormComponent from "./FormComponent";
 import { v4 as uuidv4 } from "uuid";
 import { FaArrowRight } from "react-icons/fa";
+import TypingText from "./TypingText";
+import { marked } from "marked";
+import { useGlobal } from "../utils/global-context";
 
 const MainChat = () => {
   const [input, setInput] = useState("");
   const [chat, setChat] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
   const [showForm, setShowForm] = useState(false); // Bu state sadece formun gösterilip gizlenmesi için kalacak
-  const [suggestedProgram, setSuggestedProgram] = useState("");
+  const [suggestedProgram, setSuggestedProgram] = useState(null);
   const [currentChatSessionId, setCurrentChatSessionId] = useState(() =>
     uuidv4()
   );
-
+  const ref = useRef(null);
   const [formData, setFormData] = useState({
     fullName: "",
     phoneNumber: "",
@@ -24,7 +27,13 @@ const MainChat = () => {
     supportProgram: "",
   });
   const [dateOfBirth, setDateOfBirth] = useState("");
-
+  const {userType}= useGlobal()
+  console.log(userType)
+useEffect(() => {
+  if (ref.current) {
+    ref.current.scrollTop = ref.current.scrollHeight;
+  }
+}, [chat]);
   // Uygulama yüklendiğinde veya sohbet oturumu değiştiğinde çalışır
   useEffect(() => {
     // Sohbet geçmişi boşsa (yani yeni bir oturum başlıyorsa)
@@ -33,60 +42,68 @@ const MainChat = () => {
       setChat([
         {
           role: "assistant",
-          text: "Merhaba! 👋 Ben TÜBİ. TÜBİTAK destek programları konusunda sana yardımcı olmak için buradayım. İstersen sana uygun programları bulmam için birkaç soru sorabilirim.",
+          text: `Merhaba! 👋 Ben TÜBİ. TÜBİTAK destek programları konusunda sana yardımcı olmak için buradayım. İstersen hayallerini kolaylaştırmak için sana uygun TÜBİTAK programlarını bulabiliriz.
+          
+Sana hitap edebilmek için ismini öğrenebilir miyim?`,
         },
       ]);
     }
   }, [currentChatSessionId, chat.length]);
 
-  const sendMessage = async () => {
-    if (!input.trim()) return;
+const sendMessage = async (opt) => {
+    
+const message = typeof opt === "string" ? opt : input;
+  if (!message) return;
 
-    setChat([...chat, { role: "user", text: input }]);
-    setInput("");
-    setIsTyping(true);
-    setSuggestedProgram("");
+  setChat((prev) => [...prev, { role: "user", text: message }]);
+  setInput("");
+  setIsTyping(true);
+  setSuggestedProgram("");
 
-    try {
-      const res = await fetch("api/ask", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          prompt: input,
-          chatSessionId: currentChatSessionId,
-        }),
-      });
+  try {
+    const res = await fetch("http://localhost:5001/ask", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        prompt: message,   // ✅ send message, not just input
+        chatSessionId: currentChatSessionId,
+        userType: userType,
+      }),
+    });
 
-      if (!res.ok) {
-        const errorData = await res.json().catch(() => ({}));
-        throw new Error(errorData.error || "Bilinmeyen hata");
-      }
-
-      const data = await res.json();
-      const assistantResponse = data.response;
-
-      const programMatch = assistantResponse.match(
-        /TÜBİTAK\s*(\d{3,4}(?:-\w)?(?:-\w)?)\s*(-|\s|$)/i
-      );
-      if (programMatch && programMatch[1]) {
-        setSuggestedProgram(`TÜBİTAK ${programMatch[1].trim()}`);
-      } else {
-        setSuggestedProgram("Bir TÜBİTAK Destek Programı");
-      }
-
-      setChat((prev) => [
-        ...prev,
-        { role: "assistant", text: assistantResponse },
-      ]);
-    } catch (err) {
-      setChat((prev) => [
-        ...prev,
-        { role: "assistant", text: `Bir hata oluştu: ${err.message}` },
-      ]);
-    } finally {
-      setIsTyping(false);
+    if (!res.ok) {
+      const errorData = await res.json().catch(() => ({}));
+      throw new Error(errorData.error || "Bilinmeyen hata");
     }
-  };
+
+    const data = await res.json();
+    const assistantResponse = data.response;
+
+    if (data.programId) {
+      setSuggestedProgram(`TÜBİTAK ${data.programId}`);
+    } else {
+      setSuggestedProgram(null);
+    }
+
+    setChat((prev) => [
+      ...prev,
+      {
+        role: "assistant",
+        text: assistantResponse,
+        hasProgram: data.hasProgram,
+        options: data.options || [], // ✅ keep options
+      },
+    ]);
+  } catch (err) {
+    setChat((prev) => [
+      ...prev,
+      { role: "assistant", text: `Bir hata oluştu: ${err.message}` },
+    ]);
+  } finally {
+    setIsTyping(false);
+  }
+};
+
 
   const handleShowForm = () => {
     setFormData((prev) => ({ ...prev, supportProgram: suggestedProgram }));
@@ -143,43 +160,52 @@ const MainChat = () => {
     setCurrentChatSessionId(uuidv4()); // Yeni bir session ID ver
   };
 
+
   return (
     <div className="container">
-      {showForm ? (
-        <FormComponent
-          onFormSubmit={handleFormSubmitCallback}
-          onBackToChat={handleBackToChat}
-          formData={formData}
-          setFormData={setFormData}
-          dateOfBirth={dateOfBirth}
-          setDateOfBirth={setDateOfBirth}
-          chatSessionId={currentChatSessionId}
+          <div className="chat-box" ref={ref}>
+          {chat?.map((msg, i) => (
+  <div
+    key={i}
+    className={
+      msg.role === "user" ? "message-user" : "message-assistant"
+    }
+  >
+    {
+      msg.role === "user" ? 
+        <>{msg.text}</>
+      : 
+        <div
+          style={{ whiteSpace: "pre-wrap" }}
+          dangerouslySetInnerHTML={{ __html: marked(msg.text) }} 
         />
-      ) : (
-        // Sohbet ekranı
-        <>
-          <div className="chat-box">
-            {chat.map((msg, i) => (
-              <div
-                key={i}
-                className={
-                  msg.role === "user" ? "message-user" : "message-assistant"
-                }
+    }
+      {msg.options && msg.options.length > 0 && (
+          <div className="options-list">
+            {msg?.options?.map((opt, idx) => (
+              <button
+                key={idx}
+                className="option-btn"
+                onClick={() => sendMessage(opt)}
               >
-                {msg.text}
-                {msg.role === "assistant" &&
-                  !showForm &&
-                  suggestedProgram &&
-                  i === chat.length - 1 && (
-                    <button onClick={handleShowForm} className="form-button">
-                      {suggestedProgram} için Form Doldur
-                    </button>
-                  )}
-              </div>
+                {opt}
+              </button>
             ))}
+          </div>
+        )}
+    {msg.role === "assistant" &&
+      !showForm &&
+      suggestedProgram &&
+      i === chat.length - 1 && (
+        <button onClick={handleShowForm} className="form-button">
+          {suggestedProgram} için Form Doldur
+        </button>
+      )}
+  </div>
+))}
             {isTyping && (
               <div className="message-assistant">
-                <p>...</p>
+                <TypingText/>
               </div>
             )}
           </div>
@@ -198,8 +224,16 @@ const MainChat = () => {
               </button>
             </div>
           </div>
-        </>
-      )}
+          <FormComponent  
+            onFormSubmit={handleFormSubmitCallback}
+            onBackToChat={handleBackToChat}
+            formData={formData}
+            setFormData={setFormData}
+            dateOfBirth={dateOfBirth}
+            setDateOfBirth={setDateOfBirth}
+            chatSessionId={currentChatSessionId}
+            showForm={showForm}
+            setShowForm={setShowForm}/> 
     </div>
   );
 };

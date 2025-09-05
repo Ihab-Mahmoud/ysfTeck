@@ -15,6 +15,7 @@ import ErrorElement from "./components/ErrorElement.jsx";
 import "./index.css"
 import KVKK from "./pages/KVKK.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import UserType from "./pages/userType.jsx";
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
             element:<ProtectedRoute>
             <MainChat />
             </ProtectedRoute>,
+            errorElement: <ErrorElement />,
+          },
+          {
+            path: "user-type",
+            element:<UserType/>,
             errorElement: <ErrorElement />,
           },
         ],
