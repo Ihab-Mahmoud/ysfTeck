@@ -35,12 +35,12 @@ import { log } from "console";
   app.use(bodyParser.json());
 
   const openai = new OpenAI({
-    apiKey:"",
+    apiKey:"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" ,
   });
 
   const client = new OpenAI({ 
 
-      apiKey: "",
+      apiKey: "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",
 
     });
 

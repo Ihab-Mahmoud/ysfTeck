@@ -18,17 +18,16 @@ const UserType = () => {
     <div
       style={{
         maxWidth: "500px",
-        
         margin: "100px auto",
         padding: "40px",
-        border: "1px solid #ccc",
+        border: "1px solid #cccccc12",
         borderRadius: "12px",
-        backgroundColor: "#fff",
+        backgroundColor: "trasnparent",
         textAlign: "center",
         boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
       }}
     >
-      <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+      <div className="gap" style={{ display: "flex", justifyContent: "center", gap: "100px" }}>
         <button
           onClick={()=>handleAccept("bireysel")}
           style={{
@@ -44,7 +43,9 @@ const UserType = () => {
             transition: "0.2s",
           }}
         >
-          Bireysel
+          <img className="image" src="../../public/Destek Türü İkonları/Bireysel.png" style={{
+          width:"150px"
+          }} />
         </button>   
 
         <button
@@ -62,7 +63,9 @@ const UserType = () => {
             transition: "0.2s",
           }}
         >
-          Kurumsal
+          <img className="image" src="../../public/Destek Türü İkonları/Kurumsal.png"   style={{
+          width:"150px"
+          }}  />
         </button>
       </div>
     </div>

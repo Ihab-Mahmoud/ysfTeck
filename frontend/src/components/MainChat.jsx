@@ -65,7 +65,7 @@ const message = typeof opt === "string" ? opt : input;
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        prompt: message,   // ✅ send message, not just input
+        prompt: message,   //  send message, not just input
         chatSessionId: currentChatSessionId,
         userType: userType,
       }),
@@ -91,7 +91,7 @@ const message = typeof opt === "string" ? opt : input;
         role: "assistant",
         text: assistantResponse,
         hasProgram: data.hasProgram,
-        options: data.options || [], // ✅ keep options
+        options: data.options || [], // keep options
       },
     ]);
   } catch (err) {
@@ -183,13 +183,12 @@ const message = typeof opt === "string" ? opt : input;
       {msg.options && msg.options.length > 0 && (
           <div className="options-list">
             {msg?.options?.map((opt, idx) => (
-              <button
+              <span
                 key={idx}
                 className="option-btn"
-                onClick={() => sendMessage(opt)}
               >
                 {opt}
-              </button>
+              </span>
             ))}
           </div>
         )}

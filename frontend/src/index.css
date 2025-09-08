@@ -552,6 +552,7 @@ input::placeholder {
     width: 90%;
 }
 
+
 }
 
 .options-list {
@@ -566,10 +567,26 @@ input::placeholder {
   border: 1px solid #ccc;
   padding: 6px 12px;
   border-radius: 8px;
-  cursor: pointer;
   transition: background 0.2s;
+  color :#2d2b2b;
 }
 
-.option-btn:hover {
-  background: #e5e7eb;
+.logo{
+  width:290px !important;
 }
+
+
+@media (max-width: 720px) {
+.logo{
+  width:200px !important;
+}
+
+.image{
+  width:100px !important;
+}
+
+.gap{
+  gap:0 !important;
+}
+}
+
