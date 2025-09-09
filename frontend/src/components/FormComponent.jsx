@@ -2,13 +2,24 @@
 import React, { useState } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
+
+
+let programs=[
+  "1001", "1002-A", "1002-B", "1003", "1004", "1005", "1007", "1071", "3005", "3501", 
+  "2202", "2204-B", "2204-A", "2204-C", "2204-D", "2205", "2209-A", "2209-B", "2210-A", 
+  "2210-C", "2210-D", "2210-E", "2211-A", "2211-C", "2211-E", "2213-A", "2214-A", 
+  "2216-B", "2218", "2219", "2221", "2223-B", "2223-C", "2223-D", "2224-A", "2224-B", 
+  "2224-C", "2224-D", "2232-A", "2232-B", "2236", "2236-B", "2237-A", "2237-B", "2242", 
+  "2244", "2247-A", "2247-D", "2247-B", "2247-C", "2248", "2249", "2250", "4001", 
+  "4004", "4005", "4006", "4006-C", "4007", "4008", "4003-T", "4003-A", "4003-B", 
+  "1812", "1711", "1501", "1832", "1507", "1719", "1709", "1505", "1702", "1613", 
+  "1831", "1602", "1833", "1707", "1515", "1511", "1509"
+]
+
 function FormComponent({
   onFormSubmit,
   formData,
   setFormData,
-  dateOfBirth,
-  setDateOfBirth,
-  chatSessionId,
   showForm,
   setShowForm
 }) {
@@ -16,40 +27,13 @@ function FormComponent({
 
   const [showNationalityDetail, setShowNationalityDetail] = useState(false);
   const [nationalityDetail, setNationalityDetail] = useState("");
+  const [formAccepted, setFormAccepted] = useState(false);
 
   // Prop olarak gelen handleChange fonksiyonunu kullanacağız
   const handleChange = (e) => {
     const { name, value } = e.target;
     // Eğer isim 'dateOfBirth' ise özel olarak işliyoruz
-    if (name === "dateOfBirth") {
-      const cleanedValue = value.replace(/[^0-9.]/g, ""); // Sadece sayı ve nokta kabul et
-      if (cleanedValue.match(/^\d{0,2}(\.\d{0,2}(\.\d{0,4})?)?$/)) {
-        // GG.AA.YYYY formatı için basit regex
-        setDateOfBirth(cleanedValue);
-      }
-    } else if (name === "phoneNumber") {
-      // Telefon numarası için sadece sayı kabul et
-      const cleanedValue = value.replace(/[^0-9]/g, "");
-      setFormData((prev) => ({ ...prev, [name]: cleanedValue }));
-    } else if (name === "phoneNumber") {
-      const cleanedValue = value.replace(/[^0-9]/g, "");
-      setFormData((prev) => ({ ...prev, [name]: cleanedValue }));
-    } else if (name === "nationality") {
-      // YENİ: Uyruk seçimi değiştiğinde
       setFormData((prev) => ({ ...prev, [name]: value }));
-      if (value === "yabanci") {
-        setShowNationalityDetail(true);
-      } else {
-        setShowNationalityDetail(false);
-        setNationalityDetail(""); // Seçim değişince detayı sıfırla
-      }
-    } else if (name === "nationalityDetail") {
-      // YENİ: Uyruk detay alanı
-      setNationalityDetail(value);
-    } else {
-      // Diğer form alanları için genel güncelleme
-      setFormData((prev) => ({ ...prev, [name]: value }));
-    }
   };
 
   const handleSubmit = async (e) => {
@@ -146,7 +130,7 @@ function FormComponent({
 
       </div>
         <div className="form-container">
-          <h2>Destek Programı Ön Kayıt Formu</h2>
+          <h2>Destek Programı Bilgi Talep Formu</h2>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
@@ -158,16 +142,6 @@ function FormComponent({
             />
             <div className="rap-dev">
               <input
-                type="tel" // Telefon klavyesi için
-                name="phoneNumber"
-                placeholder="Telefon Numarası (Sadece Rakam)"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-                required
-                pattern="[0-9]{10,}" // Sadece rakam ve minimum 10 karakter
-                title="Lütfen sadece rakam kullanarak telefon numaranızı girin (örneğin: 5XXXXXXXXX)."
-              />
-              <input
                 type="email"
                 name="email"
                 placeholder="E-posta"
@@ -176,75 +150,49 @@ function FormComponent({
                 required
               />
             </div>
-            {/* YENİ: Doğum Tarihi Alanı */}
-            <input
-              type="text" // Metin olarak alıp formatı kontrol edeceğiz
-              name="dateOfBirth"
-              placeholder="Doğum Tarihi (GG.AA.YYYY)"
-              value={dateOfBirth} // Ayrı state'ten geliyor
-              onChange={handleChange}
-              required
-              pattern="\d{2}\.\d{2}\.\d{4}" // GG.AA.YYYY formatını zorlar
-              title="Lütfen doğum tarihinizi GG.AA.YYYY formatında girin (örneğin: 01.01.2000)."
-            />
             <div className="select-wrapper">
-              <select
+            <select
                 name="educationStatus"
                 value={formData.educationStatus}
                 onChange={handleChange}
                 required
+                disabled={formData.supportProgram}
               >
-                <option value="">Eğitim Durumu Seçin</option>
-                <option value="lise">Lise</option>
-                <option value="onlisans">Ön Lisans</option>
-                <option value="lisans">Lisans</option>
-                <option value="yuksek_lisans">Yüksek Lisans</option>
-                <option value="doktora">Doktora</option>
-              </select>
-            </div>
-            <input
-              type="text"
-              name="profession"
-              placeholder="Meslek"
-              value={formData.profession}
-              onChange={handleChange}
-              required
-            />
-            {/* Uyruk seçimi */}
-            <div className="select-wrapper">
-              <select
-                name="nationality"
-                value={formData.nationality}
-                onChange={handleChange}
-                required
-              >
-                <option value="">Uyruk Seçin</option>
-                <option value="tc">Türkiye (T.C.)</option>
-                <option value="yabanci">Yabancı Uyruk</option>{" "}
-                {/* value 'yabanci' olarak kullanıldı */}
-              </select>
-            </div>
+                {programs.map((value, idx) => (
+                  <option key={idx} value={value}>
+                    {value}
+                  </option>
+                ))}
+            </select>
 
-            {/* Yabancı Uyruk seçildiğinde gösterilecek ek input alanı */}
-            {showNationalityDetail && (
-              <input
-                type="text"
-                name="nationalityDetail"
-                placeholder="Uyruğunuzu Belirtin (Örn: Suriye, Almanya)"
-                value={nationalityDetail}
-                onChange={handleChange}
-                required // Bu alan da zorunlu
-              />
-            )}
+            </div>
             <input
               type="text"
               name="supportProgram"
               placeholder="İlgilenilen Destek Programı"
-              value={formData.supportProgram}
+              value={formData.supportProgram ? formData.supportProgram :formData.educationStatus}
               onChange={handleChange}
               readOnly // Bu alanı sadece önerilen programı göstermek için kullanıyoruz
-              required
             />
+              <div style={{ margin: "15px 0" }}>
+                <label style={{ fontSize: "20px",display:"flex",alignItems:"center",gap:"10px",cursor:"pointer" }}>
+                  <input
+                    type="checkbox"
+                    name="confirm"
+                    required
+                    checked={formAccepted}
+                    onChange={(e) => setFormAccepted(e.target.checked)}
+                    style={{
+                        maxWidth: "20px",
+                        height: "20px",
+                        accentColor: "#3B82F6", // modern tarayıcılarda mavi tik
+                        cursor: "pointer",
+                        textAlign:"end"
+                      }}
+                  />
+                  Verdiğim bilgilerin doğruluğunu onaylıyorum.
+                </label>
+            </div>
             <div className="flex justify-around">
               <div className="input-section2">
                 <button className="sub-btn" type="submit" onClick={()=>setShowForm(false)}>
@@ -253,7 +201,7 @@ function FormComponent({
                 </button>
               </div>
               <div className="input-section2">
-                <button className="sub-btn" type="submit">
+                <button disabled={!formAccepted} className="sub-btn" type="submit">
                   Gonder
                   <FaArrowRight className="arr-spec text-black text-lg" />
                 </button>

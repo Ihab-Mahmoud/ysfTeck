@@ -7,9 +7,10 @@ const GlobalContext = createContext();
 // Create provider component
 export const GlobalProvider = ({ children }) => {
   const [userType,setUserType]=useState("")
+  const [showDirectForm, setShowDirectForm] = useState(false); 
 
   return (
-    <GlobalContext.Provider value={{ userType, setUserType }}>
+    <GlobalContext.Provider value={{ userType, setUserType,showDirectForm,setShowDirectForm }}>
       {children}
     </GlobalContext.Provider>
   );

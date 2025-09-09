@@ -6,6 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 import TypingText from "./TypingText";
 import { marked } from "marked";
 import { useGlobal } from "../utils/global-context";
+import { useOutletContext } from "react-router-dom";
 
 const MainChat = () => {
   const [input, setInput] = useState("");
@@ -13,6 +14,7 @@ const MainChat = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [showForm, setShowForm] = useState(false); // Bu state sadece formun gösterilip gizlenmesi için kalacak
   const [suggestedProgram, setSuggestedProgram] = useState(null);
+  
   const [currentChatSessionId, setCurrentChatSessionId] = useState(() =>
     uuidv4()
   );
@@ -233,7 +235,6 @@ const message = typeof opt === "string" ? opt : input;
       {msg.options && msg.options.length > 0 && (
   <div className="options-list">
     {msg.options.map((opt, idx) =>
-      msg.options.length === 17 ? (
         <button
                 key={idx}
                 className="option-btn pointer"
@@ -242,11 +243,6 @@ const message = typeof opt === "string" ? opt : input;
               >
                 {opt}
               </button>
-      ) : (
-        <button disabled={isTyping} key={idx} className="option-btn">
-          {opt}
-        </button>
-      )
     )}
   </div>
 )}
@@ -292,6 +288,7 @@ const message = typeof opt === "string" ? opt : input;
             chatSessionId={currentChatSessionId}
             showForm={showForm}
             setShowForm={setShowForm}/> 
+         
     </div>
   );
 };
