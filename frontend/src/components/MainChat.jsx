@@ -42,9 +42,10 @@ useEffect(() => {
       setChat([
         {
           role: "assistant",
-          text: `Merhaba! 👋 Ben TÜBİ. TÜBİTAK destek programları konusunda sana yardımcı olmak için buradayım. İstersen hayallerini kolaylaştırmak için sana uygun TÜBİTAK programlarını bulabiliriz.
+          text: `Merhaba! 👋 Ben TÜBİ. TÜBİTAK destek programları konusunda size yardımcı olmak için buradayım. İsterseniz hayallerinizi kolaylaştırmak için size uygun TÜBİTAK programlarını bulabilirim.
+
           
-Sana hitap edebilmek için ismini öğrenebilir miyim?`,
+Size hitap edebilmek için isminizi öğrenebilir miyim?`,
         },
       ]);
     }
@@ -70,13 +71,14 @@ const message = typeof opt === "string" ? opt : input;
         userType: userType,
       }),
     });
-
+    
     if (!res.ok) {
       const errorData = await res.json().catch(() => ({}));
       throw new Error(errorData.error || "Bilinmeyen hata");
     }
 
     const data = await res.json();
+    console.log(data);
     const assistantResponse = data.response;
 
     if (data.programId) {
@@ -91,7 +93,8 @@ const message = typeof opt === "string" ? opt : input;
         role: "assistant",
         text: assistantResponse,
         hasProgram: data.hasProgram,
-        options: data.options || [], // keep options
+        options: data.options || [],
+        recommended:data.recommended
       },
     ]);
   } catch (err) {
@@ -159,7 +162,9 @@ const message = typeof opt === "string" ? opt : input;
     setChat([]); // Sohbet geçmişini sıfırla
     setCurrentChatSessionId(uuidv4()); // Yeni bir session ID ver
   };
+  function clean(s) { return String(s || "").replace(/\s+/g, " ").trim(); }
 
+  function truncate(s, n = 200) { s = clean(s); return s.length > n ? s.slice(0, n - 1) + "…" : s; }
 
   return (
     <div className="container">
@@ -171,27 +176,81 @@ const message = typeof opt === "string" ? opt : input;
       msg.role === "user" ? "message-user" : "message-assistant"
     }
   >
-    {
-      msg.role === "user" ? 
-        <>{msg.text}</>
-      : 
-        <div
-          style={{ whiteSpace: "pre-wrap" }}
-          dangerouslySetInnerHTML={{ __html: marked(msg.text) }} 
-        />
-    }
-      {msg.options && msg.options.length > 0 && (
-          <div className="options-list">
-            {msg?.options?.map((opt, idx) => (
-              <span
-                key={idx}
-                className="option-btn"
-              >
-                {opt}
-              </span>
+  {
+  msg.role === "user" ? (
+    <>{msg.text}</>
+  ) : (
+    // Assistant messages
+    msg?.recommended && Array.isArray(msg.recommended) ? (
+      <div className="assistant-block">
+        <p>Profilinize göre öne çıkan programlar:</p>
+
+        {msg.recommended.length === 0 ? (
+          <p>- Uygun program bulunamadı. Profili biraz daha detaylandırabilirsiniz.</p>
+        ) : (
+          <div className="program-list">
+            {msg.recommended.map((p) => (
+              <div className="program-item" key={p.id}>
+                <div className="program-text">
+                  <div className="program-name"><strong>{p.name}</strong></div>
+                  {p.targetAudience && (
+                    <div className="program-audience">
+                      • hedef kitlesi: {truncate(p.targetAudience, 180)}
+                    </div>
+                  )}
+                  <button
+
+                  className="program-id-btn"
+                  title={p.targetAudience || ""}
+                  onClick={() => sendMessage(p.name + " nedir ?")}
+                >
+                  {"Detayli bilgi"}
+                </button>
+                </div>
+              </div>
             ))}
           </div>
         )}
+
+        {msg.recommended[0]?.id && (
+          <p style={{ marginTop: 16 }}>
+            Bir programı seçerseniz destek programı numarasını (örn.{" "}
+            <strong>{msg.recommended[0].id}</strong>) veya adını yazarak detay
+            sorabilirsiniz.
+          </p>
+        )}
+      </div>
+    ) : (
+      // Fallback: no structured recommended data → render the raw markdown/text
+      <div
+        style={{ whiteSpace: "pre-wrap" }}
+        dangerouslySetInnerHTML={{ __html: marked(msg.text || "") }}
+      />
+    )
+  )
+}
+
+      {msg.options && msg.options.length > 0 && (
+  <div className="options-list">
+    {msg.options.map((opt, idx) =>
+      msg.options.length === 17 ? (
+        <button
+                key={idx}
+                className="option-btn pointer"
+                onClick={() => sendMessage(opt)}
+                disabled={isTyping}
+              >
+                {opt}
+              </button>
+      ) : (
+        <button disabled={isTyping} key={idx} className="option-btn">
+          {opt}
+        </button>
+      )
+    )}
+  </div>
+)}
+
     {msg.role === "assistant" &&
       !showForm &&
       suggestedProgram &&
@@ -204,7 +263,7 @@ const message = typeof opt === "string" ? opt : input;
 ))}
             {isTyping && (
               <div className="message-assistant">
-                <TypingText/>
+                <TypingText suggestedProgram={suggestedProgram}/>
               </div>
             )}
           </div>

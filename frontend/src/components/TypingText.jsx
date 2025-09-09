@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const TypingText = () => {
+const TypingText = ({suggestedProgram}) => {
    const [dots, setDots] = useState("");
 
   useEffect(() => {
@@ -11,10 +11,19 @@ const TypingText = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <p style={{ 
-      width: "50px" ,
-      height:"20px"
-    }}>{dots}</p>;
+
+  return (
+    <p
+        style={{
+    width: "calc(fit-content)",
+    height: "calc(fit-content)",
+  }}
+    >
+      Sizin için en uygun sonuçları arıyorum. Lütfen bekleyiniz{" "}{dots}
+    </p>
+  );
+
+  
 };
 
 export default TypingText;

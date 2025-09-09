@@ -35,12 +35,12 @@ import { log } from "console";
   app.use(bodyParser.json());
 
   const openai = new OpenAI({
-    apiKey:"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" ,
+    apiKey:"" ,
   });
-
+  
   const client = new OpenAI({ 
+    apiKey:"" ,
 
-      apiKey: "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",
 
     });
 
@@ -435,7 +435,11 @@ async function computeSemanticScore(profileText, programText) {
     return {
       programId:eg,
       message: lines.join("\n"),
-      recommended: scored.map(p => ({ id: p.programId, name: p.programName }))
+      recommended: scored.map(p => ({
+      id: p.programId,
+      name: p.programName,
+      targetAudience: p.targetAudience
+    }))
     };
   }
 
@@ -580,6 +584,7 @@ async function computeSemanticScore(profileText, programText) {
       let hasProgram=false;
       let prog=null;
       let options = []
+      let rec=null;
         // 1) Ask name
       if (!profile.name) {
         const maybeName = await detectName(prompt); 
@@ -587,27 +592,31 @@ async function computeSemanticScore(profileText, programText) {
               if (userType == "bireysel") {
                 
                 await updateProfile(chatSessionId, { name: maybeName,stage:0 });
-                responseText = `Merhaba ${maybeName}, Tanıştığımıza memnun oldum. Hangi seviyede eğitim aldın ya da alıyorsun?
+                responseText = `Merhaba ${maybeName}, Tanıştığımıza memnun oldum. Hangi seviyede eğitim aldın ya da alıyorsunuz?
+
+Aşağıdan size uygun olanı seçebilirsiniz.                
                 `;
                 
                 options = [
                   "Okul Öncesi",
-                  "İlkokul Öğrencileri",
-                  "Ortaokul Öğrencileri",
-                  "Lise Öğrencileri",
-                  "Lise Mezunları",
-                  "Önlisans Öğrencileri",
-                  "Önlisans Mezunları",
-                  "Lisans Öğrencileri",
-                  "Lisans Mezunları",
-                  "Yüksek Lisans Öğrencileri",
-                  "Yüksek Lisans Mezunları",
-                  "Doktora Öğrencileri",
-                  "Doktora Mezunları",
-                  "Doktora Yapmış Araştırmacılar",
-                  "Tıpta Uzmanlık Öğrencileri",
-                  "Tıpta Uzmanlık Derecesine Sahip Kişiler",
-                  "Sanatta Yeterliliğe Sahip Kişiler"];
+                  "İlkokul Öğrencisiyim",
+                  "Ortaokul Öğrencisiyim",
+                  "Lise Öğrencisiyim",
+                  "Lise Mezunuyum",
+                  "Önlisans Öğrencisiyim",
+                  "Önlisans Mezunuyum",
+                  "Lisans Öğrencisiyim",
+                  "Lisans Mezunuyum",
+                  "Yüksek Lisans Öğrencisiyim",
+                  "Yüksek Lisans Mezunuyum",
+                  "Doktora Öğrencisiyim",
+                  "Doktora Mezunuyum",
+                  "Doktora Yapmış Araştırmacıyım", 
+                  "Tıpta Uzmanlık Öğrencisiyim",
+                  "Tıpta Uzmanlığa Sahibim",
+                  "Sanatta Yeterliğe Sahibim"
+                ];
+
                 }else{
                   await updateProfile(chatSessionId, { name: maybeName,stage:2 }); 
                   responseText = `Kurumsal olarak hangi tür çalışmalarda bulunuyorsunuz?`;
@@ -633,12 +642,12 @@ async function computeSemanticScore(profileText, programText) {
                             "Teknoloji Geliştirme Bölgeleri Yönetici Şirketleri",
                             "Uluslararası ortaklı Ar-Ge projeleri yürüten kuruluşlar",
                             "Bilim Merkezi Kurumları",
-                            "Başka"
+                            "DİĞER"
                           ];
 
                 }
         } else {
-          responseText = "Sana hitap edebilmek için ismini öğrenebilir miyim?";
+          responseText = "Size hitap edebilmek için ismini öğrenebilir miyim?";
         }
       }
 
@@ -652,49 +661,52 @@ async function computeSemanticScore(profileText, programText) {
                 console.log(lowerLevel);
                 
                 if (lowerLevel == "okul öncesi" || lowerLevel == "ilkokul Öğrencileri" || lowerLevel == "ortaokul öğrencileri" || lowerLevel == "lise öğrencileri" || lowerLevel == "lise mezunları" ) {
-                  await updateProfile(chatSessionId, { education_level: maybeeducationLevel, stage: 1 });
-                  responseText = "Kaç yaşındasınız?";
+                  await updateProfile(chatSessionId, { education_level: maybeeducationLevel, stage: 3 });
+                  responseText = "Destek alarak hangi planını hayata geçirmek istiyorsunuz? Detaylı şekilde anlatır mısınız?";
                 }else{
                   await updateProfile(chatSessionId, { education_level: maybeeducationLevel, stage: 2 });
-                  responseText = "Peki bir işte çalışıyorsan ne iş yaptığını söyler misin?";
+                  responseText = `Peki hangi mesleğe sahipsiniz? Lütfen aşağıdan size uygun olanı seçin.
+
+Aşağıdan sizin için uygun olanı seçebilirsiniz.
+                  `;
                       options = [
-                      "Öğretmenler",
+                      "Öğretmen",
                       "Araştırma Görevlisi",
                       "Öğretim Görevlisi",
-                      "Öğretim Elemanları",
+                      "Öğretim Elemanı",
                       "Doktor Öğretim Üyesi",
                       "Doçent",
                       "Uzman",
-                      "Lisans Mezunu Enstitüsü Çalışanları",
-                      "Lisans Mezunu Üniversite Çalışanı",
-                      "Lisans Mezunu Kamu Kurumu Çalışanı",
-                      "Lisans Mezunu Özel Kuruluş Çalışanları",
-                      "Bilim Merkezi Çalışanları",
-                      "Başka"
-
+                      "Endüstri Çalışanı",
+                      "Üniversite Çalışanı",
+                      "Kamu Kurumu Çalışanı",
+                      "Özel Kuruluş Çalışanı",
+                      "Bilim Merkezi Çalışanı",
+                      "DİĞER"
                     ];
                 }           
               } else {
                 responseText = `Tam olarak anlayamadım. Bu listeden senin için uygun olanı bana yazabilir misin?`    
                 
-                options = [
+            options = [
                   "Okul Öncesi",
-                  "İlkokul Öğrencisi",
-                  "Ortaokul Öğrencisi",
-                  "Lise Öğrencisi",
-                  "Lise Mezunu",
-                  "Ön Lisans Öğrencisi",
-                  "Ön Lisans Mezunu",
-                  "Lisans Öğrencisi",
-                  "Lisans Mezunu",
-                  "Yüksek Lisans Öğrencisi",
-                  "Yüksek Lisans Mezunu",
-                  "Doktora Öğrencisi",
-                  "Doktora Mezunu",
-                  "Doktora Yapmış Araştırmacılar",
-                  "Tıpta Uzmanlık Öğrencisi",
-                  "Tıpta Uzmanlık Derecesine Sahip Kişiler",
-                  "Sanatta Yeterliliğe Sahip Kişiler"];
+                  "İlkokul Öğrencisiyim",
+                  "Ortaokul Öğrencisiyim",
+                  "Lise Öğrencisiyim",
+                  "Lise Mezunuyum",
+                  "Önlisans Öğrencisiyim",
+                  "Önlisans Mezunuyum",
+                  "Lisans Öğrencisiyim",
+                  "Lisans Mezunuyum",
+                  "Yüksek Lisans Öğrencisiyim",
+                  "Yüksek Lisans Mezunuyum",
+                  "Doktora Öğrencisiyim",
+                  "Doktora Mezunuyum",
+                  "Doktora Yapmış Araştırmacıyım", 
+                  "Tıpta Uzmanlık Öğrencisiyim",
+                  "Tıpta Uzmanlığa Sahibim",
+                  "Sanatta Yeterliğe Sahibim"
+                ];
 
               }
         }
@@ -705,12 +717,13 @@ async function computeSemanticScore(profileText, programText) {
           const maybeAge = await validateAge(prompt);
           if (maybeAge) {
             await updateProfile(chatSessionId, { age: maybeAge, stage: 3 });
-            responseText = "Destek alarak hangi planını hayata geçirmek istiyorsun? Detaylı şekilde anlatır mısın?";
+            responseText = "Destek alarak hangi planını hayata geçirmek istiyorsunuz? Detaylı şekilde anlatır mısınız?";
           } else {
             responseText = "Kaç yaşındasınız?";
 
           }
       }
+
       else if (profile.stage === 2 && !profile.dream_job) {
         let maybeJob;  
         if (userType=="bireysel") {
@@ -725,23 +738,21 @@ async function computeSemanticScore(profileText, programText) {
 
                   if (userType=="bireysel") {
                       responseText = `Tam olarak anlayamadım. Bu listeden senin için uygun olanı bana yazabilir misin?`;
-                    options = [
-                      "Öğretmenler",
+                  options = [
+                      "Öğretmen",
                       "Araştırma Görevlisi",
                       "Öğretim Görevlisi",
-                      "Öğretim Elemanları",
+                      "Öğretim Elemanı",
                       "Doktor Öğretim Üyesi",
                       "Doçent",
                       "Uzman",
-                      "Lisans Mezunu Enstitüsü Çalışanları",
-                      "Lisans Mezunu Üniversite Çalışanı",
-                      "Lisans Mezunu Kamu Kurumu Çalışanı",
-                      "Lisans Mezunu Özel Kuruluş Çalışanları",
-                      "Bilim Merkezi Çalışanları",
-                      "Başka"
-
+                      "Endüstri Çalışanı",
+                      "Üniversite Çalışanı",
+                      "Kamu Kurumu Çalışanı",
+                      "Özel Kuruluş Çalışanı",
+                      "Bilim Merkezi Çalışanı",
+                      "DİĞER"
                     ];
-
                   } else{
                           responseText = `Tam olarak anlayamadım. Bu listeden senin için uygun olanı bana yazabilir misin?`;
                         options = [
@@ -766,7 +777,7 @@ async function computeSemanticScore(profileText, programText) {
                             "Teknoloji Geliştirme Bölgeleri Yönetici Şirketleri",
                             "Uluslararası ortaklı Ar-Ge projeleri yürüten kuruluşlar",
                             "Bilim Merkezi Kurumları",
-                            "Başka"
+                            "DİĞER"
                           ];
 
                     }
@@ -775,7 +786,7 @@ async function computeSemanticScore(profileText, programText) {
       }
 
       // 4) Career dreams (student path) or worker path
-      else if (profile.stage === 3 && !profile.career_dreams) {
+      else if (profile.stage === 3 && !profile.career_dreams) { 
         
         const structuredDreams = prompt;
         if (structuredDreams) {
@@ -783,14 +794,15 @@ async function computeSemanticScore(profileText, programText) {
           profile = await getOrCreateProfile(chatSessionId);
           console.log(profile);
           
-          const { message, programId } = await recommendProgramsForProfile(profile, { topK: 3 });
+          const { message, programId,recommended } = await recommendProgramsForProfile(profile, { topK: 3 });
+          rec = recommended
           prog = programId;
           responseText =
             `Teşekkürler ${profile.name}. Profilinizi kaydettim.\n\n` +
             message + `\n\nBelirli bir programı seçip ayrıntı sormak isterseniz program numarası ile yazabilirsiniz.`;
           hasProgram = true;
         } else {
-          responseText = "Hayallerini biraz daha net anlatabilir misin?";
+          responseText = "Hayallerini biraz daha net anlatabilir misininz?";
         }
       }
 
@@ -814,7 +826,7 @@ async function computeSemanticScore(profileText, programText) {
         ["assistant", responseText, chatSessionId]
       );
 
-      res.json({ response: responseText,hasProgram,programId:prog ,options});
+      res.json({ response: responseText,hasProgram,programId:prog ,options,recommended:rec});
     } catch (err) {
       console.error("Hata:", err);
       res.status(500).json({ error: "Sunucu hatası" });
@@ -867,49 +879,45 @@ async function computeSemanticScore(profileText, programText) {
 }
 
 async function validateEducationLevel(text) {
+  const SYSTEM_PROMPT = `
+You are an education level normalizer.
+
+Your task: Given a short Turkish text where a user describes their current or past education 
+(e.g. "lisedeyim", "lise bitirdim", "üniversitedeyim"), return the closest matching education level 
+from the fixed list below (verbatim, exactly as written):
+
+  • Okul Öncesi
+  • İlkokul Öğrencileri
+  • Ortaokul Öğrencileri
+  • Lise Öğrencileri
+  • Lise Mezunları
+  • Önlisans Öğrencileri
+  • Önlisans Mezunları
+  • Lisans Öğrencileri
+  • Lisans Mezunları
+  • Yüksek Lisans Öğrencileri
+  • Yüksek Lisans Mezunları
+  • Doktora Öğrencileri
+  • Doktora Mezunları
+  • Doktora Yapmış Araştırmacılar
+  • Tıpta Uzmanlık Öğrencileri
+  • Tıpta Uzmanlık Derecesine Sahip Kişiler
+  • Sanatta Yeterliliğe Sahip Kişiler
+
+⚠️ Rules:
+- Normalize colloquial expressions (e.g. "lisedeyim" → "Lise Öğrencileri", 
+  "lise bitirdim" → "Lise Mezunları").
+- Treat verbs like "okuyorum", "öğrencisiyim", "deyim" as Öğrencileri.
+- Treat words like "mezun", "bitirdim", "tamamladım" as Mezunları.
+- If the text is vague (e.g. "mezun oldum" without level), return only "INVALID".
+- Okul Öncesi is accepted
+- Return exactly one option from the list above, nothing else.
+`;
+
   const res = await client.chat.completions.create({
     model: "gpt-4o-mini",
     messages: [
-      {
-        role: "system",
-        content: `
-You are a strict classifier.  
-Identify the **specific education level** mentioned in the text.  
-It must match EXACTLY ONE of these options (verbatim):
-
-  • Okul Öncesi
-	•	İlkokul Öğrencileri
-	•	Ortaokul Öğrencileri
-	•	10-17 Yaşlarındaki Ortaokul Öğrencileri
-	•	Lise Öğrencileri
-	•	15-17 Yaşındaki Lise Öğrencileri
-	•	Lise Mezunları
-	•	Önlisans Öğrencileri
-	•	Önlisans Mezunları
-	•	Lisans Öğrencileri
-	•	Lisans Mezunları
-	•	Yüksek Lisans Öğrencileri
-	•	Yüksek Lisans Mezunları
-	•	Doktora Öğrencileri
-	•	Doktora Mezunları
-	•	Doktora Yapmış Araştırmacılar
-	•	Tıpta Uzmanlık Öğrencileri
-	•	Tıpta Uzmanlık Derecesine Sahip Kişiler
-	•	Sanatta Yeterliliğe Sahip Kişiler
-
-
-⚠️ Rules:
-- If the input **clearly matches** one of the above, return ONLY that option.  
-- If the input is vague, incomplete, or doesn’t exactly map (e.g. "mezun", "lisans", "üniversite"), return ONLY "INVALID".  
-- Do not guess or make assumptions.  
-- The input will be in Turkish.
-
-✅ Examples:
-- "mezunum" → "INVALID"  
-- "lisans" → "INVALID"  
-- "üniversite" → "INVALID"
-`
-      },
+      { role: "system", content: SYSTEM_PROMPT },
       { role: "user", content: text }
     ]
   });
@@ -919,6 +927,7 @@ It must match EXACTLY ONE of these options (verbatim):
 }
 
 
+
 async function validateJob(text) {
   const res = await client.chat.completions.create({
     model: "gpt-4o-mini",
@@ -926,28 +935,31 @@ async function validateJob(text) {
       {
         role: "system",
         content: `
-You are a strict classifier.  
-Your task is to extract a profession from user text, but it MUST be one of the following exactly (no variations, no synonyms):
+        You are an education/profession normalizer.
 
-- Öğretmenler
-- Araştırma Görevlisi
-- Öğretim Görevlisi
-- Öğretim Elemanları
-- Doktor Öğretim Üyesi
-- Doçent
-- Uzman
-- Lisans Mezunu Enstitüsü Çalışanları
-- Lisans Mezunu Üniversite Çalışanı
-- Lisans Mezunu Kamu Kurumu Çalışanı
-- Lisans Mezunu Özel Kuruluş Çalışanları
-- Bilim Merkezi Çalışanları
-- Başka 
+        Your task: Given a short Turkish text where a user describes their profession, normalize it and return the closest match from the fixed list below (exactly as written):
 
-Rules:
-- If the input clearly matches one of these, return ONLY that exact phrase.  
-- If no clear match, return ONLY "INVALID".  
-- Do not return explanations, multiple options, or anything else.  
-- The input will be in Turkish.
+          • Öğretmen
+          • Araştırma Görevlisi
+          • Öğretim Görevlisi
+          • Öğretim Elemanı
+          • Doktor Öğretim Üyesi
+          • Doçent
+          • Uzman
+          • Endüstri Çalışanı
+          • Üniversite Çalışanı
+          • Kamu Kurumu Çalışanı
+          • Özel Kuruluş Çalışanı
+          • Bilim Merkezi Çalışanı
+          • DİĞER
+
+        ⚠️ Rules:
+        - Accept colloquial or inflected forms (e.g. "öğretmenim", "ogretmen", "matematik öğretmeni") → map to "Öğretmen".
+        - Accept variations like "araştırma görevlisiyim" → "Araştırma Görevlisi".
+        - Accept phrases that clearly imply the profession (e.g. "özel şirkette çalışıyorum") → "Özel Kuruluş Çalışanı".
+        - If the input is too vague or does not clearly fit any category, return ONLY "INVALID".
+        - Return exactly one of the options above (verbatim), nothing else.
+        - The input will be in Turkish.
 `
       },
       { role: "user", content: text }
@@ -988,7 +1000,7 @@ Your task is to extract an enterprise type from user text, but it MUST be one of
 - Teknoloji Geliştirme Bölgeleri Yönetici Şirketleri
 - Uluslararası ortaklı Ar-Ge projeleri yürüten kuruluşlar
 - Bilim Merkezi Kurumları
-- Başka 
+- DİĞER 
 
 Rules:
 - If the input clearly matches one of these, return ONLY that exact phrase.  
