@@ -15,47 +15,58 @@ const BigSidebar = ({ toggleSidebar, showSidebar, user, logoutUser,setShowSideba
           showSidebar ? "sidebar-container" : "sidebar-container show-sidebar"
         }
       >
-        <div className="admin-container">
-      <NavLink
-      onClick={()=>{setShowSidebar(true)}}
-        to="/"
-        style={{
-          padding: "10px 16px",
-          marginRight: "10px",
-          borderRadius: "6px",
-          border: "1px solid #ccc",
-          backgroundColor: "rgb(45 43 43)",
-          color: "#fff",
-          cursor: "pointer",
-          textDecoration:"none",
-          textAlign:"center",
-          width:"80%",
-          fontFamily:"sans-serif"
-        }}
-      >
-        Başa Dön
+    <div className="admin-container" 
+     style={{
+       display: "flex",
+       flexDirection: "column",
+       alignItems: "left",
+       gap: "14px",
+       padding: "60px",
+       backgroundColor: "#1c1c1c",
+       height: "100vh",
+       color: "#fff",
+       fontFamily: "sans-serif",
 
-      </NavLink>
+     }}
+>
+  {/* Yeniden Başla */}
+  <NavLink
+    onClick={() => setShowSidebar(true)}
+    to="/"
+    style={{
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      textDecoration: "none",
+      color: "#fff",
+      fontSize: "18px",
+      gap: "10px"
+    }}
+  >
+    <img style={{ width: "20px" }} src="/yeniden başla.png"/>
+    Yeniden Başla
+  </NavLink>
 
-      <NavLink
-      onClick={()=>{setShowDirectForm(true)
-      }}
-        style={{
-          padding: "10px 16px",
-          borderRadius: "6px",
-          border: "1px solid #ccc",
-          backgroundColor: "rgb(45 43 43)",
-          color: "#fff",
-          cursor: "pointer",
-          textDecoration:"none",
-          textAlign:"center",
-          width:"80%",
-          fontFamily:"sans-serif"
-        }}
-      >
-        Destek Bilgi Talep Formu
-      </NavLink>
-        </div>
+  <hr style={{ width: "100%", border: "1px solid #444" }} />
+
+  {/* Hızlı Erişim */}
+  <NavLink
+    onClick={() => setShowDirectForm(true)}
+    style={{
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      textDecoration: "none",
+      color: "#fff",
+      fontSize: "18px",
+      gap: "10px"
+    }}
+  >
+    <img style={{ width: "20px" }} src="/hızlı erişim.png"/>
+    Hızlı Erişim
+  </NavLink>
+</div>
+
 
       </div>
     </Wrapper>

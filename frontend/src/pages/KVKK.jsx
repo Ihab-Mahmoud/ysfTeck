@@ -4,7 +4,6 @@ import { useNavigate, useNavigation } from 'react-router-dom';
 
 const KVKK = () => {
   const [accepted, setAccepted] = useState(false);
-  const [canCheck, setCanCheck] = useState(false);
   const navigate = useNavigate()
   const textRef = useRef();
 
@@ -50,6 +49,7 @@ const KVKK = () => {
           margin: 0,
           fontWeight: 600,
           letterSpacing: "0.2px",
+          cursor:"pointer"
         }}
       >
         KVKK Aydınlatma Metni
@@ -61,6 +61,7 @@ const KVKK = () => {
 
     {/* Kaydırılabilir içerik */}
     <div
+    className='KVKK'
       ref={textRef}
       // onScroll={handleScroll}
       style={{
@@ -71,24 +72,120 @@ const KVKK = () => {
         color: "#E5E7EB",
       }}
     >
-      <p style={{ margin: 0 }}>
-        {/* KVKK metniniz buraya */}
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-        Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut
-        sem vitae risus tristique posuere.
-        <br />
-        <br />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-        Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut
-        sem vitae risus tristique posuere.
-        <br />
-        <br />
-        {/* ... (devamı) */}
-      </p>
+    <div style={{ color: "#d1d5db", fontSize: "15px", lineHeight: "1.7" }}>
+  <section style={{ marginBottom: "24px" }}>
+    <h3 style={{ fontSize: "18px", fontWeight: 600, color: "#60a5fa",marginBottom:"15px" }}>
+      Veri Sorumlusunun Kimliği
+    </h3>
+    <p>
+      Bu aydınlatma metni, Veri Sorumlusu sıfatıyla Türkiye Bilimsel ve
+      Teknolojik Araştırma Kurumu (TÜBİTAK) tarafından 6698 sayılı Kişisel
+      Verilerin Korunması Kanununun (“Kanun”) 10. maddesi ile Aydınlatma
+      Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında
+      Tebliğ uyarınca tubitak.online platformunda işlenen kişisel verilere
+      ilişkin aydınlatma yapılması amacıyla hazırlanmıştır.
+    </p>
+  </section>
+
+  <section style={{ marginBottom: "24px" }}>
+    <h3 style={{ fontSize: "18px", fontWeight: 600, color: "#60a5fa",marginBottom:"15px" }}>
+      İşlenen Kişisel Veriler
+    </h3>
+    <p>tubitak.online uygulaması üzerinden aşağıdaki kişisel veriler işlenmektedir:</p>
+    <ul style={{ marginTop: "8px", paddingLeft: "20px", display: "flex", flexDirection: "column", gap: "6px" }}>
+      <li>Ad, Soyad</li>
+      <li>Eğitim Bilgileri (mezuniyet, öğrenim durumu, alan/bölüm)</li>
+      <li>Meslek / Görev Bilgisi</li>
+      <li>E-posta Adresi</li>
+      <li>Kullanıcı tarafından sohbet sırasında paylaşılan diğer bilgiler</li>
+    </ul>
+  </section>
+
+  <section style={{ marginBottom: "24px" }}>
+    <h3 style={{ fontSize: "18px", fontWeight: 600, color: "#60a5fa",marginBottom:"15px" }}>
+      Kişisel Verilerin İşlenme Amaçları
+    </h3>
+    <p>tubitak.online üzerinde işlenen kişisel veriler;</p>
+    <ul style={{ marginTop: "8px", paddingLeft: "20px", display: "flex", flexDirection: "column", gap: "6px" }}>
+      <li>TÜBİTAK destek programları hakkında bilgilendirme yapılması,</li>
+      <li>Kullanıcıya uygun olabilecek destek programlarının ön değerlendirmesinin sağlanması,</li>
+      <li>Başvuru ve yönlendirme süreçlerinde kullanıcıyla iletişimin kurulması,</li>
+      <li>Platformun işletilmesi, geliştirilmesi ve güvenliğinin sağlanması,</li>
+      <li>Hukuki yükümlülüklerin yerine getirilmesi,</li>
+      <li>Yetkili kurum/kuruluşlara yapılması gereken bildirimlerin gerçekleştirilmesi</li>
+    </ul>
+  </section>
+
+  <section style={{ marginBottom: "24px" }}>
+    <h3 style={{ fontSize: "18px", fontWeight: 600, color: "#60a5fa",marginBottom:"15px" }}>
+      Kişisel Verilerin Toplanma Yöntemi
+    </h3>
+    <p>
+      Kişisel verileriniz, tubitak.online uygulaması üzerinden elektronik
+      ortamda ve kullanıcı beyanına dayalı olarak otomatik yollarla
+      toplanmaktadır.
+    </p>
+  </section>
+
+  <section style={{ marginBottom: "24px" }}>
+    <h3 style={{ fontSize: "18px", fontWeight: 600, color: "#60a5fa",marginBottom:"15px" }}>
+      Kişisel Verilerin Toplanmasının Hukuki Sebebi
+    </h3>
+    <p>
+      TÜBİTAK, Kanun’un 5. ve 6. maddelerinde yer alan aşağıdaki hukuki
+      sebepler doğrultusunda kişisel verileri işlemektedir:
+    </p>
+    <ul style={{ marginTop: "8px", paddingLeft: "20px", display: "flex", flexDirection: "column", gap: "6px" }}>
+      <li>Bir sözleşmenin kurulması veya ifasıyla doğrudan ilgili olması kaydıyla, hizmetin sağlanması için gerekli olması,</li>
+      <li>Veri sorumlusunun hukuki yükümlülüğünü yerine getirebilmesi için zorunlu olması,</li>
+      <li>İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla, veri sorumlusunun meşru menfaatleri için veri işlemenin zorunlu olması,</li>
+      <li>Açık rızanızın bulunduğu haller.</li>
+    </ul>
+  </section>
+
+  <section style={{ marginBottom: "24px" }}>
+    <h3 style={{ fontSize: "18px", fontWeight: 600, color: "#60a5fa",marginBottom:"15px" }}>
+      Kişisel Verilerin Aktarıldığı Gerçek ve Tüzel Kişiler ve Aktarım Amaçları
+    </h3>
+    <p>Toplanan kişisel veriler;</p>
+    <ul style={{ marginTop: "8px", paddingLeft: "20px", display: "flex", flexDirection: "column", gap: "6px" }}>
+      <li>Yalnızca TÜBİTAK’ın görev ve sorumluluklarını yerine getirmesi amacıyla,</li>
+      <li>Yetkili kamu kurum/kuruluşları ile paylaşılabilir.</li>
+    </ul>
+    <p>
+      Yurt dışına aktarım söz konusu olduğunda, Kanun’un 9. maddesinde tanımlanan şartlar aranır ve gerekli güvenlik tedbirleri alınır.
+    </p>
+  </section>
+
+  <section style={{ marginBottom: "24px" }}>
+    <h3 style={{ fontSize: "18px", fontWeight: 600, color: "#60a5fa",marginBottom:"15px" }}>
+      İlgili Kişinin Hakları
+    </h3>
+    <p>Kanun’un 11. maddesi gereğince kişisel verilerinizin;</p>
+    <ol style={{ marginTop: "8px", paddingLeft: "20px", display: "flex", flexDirection: "column", gap: "6px" }}>
+      <li>İşlenip işlenmediğini öğrenme,</li>
+      <li>İşlenmişse bilgi talep etme,</li>
+      <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+      <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,</li>
+      <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme,</li>
+      <li>Kanun’un 7. maddesi çerçevesinde silinmesini veya yok edilmesini isteme,</li>
+      <li>Bu işlemlerin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+      <li>Münhasıran otomatik sistemler ile analiz edilmesi nedeniyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme,</li>
+      <li>Kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme</li>
+    </ol>
+  </section>
+
+  <section style={{ marginTop: "32px" }}>
+    <p style={{ fontSize: "14px", color: "#9ca3af" }}>
+      Bu kapsamdaki taleplerinizi, kimliğinizi tespit edici belgeleri ekleyerek{" "}
+      <strong>TÜBİTAK Tunus Caddesi No:80 06100 Kavaklıdere / Ankara</strong>{" "}
+      adresine bizzat iletebilir veya{" "}
+      <strong>tubitak.baskanlik@tubitak.hs03.kep.tr</strong> adresine güvenli
+      elektronik imzalı olarak gönderebilirsiniz.
+    </p>
+  </section>
+</div>
+
     </div>
 
     {/* Onay kutusu + buton alanı */}
@@ -123,7 +220,7 @@ const KVKK = () => {
             textAlign:"end"
           }}
         />
-        KVKK metnini okudum ve anladım
+        KVKK aydınlatma metnini okudum, kabul ediyorum.
       </label>
 
       <button
@@ -156,6 +253,8 @@ const KVKK = () => {
         Devam Et
       </button>
     </div>
+
+
   </div>
 );
 

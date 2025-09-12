@@ -197,7 +197,7 @@ const message = typeof opt === "string" ? opt : input;
                   <div className="program-name"><strong>{p.name}</strong></div>
                   {p.targetAudience && (
                     <div className="program-audience">
-                      • hedef kitlesi: {truncate(p.targetAudience, 180)}
+                      • Hedef Kitlesi: {truncate(p.targetAudience, 180)}
                     </div>
                   )}
                   <button
@@ -232,7 +232,7 @@ const message = typeof opt === "string" ? opt : input;
   )
 }
 
-      {msg.options && msg.options.length > 0 && (
+      {msg.options && msg.options.length > 0&& i === chat?.length - 1 &&   (
   <div className="options-list">
     {msg.options.map((opt, idx) =>
         <button
@@ -252,7 +252,7 @@ const message = typeof opt === "string" ? opt : input;
       suggestedProgram &&
       i === chat.length - 1 && (
         <button onClick={handleShowForm} className="form-button">
-          {suggestedProgram} için Form Doldur
+          {suggestedProgram} desteği için bana detaylı bilgi gönder
         </button>
       )}
   </div>
@@ -288,7 +288,6 @@ const message = typeof opt === "string" ? opt : input;
             chatSessionId={currentChatSessionId}
             showForm={showForm}
             setShowForm={setShowForm}/> 
-         
     </div>
   );
 };

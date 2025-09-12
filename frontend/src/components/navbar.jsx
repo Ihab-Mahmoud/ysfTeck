@@ -18,7 +18,6 @@ const Navbar = ({ toggleSidebar }) => {
           </NavLink>
         </div>
         <div className="btn-container">
-          <FaRegQuestionCircle />
         </div>
       </div>
     </Wrapper>

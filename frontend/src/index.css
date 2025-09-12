@@ -146,6 +146,25 @@ h5 {
 .form-container::-webkit-scrollbar-thumb:hover {
   background: #353333;
 }
+.KVKK::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.KVKK::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.KVKK::-webkit-scrollbar-thumb {
+  background: #555555;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0; /* for padding effect */
+}
+
+.KVKK::-webkit-scrollbar-thumb:hover {
+  background: #353333;
+}
 
 .message-user {
   align-self: flex-end;
@@ -654,4 +673,12 @@ input::placeholder {
   .program-id-btn {
     width: 100%;
   }
+  .labelRes{
+font-size: 14px !important;
+  }
+  .inputRes{
+height: 15px !important;
+  }
 }
+
+
