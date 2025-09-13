@@ -1,0 +1,656 @@
+[
+  {
+    "id": "1001",
+    "name": "1001 - Bilimsel ve Teknolojik Araştırma Projelerini Destekleme Programı",
+    "amac": "Yeni bilgiler üretilmesi, bilimsel yorumların yapılması veya teknolojik problemlerin çözümlenmesi için bilimsel esaslara uygun olan projelerin desteklenmesi",
+    "miktar": "Destek üst limiti (Burs dâhil, Proje Teşvik İkramiyesi (PTİ), ve Kurum hissesi hariç) yıllık bütçe sınırlaması olmaksızın 2.400.000 TL"
+  },
+  {
+    "id": "1002",
+    "name": "1002 - A - Hızlı Destek Modülü",
+    "amac": "Üniversitelerde, araştırma hastanelerinde ve araştırma enstitülerinde yürütülecek kısa süreli, küçük bütçeli, hızlı araştırma ihtiyaçlarına yönelik veya doktora tezi kapsamındaki araştırma ve geliştirme projelerine destek sağlamak",
+    "miktar": "Destek üst limiti (Burs dahil) yıllık 100.000 TL"
+  },
+  {
+    "id": "1002",
+    "name": "1002 – B – Acil Destek Modülü",
+    "amac": "Beklenmedik bir şekilde gelişen, doğa veya insan kaynaklı olayların (jeolojik, klimatik, biyolojik, sosyal, teknolojik vb.) hemen sonrasında ortaya çıkan verinin temini açısından aciliyet içeren araştırma projelerini desteklemek",
+    "miktar": "Destek üst limiti (Burs dahil) yıllık 85.000 TL"
+  },
+  {
+    "id": "1003",
+    "name": "1003 - Öncelikli Alanlar Ar-Ge Projeleri Destekleme Programı",
+    "amac": "Ulusal Bilim Teknoloji ve Yenilik Stratejisi çerçevesinde belirlenecek öncelikli alanlarda sonuç odaklı, izlenebilir hedefleri olan, ilgili bilim/teknoloji alanlarının dinamiklerini gözeten ve yurt içinde yapılan Ar-Ge projelerini desteklemek ve bu projeler arasında eşgüdüm sağlamak",
+    "miktar": "Destek üst limiti (Burs dahil, Proje Teşvik İkramiyesi (PTİ) ve Kurum hissesi hariç)\nKüçük Ölçekli projeler: 750.000 TL,\nOrta Ölçekli projeler: \n1.500.000 TL (750.001-1.500.000),\nBüyük Ölçekli projeler: 3.750.000 TL (1.500.001-3.750.000)"
+  },
+  {
+    "id": "1004",
+    "name": "1004 - Mükemmeliyet Merkezi Destek Programı",
+    "amac": "Yükseköğretim kurumları araştırma altyapılarının, Ar-Ge/Tasarım merkezleri ve kamu Ar-Ge birimleri ile iş birliği yaparak ihtisaslaşması ve mükemmeliyet merkezi haline gelmesi için ulusal hedef ve politikalar kapsamında belirlenen öncelikli alanlarda, yurt içinde yapılan, izlenebilir hedefleri olan, bilimsel nitelikli, ticarileşme potansiyeli yüksek araştırma programlarını desteklemek",
+    "miktar": "Çağrıda belirtilir."
+  },
+  {
+    "id": "1005",
+    "name": "1005 - Ulusal Yeni Fikirler ve Ürünler Araştırma Destek Programı",
+    "amac": "Ülkemizde ihtiyaç duyulan, teknolojik dışa bağımlılığımızı azaltacak ve/veya ülkemizin rekabet gücünü artıracak ulusal/uluslararası yeni bir ürün/süreç/yöntem/model geliştirme amacına yönelik uygulamalı araştırma ve/veya deneysel geliştirme projelerinin desteklenmesi",
+    "miktar": "Destek üst limiti (burs dahil, proje teşvik ikramiyesi (PTİ) ve kurum hissesi hariç) 950.000 TL"
+  },
+  {
+    "id": "1007",
+    "name": "1007 - Kamu Kurumları Araştırma ve Geliştirme Projelerini Destekleme Programı",
+    "amac": "Program kapsamında desteklenen projeler ile Kamu kurumlarının Ar-Ge ile giderilebilecek ihtiyaçlarının karşılanması ya da sorunlarının çözümü",
+    "miktar": "Çağrıda belirtilir."
+  },
+  {
+    "id": "1071",
+    "name": "1071 - Uluslararası Araştırma Fonlarından Yararlanma Kapasitesinin ve Uluslararası Ar-Ge İşbirliklerine Katılımın Arttırılmasına Yönelik Destek Programı",
+    "amac": "Ülkemiz araştırmacılarının uluslararası destek fonlarına başvuru kapasitesinin ve başvurularda başarı performansının iyileştirilmesi ile ikili ve çok taraflı uluslararası Ar-Ge işbirliklerine katılımın arttırılmasına yönelik belirlenecek çağrı başlıkları kapsamındaki projelerin desteklenmesi",
+    "miktar": "Çağrıda belirtilir."
+  },
+  {
+    "id": "1501",
+    "name": "1501 - Sanayi Ar-Ge Projeleri Destekleme Programı",
+    "amac": "KOBİ’lerin Ar-Ge ve yenilikçilik kapasitesini artırmak, yeni ürün/süreç geliştirmek.",
+    "miktar": "Çağrılı program, PRODİS üzerinden başvuru. Aynı çağrıya en fazla 2 proje hakkı. Süre: 24 ay (36 aya uzatılabilir). Personel, ekipman, yazılım, danışmanlık vb. giderler desteklenir."
+  },
+  {
+    "id": "1505 Üniversite",
+    "name": "1505 Üniversite-Sanayi İşbirliği Destek Programı",
+    "amac": "Üniversite, araştırma altyapısı, kamu araştırma merkez ve enstitülerindeki bilgi birikimi ve teknolojinin, Türkiye'de yerleşik ve proje sonuçlarını Türkiye'de uygulamayı taahhüt eden kuruluşların ihtiyaçları doğrultusunda, ürüne ya da sürece dönüştürülerek sanayiye aktarılması yoluyla ticarileştirilmesine katkı sağlamak",
+    "miktar": "Bir yürütücü kuruluş ve bir müşteri kuruluş olmak üzere ortaklı başvurudur. Başvurular yürütücü luruluş tarafından yapılır. Müşteri kuruluş Türkiye'de yerleşik sermaye şirketleri olabilir.  Personel, ekipman, hizmet alımı, malzeme vb. giderler desteklenir.\nSüre en fazla 24 ay."
+  },
+  {
+    "id": "1507",
+    "name": "1507 - TÜBİTAK KOBİ Ar-Ge Başlangıç Destek Programı",
+    "amac": "KOBİ ölçeğindeki kuruluşları Ar-Ge ve yenilik içeren projeler yapmaya özendirmek.",
+    "miktar": "Çağrılı program, PRODIS üzerinden başvuru. Aynı çağrıya en fazla 2 proje hakkı. İkisi ortaklı olmak kaydıyla firmanın ilk 5 projesi desteklenir. Süre: en fazla 18 ay. Personel, seyahat, alet/teçhizat/yazılım/yayın, danışmanlık ve hizmet, malzeme giderleri desteklenir."
+  },
+  {
+    "id": "1509 – TÜBİTAK Uluslararası Sanayi Ar",
+    "name": "1509 – TÜBİTAK Uluslararası Sanayi Ar-Ge Projeleri Destekleme Programı",
+    "amac": "Türkiye’deki sanayi kuruluşlarının uluslararası Ar-Ge ve yenilik projelerine katılımlarını destekleyerek teknik yeterliliklerini ve bilgi birikimlerini artırmayı amaçlar.",
+    "miktar": "Uluslararası başvuru sonrasında PRODIS üzerinden ulusal başvuru. Başvurular yıl boyunca devamlı açıktır, ancak uluslararası çağrı takvimine uygun şekilde sunulması gereklidir. Türkiye’de yerleşik sermaye şirketi olmak. Uluslararası ortaklı (EUREKA Network sürekli açık çağrılar, EUREKA Küme, EUREKA Globalstars vb.) proje başvurusu yapılmış olması. Projede en az bir lisans mezunu teknik personelin yer alması"
+  },
+  {
+    "id": "1511",
+    "name": "1511 - TÜBİTAK Öncelikli Alanlar Araştırma Teknoloji Geliştirme ve Yenilik P. D. P.(Teknoloji Odaklı Sanayi Hamlesi Programı)",
+    "amac": "Türkiye’de orta-yüksek ve yüksek teknoloji seviyeli, katma değeri yüksek ürünlerin ve bu sektörlerin gelişimi için kritik önemi haiz ürünlerin üretiminin artırılması ve bu çerçevede yeni üretim imkan ve kabiliyetlerinin ülkemize kazandırılması amaçlanmaktadır.",
+    "miktar": "Teknoloji Odaklı Sanayi Hamlesi Programı, Türkiye’de katma değerli üretimin artırılması amacı doğrultusunda, Sanayi ve Teknoloji Bakanlığı, TÜBİTAK ve KOSGEB tarafından sağlanan destek ve teşviklerin orta-yüksek ve yüksek teknoloji seviyeli sektörlere yoğunlaştırılmasına yönelik özel bir programdır.\nProgram kapsamında Öncelikli Ürün Listesinde yer alan ürünleri üretmeyi amaçlayan projelere Ar-Ge ihtiyacı olması durumunda TÜBİTAK tarafından 1511 Programı kapsamında hibe destek sağlanmaktadır.\nPrograma sektör ve büyüklüğüne bakılmaksızın kuruluş düzeyinde katma değer üreten Türkiye’de yerleşik bütün sermaye şirketleri çağrı konusuna uygun projeleriyle başvuru yapabilmektedir.\nBaşvurular, Teknoloji Odaklı Sanayi Hamlesi Programı web sitesinde Program Portali uygulaması üzerinden çevrim içi olarak alınmaktadır. \nProje bütçesi üst sınırı ve proje süresi Sanayi ve Teknoloji Bakanlığı tarafından çağrıya özel belirlenmeltedir."
+  },
+  {
+    "id": "1515",
+    "name": "1515 - Öncül Ar-Ge Laboratuvarları Destekleme Programı",
+    "amac": "Türk bilim insanlarının araştırma niteliklerinin yükseltilmesi ve \nülkemizin belirli bilim ve teknoloji alanlarında küresel çekim merkezi olmasının sağlanması",
+    "miktar": "Kurulacak laboratuvarda yer alacak araştırmacıların toplamının en az 1/3'ünün doktoralı olması gerekmektedir.\nBaşvuru yapacak kuruluşun 2022 yılı için Ar-Ge harcamasının 15 milyon TL ve üzerinde olması, 2023 yılı için 24.715.500 TL ve üzerinde olması veya 2024 yılı için 35.684.238 TL ve üzerinde olması beklenmektedir. Koşulda belirtilen Ar-Ge harcaması tutarları bir önceki yıl sonu TÜFE ortalama yüzde değişimi oranında her yılın Ocak ayında artırılır."
+  },
+  {
+    "id": "1602",
+    "name": "1602 Patent Destek Programı",
+    "amac": "1602 TÜBİTAK Patent Destek Programı, ülkemiz kaynaklı ulusal ve uluslararası patent başvuru sayısının artırılması ve ülkemizdeki patent sayısının artırılmasını hedeflemektedir.",
+    "miktar": "TÜRKPATENT veya WIPO’ya başvuru yaparak, başvuru numarası alan Türkiye Cumhuriyeti vatandaşları veya ülkemizde yerleşik olan şirketler, üniversiteler, kamu kurum ve kuruluşları Destek Programından faydalanabilirler. Ancak, kanuni ve iş merkezi yurtdışında bulunan işletmelerin dar mükellefiyet statüsündeki Türkiye’de yerleşik temsilcilik ve şubeleri ile vakıflar (kanunla kurulmuş vakıflar hariç), dernekler ve bunların iktisadi işletmeleri bu program kapsamında destek başvurusu yapamazlar.\n\nDestek ve Ödül Sınırlamaları:\n\nGerçek kişiler bir takvim yılı içerisinde en fazla 5 (beş) patent başvurusu için, Tüzel kişiler bir takvim yılı içerisinde en fazla 20 (yirmi) patent başvurusu için desteklerden faydalanabilirler.\n\nUlusal Patent Tescil Ödülü ve Uluslararası Patent Tescil Ödüllerine sadece gerçek kişiler, üniversiteler ile KOBİ ölçeğindeki şirketler başvurabilir."
+  },
+  {
+    "id": "1613",
+    "name": "1613-Teknoloji Transfer Profesyoneli İstihdamı Desteği Çağrısı",
+    "amac": "TTO’lar tarafından yeni Teknoloji Transfer Profesyonelleri (TTP) istihdam edilmesi veya mevcut TTP’lerinin istihdamının devamlılığına katkı sunarak ulusal teknoloji transfer ekosisteminin gelişimine katkı sağlanması amaçlanmaktadır.",
+    "miktar": "Personel (1 TTP), hizmet alımı, genel giderler desteklenir. Süre 24 ay."
+  },
+  {
+    "id": "1702",
+    "name": "1702 - Patent Tabanlı Teknoloji Transferi Destekleme Çağrısı",
+    "amac": "Üniversitelerde, araştırma kurumlarında ve teknoloji geliştirme bölgelerinde geliştirilen patentli teknolojilerin sanayiye aktarılması amaçlanmaktadır.",
+    "miktar": "Üniversiteler, araştırma altyapıları, teknoloji geliştirme bölgesi şirketleri ve teknoloji transfer ofisleri Teknoloji Sağlayıcı Kuruluş olarak nitelendirilmektedir. Müşteri Kuruluş ise Teknoloji Sağlayıcı Kuruluşun hak sahibi olduğu ve ulusal veya uluslararası patentler ile korunan teknolojileri lisanslama ya da devir yolu ile edinerek ekonomik değer oluşturmayı hedefleyen ve Türkiye’de yerleşik sermaye şirketidir. Bir Müşteri Kuruluş ve en az bir Teknoloji Sağlayıcı Kuruluşun ortak başvuruları kabul edilir. Başvurular müşteri kuruluş tarafından yapılır. Proje konusu patentli teknolojinin lisans/devir bedeli, patent değerleme hizmeti, kavram doğrulama, prototip geliştirme, vb giderler desteklenir. \nSüre en fazla 60 ay."
+  },
+  {
+    "id": "1707",
+    "name": "1707 - Siparişe Dayalı Ar-Ge Projeleri için KOBİ Destekleme Çağrısı",
+    "amac": "Ülkemizdeki sanayi kuruluşlarının büyük kısmını oluşturan KOBİ’lerin potansiyel müşterisi olan yenilikçi ürünleri/süreçleri geliştireceği Müşteri Kuruluş ortaklı Ar-Ge projelerinin desteklenmesi; bu sayede işbirliklerinin artması, Ar-Ge destekleri için ayrılan kamu kaynaklarının daha etkin kullanılması",
+    "miktar": "Çağrılı program, PRODIS üzerinden başvuru. Süre: en fazla 24 ay. Tedarikçi kuruluş için; Personel, seyahat, alet teçhizat, hizmet alımı, mazleme giderleri desteklenir. Müşteri kuruluş için: Sipariş Ar-Ge çağrılarında, Müşteri Kuruluşun yönetim, kalite, test, validasyon ürünün sahada doğrulanması gibi faaliyetlerini yapan proje personelinin giderleri (bu desteğin üst sınırı 18 adam ay işgücünü geçmeyecektir.) ve şehirlerarası seyahat giderleri desteklenir.Bütçe üst sınırı 7.500.000 TL."
+  },
+  {
+    "id": "1709",
+    "name": "1709 – Eureka Eurostars Çağrıları",
+    "amac": "Özel sektörün öncülüğünde, üniversite ve kamu iş birliği çerçevesinde uluslararası konsorsiyumlar kurarak teknoloji transferini hızlandırmak, teknik yeterliliği artırmak ve firmaların küresel pazarda rekabet gücünü yükseltmek.",
+    "miktar": "En az bir sermaye şirketi ortak olmalı; diğer paydaşlar iş birliği içinde yer alabilir\nUluslararası çağrılar çerçevesinde oluşturulan konsorsiyumlar (en az iki ülkeden)\nProje, çağrıya uygun tematik alana odaklanmalı ve teknoloji ile yenilik içermeli\nProjede en az bir lisans mezunu teknik personelin yer alması"
+  },
+  {
+    "id": "1711",
+    "name": "1711 - Yapay Zeka Ekosistem Çağrısı",
+    "amac": "Bu çağrı ile Yapay zekâ gibi yüksek bir teknolojinin, müşteri kuruluşların ihtiyaçları doğrultusunda ürün ya da çözümlere dönüştürülmesi hedeflenmektedir.\nDestek modelinde bir Müşteri ile onun ihtiyacını karşılayacak en az bir Üniversite / Kamu Araştırma Merkezi ve en az bir KOBİ’nin birlikte çalışması beklenmektedir.",
+    "miktar": "Çağrılı program, PRODIS üzerinden başvuru. Süre: en fazla 24 ay. Personel, seyahat, alet teçhizat, hizmet alımı, mazleme giderleri desteklenir. Yerli malında oran artar. Bütçe üst sınırı 7.500.000 TL."
+  },
+  {
+    "id": "1719",
+    "name": "1719 – Eureka Network Tematik Çağrıları",
+    "amac": "Özel sektörün öncülüğünde, üniversite ve kamu iş birliği çerçevesinde uluslararası konsorsiyumlar kurarak teknoloji transferini hızlandırmak, teknik yeterliliği artırmak ve firmaların küresel pazarda rekabet gücünü yükseltmek.",
+    "miktar": "En az bir sermaye şirketi ortak olmalı; diğer paydaşlar iş birliği içinde yer alabilir\nUluslararası çağrılar çerçevesinde oluşturulan konsorsiyumlar (en az iki ülkeden)\nProje, çağrıya uygun tematik alana odaklanmalı ve teknoloji ile yenilik içermeli\nProjede en az bir lisans mezunu teknik personelin yer alması"
+  },
+  {
+    "id": "1812",
+    "name": "1812 - Yatırım Tabanlı Girişimcilik Destek Programı (BiGG Yatırım)",
+    "amac": "Girişimcilerin, teknoloji ve yenilik odaklı iş fikirlerini katma değer ve nitelikli istihdam yaratma potansiyeli yüksek teşebbüslere dönüştürebilmeleri için, fikir aşamasından pazara kadar olan faaliyetlerinin desteklenmesi ve program ile Türkiye'de yerleşik sermaya şirketinin kurulması",
+    "miktar": "İş fikri başvuruları 22/8/2025 tarihine kadar 149 Uygulayıcı Kuruluş tarafından alınmaktadır.Uygulayıcı Kuruluşlar tarafından 2. Aşamaya geçmesi onaylanan iş planları 1/9/2025–11/9/2025 tarihleri arasında PRODİS üzerinden TÜBİTAK’a sunulabilir.\nSüre: 18 ay"
+  },
+  {
+    "id": "1831",
+    "name": "1831 - Yeşil İnovasyon Teknoloji Mentörlük Çağrısı",
+    "amac": "KOBİ’lerin yeşil dönüşüm sürecinde teknoloji ve yenilik ihtiyaçlarının belirlenmesi amacıyla, başvurusu TÜBİTAK tarafından onaylanan çözüm ortaklarından uzman desteği alınması, yeşil dönüşüm çerçevesinde iş modellerini, tedarik ve değer zincirlerini, ürün ve hizmetlerini gözden geçirmek isteyen KOBİ'lere teknik yardım sağlanmasıdır.",
+    "miktar": "Yeşil İnovasyon Teknoloji Mentörlük Programı Niyet Beyanı çağrılarında TÜBİTAK tarafından onay alan ve çözüm ortağı olarak belirlenen web sitemizde yayınlanan çözüm ortaklarından alınan yeşil dönüşüm çerçevesinde, danışmanlık, rehberlik ve mentörlük hizmetleri desteklenir.  \n\nProjeler kapsamında firmaların faaliyet alanları kapsamında Yeşil Dönüşümün önemi, mevcut durum analizi, karbon ayak izi ölçümü, yol haritası oluşturulması vb. çalışmaları içerebilen mentörlük faaliyetlerinin Yeşil Dönüşüm kapsamında firmaya sağlayacağı katkılardan bahsedilmesi beklenmektedir. \n\nProje süreleri 3-6 ay olup KOBİ’ler -her bir başvurunun gerekçesini ve beklenen etkilerini proje özelinde ayrıştırmak koşuluyla- aynı Çözüm Ortağı ile en fazla 2, toplamda en fazla 3 ayrı proje ile bu program kapsamında destek alabilir."
+  },
+  {
+    "id": "1832",
+    "name": "1832 - Sanayide Yeşil Dönüşüm",
+    "amac": "Sanayinin yeşil dönüşümüne yönelik Ar-Ge ve yenilik projelerinin desteklenmesi",
+    "miktar": "Çağrılı program, PRODIS üzerinden başvuru. THS5-6 arası desteklenir. Başvuru aşamasında firmanın elinde ticarileşmemiş bir prototip olmalı. En fazla 2 proje hakkı. Süre: 24 ay. Personel, ekipman, yazılım, danışmanlık vb. giderler desteklenir."
+  },
+  {
+    "id": "1833",
+    "name": "1833- SAYEM YEŞİL DÖNÜŞÜM ÇAĞRISI",
+    "amac": "4-10 ortaklı platformların Sanayinin yeşil dönüşümüne yönelik Ar-Ge ve yenilik projelerinin desteklenmesi",
+    "miktar": "Çağrılı program, PRODIS üzerinden başvuru. En az 4 en fazla 10 ortaklı başvuru alınmaktadır. THS5-9 arası desteklenir. Başvuru aşamasında firmanın elinde ticarileşmemiş bir prototip olmalı. En fazla 2 proje hakkı. Süre: 36 ay. Personel, ekipman, yazılım, danışmanlık vb. giderler desteklenir."
+  },
+  {
+    "id": "2202",
+    "name": "2202-Bilim Olimpiyatları Programı",
+    "amac": "Ortaokul ve lise öğrencilerinin temel bilimler ve bilgisayar bilimleri alanlarına ilgilerini artırmak, çalışmalarını yönlendirmek ve bu alanlarda özel eğitim olanakları sağlamak yolu ile gelişmelerine katkıda bulunmak amacıyla her yıl Astronomi-Astrofizik, Coğrafya (yeni), Matematik, Fizik, Kimya, Biyoloji, Bilgisayar, Ortaokul Matematik ve Ortaokul Bilgisayar dallarında bilim olimpiyatları düzenlenmektedir.",
+    "miktar": "Ulusal Bilim Olimpiyatları\nLiseler İçin Ödül Miktarı (TL):\nAltın Madalya: 24.000\nGümüş Madalya: 19.000\nBronz Madalya: 14.000\n\nOrtaokullar İçin Ödül Miktarı (TL):\nAltın Madalya: 16.000\nGümüş Madalya: 13.500\nBronz Madalya: 11.000\n\nUluslararası Bilim Olimpiyatları / Bölgesel Bilim Olimpiyatları\nÖdül Miktarı (TL):\n\nAltın Madalya: 72.000 / 32.000\nGümüş Madalya: 57.000 / 27.000\nBronz Madalya: 42.000 / 22.000\nMansiyon: 28.500 / 13.500"
+  },
+  {
+    "id": "2202",
+    "name": "2202-Bilim Olimpiyatları Programı Öğretmen Akademisi",
+    "amac": "Astronomi ve Astrofizik, Bilgisayar, Biyoloji, Coğrafya, Fizik, Kimya, Matematik, Ortaokul Matematik ve Ortaokul Bilgisayar dallarında Bilim Olimpiyatları Birinci aşama sınavına hazırlanan öğrencilere rehberlik edecek eğitmenlerin TÜBİTAK Olimpiyat Akademisine katılımlarına olanak sağlamak için bilim olimpiyatları projesini yürütmektir.",
+    "miktar": "nan"
+  },
+  {
+    "id": "2204",
+    "name": "2204-A-Lise Öğrencileri Araştırma Projeleri Yarışmaları",
+    "amac": "Lise öğrenimine devam etmekte olan öğrencileri temel, sosyal ve uygulamalı bilim alanlarında çalışmalar yapmaya teşvik etmek, çalışmalarını yönlendirmek ve mevcut bilimsel çalışmalarının gelişimine katkı sağlamak amacıyla 2204-A-Lise Öğrencileri Araştırma Projeleri Yarışması düzenlenmektedir.",
+    "miktar": "Bölge Yarışması Ödülleri\n\nBirincilik:\nÖğrenci Ödülü: 6.000 TL (kişi başına)\nDanışman Ödülü: 3.500 TL  (proje başına)\n\nİkincilik:\nÖğrenci Ödülü: 3.500 TL (kişi başına)\nDanışman Ödülü: 3.000 TL  (proje başına)\n\nÜçüncülük:\nÖğrenci Ödülü: 2.000 TL (kişi başına)\nDanışman Ödülü: 2.000 TL   (proje başına)\n\nFinal Yarışması Ödülleri\n\nBirincilik:\nÖğrenci Ödülü: 22.000 TL (kişi başına)\nDanışman Ödülü: 16.000 TL   (proje başına)\n\nİkincilik:\nÖğrenci Ödülü: 18.000 TL (kişi başına)\nDanışman Ödülü: 13.500 TL  (proje başına)\n\nÜçüncülük:\nÖğrenci Ödülü: 14.000 TL (kişi başına)\nDanışman Ödülü: 11.000 TL   (proje başına)\n\nTeşvik Ödülü:\nÖğrenci Ödülü: 10.000 TL  (kişi başına)\nDanışman Ödülü: 8.000 TL (proje başına)"
+  },
+  {
+    "id": "2204",
+    "name": "2204-B-Ortaokul Öğrencileri Araştırma Projeleri Yarışmaları",
+    "amac": "Ortaokul öğrenimine devam etmekte olan öğrencileri temel, sosyal ve uygulamalı bilim alanlarında çalışmalar yapmaya teşvik etmek, çalışmalarını yönlendirmek ve mevcut bilimsel çalışmalarının gelişimine katkı sağlamak amacıyla düzenlenmektedir.",
+    "miktar": "Bölge Yarışması Ödülleri\nBirincilik:\nÖğrenci Ödülü: 3.500 TL (kişi başına)\nDanışman Ödülü: 2.500 TL (proje başına)\n\nİkincilik:\nÖğrenci Ödülü: 2.500 TL (kişi başına)\nDanışman Ödülü: 2.000 TL (proje başına)\n\nÜçüncülük:\nÖğrenci Ödülü: 2.000 TL (kişi başına)\nDanışman Ödülü: 1.500 TL (proje başına)\n\n\nFinal Yarışması Ödülleri\nBirincilik:\nÖğrenci Ödülü: 14.000 TL (kişi başına)\nDanışman Ödülü: 12.000 TL (proje başına)\n\nİkincilik:\nÖğrenci Ödülü: 12.000 TL (kişi başına)\nDanışman Ödülü: 9.500 TL (proje başına)\n\nÜçüncülük:\nÖğrenci Ödülü: 9.000 TL (kişi başına)\nDanışman Ödülü: 8.000 TL (proje başına)\n\nTeşvik:\nÖğrenci Ödülü: 7.000 TL (kişi başına)\nDanışman Ödülü: 6.000 TL (proje başına)"
+  },
+  {
+    "id": "2204",
+    "name": "2204-C-Lise Öğrencileri Kutup Araştırma Projeleri Yarışmaları",
+    "amac": "Lise öğrenimine devam etmekte olan öğrencileri Antarktika ve Arktik bölgelerde kutup bilimleri konusunda çalışmalar yapmaya teşvik etmek, kutup bilimleri alanında araştırmalar yapmaya yönlendirmek amacıyla düzenlenmektedir.",
+    "miktar": "Final Yarışması Ödülleri\n\nBirincilik:\nÖğrenci Ödülü 70.000 TL  (proje başına)\nDanışman Ödülü: 9.000 TL  (proje başına)\n\nİkincilik:\nÖğrenci Ödülü: 60.000 TL  (proje başına)\nDanışman Ödülü: 7.500 TL (proje başına)\n\nÜçüncülük:\nÖğrenci Ödülü: 50.000 TL  (proje başına)\nDanışman Ödülü: 6.000 TL  (proje başına)"
+  },
+  {
+    "id": "2204",
+    "name": "2204-D-Lise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışmaları",
+    "amac": "Lise öğrencilerinin iklim değişikliği hakkında farkındalıklarını artırmak, ülkemizdeki doğal kaynakların sürdürülebilir şekilde kullanılması konusunda çalışmalar yapmaya teşvik etmek, bu konu hakkında toplum bilincini oluşturmak ve iklim değişikliğinin olumsuz etkilerine yönelik çözümler üretmelerini sağlamak amacıyla düzenlenmektedir.",
+    "miktar": "Final Yarışması Ödülleri\n\nBirincilik:\nÖğrenci Ödülü 70.000 TL  (proje başına)\nDanışman Ödülü: 9.000 TL  (proje başına)\n\nİkincilik:\nÖğrenci Ödülü: 60.000 TL  (proje başına)\nDanışman Ödülü: 7.500 TL  (proje başına)\n\nÜçüncülük:\nÖğrenci Ödülü: 50.000 TL  (proje başına)\nDanışman Ödülü: 6.000 TL  (proje başına)"
+  },
+  {
+    "id": "2205",
+    "name": "2205-Lisans Burs Programı:",
+    "amac": "Lisans öğrencilerinin temel bilimler ile sosyal ve beşerî bilimlere yönelimini teşvik etmek, TÜBİTAK tarafından yürütülen bilim olimpiyatları ve proje yarışmalarında başarılı olan öğrencileri desteklemek, bilimsel düşünme ve araştırıcılığa yatkınlıklarını geliştirerek geleceğin bilim insanları olarak yetişmelerini sağlamaktır.",
+    "miktar": "Burs Miktarları\n\nİlk 1.000: 15.600 TL/ay\n1.001 - 5.000: 12.000 TL/ay\n5.001 - 10.000: 8.900 TL/ay\n10.001 - 20.000: 5.800 TL/ay\n20.001 - 25.000: 4.800 TL/ay\n\nÇAP bursu 4.800 TL/ay"
+  },
+  {
+    "id": "2209",
+    "name": "2209-A-Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı",
+    "amac": "Üniversitelerde öğrenim görmekte olan ön lisans ve lisans öğrencisinin/öğrencilerinin hazırladıkları araştırma projelerinin gerektirdiği makine/teçhizat, sarf malzemesi, seyahat, hizmet alımı giderleri için destek sağlanır.",
+    "miktar": "Maksimum destek tutarı 9.000 TL’dir."
+  },
+  {
+    "id": "2209",
+    "name": "2209-B-Üniversite Öğrencileri Sanayiye Yönelik Araştırma Projeleri Destekleme Programı",
+    "amac": "Ön lisans/Lisans öğrencilerinin hazırladıkları, sanayinin bir sorununu çözmeyi hedefleyen ve/veya sanayide uygulama potansiyeli olan ürün/yöntem/süreç iyileştirme ve/veya geliştirmeye yönelik araştırma konusuna sahip lisans projelerinin gerektirdiği makine/teçhizat, sarf malzemesi, kırtasiye giderleri, seyahat, hizmet alımı vb. giderler için destek sağlanır.",
+    "miktar": "Maksimum destek tutarı 12.000 TL’dir."
+  },
+  {
+    "id": "2210",
+    "name": "2210-A Genel Yurt İçi Yüksek Lisans Burs Programı",
+    "amac": "Sürdürülebilir kalkınma ve teknolojik gelişime öncülük edecek insan kaynağının nicelik ve niteliğinin artırılması amacıyla yüksek lisans öğrenimi yapan üretken, duyarlı, yeniliklere açık ve araştırmacı öğrenciler desteklenir.",
+    "miktar": "Tam Burs: 13.800 TL/ay\nKısmi Burs: 4.000 TL/ay."
+  },
+  {
+    "id": "2210",
+    "name": "2210-C-Yurt İçi Öncelikli Alanlar Yüksek Lisans Burs Programı",
+    "amac": "Sürdürülebilir kalkınma ve teknolojik gelişime öncülük edecek insan kaynağının nicelik ve niteliğinin artırılması amacıyla yüksek lisans öğrenimi yapan üretken, duyarlı, yeniliklere açık ve araştırmacı öğrenciler desteklenir. Bu doğrultuda, başarılı öğrencilerin yüksek lisans tezlerini ülkemizin ihtiyaç duyduğu öncelikli alanlarda hazırlamaları teşvik edilir.",
+    "miktar": "Tam Burs: 15.870 TL\nKısmi Burs: 5.250 TL"
+  },
+  {
+    "id": "2210",
+    "name": "2210-D-Yurt İçi Sanayiye Yönelik Yüksek Lisans Burs Programı",
+    "amac": "Program kapsamında, sürdürülebilir kalkınma ve teknolojik gelişime öncülük edecek insan kaynağının nicelik ve niteliğinin artırılması amacıyla yüksek lisans öğrenimi yapan üretken, duyarlı, yeniliklere açık ve araştırmacı öğrenciler desteklenir. Bu doğrultuda, başarılı öğrencilerin üniversite-sanayi iş birliğinde sanayinin ihtiyaç duyduğu alanlara yönelik yüksek lisans tezi hazırlamaları teşvik edilir.",
+    "miktar": "Tam Burs: 15.870 TL\nKısmi Burs: 5.250 TL\n\nBursiyerlerimiz, TÜBİTAK ARDEB veya TEYDEB projelerinde de görev almaları halinde bursları 19.000 TL/Ay tam burs, 5.250 TL/Ay kısmi burs olacak şekilde 2210 Programından ödenecektir."
+  },
+  {
+    "id": "2210",
+    "name": "2210-E Doğrudan Yurt İçi Yüksek Lisans Burs \nProgramı",
+    "amac": "Lisans eğitimleri sırasında BİDEB bursiyeri olan başarılı öğrencilerin lisanstan mezun oldukları dönemi takip eden dönemde yüksek lisans öğrenimine başlamaları teşvik edilir.",
+    "miktar": "Tam Burs: 13.800 TL/ay\nKısmi Burs: 4.000 TL/ay."
+  },
+  {
+    "id": "2211",
+    "name": "2211-A Genel Yurt İçi Doktora Burs Programı",
+    "amac": "Program kapsamında, sürdürülebilir kalkınma ve teknolojik gelişime öncülük edecek insan kaynağının nicelik ve niteliğinin artırılması amacıyla doktora öğrenimi yapan üretken, duyarlı, yeniliklere açık ve araştırmacı öğrenciler desteklenir.",
+    "miktar": "Tam Burs: 27.500 TL/ay\nKısmi Burs: 7.250 TL/ay."
+  },
+  {
+    "id": "2211",
+    "name": "2211-C-Yurt İçi Öncelikli Alanlar Doktora Burs Programı",
+    "amac": "Program kapsamında, sürdürülebilir kalkınma ve teknolojik gelişime öncülük edecek insan kaynağının nicelik ve niteliğinin artırılması amacıyla doktora öğrenimi yapan üretken, duyarlı, yeniliklere açık ve araştırmacı öğrenciler desteklenir. Bu doğrultuda, başarılı öğrencilerin doktora tezlerini ülkemizin ihtiyaç duyduğu öncelikli alanlarda hazırlamaları teşvik edilir.",
+    "miktar": "Tam Burs: 27.500 TL/ay\nKısmi Burs: 7.250 TL/ay."
+  },
+  {
+    "id": "2211",
+    "name": "2211-E Doğrudan Yurt İçi Doktora Burs Programı",
+    "amac": "Başarılı öğrencilerin lisans eğitimleri sırasında BİDEB bursiyeri olup lisanstan mezun oldukları dönemi takip eden dönemde bütünleşik doktora veya yüksek lisans eğitimleri sırasında BİDEB bursiyeri olup yüksek lisanstan mezun oldukları dönemi takip eden dönemde doktora öğrenimine başlamaları teşvik edilir.",
+    "miktar": "Tam Burs: 27.500 TL/ay\nKısmi Burs: 7.250 TL/ay.\n\nBu programdan desteklenen bursiyerler, ARDEB veya TEYDEB projelerinde görev alıyorsa, 2250-Lisansüstü Bursları Performans Programı mevzuatına uygun olarak aynı anda 2250 Programı’ndan da 8.700 TL/Ay'a kadar ek burs alabilir."
+  },
+  {
+    "id": "2213",
+    "name": "2213-A Yurt Dışı Doktora Burs Programı",
+    "amac": "Program kapsamında, sürdürülebilir kalkınma ve teknolojik gelişime öncülük edecek insan kaynağının niteliğinin artırılması amacıyla öğrenimlerini tamamladıktan sonra Türkiye’ye dönmeleri kaydıyla yurt dışında doktora eğitimi almak isteyen üretken, duyarlı, yeniliklere açık ve araştırmacı öğrenciler desteklenir. Bilim, Teknoloji ve Yenilik Politikaları Kurulu tarafından belirlenen öncelikli alanlar ve buna bağlı olarak Yönetim Kurulu’nun belirlediği aşağıdaki tematik alanlarda yurt dışında doktora yapmak isteyen öğrencilere yurt dışındaki bir doktora programına kayıt yaptırmış olmaları şartıyla burs verilir.",
+    "miktar": "Aylık 1.900 ABD"
+  },
+  {
+    "id": "2214",
+    "name": "2214-A-Yurt Dışı Doktora Sırası Araştırma Burs Programı",
+    "amac": "Program kapsamında; ülkemizin öncelikli ihtiyaçları doğrultusunda, araştırmacıların bilimsel üretkenliğini artırmak, uluslararası işbirliklerini güçlendirmek ve alanlarında yenilikçi yöntem ve yaklaşımlar edinerek akademik yetkinliklerini geliştirmelerini sağlamak amacıyla doktora sırası araştırmacılara destek verilmektedir.",
+    "miktar": "Aylık burs miktarı Birleşik Krallık için 1500 sterlin, Avrupa ülkeleri için en fazla 1.700 avro, diğer ülkeler için en fazla 1.900 Amerikan doları kadardır."
+  },
+  {
+    "id": "2216",
+    "name": "2216-B-TÜBİTAK-TWAS Doktora Sırası ve Doktora Sonrası Araştırma Burs Programları",
+    "amac": "BİDEB-TÜBİTAK ve TWAS-UNESCO iş birliği ile hazırlanan programın amacı, gelişmekte olan ülkelerden Türkiye’ye gelecek olan doğa ve ilgili uygulamalı bilimlerde yurt dışında doktora programına halen kayıtlı olan veya doktorasını almış uluslararası araştırmacılara finansal destek sağlayarak, Türkiye'nin bilim ve teknoloji alanındaki uluslararası iş birliğini ilerletmektir.",
+    "miktar": "Doktora öğrencileri için: Aylık 27.500 TL burs. \n\nDoktora sonrası araştırmacılar için: Aylık 36.500 TL burs."
+  },
+  {
+    "id": "2218",
+    "name": "2218-Yurt İçi Doktora Sonrası Araştırma Burs Programı",
+    "amac": "ülkemizin öncelikli ihtiyaçları doğrultusunda, doktora sonrası araştırmacıların bilimsel üretkenliğini artırmak, ulusal işbirliklerini güçlendirmek ve alanlarında yenilikçi yöntem ve yaklaşımlar edinerek akademik yetkinliklerini geliştirmelerini sağlamak amacıyla; Türkiye’deki yükseköğretim kurumları, araştırma altyapıları , kamu araştırma enstitüleri, Ar-Ge ve tasarım merkezleri ile teknoparklardaki şirketlerde yürütülecek araştırma projelerine destek verilmektedir\n\n*Kadın başvuru sahiplerinde her doğum için bir yıl ilave edilir.",
+    "miktar": "Tam Burs: 36.500 TL\nKısmi Burs: 10.000 TL\nAraştırma Desteği: En fazla 150.000 TL\nDanışmanlık Ücreti: 1.000 TL/rapor dönemi \n\nİsteğe bağlı sigorta bursu,"
+  },
+  {
+    "id": "2219",
+    "name": "2219-Yurt Dışı Doktora Sonrası Araştırma Burs Programı",
+    "amac": "Program kapsamında; ülkemizin öncelikli ihtiyaçları doğrultusunda, araştırmacıların bilimsel üretkenliğini artırmak, uluslararası işbirliklerini güçlendirmek ve alanlarında yenilikçi yöntem ve yaklaşımlar edinerek akademik yetkinliklerini geliştirmelerini sağlamak amacıyla doktora sonrası araştırmacılara destek verilmektedir.",
+    "miktar": "Aylık burs miktarı\nAB: 2.350 avro, \nAmerika 2.600 doları, \nBirleşik Krallık 2.050 GBP"
+  },
+  {
+    "id": "2221",
+    "name": "2221-Konuk veya Akademik İzinli (Sabbatical) Bilim İnsanı Destekleme Programı",
+    "amac": "Yurt dışındaki öncü bilim insanlarının Türkiye’ye gelerek araştırma, laboratuvar çalışması, ürün geliştirme, konferans düzenleme, seminer verme, eğitim ve ortak proje yazma gibi akademik ve Ar-Ge faaliyetlerine katılımını teşvik eden programdır. Ayrıca, akademik izin (sabbatical) döneminde üniversite ve enstitülerde bu tür faaliyetlerin gerçekleştirilmesine destek sağlanır.",
+    "miktar": "Destekler\nTek seferlik geliş-dönüş yol giderleri\nGünlük/aylık yaşam gideri katkısı\n3-12 ay için sağlık sigortası giderleri \n\nKonuk Bilim İnsanı: En az 7gün en çok 12ay \nAkademik İzinli: En az 3 ay, en çok 12 ay\n\nKonuk Bilim İnsanı: 66.000 TL/ay\n\nAkademik İzinli: 84.000 TL/ay \n\n1 Aydan kısa süreli desteklerde aylık tutar 30'a bölünerek ödenecektir."
+  },
+  {
+    "id": "2223",
+    "name": "2223-B-Yurt İçi Bilimsel Etkinlik Düzenleme Desteği",
+    "amac": "Program kapsamında farklı kurumlarda görev yapan bilim insanlarının bir araya gelmesi, bilgi ve deneyim paylaşımı yapılması, çok disiplinli ve disiplinler arası çalışmalara zemin hazırlaması amacıyla yurt içinde düzenlenen kongre, konferans, kolokyum, sempozyum ve çalıştay türü (çevrim içi yapılacaklar dâhil) etkinliklere destek verilir.",
+    "miktar": "Destek Üst Limiti: 117.000 TL"
+  },
+  {
+    "id": "2223",
+    "name": "2223-C-Çok Katılımlı Uluslararası Etkinlik Düzenleme Desteği",
+    "amac": "Program kapsamında farklı kurumlarda görev yapan bilim insanlarının bir araya gelmesi, bilgi ve deneyim paylaşımı yapılması, çok disiplinli ve disiplinler arası çalışmalara zemin hazırlaması amacıyla yurt içinde düzenlenen kongre, konferans, kolokyum ve sempozyum türü (çevrim içi yapılacaklar dahil) etkinliklere destek verilir.",
+    "miktar": "Destek Üst Limiti: 365.000 TL"
+  },
+  {
+    "id": "2223",
+    "name": "2223-D-İkili İş Birliği Anlaşmaları Çerçevesinde Etkinlik Düzenleme Desteği",
+    "amac": "Bilim, teknoloji ve yenilik alanlarında iş birliğini geliştirmek, ortak araştırma projeleri yapmak ve sürdürülebilir ortaklıklar kurmak amacıyla, Türkiye'nin ikili iş birliği anlaşmaları çerçevesinde yurt içinde düzenlenen çalıştay, seminer, panel, kolokyum gibi etkinliklere destek verilir (çevrim içi etkinlikler de dahil).",
+    "miktar": "Destek Üst Limiti: 195.000 TL"
+  },
+  {
+    "id": "2224",
+    "name": "2224-A Yurt Dışı Bilimsel Etkinliklere Katılımı Destekleme Programı",
+    "amac": "Bu program, araştırmacıların özgün çalışmalarını bilim dünyasıyla paylaşmalarını, geri bildirim alarak çalışmalarını geliştirmelerini ve alanlarındaki uzman bilim insanlarıyla etkileşim ve iş birliklerini artırmalarını amaçlar. Yurt dışında düzenlenen (çevrim içi etkinlikler dahil) bilimsel etkinliklere bildiri sunulması için destek verilir.",
+    "miktar": "Destek Üst Limiti: 2.000 Dolar"
+  },
+  {
+    "id": "2224",
+    "name": "2224-B-Yurt İçi Bilimsel Etkinliklere Katılımı Destekleme Programı",
+    "amac": "Program kapsamında araştırmacıların kendi alanlarıyla ilgili bir konuda hazırladıkları özgün çalışmalarını bilim dünyasıyla paylaşmaları, geri bildirim ve bilimsel tartışmalar ile çalışmalarını geliştirmeleri, çalıştıkları alanlardaki uzman bilim insanlarıyla etkileşim ve iş birliklerini artırmaları amacıyla yurt içinde düzenlenen (çevrim içi yapılacaklar dahil) bilimsel etkinliklerde bildiri sunulması için destek verilir.",
+    "miktar": "Destek Üst Limiti: 7.350 TL"
+  },
+  {
+    "id": "2224",
+    "name": "2224-C-Uluslararası Anlaşmalar Çerçevesinde Yurt Dışındaki Bilimsel Etkinliklere Katılımı Destekleme Programı",
+    "amac": "Program kapsamında, Türkiye’de lisans veya lisansüstü eğitimlerine devam eden üstün başarılı öğrenciler ile gelecekte bilime ulusal ve uluslararası düzeyde önemli katkılarda bulunabilecek genç doktora araştırmacılarına, Nobel ödüllü bilim insanları ile genç araştırmacıları bir araya getiren “Lindau Nobel Ödüllü Bilim İnsanları Toplantıları”na katılım desteği sağlanır.",
+    "miktar": "Desteklenecek kişilerin etkinlik katılım ücreti ve harcırah/konaklama giderleri protokol kapsamında belirlenen koşullara göre karşılanır.\n\nUçak bileti desteği talep edilmesi halinde TÜBİTAK tarafından sağlanır"
+  },
+  {
+    "id": "2224",
+    "name": "2224-D-Yurt Dışındaki Bilimsel Eğitim Etkinliklerine Katılımı Destekleme Programı",
+    "amac": "Program kapsamında, lise veya lisans eğitimlerine devam eden üstün başarılı öğrencilere; sosyal ağlarını genişletmeleri, yeni kültürler tanımaları, mesleki ve teknik becerilerini geliştirmeleri, kariyerlerini şekillendirmeleri, eğitim aldıkları alanlarda edindikleri bilgi birikimini uygulama becerisi kazanmaları ve yeteneklerini belli konular üzerinde yoğunlaştırmaları amacıyla yurt dışında düzenlenen staj ve yaz/kış okulları gibi kısa süreli bilimsel eğitim etkinliklerine katılım için destek verilir.",
+    "miktar": "Aylık 1900 Dolar"
+  },
+  {
+    "id": "2232",
+    "name": "2232-A-Uluslararası Lider Araştırmacılar Programı\n\nve\n\n2232-B-Uluslararası Genç Araştırmacılar Programı",
+    "amac": "Program, stratejik öneme sahip araştırma alanlarında projelere katkı sağlamak amacıyla, üst düzey bilimsel ve/veya teknolojik çalışmalarıyla öne çıkan, yurt dışı deneyimine sahip Türk bilim insanları başta olmak üzere başarılı araştırmacıların Türkiye’ye gelmelerini teşvik ederek çalışmalarını önde gelen üniversitelerde, araştırma altyapılarında, kamu enstitülerinde, Ar-Ge merkezlerinde veya teknoparklarda sürdürmeleri için destek sağlar.",
+    "miktar": "Lider araştırmacılar 19.286.000 TL\nGenç Araştırmacılara ise 15.640.000 TL toplamda destek sağlanır"
+  },
+  {
+    "id": "2236",
+    "name": "2236-B-MSCA-COFUND Burs Programlarına Katkı Fonu Programı",
+    "amac": "Program kapsamında Ufuk Avrupa Programı “The Marie Skłodowska-Curie Actions COFUND (MSCA–COFUND)” çağrıları kapsamında araştırma projelerine yönelik burs ve destek mekanizması bulunan ya da böyle bir program oluşturmak isteyen Araştırma Üniversitelerine ve 6550 sayılı Kanun kapsamında tüzel kişiliği olan Araştırma Altyapılarının, Avrupa Komisyon desteğine ek olarak destek sağlanmaktadır.",
+    "miktar": "Doktora Öğrencisi\n2.800 € yaşam ve dolaşım gideri*,\n500 € araştırma gideri,\n650 € kurum hissesi,\n\nDoktora Sonrası Araştırmacılar\n3.980 € yaşam ve dolaşım gideri*,\n800 € araştırma gideri,\n650 € kurum hissesi"
+  },
+  {
+    "id": "2236",
+    "name": "2236-Uluslararası Deneyimli Araştırmacı Dolaşımı Destek Programı",
+    "amac": "2236-A programı kapsamında Avrupa Komisyonu tarafından Ufuk Avrupa MSCA COFUND programı 2023 yılı çağrısında desteklenen CoCirculation3 projesi için 2025, 2026 ve 2027 yılı olmak üzere 3 çağrıya çıkılacaktır. Bu program, dünyanın dört bir yanından deneyimli araştırmacıların Türkiye’nin önde gelen akademik ve akademi dışı kurumlarında yüksek nitelikli araştırmalar yürütmesini amaçlamaktadır.",
+    "miktar": "Aylık brüt 3980 Euro maaş,\n 600 Euro aile desteği\n 1000 Euro araştırma, eğitim ve ağ kurma desteği"
+  },
+  {
+    "id": "2237",
+    "name": "2237-A-Bilimsel Eğitim Etkinlikleri Desteği",
+    "amac": "Programın amacı, bilim ve teknoloji alanlarında yürütülecek bilimsel eğitim faaliyetlerini destekleyerek bu alanlarda gelişimi teşvik etmektir.",
+    "miktar": "Destek üst limiti 195.000 TL"
+  },
+  {
+    "id": "2237",
+    "name": "2237-B-Proje Eğitimi Etkinliklerini Destekleme Programı",
+    "amac": "Program kapsamında; TÜBİTAK’ın ulusal ve uluslararası programlarına yönelik Ar-Ge ve yenilik projelerinin nicelik ve niteliklerinin artırılması amacıyla düzenlenen teorik ve uygulamalı proje yazma eğitimleri desteklenir. Bu doğrultuda, proje hazırlama sürecinde yer alan bilimsel yaklaşımlar, proje yönetimi, bütçelendirme, değerlendirme aşamasında göz önünde bulundurulması gereken hususlar ile araştırma projesi hazırlama tekniklerinin öğretilmesine yönelik yurt içinde düzenlenen (çevrim içi etkinlikler dâhil) etkinliklere destek sağlanır.",
+    "miktar": "Destek üst limiti 195.000 TL"
+  },
+  {
+    "id": "2242",
+    "name": "2242-Üniversite Öğrencileri Araştırma Proje Yarışmaları",
+    "amac": "yarışmanın amacı, yarışmacıları araştırma projeleri aracılığıyla bilim temelli bilgi ve teknoloji üretimine katkıda bulunmaya teşvik ederek, ülkemizin Milli Teknoloji Hamlesi ve nitelikli insan kaynakları gelişimi süreçlerine destek sağlamaktır.",
+    "miktar": "Final Yarışması Ödülleri (Proje başına):\n\nBirinci: 80.000 TL\nİkinci: 70.000 TL\nÜçüncü: 60.000 TL"
+  },
+  {
+    "id": "2244",
+    "name": "2244-Sanayi Doktora Programı",
+    "amac": "Sanayi kuruluşlarında bilgi üstünlüğü ile rekabet etmek için ihtiyaç duyulan nitelikli insan kaynağının üniversite-sanayi iş birliği ile yetiştirilmesi ve sanayide doktoralı araştırmacı istihdamının teşvik edilmesi amacıyla yürütülmektedir.",
+    "miktar": "Tam burs: 25.800 TL/ay\nKısmi burs 7.200 TL/ay"
+  },
+  {
+    "id": "2247",
+    "name": "2247-A-Ulusal Lider Araştırmacılar Programı \n\nve \n\n2247-D-Ulusal Genç Liderler Programı",
+    "amac": "Bilimin ve teknolojinin her alanında ülkemiz açısından çığır açıcı nitelikte gelişmeler sağlamaya yönelik hedefler içeren, alanında önemli boşlukları giderebilme ve araştırmacılara yeni bir bakış açısı kazandırabilme fırsatı sunan, önemli bir keşif ve/veya buluş yapma potansiyeli olan projelere ve bu projeleri gerçekleştirecek olan yurt içindeki deneyimli ve genç bilim insanlarına destek verilmektedir.",
+    "miktar": "Üst limit 11.605.000 TL"
+  },
+  {
+    "id": "2247",
+    "name": "2247-B-Avrupa Araştırma Konseyi (ERC) Projeleri Güçlendirme Desteği Programı",
+    "amac": "Avrupa Birliği fonlarından ülkemize geri dönüş oranını artırmak için araştırmacıların önemli bir keşif ve/veya buluş yapma potansiyeli içeren ERC’ye yeniden sunacakları proje önerilerini iyileştirmek/güçlendirmek ve Avrupa Araştırma Konseyi (ERC)’den destek alabilmelerini sağlamak için program kapsamında, hibe desteği olarak 24 aya kadar araştırma projesi desteği sağlanır.",
+    "miktar": "En fazla 2.400.000 TL"
+  },
+  {
+    "id": "2247",
+    "name": "2247-C Stajyer Araştırmacı Burs Programı (Lisans)",
+    "amac": "Lisans düzeyinde örgün öğretim programlarına kayıtlı başarılı öğrencilerimizin Ar-Ge kültürlerinin oluşturulması, araştırma faaliyetlerine özendirilmesi ve araştırma yapmaya teşvik edilmesi amacıyla yürütülmektedir.\n\nÖğretmenlerin mesleki bilgi ve becerilerinin gelişimini desteklemek ve bilimsel araştırma süreçlerine dair bilgi, görgü ve deneyimini artırmak amacıyla bilimsel araştırma projelerinde bilimsel etik kurallarını gözeterek görev alması hedeflenmektedir.",
+    "miktar": "STAR Lisans 5.250 (6 aylık)"
+  },
+  {
+    "id": "2247",
+    "name": "2247-C Stajyer Araştırmacı Burs Programı (Öğretmen)",
+    "amac": "Öğretmenlerin mesleki bilgi ve becerilerinin gelişimini desteklemek ve bilimsel araştırma projelerinde görev almaları ve proje kültürü kazanmaları hedeflenmektedir.",
+    "miktar": "Katılım Ödülü (Tek Seferde) 4.400 TL"
+  },
+  {
+    "id": "2248",
+    "name": "2248-Mentorluk Desteği Programı",
+    "amac": "nan",
+    "miktar": "Bu program kapsamında Bilim Olimpiyatları ile TÜBİTAK Fen Lisesi öğrencilerine ve lisans bursiyerlerine, kariyer hedefleri doğrultusunda mentorluk desteği sağlanır."
+  },
+  {
+    "id": "2249",
+    "name": "2249-Bilim ve Teknoloji Okulları Programı",
+    "amac": "Yetişmiş ve nitelikli insan gücü, güçlü altyapısı ve ileri düzey laboratuvarlarıyla Ar-Ge ve teknoloji dünyasının öncü araştırma merkezleri ve enstitülerini bünyesinde bulunduran TÜBİTAK Gebze Yerleşkesinde 2021-2022 eğitim-öğretim yılında TÜBİTAK Fen Lisesi kurulmuştur.",
+    "miktar": "Aylık 2.700 Burs"
+  },
+  {
+    "id": "2250",
+    "name": "2250-Lisansüstü Bursları Performans Programı",
+    "amac": "Program kapsamında, bursiyerlerin araştırma yapmaya teşvik edilmesi, proje aidiyetlerinin sağlanması, performans ve motivasyonlarının artırılması ve araştırma ekosisteminin güçlendirilmesi amacıyla TÜBİTAK destekli projelerde bursiyer olarak yer alan doktora öğrencileri ile doktora sonrası araştırmacılara performansa dayalı burs desteği sağlanmasıdır.",
+    "miktar": "Doktora Öğrencisi 8.700 TL aylık\n\nDoktora Sonrası Araştırmacılar 10.500 TL aylık"
+  },
+  {
+    "id": "3005",
+    "name": "3005 - Sosyal ve Beşeri Bilimlerde Yenilikçi Çözümler Araştırma Projeleri Destek Programı",
+    "amac": "• Beşeri bilimlerin veri toplama ve analiz yoluyla durum tespiti çalışmalarının bulguları ile bulgular ışığında bilime yenilikçi katkılar yapacak yöntemler, yaklaşımlar ve yorumların geliştirilmesi;\n• Kamu politikalarının geliştirilmesi süreçlerinde bilimsel temellerin oluşturulması; \n• Teknolojik ilerlemelerin sosyal etkilerinin ortaya konulması amacıyla yapılandırılmış\nçıktı ve etki odaklı sosyal ve beşeri bilim araştırma ve geliştirme faaliyetlerinin desteklenerek ülkemizde toplumsal ve kamusal fayda sağlanması",
+    "miktar": "Destek üst limiti (burs dahil, proje teşvik ikramiyesi (PTİ) ve kurum hissesi hariç) yıllık bütçe sınırlaması olmaksızın 1.000.000 TL"
+  },
+  {
+    "id": "3501",
+    "name": "3501 - Kariyer Geliştirme Programı",
+    "amac": "Kariyerlerine yeni başlayan doktoralı bilim insanlarının çalışmalarını proje desteği vererek teşvik etmek",
+    "miktar": "Destek üst limiti (Burs dahil, Proje Teşvik İkramiyesi (PTİ) ve Kurum hissesi hariç) yıllık bütçe sınırlaması olmaksızın 1.000.000 TL"
+  },
+  {
+    "id": "4001",
+    "name": "4001-Ulusal ve Uluslararası Yarışma/Etkinlik Katılım Desteği",
+    "amac": "Desteğin amacı, öğrenimi devam eden lise öğrencileri ile lise ve üzeri eğitim düzeyine sahip öğrenci ve mezunların proje üretmelerini, geri bildirimler yoluyla projelerini geliştirmelerini, geliştirdikleri projelere yönelik düzenlenen yurt dışı bilimsel ve/veya teknolojik yarışmalara ve ilgili etkinliklere katılmalarını teşvik ederek Milli Teknoloji Hamlesinin ana bileşenlerinden olan beşeri sermaye gelişimine katkı sağlamak.",
+    "miktar": "Üst limiti (ulaşım hariç) 245.000 TL (KDV dâhil)’dir."
+  },
+  {
+    "id": "4003",
+    "name": "4003-A Büyük Ölçekli Bilim Merkezi Kurulum Desteği",
+    "amac": "Toplumu bilimle buluşturmayı, bilim ve teknolojiyi anlaşılır ve ulaşılır kılmayı, deneysel ve uygulamalı etkinlikler yoluyla bilim ve teknoloji alanında farkındalık yaratmayı, bireyleri denemeye ve keşfetmeye teşvik etmek",
+    "miktar": "Üst limit 100.000.000 TL"
+  },
+  {
+    "id": "4003",
+    "name": "4003-A Büyük Ölçekli Bilim Merkezi Sürdürülebilirlik ve Kapasite Artırımı Desteği",
+    "amac": "Toplumu bilimle buluşturmayı, bilim ve teknolojiyi anlaşılır ve ulaşılır kılmayı, deneysel ve uygulamalı etkinlikler yoluyla bilim ve teknoloji alanında farkındalık yaratmayı, bireyleri denemeye ve keşfetmeye teşvik etmek",
+    "miktar": "Üst Limit: 30.000.000"
+  },
+  {
+    "id": "4003",
+    "name": "4003-B Küçük Ölçekli Bilim Merkezi Kurulum Desteği",
+    "amac": "Toplumu bilimle buluşturmayı, bilim ve teknolojiyi anlaşılır ve ulaşılır kılmayı, deneysel ve uygulamalı etkinlikler yoluyla bilim ve teknoloji alanında farkındalık yaratmayı, bireyleri denemeye ve keşfetmeye teşvik etmek",
+    "miktar": "nan"
+  },
+  {
+    "id": "4003",
+    "name": "4003-B Küçük Ölçekli Bilim Merkezi Sürdürülebilirlik ve Kapasite Artırımı Desteği",
+    "amac": "Toplumu bilimle buluşturmayı, bilim ve teknolojiyi anlaşılır ve ulaşılır kılmayı, deneysel ve uygulamalı etkinlikler yoluyla bilim ve teknoloji alanında farkındalık yaratmayı, bireyleri denemeye ve keşfetmeye teşvik etmek",
+    "miktar": "Üst Limit: 21.000.000 TL"
+  },
+  {
+    "id": "4003",
+    "name": "4003-T Milli Teknoloji Atölyeleri Destek Programı",
+    "amac": "Milli Teknoloji Atölyeleri, öğrencilerin bilim ve teknoloji yarışmalarına hazırlanabileceği ve teknik donanımı kullanabileceği alanlar sunacaktır. Bu atölyeler, gençlerimize yerli ve milli teknolojiler geliştirme imkânı tanıyarak sanayimizin ihtiyaç duyduğu nitelikli insan kaynağını yetiştirmeyi hedeflemektedir.",
+    "miktar": "Atölye ile ilgili her türlü mal ve hizmet alımı için 30.000.000 TL destek aktarımı sağlanmaktadır."
+  },
+  {
+    "id": "4004",
+    "name": "4004 Doğa Eğitimi ve Bilim Okulları Destekleme Programı",
+    "amac": "Bilimsel bilginin toplum ile buluşturulmasını ve yaygınlaştırılmasını, bilginin mümkün olduğunca görselleştirilerek, etkileşimli uygulamalarla anlaşılır bir biçimde kazandırılmasını ve katılımcıların bilimsel olguları fark etmelerini sağlayarak, merak duygularının, araştırma, sorgulama ve öğrenme isteklerinin teşvik edilmesi",
+    "miktar": "Destek üst limiti 360.000 TL’dir."
+  },
+  {
+    "id": "4005",
+    "name": "4005 Yenilikçi Eğitim Uygulamaları Destekleme Programı",
+    "amac": "Hedef kitleye, kendi branşlarında eğitim ve öğretime özgü yenilikçi yaklaşım, strateji, yöntem ve tekniklerin etkileşimli olarak kazandırılması, kullanılması ve yaygınlaştırılması",
+    "miktar": "Destek üst limiti 360.000 TL’dir."
+  },
+  {
+    "id": "4006",
+    "name": "4006-C Bilim Fuarları Festivali Desteği",
+    "amac": "Bilim Fuarları Festivali Desteği ile 4006-TÜBİTAK Bilim Fuarları Destekleme Programı kapsamında desteklenen ve sergilenen projelerin il/ilçe ölçeğinde düzenlenecek festivaller aracılığıyla toplumun daha geniş kesimleriyle buluşturulması hedeflenmektedir. Bu kapsamda, bilimsel çalışmaların ve yenilikçi projelerin daha geniş kitlelere ulaşması sağlanarak toplumda bilim ve teknolojiye olan ilginin artırılması",
+    "miktar": "En az 10 Bilim Fuarı İçin 50.000\nEn az 20 Bilim Fuarı İçin: 75.000\nEn az 30 Bilim Fuarı İçin: 100.000"
+  },
+  {
+    "id": "4006",
+    "name": "4006-TÜBİTAK Bilim Fuarları Destekleme Programı",
+    "amac": "5-12. sınıf öğrencilerinin program çağrısında belirtilen ana alan ve tematik konular arasından kendi ilgileri doğrultusunda seçtikleri konular üzerine araştırma yaparak araştırmalarının sonuçlarını sergileyebilecekleri, okuldaki diğer öğrenciler ve katılımcılarla birlikte eğlenerek öğrenebilecekleri bir ortamın oluşturulmasını amaçlamaktadır.",
+    "miktar": "2024 yılında yayınlanan çağrı kapsamında destek üst limiti bilim fuarı başına 20.000 TL idi, 2025-2026 çağrısı Eylül 2025'te yayınlanacaktır.  Bu çağrı kapsamında geçerli olacak güncel destek miktarı, enflasyon oranı dikkate alınarak güncellenecektir."
+  },
+  {
+    "id": "4007",
+    "name": "4007 Bilim Şenlikleri Destekleme Programı",
+    "amac": "Toplumun tüm kesimlerinde bilim ve teknoloji farkındalığı oluşturmak, ülkemizin kalkınmasında kritik öneme sahip bilim ve teknolojinin toplum tarafından benimsenmesi ve sahiplenilmesini sağlamak",
+    "miktar": "• A kategorisi için 600.001 - 1.250.000 TL (KDV dâhil)\n• B kategorisi için 360.001 - 600.000 TL (KDV dâhil)\n• C kategorisi için üst limit 360.000 TL (KDV dâhil)"
+  },
+  {
+    "id": "4008",
+    "name": "4008-Özel Gereksinimli Bireylere Yönelik Kapsayıcı Toplum Uygulamaları Destekleme Programı",
+    "amac": "Program, özel gereksinimli bireylerin eğitim ve bağımsız yaşam alanlarında desteklenerek topluma katılımlarının kolaylaştırılmasını ve bu bireylere hizmet sunan kişilerle özel gereksinimli bireyler arasında bilimsel uygulamaların yaygınlaşması",
+    "miktar": "Destek üst limiti 360.000 TL’dir."
+  },
+  {
+    "id": "Bilim",
+    "name": "Bilim Kafe",
+    "amac": "Gençlerin bilim insanlarıyla buluşmasını ve bilimsel farkındalıklarının artırmasını amaçlayan bilim kafe etkinlikleri düzenliyor. Hem alanında uzman kişilerle gençlerin etkileşimini artırıyor hem de gençlerimize rol model olan kişilerle buluşturmak.",
+    "miktar": "-"
+  },
+  {
+    "id": "Bilim",
+    "name": "Bilim Söyleşileri",
+    "amac": "Bilim insanları ile toplumu buluşturmak",
+    "miktar": "-"
+  },
+  {
+    "id": "Biyoteknoloji",
+    "name": "Biyoteknoloji İnovasyon Yarışması",
+    "amac": "Gençlerin inovasyon ve yüksek teknoloji alanlarında çalışmasını desteklemek, biyoteknolojiye ilgi duyan gençlere farkındalık kazandırmak, bu alanda yetkinlik geliştirmeleri için onları teşvik etmek",
+    "miktar": "Biyoteknoloji İnovasyon Yarışması Lise Kategorisi\n Birinci: 70.000,00 TL \n İkinci: 60.000,00 TL\n Üçüncü: 50.000,00 TL\n\nBiyoteknoloji İnovasyon Yarışması Üniversite ve Üzeri Fikir Kategorisi\n Birinci: 100.000,00 TL\n İkinci: 80.000,00 TL\n Üçüncü: 60.000,00 TL\n\nBiyoteknoloji İnovasyon Yarışması Üniversite ve Üzeri Proje Kategorisi\n Birinci: 150.000,00 TL\n İkinci: 120.000,00 TL\n Üçüncü: 100.000,00 TL"
+  },
+  {
+    "id": "Blokzincir",
+    "name": "Blokzincir Yarışması",
+    "amac": "Blokzincir teknolojilerinde proje üretmek",
+    "miktar": "Birinci: 120.000,00 TL\n İkinci: 100.000,00 TL\n Üçüncü: 90.000,00 TL"
+  },
+  {
+    "id": "Çip",
+    "name": "Çip Tasarım Yarışması",
+    "amac": "Çip tasarım potansiyelini geliştirmek",
+    "miktar": "Analog Tasarım Yarışması\nBirinci: 180.000,00 TL\nİkinci: 150.000,00 TL\nÜçüncü: 120.000,00 TL\n\nMikrodenetleyici Tasarım Kategorisi\nBirinci: 180.000,00 TL\nİkinci: 150.000,00 TL\nÜçüncü: 120.000,00 TL"
+  },
+  {
+    "id": "DENEYAP",
+    "name": "DENEYAP TEKNOLOJİ ATÖLYELERİ",
+    "amac": "Deneyap Teknoloji Atölyeleri, Türkiye’nin dört bir yanında teknolojiye ilgi duyan gençlerin çağın gerektirdiği teknik ve sosyal becerilerle donatılmasını amaçlamaktadır. Program; yapay zekâ, robotik, ileri üretim, yazılım, elektronik programlama, nesnelerin interneti gibi alanlarda uygulamalı eğitimler sunarak öğrencilerin üretken, yenilikçi ve girişimci bireyler olarak yetişmeleri",
+    "miktar": "-"
+  },
+  {
+    "id": "Dijital",
+    "name": "Dijital Popüler Bilim Yayını Bilim Genç",
+    "amac": "Amacı, toplumun bilim ve teknolojiye ilgisini artırarak bilimsel bakış açısı kazanmalarına katkı sağlamak amacıyla; bilimsel bilgiyi toplumun her kesimine ulaşılabilir ve anlaşılır şekilde sunmak, dijital platformlar aracılığıyla bilimi erişilebilir kılmak, video, infografik, podcast ve interaktif içeriklerle popüler bilim yayıncılığı yaparak bilimsel farkındalığı yaygınlaştırmak ve bilim okuryazarlığını geliştirmek, TÜBİTAK’ın bilimsel projelerini topluma aktarmak, yerli ve milli teknoloji hamlesine katkıda bulunmak, gençleri bilimsel araştırmalara teşvik etmek ve bilim kültürünün yerleşmesine öncülük etmektir.",
+    "miktar": "-"
+  },
+  {
+    "id": "Dikey",
+    "name": "Dikey İnişli Roket Yarışması",
+    "amac": "Roketlerde kontrollü iniş kabiliyetini geliştirmek",
+    "miktar": "Birinci: 250.000,00 TL\nİkinci: 200.000,00 TL\nÜçüncü: 150.000,00 TL"
+  },
+  {
+    "id": "Havacılıkta",
+    "name": "Havacılıkta Yapay Zeka Yarışması",
+    "amac": "Havacılıkta yapay zekâ çözümleri geliştirmek",
+    "miktar": "Birinci: 200.000,00 TL\n İkinci: 175.000,00 TL\n Üçüncü: 150.000,00 TL"
+  },
+  {
+    "id": "Hyperloop",
+    "name": "Hyperloop Geliştirme Yarışması",
+    "amac": "Geleceğin ulaşım teknolojilerini geliştirmek",
+    "miktar": "Birinci: 250.000,00 TL\nİkinci: 200.000,00 TL\nÜçüncü: 150.000,00 TL"
+  },
+  {
+    "id": "Kuantum",
+    "name": "Kuantum Hackathon Yarışması",
+    "amac": "Kuantum alanında öncü çalışmalar yapmak",
+    "miktar": "Birinci: 175.000,00 TL\n İkinci: 150.000,00 TL\n Üçüncü: 125.000,00 TL"
+  },
+  {
+    "id": "Lise",
+    "name": "Lise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışması",
+    "amac": "Öğrencilerin iklim bilinci geliştirmesi",
+    "miktar": "Lise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışması -  Çevre         \nBirinci: 70.000,00 TL\nİkinci: 60.000,00 TL\nÜçüncü: 50.000,00 TL\n\nLise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışması -  Ekonomik Sektörler         \nBirinci: 70.000,00 TL\nİkinci: 60.000,00 TL\nÜçüncü: 50.000,00 TL\n\nLise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışması -  Hava ve İklim         \nBirinci: 70.000,00 TL\nİkinci: 60.000,00 TL\nÜçüncü: 50.000,00 TL\n\nLise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışması -  Su Araştırmaları         \nBirinci: 70.000,00 TL\nİkinci: 60.000,00 TL\nÜçüncü: 50.000,00 TL\n\nLise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışması -  Sürdürülebilirlik ve Refah         \nBirinci: 70.000,00 TL\nİkinci: 60.000,00 TL\nÜçüncü: 50.000,00 TL\n\nLise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışması -  Toplumsal Farkındalık         \nBirinci: 70.000,00 TL\nİkinci: 60.000,00 TL\nÜçüncü: 50.000,00 TL"
+  },
+  {
+    "id": "Lise",
+    "name": "Lise Öğrencileri Kutup Araştırma Projeleri Yarışması",
+    "amac": "Gençleri kutup bilimlerinde araştırmaya yönlendirmek",
+    "miktar": "Lise Öğrencileri Kutup Araştırma \nProjeleri Yarışması - Canlı Bilimleri\t \nBirinci: 70.000,00 TL\nİkinci:60.000,00 TL\nÜçüncü: 50.000,00 TL\n\nLise Öğrencileri Kutup Araştırma \nProjeleri Yarışması - Fiziki Bilimler\nBirinci: 70.000,00 TL\nİkinci: 60.000,00 TL\nÜçüncü\t: 50.000,00 TL\n\nLise Öğrencileri Kutup Araştırma \nProjeleri Yarışması - Sosyal ve Beşeri Bilimler\t \nBirincİ: 70.000,00 TL\nİkinci: 60.000,00 TL\nÜçüncü: 50.000,00 TL\n\nLise Öğrencileri Kutup Araştırma Projeleri Yarışması -  Yer Bilimleri\nBirinci: 70.000,00 TL\nİkinci: 60.000,00 TL\nÜçüncü: 50.000,00 TL"
+  },
+  {
+    "id": "Liseler",
+    "name": "Liseler Arası Efficiency Challenge Elektrikli Araç Yarışları",
+    "amac": "Temiz enerji teknolojileri ile tanışmak",
+    "miktar": "Liselerarası Efficiency Challenge Elektrikli Araç Yarışması         \nBirinci: 200.000,00 TL\nİkinci:150.000,00 TL\nÜçüncü: 120.000,00 TL"
+  },
+  {
+    "id": "Liseler",
+    "name": "Liseler Arası İnsansız Hava Araçları Yarışması",
+    "amac": "Gençleri İHA teknolojileri ile buluşturmak",
+    "miktar": "Liseler Arası İnsansız Hava Araçları Yarışması - Sabit Kanat Kategorisi        \nBirinci: 150.000,00 TL\nİkinci: 120.000,00 TL\nÜçüncü: 110.000,00 TL\n\nLiseler Arası İnsansız Hava Araçları Yarışması - Döner Kanat Kategorisi        \nBirinci : 150.000,00 TL\nİkinci: 120.000,00 TL\nÜçüncü: 110.000,00 TL\n\nLiseler Arası İnsansız Hava Araçları Yarışması - Serbest Görev Kategorisi        \nBirinci : 150.000,00 TL\nİkinci: 120.000,00 TL\nÜçüncü: 110.000,00 TL"
+  },
+  {
+    "id": "Milli",
+    "name": "Milli Teknoloji Kulüpler Birliği Desteği",
+    "amac": "Üniversitelerde faaliyet gösteren, belirlenen yetkinlik ölçütlerini sağlayan, teknoloji ve teknoloji girişimciliği alanında faaliyet gösteren kulüplerinin oluşturduğu iş birliği ve koordinasyon platformu ile kulüplerin teknoloji ve yenilik ekosisteminde daha etkin yer almasını sağlamak",
+    "miktar": "Üst limit: 150.000 TL"
+  },
+  {
+    "id": "PARDUS",
+    "name": "PARDUS Hata Yakalama ve Öneri Yarışması",
+    "amac": "Gençleri açık kaynak ekosistemine dahil etmek",
+    "miktar": "Pardus Hata Yakalama ve Öneri Yarışması- Öneri Kategorisi\t \nBirinci: 60.000,00 TL\nİkinci: 45.000,00 TL\nÜçüncü: 30.000,00 TL\n\nPardus Hata Yakalama ve Öneri Yarışması - Geliştirme Kategorisi\t \nBirinci: 70.000,00 TL\nİkinci: 60.000,00 TL\nÜçüncü: 50.000,00 TL"
+  },
+  {
+    "id": "Popüler",
+    "name": "Popüler Bilim Dergileri (Bilim ve Teknik, Bilim Çocuk, Meraklı Minik)",
+    "amac": "Bilimsel ve teknolojik gelişmeleri, yenilikleri toplumda herkesin anlayabileceği biçimde anlaşılır bir dille anlatmak, küçük yaşlardan itibaren bilime ilgi duyan bireyler yetiştirmek, bilimokuryazarlığını toplum geneline yaymak.",
+    "miktar": "-"
+  },
+  {
+    "id": "Popüler",
+    "name": "Popüler Bilim Kitapları",
+    "amac": "Bilimsel bilgi ve gelişmeleri topluma anlaşılır, ilgi çekici ve doğru şekilde aktarmayı; dünya çapındaki nitelikli popüler bilim kitaplarını Türkçeye kazandırmayı ve bilime ilgiyi küçük yaşlardan itibaren artırarak bilim okuryazarlığını teşvik etmeyi amaçlamak",
+    "miktar": "-"
+  },
+  {
+    "id": "Robotaksi",
+    "name": "Robotaksi-Binek Otonom Araç Yarışması",
+    "amac": "Otonom araç teknolojilerini geliştirmek",
+    "miktar": "Robotaksi - Binek Otonom Araç Yarışması \nHazır Araç Kategorisi\n\t \nBirinci: 200.000,00 TL\nİkinci: 175.000,00 TL\nÜçüncü: 150.000,00 TL\n\nRobotaksi - Binek Otonom Araç Yarışması \nÖzgün Araç Kategorisi\n\t \nBirinci: 250.000,00 TL\nİkinci: 200.000,00 TL\nÜçüncü: 175.000,00 TL"
+  },
+  {
+    "id": "TÜBİTAK",
+    "name": "TÜBİTAK Bilim Kampları",
+    "amac": "TÜBİTAK Bilim Kampları, öğrencilerin temel bilimlerde farkındalık artırmak, kariyer hedeflerine yönelik motivasyon sağlamak, yenilikçi teknoloji alanlarını tanıtmak ve yetenek keşfini desteklemek, bilimi eğlenceli, tarihsel ve uygulamalı yöntemlerle öğretmek, öğrencilerin sosyal bağlar kurmasını sağlamak",
+    "miktar": "-"
+  },
+  {
+    "id": "Uluslararası",
+    "name": "Uluslararası Çocuk Bilim Yarışması",
+    "amac": "Çocukların STEM alanlarında becerilerini geliştirmek",
+    "miktar": "Birinci: 60.000,00 TL\nİkinci: 50.000,00 TL\nÜçüncü: 40.000,00 TL"
+  },
+  {
+    "id": "Uluslararası",
+    "name": "Uluslararası Efficiency Challenge Elektrikli Araç Yarışları",
+    "amac": "Temiz enerji teknolojileri ile tanışmak",
+    "miktar": "Efficiency Challenge Elektrikli Araç Yarışması Elektromobil Kategorisi\nBirinci:         250.000,00 TL\nİkinci: 200.000,00 TL\nÜçüncü: 150.000,00 TL\n\nEfficiency Challenge Elektrikli Araç Yarışması Hidromobil Kategorisi         \nBirinci: 250.000,00 TL\nİkinci: 200.000,00 TL\nÜçüncü: 150.000,00 TL"
+  },
+  {
+    "id": "Uluslararası",
+    "name": "Uluslararası Efficiency Challenge Elektrikli Araç Yarışları",
+    "amac": "Sürdürülebilir ulaşım için yenilikçi araçlar geliştirmek",
+    "miktar": "Birinci: 250.000,00 TL\nİkinci: 200.000,00 TL\nÜçüncü: 150.000,00 TL"
+  },
+  {
+    "id": "Uluslararası",
+    "name": "Uluslararası İnsansız Hava Araçları Yarışması",
+    "amac": "Gençleri İHA teknolojileri ile buluşturmak",
+    "miktar": "Birinci: 200.000,00 TL\nİkinci: 170.000,00 TL\nÜçüncü: 150.000,00 TL"
+  },
+  {
+    "id": "Uluslararası",
+    "name": "Uluslararası İnsansız Hava Araçları Yarışması",
+    "amac": "Küresel ölçekte İHA teknolojilerini geliştirmek",
+    "miktar": "Uluslararası İnsansız Hava Araçları Yarışması - Sabit Kanat Kategorisi\t\nBirinci: 200.000,00 TL\nİkinci: 175.000,00 TL\nÜçüncü: 150.000,00 TL\n\nUluslararası İnsansız Hava Araçları Yarışması - Döner Kanat Kategorisi\t\nBirinci\t: 200.000,00 TL\nİkinci: 175.000,00 TL\nÜçüncü: 150.000,00 TL\n\nUluslararası İnsansız Hava Araçları Yarışması - Serbest Görev Kategorisi\t\nBirinci\t: 200.000,00 TL\nİkinci: 175.000,00 TL\nÜçüncü: 150.000,00 TL"
+  },
+  {
+    "id": "Üniversite",
+    "name": "Üniversite Öğrencileri Araştırma Proje Yarışmaları",
+    "amac": "Bilim temelli bilgi üretimini teşvik etmek",
+    "miktar": "Üniversite Öğrencileri Araştırma Proje Yarışmaları - Akıllı Şehirler ve Ulaşım\nBirinci: 80.000 TL\nİkinci: 70.000 TL\nÜçüncü: 60.000 TL\n\nÜniversite Öğrencileri Araştırma Proje Yarışmaları - Bilgi ve İletişim Teknolojileri\nBirinci: 80.000 TL\nİkinci: 70.000 TL\nÜçüncü: 60.000 TL\n\nÜniversite Öğrencileri Araştırma Proje Yarışmaları - Eğitim\nBirinci: 80.000 TL\nİkinci: 70.000 TL\nÜçüncü: 60.000 TL\n\nÜniversite Öğrencileri Araştırma Proje Yarışmaları - Enerji ve Çevre\nBirinci: 80.000 TL\nİkinci: 70.000 TL\nÜçüncü: 60.000 TL\n\nÜniversite Öğrencileri Araştırma Proje Yarışmaları - Gıda ve Tarım\nBirinci: 80.000 TL\nİkinci: 70.000 TL\nÜçüncü: 60.000 TL\n\nÜniversite Öğrencileri Araştırma Proje Yarışmaları - Makine İmalatı ve Otomotiv\nBirinci: 80.000 TL\nİkinci: 70.000 TL\nÜçüncü: 60.000 TL\n\nÜniversite Öğrencileri Araştırma Proje Yarışmaları - Sağlık\nBirinci: 80.000 TL\nİkinci: 70.000 TL\nÜçüncü: 60.000 TL\n\nÜniversite Öğrencileri Araştırma Proje Yarışmaları - Savunma, Uzay ve Havacılık\nBirinci: 80.000 TL\nİkinci: 70.000 TL\nÜçüncü: 60.000 TL\n\nÜniversite Öğrencileri Araştırma Proje Yarışmaları - Sosyal Yenilikçilik ve Girişimcilik\nBirinci: 80.000 TL\nİkinci: 70.000 TL\nÜçüncü: 60.000 TL"
+  }
+]

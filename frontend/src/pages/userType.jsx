@@ -4,14 +4,14 @@ import { useGlobal } from "../utils/global-context";
 
 const UserType = () => {
   const navigate = useNavigate();   
-  const {setUserType}= useGlobal()
 
   const handleAccept = (type) => {
     setUserType(type)
     console.log(type);
-    
+    setChat([])
     navigate("/main-chat");
   };
+      const {setUserType, showDirectForm, setShowDirectForm,showSelectPrg,setShowSelectPrg,setChat,chat  } = useGlobal();
 
 
   return (

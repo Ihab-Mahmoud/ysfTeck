@@ -10,10 +10,10 @@ import { useOutletContext } from "react-router-dom";
 
 const MainChat = () => {
   const [input, setInput] = useState("");
-  const [chat, setChat] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
   const [showForm, setShowForm] = useState(false); // Bu state sadece formun gösterilip gizlenmesi için kalacak
   const [suggestedProgram, setSuggestedProgram] = useState(null);
+      const {setUserType, showDirectForm, setShowDirectForm,showSelectPrg,setShowSelectPrg,setChat,chat  } = useGlobal();
   
   const [currentChatSessionId, setCurrentChatSessionId] = useState(() =>
     uuidv4()

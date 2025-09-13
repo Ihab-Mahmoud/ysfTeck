@@ -1,6 +1,8 @@
 // frontend/src/FormComponent.jsx
 import React, { useState } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { useGlobal } from "../utils/global-context";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -106,7 +108,8 @@ function FormComponent({
   const [nationalityDetail, setNationalityDetail] = useState("");
   const [formAccepted, setFormAccepted] = useState(false);
   const [popup, setPopup] = useState(false);
-
+  const {setChat} = useGlobal();
+  const navigate=useNavigate()
   // Prop olarak gelen handleChange fonksiyonunu kullanacağız
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -120,48 +123,11 @@ function FormComponent({
     // Tüm alanların dolu olup olmadığını kontrol et
     if (
       !formData.fullName ||
-      !formData.phoneNumber ||
       !formData.email ||
-      !formData.educationStatus ||
-      !formData.profession ||
-      !formData.nationality ||
-      !formData.supportProgram ||
-      !dateOfBirth
+      !formData.supportProgram  
     ) {
       // dateOfBirth'i de kontrol et
       alert("Lütfen tüm alanları doldurun.");
-      return;
-    }
-
-    // Telefon numarası sadece sayı içermeli (Regex)
-    if (!/^[0-9]+$/.test(formData.phoneNumber)) {
-      alert("Telefon numarası sadece rakam içermelidir.");
-      return;
-    }
-
-    // Doğum tarihi formatı kontrolü (GG.AA.YYYY) ve geçerlilik kontrolü
-    if (!/^\d{2}\.\d{2}\.\d{4}$/.test(dateOfBirth)) {
-      alert(
-        "Doğum tarihi GG.AA.YYYY formatında olmalıdır (örneğin: 01.01.2000)."
-      );
-      return;
-    }
-    const [day, month, year] = dateOfBirth.split(".").map(Number);
-    const dateObj = new Date(year, month - 1, day); // Ay 0-indekslidir
-    if (
-      dateObj.getFullYear() !== year ||
-      dateObj.getMonth() !== month - 1 ||
-      dateObj.getDate() !== day
-    ) {
-      alert("Lütfen geçerli bir doğum tarihi girin.");
-      return;
-    }
-
-    // Gelecek bir tarih olup olmadığını kontrol et
-    const today = new Date();
-    today.setHours(0, 0, 0, 0); // Sadece tarih karşılaştırması için saatleri sıfırla
-    if (dateObj > today) {
-      alert("Doğum tarihi bugünden ileri bir tarih olamaz.");
       return;
     }
 
@@ -169,16 +135,11 @@ function FormComponent({
 
     try {
       // YENİ: Eğer yabancı uyruk seçildiyse, nationalityDetail'ı nationality olarak gönder
-      const finalNationality =
-        formData.nationality === "yabanci"
-          ? nationalityDetail
-          : formData.nationality;
-
       const res = await fetch("http://localhost:5001/submit-form", {
         // Backend'deki yeni endpoint
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, dateOfBirth, chatSessionId }), // chatSessionId'yi de gönder
+        body: JSON.stringify({ ...formData }), // chatSessionId'yi de gönder
       });
 
       if (!res.ok) {
@@ -187,8 +148,10 @@ function FormComponent({
           errorData.error || "Form gönderilirken bilinmeyen bir hata oluştu."
         );
       }
-
+      setChat([])
+      navigate("/")
       onFormSubmit(true); // Başarılı gönderildi
+
     } catch (error) {
       console.error("Form gönderme hatası:", error);
       onFormSubmit(false); // Hata oluştu
@@ -198,13 +161,50 @@ function FormComponent({
     return
   }
   return (
-      <div className="modal-backdrop">
+      <div  style={{
+        position: "fixed",
+        inset: 0,
+        background: "rgba(0,0,0,0.75)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 1000,
+        backdropFilter: "blur(6px)",
+      }}>
       
-    <div className="modal-content">
+    <div style={{
+          background: "#1f1f1f",
+          color: "#e5e7eb",
+          maxWidth: "700px",
+          width: "90%",
+          maxHeight: "85vh",
+          overflowY: "auto",
+          borderRadius: "14px",
+          padding: "32px",
+          position: "relative",
+          boxShadow: "0 12px 40px rgba(0,0,0,0.65)",
+          border: "1px solid rgba(255,255,255,0.1)",
+        }}>
       <div  style={{ backgroundColor:"transparent", color:"red" , fontSize:"30px" , fontWeight:"bolder" , textAlign:"end"}}>
-    <svg onClick={()=>setShowForm(false)} style={{cursor:"pointer" ,width:"40px", height:"40px", padding:"10px"}} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-label="Close">
-  <path d="M18 6L6 18M6 6l12 12"/>
-    </svg>
+     {/* Close Button */}
+        <button
+          onClick={() => setShowForm(false)}
+          style={{
+            position: "absolute",
+            top: "14px",
+            right: "14px",
+            border: "none",
+            background: "transparent",
+            fontSize: "28px",
+            cursor: "pointer",
+            color: "#9ca3af",
+            transition: "color 0.2s ease",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#f87171")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "#9ca3af")}
+        >
+          ✕
+        </button>
 
       </div>
         <div className="form-container">
@@ -218,7 +218,6 @@ function FormComponent({
               onChange={handleChange}
               required
             />
-            <div className="rap-dev">
               <input
                 type="email"
                 name="email"
@@ -227,13 +226,12 @@ function FormComponent({
                 onChange={handleChange}
                 required
               />
-            </div>
             {
             !formData.supportProgram && 
             <div className="select-wrapper">
             <select
                 name="educationStatus"
-                value={formData.educationStatus}
+                value={formData.supportProgram}
                 onChange={handleChange}
                 required
                 disabled={formData.supportProgram}
@@ -249,19 +247,17 @@ function FormComponent({
             }
             {
             formData.supportProgram && 
-            <div style={{position:"relative"}} className="">
             <input
               type="text"
               name="supportProgram"
               placeholder="İlgilenilen Destek Programı"
-              value={formData.supportProgram ? formData.supportProgram :formData.educationStatus}
+              value={formData.supportProgram ? formData.supportProgram :""}
               onChange={handleChange}
               readOnly // Bu alanı sadece önerilen programı göstermek için kullanıyoruz
             />
-            </div>
             }
           
-              <div style={{ margin: "15px 0",display:"flex" ,gap:"6px" }}>
+              <div style={{ margin: "15px 0",display:"flex" ,gap:"25px" }}>
                   <input
                   className="inputRes"
                     type="checkbox"
@@ -277,17 +273,11 @@ function FormComponent({
                         textAlign:"end",
                       }}
                   />
-              <label onClick={()=>setPopup(true)}  className="labelRes" style={{ fontSize: "20px",display:"flex",alignItems:"center",gap:"10px",cursor:"pointer" }}>
+              <label onClick={()=>setPopup(true)}  className="labelRes" style={{ fontSize: "20px",display:"flex",alignItems:"center",gap:"10px",cursor:"pointer",textDecoration:"underline",fontWeight:"bold" }}>
                   KVKK aydınlatma metnini okudum, kabul ediyorum.
                 </label>
             </div>
-            <div className="flex justify-around">
-              <div className="input-section2">
-                <button className="sub-btn" type="submit" onClick={()=>setShowForm(false)}>
-                  <FaArrowLeft className="arr-spec text-black text-lg" />
-                  Geri don
-                </button>
-              </div>
+            <div className="flex justify-center">
               <div className="input-section2">
                 <button disabled={!formAccepted} className="sub-btn" type="submit">
                   Gonder
@@ -329,26 +319,26 @@ function FormComponent({
         whiteSpace: "pre-line", // ✅ preserves your line breaks
       }}
     >
-      {/* Close button */}
-      <button
-        onClick={() => setPopup(false)}
-        style={{
-          position: "absolute",
-          top: "14px",
-          right: "14px",
-          border: "none",
-          background: "transparent",
-          fontSize: "28px",
-          cursor: "pointer",
-          color: "#9ca3af",
-          transition: "color 0.2s ease",
-        }}
-        onMouseEnter={(e) => (e.currentTarget.style.color = "#f87171")}
-        onMouseLeave={(e) => (e.currentTarget.style.color = "#9ca3af")}
-      >
-        ✕
-      </button>
-
+     
+           {/* Close Button */}
+        <button
+          onClick={() => setPopup(false)}
+          style={{
+            position: "absolute",
+            top: "14px",
+            right: "14px",
+            border: "none",
+            background: "transparent",
+            fontSize: "28px",
+            cursor: "pointer",
+            color: "#9ca3af",
+            transition: "color 0.2s ease",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#f87171")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "#9ca3af")}
+        >
+          ✕
+        </button>
       <h2
         style={{
           marginTop: 0,

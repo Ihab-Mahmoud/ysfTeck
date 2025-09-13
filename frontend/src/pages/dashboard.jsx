@@ -14,6 +14,7 @@ import Loading from "../components/Lodaing.jsx";
 import Navbar from "../components/navbar.jsx";
 import { useGlobal } from "../utils/global-context.jsx";
 import FormComponent from "../components/FormComponent.jsx";
+import SelectPrg from "../components/SelectPrg.jsx";
 
 
 
@@ -24,7 +25,7 @@ const Dashboard = () => {
   const isLoading = useNavigation.state === "loading";
   const [showSidebar, setShowSidebar] = useState(true);
 
-    const {setUserType, showDirectForm, setShowDirectForm } = useGlobal();
+    const {setUserType, showDirectForm, setShowDirectForm,showSelectPrg,setShowSelectPrg,setChat,chat  } = useGlobal();
     const [formData, setFormData] = useState({
       fullName: "",
       phoneNumber: "",
@@ -67,7 +68,6 @@ const Dashboard = () => {
       supportProgram: "",
       dateOfBirth:""
     });
-    setCurrentChatSessionId(uuidv4()); // Yeni bir sohbet oturumu başlat
   };
   const handleBackToChat = () => {
     setShowDirectForm(false);
@@ -82,7 +82,6 @@ const Dashboard = () => {
       dateOfBirth:""
     });
     setChat([]); // Sohbet geçmişini sıfırla
-    setCurrentChatSessionId(uuidv4()); // Yeni bir session ID ver
   };
 
   return (
@@ -92,11 +91,15 @@ const Dashboard = () => {
           toggleSidebar={toggleSidebar}
           showSidebar={showSidebar}
           setShowSidebar={setShowSidebar}
+          setShowSelectPrg={setShowSelectPrg}
+          showSelectPrg={showSelectPrg}
         />
         <SmallSidebar
           toggleSidebar={toggleSidebar}
           showSidebar={showSidebar}
           setShowSidebar={setShowSidebar}
+            setShowSelectPrg={setShowSelectPrg}
+          showSelectPrg={showSelectPrg}
 
         />
         <div>
@@ -117,6 +120,13 @@ const Dashboard = () => {
             setFormData={setFormData}
             showForm={showDirectForm}
             setShowForm={setShowDirectForm}/> 
+
+        <SelectPrg
+            setFormData={setFormData}
+            showSelectPrg={showSelectPrg}
+            setShowSelectPrg={setShowSelectPrg}
+             setShowForm={setShowDirectForm}
+        />
       </main>
 
     </Wrapper>

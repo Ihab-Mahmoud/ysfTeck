@@ -24,47 +24,57 @@ const SmallSidebar = ({ showSidebar, toggleSidebar, user, logoutUser,setShowSide
             </button>
             <Logo />
           </div>
-            <div className="admin-container">
+        <div className="admin-container" 
+         style={{
+           display: "flex",
+           flexDirection: "column",
+           alignItems: "left",
+           gap: "14px",
+           padding: "60px",
+           backgroundColor: "#1c1c1c",
+           height: "100vh",
+           color: "#fff",
+           fontFamily: "sans-serif",
+    
+         }}
+    >
+      {/* Yeniden Başla */}
       <NavLink
-      onClick={()=>{setShowSidebar(true)}}
+        onClick={() => setShowSidebar(true)}
         to="/"
         style={{
-          padding: "10px 16px",
-          marginRight: "10px",
-          borderRadius: "6px",
-          border: "1px solid #ccc",
-          backgroundColor: "rgb(45 43 43)",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          textDecoration: "none",
           color: "#fff",
-          cursor: "pointer",
-          textDecoration:"none",
-          textAlign:"center",
-          width:"80%",
-          fontFamily:"sans-serif"
+          fontSize: "18px",
+          gap: "10px"
         }}
       >
-        Başa Dön
-
+        <img style={{ width: "20px" }} src="/yeniden başla.png"/>
+        Yeniden Başla
       </NavLink>
-
+    
+      <hr style={{ width: "100%", border: "1px solid #444" }} />
+    
+      {/* Hızlı Erişim */}
       <NavLink
-      onClick={()=>{setShowDirectForm(true)
-      }}
+        onClick={() => setShowDirectForm(true)}
         style={{
-          padding: "10px 16px",
-          borderRadius: "6px",
-          border: "1px solid #ccc",
-          backgroundColor: "rgb(45 43 43)",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          textDecoration: "none",
           color: "#fff",
-          cursor: "pointer",
-          textDecoration:"none",
-          textAlign:"center",
-          width:"80%",
-          fontFamily:"sans-serif"
+          fontSize: "18px",
+          gap: "10px"
         }}
       >
-        Destek Bilgi Talep Formu
+        <img style={{ width: "20px" }} src="/hızlı erişim.png"/>
+        Hızlı Erişim
       </NavLink>
-        </div>
+    </div>
         </div>
       </div>
     </Wrapper>

@@ -3,7 +3,7 @@ import React, { useCallback, useContext, useEffect, useState } from "react";
 import AdminPanel from "./AdminPanel.jsx";
 import { NavLink, useOutletContext } from "react-router-dom";
 import { useGlobal } from "../utils/global-context.jsx";
-const BigSidebar = ({ toggleSidebar, showSidebar, user, logoutUser,setShowSidebar }) => {
+const BigSidebar = ({ toggleSidebar, showSidebar, user, logoutUser,setShowSidebar ,setShowSelectPrg}) => {
       const { userType, setUserType, showDirectForm, setShowDirectForm } = useGlobal();
 
     
@@ -51,7 +51,7 @@ const BigSidebar = ({ toggleSidebar, showSidebar, user, logoutUser,setShowSideba
 
   {/* Hızlı Erişim */}
   <NavLink
-    onClick={() => setShowDirectForm(true)}
+    onClick={() => setShowSelectPrg(true)}
     style={{
       display: "flex",
       flexDirection: "row",
