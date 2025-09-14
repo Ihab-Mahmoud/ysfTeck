@@ -81,7 +81,7 @@ const SelectPrg = ({ setFormData, showSelectPrg, setShowSelectPrg ,setShowForm})
             paddingBottom: "12px",
           }}
         >
-          Destek Programı Seç
+          Hızlı Erişim
         </h2>
 
         {/* Form */}
@@ -107,7 +107,7 @@ const SelectPrg = ({ setFormData, showSelectPrg, setShowSelectPrg ,setShowForm})
               color: "#fff",
             }}
           >
-            <option value="">-- Seçiniz --</option>
+            <option value="">- Program Seçin -</option>
             {programs.map((opt, idx) => (
               <option key={idx} value={opt.name}>
                 {opt.name}
@@ -121,7 +121,7 @@ const SelectPrg = ({ setFormData, showSelectPrg, setShowSelectPrg ,setShowForm})
             value={
               selectedProgram
                 ? `Amaç: ${selectedProgram.amac}\n\nDestek Miktarı: ${selectedProgram.miktar}`
-                : "Henüz seçim yapılmadı"
+                : "Lütfen bilgi almak istediğiniz programı seçin"
             }
             style={{
               padding: "12px",
@@ -140,7 +140,7 @@ const SelectPrg = ({ setFormData, showSelectPrg, setShowSelectPrg ,setShowForm})
                         <div className="input-section2">
                           <button onClick={()=>{setShowSelectPrg(false);setShowForm(true)}}
                             disabled={!selectedProgram} className="sub-btn" type="submit">
-                            Form doldurmuya devam et
+                            E-posts ile gönder
                             <FaArrowRight className="arr-spec text-black text-lg" />
                           </button>
                         </div>

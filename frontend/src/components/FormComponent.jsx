@@ -3,97 +3,10 @@ import React, { useState } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { useGlobal } from "../utils/global-context";
 import { useNavigate } from "react-router-dom";
+import programs from "../utils/programs.json"; // <- JSON import
 
 
 
-let programs=
-[
-  "1001 - Bilimsel ve Teknolojik Araştırma Projelerini Destekleme Programı",
-  "1002 - A - Hızlı Destek Modülü",
-  "1002 - B - Acil Destek Modülü",
-  "1003 - Öncelikli Alanlar Ar-Ge Projeleri Destekleme Programı",
-  "1004 - Mükemmeliyet Merkezi Destek Programı",
-  "1005 - Ulusal Yeni Fikirler ve Ürünler Araştırma Destek Programı",
-  "1007 - Kamu Kurumları Araştırma ve Geliştirme Projelerini Destekleme Programı",
-  "1071 - Uluslararası Araştırma Fonlarından Yararlanma Kapasitesinin ve Uluslararası Ar-Ge İşbirliklerine Katılımın Arttırılmasına Yönelik Destek Programı",
-  "3005 - Sosyal ve Beşeri Bilimlerde Yenilikçi Çözümler Araştırma Projeleri Destek Programı",
-  "3501 - Kariyer Geliştirme Programı",
-  "2202-Bilim Olimpiyatları Programı",
-  "2204-B-Ortaokul Öğrencileri Araştırma Projeleri Yarışmaları",
-  "2204-A-Lise Öğrencileri Araştırma Projeleri Yarışmaları",
-  "2204-C-Lise Öğrencileri Kutup Araştırma Projeleri Yarışmaları",
-  "2204-D-Lise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışmaları",
-  "2205-Lisans Burs Programı:",
-  "2209-A-Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı",
-  "2209-B-Üniversite Öğrencileri Sanayiye Yönelik Araştırma Projeleri Destekleme Programı",
-  "2210-A Genel Yurt İçi Yüksek Lisans Burs Programı",
-  "2210-C-Yurt İçi Öncelikli Alanlar Yüksek Lisans Burs Programı",
-  "2210-D-Yurt İçi Sanayiye Yönelik Yüksek Lisans Burs Programı",
-  "2210-E Doğrudan Yurt İçi Yüksek Lisans Burs Programı",
-  "2211-A Genel Yurt İçi Doktora Burs Programı",
-  "2211-C-Yurt İçi Öncelikli Alanlar Doktora Burs Programı",
-  "2211-E Doğrudan Yurt İçi Doktora Burs Programı",
-  "2213-A Yurt Dışı Doktora Burs Programı",
-  "2214-A-Yurt Dışı Doktora Sırası Araştırma Burs Programı",
-  "2216-B-TÜBİTAK-TWAS Doktora Sırası ve Doktora Sonrası Araştırma Burs Programları",
-  "2218-Yurt İçi Doktora Sonrası Araştırma Burs Programı",
-  "2219-Yurt Dışı Doktora Sonrası Araştırma Burs Programı",
-  "2221-Konuk veya Akademik İzinli (Sabbatical) Bilim İnsanı Destekleme Programı",
-  "2223-B-Yurt İçi Bilimsel Etkinlik Düzenleme Desteği",
-  "2223-C-Çok Katılımlı Uluslararası Etkinlik Düzenleme Desteği",
-  "2223-D-İkili İş Birliği Anlaşmaları Çerçevesinde Etkinlik Düzenleme Desteği",
-  "2224-A-Yurt Dışı Bilimsel Etkinliklere Katılımı Destekleme Programı",
-  "2224-B-Yurt İçi Bilimsel Etkinliklere Katılımı Destekleme Programı",
-  "2224-C-Uluslararası Anlaşmalar Çerçevesinde Yurt Dışındaki Bilimsel Etkinliklere Katılımı Destekleme Programı",
-  "2224-D-Yurt Dışındaki Bilimsel Eğitim Etkinliklerine Katılımı Destekleme Programı",
-  "2232-A-Uluslararası Lider Araştırmacılar Programı",
-  "2232-B-Uluslararası Genç Araştırmacılar Programı",
-  "2236-Uluslararası Deneyimli Araştırmacı Dolaşımı Destek Programı",
-  "2236-B-MSCA-COFUND Burs Programlarına Katkı Fonu Programı",
-  "2237-A-Bilimsel Eğitim Etkinlikleri Desteği",
-  "2237-B-Proje Eğitimi Etkinliklerini Destekleme Programı",
-  "2242-Üniversite Öğrencileri Araştırma Proje Yarışmaları",
-  "2244-Sanayi Doktora Programı",
-  "2247-A-Ulusal Lider Araştırmacılar Programı",
-  "2247-B-Avrupa Araştırma Konseyi (ERC) Projeleri Güçlendirme Desteği Programı",
-  "2247-C Stajyer Araştırmacı Burs Programı",
-  "2247-D-Ulusal Genç Liderler Programı",
-  "2248-Mentorluk Desteği Programı",
-  "2249-Bilim ve Teknoloji Okulları Programı",
-  "2250-Lisansüstü Bursları Performans Programı",
-  "4001-Ulusal ve Uluslararası Yarışma/Etkinli4003-Tk Katılım Desteği",
-  "4004 Doğa Eğitimi ve Bilim Okulları Destekleme Programı",
-  "4005 Yenilikçi Eğitim Uygulamaları Destekleme Programı",
-  "4006-TÜBİTAK Bilim Fuarları Destekleme Programı",
-  "4006-C Bilim Fuarları Festivali Desteği",
-  "4007 Bilim Şenlikleri Destekleme Programı",
-  "4008-Özel Gereksinimli Bireylere Yönelik Kapsayıcı Toplum Uygulamaları Destek Programı",
-  "4003-T Milli Teknoloji Atölyeleri Destek Programı",
-  "Milli Teknoloji Kulüpler Birliği Desteği",
-  "TÜBİTAK Bilim Kampları",
-  "DENEYAP TEKNOLOJİ ATÖLYELERİ",
-  "4003-A Büyük Ölçekli Bilim Merkezi Kurulum Desteği",
-  "4003-A Büyük Ölçekli Bilim Merkezi Sürdürülebilirlik ve Kapasite Artırımı Desteği",
-  "4003-B Küçük Ölçekli Bilim Merkezi Kurulum Desteği",
-  "4003-B Küçük Ölçekli Bilim Merkezi Sürdürülebilirlik ve Kapasite Artırımı Desteği",
-  "1812 - Yatırım Tabanlı Girişimcilik Destek Programı (BiGG Yatırım)",
-  "1711 - Yapay Zeka Ekosistem Çağrısı",
-  "1501 - Sanayi Ar-Ge Projeleri Destekleme Programı",
-  "1832 - Sanayide Yeşil Dönüşüm",
-  "1507 - TÜBİTAK KOBİ Ar-Ge Başlangıç Destek Programı",
-  "1719 - Eureka Network Tematik Çağrıları",
-  "1709 - Eureka Eurostars Çağrıları",
-  "1505 Üniversite-Sanayi İşbirliği Destek Programı",
-  "1702 - Patent Tabanlı Teknoloji Transferi Destekleme Çağrısı",
-  "1613-Teknoloji Transfer Profesyoneli İstihdamı Desteği Çağrısı",
-  "1831 - Yeşil İnovasyon Teknoloji Mentörlük Çağrısı",
-  "1602 Patent Destek Programı",
-  "1833- SAYEM YEŞİL DÖNÜŞÜM ÇAĞRISI",
-  "1707 - Siparişe Dayalı Ar-Ge Projeleri için KOBİ Destekleme Çağrısı",
-  "1515 - Öncül Ar-Ge Laboratuvarları Destekleme Programı",
-  "1511 - TÜBİTAK Öncelikli Alanlar Araştırma Teknoloji Geliştirme ve Yenilik P. D. P.(Teknoloji Odaklı Sanayi Hamlesi Programı)",
-  "1509 - TÜBİTAK Uluslararası Sanayi Ar-Ge Projeleri Destekleme Programı"
-]
 
 function FormComponent({
   onFormSubmit,
@@ -236,11 +149,11 @@ function FormComponent({
                 required
                 disabled={formData.supportProgram}
               >
-                {programs.map((value, idx) => (
-                  <option key={idx} value={value}>
-                    {value}
-                  </option>
-                ))}
+                {programs.map((opt, idx) => (
+              <option key={idx} value={opt.name}>
+                {opt.name}
+              </option>
+            ))}
             </select>
 
             </div>

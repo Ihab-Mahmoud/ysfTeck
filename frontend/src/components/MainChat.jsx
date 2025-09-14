@@ -7,6 +7,7 @@ import TypingText from "./TypingText";
 import { marked } from "marked";
 import { useGlobal } from "../utils/global-context";
 import { useOutletContext } from "react-router-dom";
+import { IoIosArrowForward } from "react-icons/io";
 
 const MainChat = () => {
   const [input, setInput] = useState("");
@@ -236,6 +237,7 @@ const message = typeof opt === "string" ? opt : input;
   <div className="options-list">
     {msg.options.map((opt, idx) =>
         <button
+        style={{backgroundColor:"#2a1a47",color:"#ffffffbd"}}
                 key={idx}
                 className="option-btn pointer"
                 onClick={() => sendMessage(opt)}
@@ -274,7 +276,7 @@ const message = typeof opt === "string" ? opt : input;
                 placeholder="Bir şey yaz..."
               />
                 <button className="sub-btn2" onClick={sendMessage}>
-                <FaArrowRight className="text-black text-lg" />
+                <IoIosArrowForward className="text-black text-lg" />
               </button>
             </div>
           </div>

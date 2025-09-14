@@ -26,9 +26,9 @@ const UserType = () => {
       }}
     >
 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "70px" }}>
-  <h3 style={{ color: "#fff", fontSize: "25px" }}>DESTEK TÜRÜ</h3>
+  <h3 style={{ color: "#fff", fontSize: "30px",fontWeight: "bolder"}}>DESTEK TÜRÜNÜ SEÇİN</h3>
   
-  <div className="gap" style={{ display: "flex", justifyContent: "center", gap: "100px" }}>
+  <div className="gap" style={{ display: "flex", justifyContent: "center", gap: "70px" }}>
     <button
       onClick={() => handleAccept("bireysel")}
       style={{
@@ -36,16 +36,16 @@ const UserType = () => {
         padding: "12px",
         borderRadius: "12px",
         border: "none",
-        backgroundColor: "#2d2b2b",
+        backgroundColor: "transparent",
         cursor: "pointer",
         transition: "0.2s",
       }}
     >
       <img
         className="image"
-        src="/Destek Türü İkonları/Bireysel.png"
+        src="/Destek Türü İkonları/Bireysel-Aktif.png"
         alt="Bireysel"
-        style={{ width: "150px", display: "block", margin: "0 auto" }}
+        style={{ width: "120px", display: "block", margin: "0 auto" }}
       />
     </button>
 
@@ -56,16 +56,16 @@ const UserType = () => {
         padding: "12px",
         borderRadius: "12px",
         border: "none",
-        backgroundColor: "#2d2b2b",
+        backgroundColor: "transparent",
         cursor: "pointer",
         transition: "0.2s",
       }}
     >
       <img
         className="image"
-        src="/Destek Türü İkonları/Kurumsal.png"
+        src="/Destek Türü İkonları/Kurumsal-Aktif.png"
         alt="Kurumsal"
-        style={{ width: "150px", display: "block", margin: "0 auto" }}
+        style={{ width: "120px", display: "block", margin: "0 auto" }}
       />
     </button>
   </div>

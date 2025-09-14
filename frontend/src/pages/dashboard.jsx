@@ -86,7 +86,12 @@ const Dashboard = () => {
 
   return (
     <Wrapper>
-      <main className="dashboard font-popping">
+      <main className="dashboard font-popping"  style={{
+        backgroundSize: "cover",
+        backgroundPosition: "top",
+        backgroundImage: "url('/BG.jpg')",
+        position:"relative",
+      }}>
         <BigSidebar
           toggleSidebar={toggleSidebar}
           showSidebar={showSidebar}
@@ -102,7 +107,7 @@ const Dashboard = () => {
           showSelectPrg={showSelectPrg}
 
         />
-        <div>
+        <div style={{display:"flex",flexDirection:"column",justifyContent:"space-between"}} >
           <div className="z-50 top-0 sticky">
             <Navbar
               toggleSidebar={toggleSidebar}
@@ -111,6 +116,9 @@ const Dashboard = () => {
           <div className="dashboard-page font-popping flex items-center justify-center  ">
             {isLoading ? <Loading /> : <Outlet  />}
           </div>
+               <div style={{textAlign:"center",marginBottom:"30px",color:"#6d6e71"}}>
+      © 2025 TÜBİTAK. Tüm hakları saklıdır.
+        </div>
         </div>
 
         <FormComponent  
@@ -127,6 +135,14 @@ const Dashboard = () => {
             setShowSelectPrg={setShowSelectPrg}
              setShowForm={setShowDirectForm}
         />
+      <div style={{
+        position:"absolute",
+        bottom:"20px",
+        right:"0",
+        pointerEvents: "none" // mouse etkileşimini de kapatır
+      }}>
+        <img style={{width:"400px"}} src="/tubitak-corner.png"></img>
+      </div>
       </main>
 
     </Wrapper>

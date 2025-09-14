@@ -21,6 +21,12 @@ const KVKK = () => {
   };
 
  return (
+
+  <div style={{  display:"flex",
+      flexDirection:"column",
+      gap:"25px",
+      marginBottom:"70px"}}>
+ 
   <div
     style={{
       maxWidth: "720px",
@@ -32,6 +38,7 @@ const KVKK = () => {
         color: "#fff",
       border: "1px solid rgba(255,255,255,0.08)",
       backgroundColor:"#2d2b2bd4",
+    
     }}
   >
     {/* Başlık şeridi */}
@@ -254,7 +261,16 @@ const KVKK = () => {
       </button>
     </div>
 
+     
 
+  </div>
+
+      <div style={{textAlign:"center"}}>
+      <img style={{
+
+        width:"400px",
+      }} src='/stb-logo.png'></img>
+      </div>  
   </div>
 );
 
