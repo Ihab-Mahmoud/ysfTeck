@@ -7,9 +7,9 @@ const SelectPrg = ({ setFormData, showSelectPrg, setShowSelectPrg ,setShowForm})
   const [selectedProgram, setSelectedProgram] = useState("");
 
   const handleChange = (e) => {
-     const program = programs.find((p) => p.name === e.target.value);
+     const program = programs.find((p) => p.programName === e.target.value);
     setSelectedProgram(program);
-    setFormData((prev) => ({ ...prev, supportProgram: program?.name || "" }));
+    setFormData((prev) => ({ ...prev, supportProgram: program?.programName || "" }));
   };
 
   const handleSubmit = (e) => {
@@ -97,7 +97,7 @@ const SelectPrg = ({ setFormData, showSelectPrg, setShowSelectPrg ,setShowForm})
           <select
             name="supportProgram"
             onChange={handleChange}
-            value={selectedProgram.name     }
+            value={selectedProgram.programName     }
             required
             style={{
               padding: "12px",
@@ -109,8 +109,8 @@ const SelectPrg = ({ setFormData, showSelectPrg, setShowSelectPrg ,setShowForm})
           >
             <option value="">- Program Seçin -</option>
             {programs.map((opt, idx) => (
-              <option key={idx} value={opt.name}>
-                {opt.name}
+              <option key={idx} value={opt.programName}>
+                {opt.programName}
               </option>
             ))}
           </select>
@@ -120,7 +120,7 @@ const SelectPrg = ({ setFormData, showSelectPrg, setShowSelectPrg ,setShowForm})
             readOnly
             value={
               selectedProgram
-                ? `Amaç: ${selectedProgram.amac}\n\nDestek Miktarı: ${selectedProgram.miktar}`
+                ? `Amaç: ${selectedProgram.supportPurpose}\n\nDestek Miktarı: ${selectedProgram.supportAmount}`
                 : "Lütfen bilgi almak istediğiniz programı seçin"
             }
             style={{

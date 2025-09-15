@@ -2,52 +2,87 @@
 
 
 export const educationPrograms = {
-  "okul öncesi": [
-    { id: "4004", name: "Doğa Eğitimi ve Bilim Okulları Destekleme Programı" }
-  ],
-
   "i̇lkokul öğrencileri": [
-    { id: "4004", name: "Doğa Eğitimi ve Bilim Okulları Destekleme Programı" }
+    { id: "4004", name: "Doğa Eğitimi ve Bilim Okulları Destekleme Programı" },
+    { id: "CUSTOM-DENEYAP", name: "PARDUS Hata Yakalama ve Öneri Yarışması" },
+    { id: "CUSTOM-DENEYAP", name: "Uluslararası Çocuk Bilim Yarışması" },
   ],
 
   "ortaokul öğrencileri": [
-    { id: "2202", name: "Bilim Olimpiyatları Programı" },
     { id: "2204-B", name: "Ortaokul Öğrencileri Araştırma Projeleri Yarışmaları" },
     { id: "2248", name: "Mentorluk Desteği Programı" },
     { id: "4004", name: "Doğa Eğitimi ve Bilim Okulları Destekleme Programı" },
     { id: "4006", name: "TÜBİTAK Bilim Fuarları Destekleme Programı" },
-    { id: "CUSTOM-DENEYAP", name: "DENEYAP TEKNOLOJİ ATÖLYELERİ" }
+    { id: "CUSTOM-DENEYAP", name: "DENEYAP TEKNOLOJİ ATÖLYELERİ" },
+    { id: "2202", name: "2202-Bilim Olimpiyatları Programı" },
+    { id: "2249", name: "2249-Bilim ve Teknoloji Okulları Programı" },
+    { id: "CUSTOM-DENEYAP", name: "PARDUS Hata Yakalama ve Öneri Yarışması" },
   ],
 
   "lise öğrencileri": [
-    { id: "2202", name: "Bilim Olimpiyatları Programı" },
     { id: "2204-A", name: "Lise Öğrencileri Araştırma Projeleri Yarışmaları" },
     { id: "2204-C", name: "Lise Öğrencileri Kutup Araştırma Projeleri Yarışmaları" },
-    { id: "2204-D", name: "Lise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışmaları" },
-    { id: "2205", name: "Lisans Burs Programı" },
+    { id: "CUSTOM-DENEYAP", name: "Lise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışmaları" },
+    { id: "CUSTOM-DENEYAP", name: "Lise Öğrencileri Kutup Araştırma Projeleri Yarışması" },
+    { id: "CUSTOM-DENEYAP", name: "Liseler Arası Efficiency Challenge Elektrikli Araç Yarışları" },
+    { id: "CUSTOM-DENEYAP", name: "Liseler Arası İnsansız Hava Araçları Yarışması" },
+    { id: "CUSTOM-DENEYAP", name: "PARDUS Hata Yakalama ve Öneri Yarışması" },
+    { id: "CUSTOM-DENEYAP", name: "Robotaksi-Binek Otonom Araç Yarışması" },
+    { id: "CUSTOM-DENEYAP", name: "TÜBİTAK Bilim Kampları" },
+    { id: "2224-D", name: "Lise Öğrencileri İklim Değişikliği Araştırma Projeleri Yarışması" },
     { id: "2224-D", name: "Yurt Dışındaki Bilimsel Eğitim Etkinliklerine Katılımı Destekleme Programı" },
+    { id: "2205", name: "Lisans Burs Programı" },
     { id: "2249", name: "Bilim ve Teknoloji Okulları Programı" },
     { id: "4004", name: "Doğa Eğitimi ve Bilim Okulları Destekleme Programı" },
     { id: "4006", name: "TÜBİTAK Bilim Fuarları Destekleme Programı" },
     { id: "CUSTOM-DENEYAP", name: "DENEYAP TEKNOLOJİ ATÖLYELERİ" },
-    { id: "CUSTOM-KAMP", name: "TÜBİTAK Bilim Kampları" }
+    { id: "CUSTOM-KAMP", name: "TÜBİTAK Bilim Kampları" },
+    { id: "2202", name: "2202-Bilim Olimpiyatları Programı" },
+    { id: "2209-A", name: "2209-A-Üniversite Öğrencisi Araştırma Projeleri Destekleme Programı" },
+    { id: "2209-B", name: "2209-B-Üniversite Öğrencisi Sanayiye Yönelik Araştırma Projeleri Destekleme Programı" },
+    { id: "2209-D", name: "2224-D-Yurt Dışındaki Bilimsel Eğitim Etkinliklerine Katılımı Destekleme Programı" },
+    { id: "2248", name: "2248-Mentorluk Desteği Programı" },
+    { id: "4001", name: "Ulusal ve Uluslararası Yarışma/Etkinli4003-Tk Katılım Desteği" },
+    { id: "4003-T", name: "Milli Teknoloji Atölyeleri Destek Programı" },
+    { id: "CUSTOM-MTKB", name: "Biyoteknoloji İnovasyon Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Çip Tasarım Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Dikey İnişli Roket Yarışması" },
+{ id: "CUSTOM-MTKB", name: "Havacılıkta Yapay Zeka Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Hyperloop Geliştirme Yarışması" },
+
   ],
 
   "lise mezunları": [
     { id: "4001", name: "Ulusal ve Uluslararası Yarışma/Etkinli4003-Tk Katılım Desteği" },
     { id: "4003-T", name: "Milli Teknoloji Atölyeleri Destek Programı" },
+    { id: "CUSTOM-KAMP", name: "Havacılıkta Yapay Zeka Yarışması" },
+    { id: "CUSTOM-KAMP", name: "Robotaksi-Binek Otonom Araç Yarışması" },
   ],
 
   "önlisans öğrencileri": [
-    { id: "2209-A", name: "Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı" },
-    { id: "2209-B", name: "Üniversite Öğrencileri Sanayiye Yönelik Araştırma Projeleri Destekleme Programı" },
     { id: "2224-A", name: "Yurt Dışı Bilimsel Etkinliklere Katılımı Destekleme Programı" },
     { id: "2224-B", name: "Yurt İçi Bilimsel Etkinliklere Katılımı Destekleme Programı" },
-    { id: "2242", name: "Üniversite Öğrencileri Araştırma Proje Yarışmaları" },
-    { id: "4004", name: "Doğa Eğitimi ve Bilim Okulları Destekleme Programı" },
-    { id: "4003-T", name: "Milli Teknoloji Atölyeleri Destek Programı" },
     { id: "CUSTOM-MTKB", name: "Milli Teknoloji Kulüpler Birliği Desteği" },
-    { id: "4001", name: "Ulusal ve Uluslararası Yarışma/Etkinli4003-Tk Katılım Desteği" },
+    { id: "4003-T", name: "Milli Teknoloji Atölyeleri Destek Programı" },
+    { id: "4004", name: "Doğa Eğitimi ve Bilim Okulları Destekleme Programı" },
+    { id: "1812", name: "Yatırım Tabanlı Girişimcilik Destek Programı (BiGG Yatırım)" },
+    { id: "2209-A", name: "2209-A-Üniversite Öğrencisi Araştırma Projeleri Destekleme Programı" },
+    { id: "2209-B", name: "2209-B-Üniversite Öğrencisi Sanayiye Yönelik Araştırma Projeleri Destekleme Programı" },
+    { id: "2242", name: "2242-Üniversite Öğrencisi Araştırma Proje Yarışmaları" },
+    { id: "4001", name: "4001-Ulusal ve Uluslararası Yarışma/Etkinlik Katılım Desteği" },
+    { id: "CUSTOM-MTKB", name: "Biyoteknoloji İnovasyon Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Blokzincir Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Çip Tasarım Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Dikey İnişli Roket Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Havacılıkta Yapay Zeka Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Hyperloop Geliştirme Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Milli Teknoloji Kulüpler Birliği Desteği" },
+    { id: "CUSTOM-MTKB", name: "PARDUS Hata Yakalama ve Öneri Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Robotaksi-Binek Otonom Araç Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Popüler Bilim Dergileri (Bilim ve Teknik, Bilim Çocuk, Meraklı Minik)" },
+    { id: "CUSTOM-MTKB", name: "Uluslararası Efficiency Challenge Elektrikli Araç Yarışları" },
+    { id: "CUSTOM-MTKB", name: "Uluslararası İnsansız Hava Araçları Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Üniversite Öğrencileri Araştırma Proje Yarışmaları" },
 
   ],
 
@@ -55,6 +90,9 @@ export const educationPrograms = {
     { id: "4003-T", name: "Milli Teknoloji Atölyeleri Destek Programı" },
     { id: "1812", name: "Yatırım Tabanlı Girişimcilik Destek Programı (BiGG Yatırım)" },
     { id: "4001", name: "Ulusal ve Uluslararası Yarışma/Etkinli4003-Tk Katılım Desteği" },
+    { id: "CUSTOM-MTKB", name: "Blokzincir Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Havacılıkta Yapay Zeka Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Robotaksi-Binek Otonom Araç Yarışması" },
 
   ],
 
@@ -72,9 +110,34 @@ export const educationPrograms = {
     { id: "2247-C", name: "Stajyer Araştırmacı Burs Programı" },
     { id: "2248", name: "Mentorluk Desteği Programı" },
     { id: "4004", name: "Doğa Eğitimi ve Bilim Okulları Destekleme Programı" },
+    { id: "4005", name: "4005 Yenilikçi Eğitim Uygulamaları Destekleme Programı" },
     { id: "4003-T", name: "Milli Teknoloji Atölyeleri Destek Programı" },
-    { id: "CUSTOM-MTKB", name: "Milli Teknoloji Kulüpler Birliği Desteği" },
     { id: "4001", name: "Ulusal ve Uluslararası Yarışma/Etkinli4003-Tk Katılım Desteği" },
+    { id: "1812", name: "Yatırım Tabanlı Girişimcilik Destek Programı (BiGG Yatırım)" },
+    { id: "2210-A", name: "2210-A Genel Yurt İçi Yüksek Lisans Burs Programı" },
+    { id: "2210-C", name: "2210-C-Yurt İçi Öncelikli Alanlar Yüksek Lisans Burs Programı" },
+    { id: "2210-D", name: "2210-D-Yurt İçi Sanayiye Yönelik Yüksek Lisans Burs Programı" },
+    { id: "2210-E", name: "2210-E Doğrudan Yurt İçi Yüksek Lisans Burs \nProgramı\n" },
+    { id: "2211-A", name: "2211-A Genel Yurt İçi Doktora Burs Programı" },
+    { id: "2211-C", name: "2211-C-Yurt İçi Öncelikli Alanlar Doktora Burs Programı" },
+    { id: "2211-E", name: "2211-E Doğrudan Yurt İçi Doktora Burs Programı" },
+    { id: "2213-A", name: "2213-A Yurt Dışı Doktora Burs Programı" },
+    { id: "2214-A", name: "2214-A-Yurt Dışı Doktora Sırası Araştırma Burs Programı" },
+    { id: "2232-A", name: "2232-A-Uluslararası Lider Araştırmacılar Programı\n\nve\n\n2232-B-Uluslararası Genç Araştırmacılar Programı\n" },
+
+    { id: "CUSTOM-MTKB", name: "Biyoteknoloji İnovasyon Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Çip Tasarım Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Dikey İnişli Roket Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Blokzincir Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Havacılıkta Yapay Zeka Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Hyperloop Geliştirme Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Kuantum Hackathon Yarışması" },
+    { id: "CUSTOM-MTKB", name: "PARDUS Hata Yakalama ve Öneri Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Robotaksi-Binek Otonom Araç Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Uluslararası İnsansız Hava Araçları Yarışması" },
+    
+    { id: "CUSTOM-MTKB", name: "Uluslararası Efficiency Challenge Elektrikli Araç Yarışları" },
+    { id: "CUSTOM-MTKB", name: "Üniversite Öğrencileri Araştırma Proje Yarışmaları" },
 
   ],
 
@@ -86,7 +149,20 @@ export const educationPrograms = {
     { id: "2224-A", name: "Yurt Dışı Bilimsel Etkinliklere Katılımı Destekleme Programı" },
     { id: "2224-B", name: "Yurt İçi Bilimsel Etkinliklere Katılımı Destekleme Programı" },
     { id: "4001", name: "Ulusal ve Uluslararası Yarışma/Etkinli4003-Tk Katılım Desteği" },
-
+    { id: "1002-A", name: "1002 - A - Hızlı Destek Modülü" },
+    { id: "2210-A", name: "2210-A Genel Yurt İçi Yüksek Lisans Burs Programı" },
+    { id: "2210-C", name: "2210-C-Yurt İçi Öncelikli Alanlar Yüksek Lisans Burs Programı" },
+    { id: "2210-D", name: "2210-D-Yurt İçi Sanayiye Yönelik Yüksek Lisans Burs Programı" },
+    { id: "2210-E", name: "2210-E Doğrudan Yurt İçi Yüksek Lisans Burs \nProgramı\n" },
+    { id: "2211-A", name: "2211-A Genel Yurt İçi Doktora Burs Programı" },
+    { id: "2211-C", name: "2211-C-Yurt İçi Öncelikli Alanlar Doktora Burs Programı" },
+    { id: "2211-E", name: "2211-E Doğrudan Yurt İçi Doktora Burs Programı" },
+    { id: "2213-A", name: "2213-A Yurt Dışı Doktora Burs Programı" },
+    { id: "2214-A", name: "2214-A-Yurt Dışı Doktora Sırası Araştırma Burs Programı" },
+    { id: "CUSTOM-MTKB", name: "Blokzincir Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Havacılıkta Yapay Zeka Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Kuantum Hackathon Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Robotaksi-Binek Otonom Araç Yarışması" },
   ],
 
   "yüksek lisans öğrencileri": [
@@ -100,9 +176,32 @@ export const educationPrograms = {
     { id: "2237-A", name: "Bilimsel Eğitim Etkinlikleri Desteği" },
     { id: "2237-B", name: "Proje Eğitimi Etkinliklerini Destekleme Programı" },
     { id: "2244-A", name: "Sanayi Doktora Programı" },
-    { id: "4004", name: "Doğa Eğitimi ve Bilim Okulları Destekleme Programı" },
     { id: "4005", name: "Yenilikçi Eğitim Uygulamaları Destekleme Programı" },
-    { id: "4003-T", name: "Milli Teknoloji Atölyeleri Destek Programı" }
+    { id: "1812", name: "1812 - Yatırım Tabanlı Girişimcilik Destek Programı (BiGG Yatırım)" },
+    { id: "2211-A", name: "2211-A Genel Yurt İçi Doktora Burs Programı" },
+    { id: "2211-C", name: "2211-C-Yurt İçi Öncelikli Alanlar Doktora Burs Programı" },
+    { id: "2211-E", name: "2211-E Doğrudan Yurt İçi Doktora Burs Programı" },
+    { id: "2213-A", name: "2213-A Yurt Dışı Doktora Burs Programı" },
+    { id: "2214-A", name: "2214-A-Yurt Dışı Doktora Sırası Araştırma Burs Programı" },
+    { id: "4003-T", name: "Milli Teknoloji Atölyeleri Destek Programı" },
+    { id: "4004", name: "Doğa Eğitimi ve Bilim Okulları Destekleme Programı" },
+
+     { id: "CUSTOM-MTKB", name: "Biyoteknoloji İnovasyon Yarışması" },
+     { id: "CUSTOM-MTKB", name: "Blokzincir Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Çip Tasarım Yarışması" },
+
+
+    { id: "CUSTOM-MTKB", name: "Dikey İnişli Roket Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Hyperloop Geliştirme Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Kuantum Hackathon Yarışması" },
+
+
+    { id: "CUSTOM-MTKB", name: "PARDUS Hata Yakalama ve Öneri Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Uluslararası İnsansız Hava Araçları Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Robotaksi-Binek Otonom Araç Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Havacılıkta Yapay Zeka Yarışması" },
+
+
   ],
 
   "yüksek lisans mezunları": [
@@ -111,6 +210,15 @@ export const educationPrograms = {
     { id: "4001", name: "Ulusal ve Uluslararası Yarışma/Etkinli4003-Tk Katılım Desteği" },
     { id: "2224-A", name: "Yurt Dışı Bilimsel Etkinliklere Katılımı Destekleme Programı" },
     { id: "2224-B", name: "Yurt İçi Bilimsel Etkinliklere Katılımı Destekleme Programı" },
+    { id: "2211-A", name: "2211-A Genel Yurt İçi Doktora Burs Programı" },
+    { id: "2211-C", name: "2211-C-Yurt İçi Öncelikli Alanlar Doktora Burs Programı" },
+    { id: "2211-E", name: "2211-E Doğrudan Yurt İçi Doktora Burs Programı" },
+    { id: "2213-A", name: "2213-A Yurt Dışı Doktora Burs Programı" },
+    { id: "2214-A", name: "2214-A-Yurt Dışı Doktora Sırası Araştırma Burs Programı" },
+    { id: "CUSTOM-MTKB", name: "Robotaksi-Binek Otonom Araç Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Blokzincir Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Kuantum Hackathon Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Havacılıkta Yapay Zeka Yarışması" },
   ],
 
   "doktora öğrencileri": [
@@ -133,6 +241,13 @@ export const educationPrograms = {
     { id: "4005", name: "Yenilikçi Eğitim Uygulamaları Destekleme Programı" },
     { id: "4003-T", name: "Milli Teknoloji Atölyeleri Destek Programı" },
     { id: "1812", name: "Yatırım Tabanlı Girişimcilik Destek Programı (BiGG Yatırım)" },
+    { id: "2236-B", name: "2236-B-MSCA-COFUND Burs Programlarına Katkı Fonu Programı" },
+    { id: "CUSTOM-MTKB", name: "Biyoteknoloji İnovasyon Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Blokzincir Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Çip Tasarım Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Dikey İnişli Roket Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Hyperloop Geliştirme Yarışması" },
+    { id: "CUSTOM-MTKB", name: "Kuantum Hackathon Yarışması" },
   ],
 
   "doktora mezunları": [
@@ -146,6 +261,26 @@ export const educationPrograms = {
     { id: "4001", name: "Ulusal ve Uluslararası Yarışma/Etkinli4003-Tk Katılım Desteği" },
         { id: "1812", name: "Yatırım Tabanlı Girişimcilik Destek Programı (BiGG Yatırım)" },
         { id: "3501", name: "Kariyer Geliştirme Programı" },
+        { id: "2216-B", name: "2216-B-TÜBİTAK-TWAS Doktora Sırası ve Doktora Sonrası Araştırma Burs Programları" },
+        { id: "2218", name: "2218-Yurt İçi Doktora Sonrası Araştırma Burs Programı" },
+        { id: "2219", name: "2219-Yurt Dışı Doktora Sonrası Araştırma Burs Programı" },
+        { id: "2221", name: "2221-Konuk veya Akademik İzinli (Sabbatical) Bilim İnsanı Destekleme Programı" },
+        { id: "2223-B", name: "2223-B-Yurt İçi Bilimsel Etkinlik Düzenleme Desteği" },
+        { id: "2223-C", name: "2223-C-Çok Katılımlı Uluslararası Etkinlik Düzenleme Desteği" },
+        { id: "2223-D", name: "2223-D-İkili İş Birliği Anlaşmaları Çerçevesinde Etkinlik Düzenleme Desteği" },
+        { id: "2224-C", name: "2224-C-Uluslararası Anlaşmalar Çerçevesinde Yurt Dışındaki Bilimsel Etkinliklere Katılımı Destekleme Programı" },
+        { id: "2232-A", name: "2232-A-Uluslararası Lider Araştırmacılar Programı\n\nve\n\n2232-B-Uluslararası Genç Araştırmacılar Programı\n" },
+        { id: "2236-B", name: "2236-B-MSCA-COFUND Burs Programlarına Katkı Fonu Programı" },
+        { id: "2236", name: "2236-Uluslararası Deneyimli Araştırmacı Dolaşımı Destek Programı" },
+        { id: "2237-A", name: "2237-A-Bilimsel Eğitim Etkinlikleri Desteği" },
+        { id: "2237-B", name: "2237-B-Proje Eğitimi Etkinliklerini Destekleme Programı" },
+        { id: "2244", name: "2244-Sanayi Doktora Programı" },
+        { id: "2247-A", name: "2247-A-Ulusal Lider Araştırmacılar Programı \n\nve \n\n2247-D-Ulusal Genç Liderler Programı\n" },
+        { id: "2247-B", name: "2247-B-Avrupa Araştırma Konseyi (ERC) Projeleri Güçlendirme Desteği Programı" },
+        { id: "2250", name: "2250-Lisansüstü Bursları Performans Programı" },
+        { id: "3501", name: "3501 - Kariyer Geliştirme Programı" },
+    { id: "CUSTOM-MTKB", name: "Kuantum Hackathon Yarışması" },
+
   ],
 
   "doktora yapmış araştırmacılar": [
