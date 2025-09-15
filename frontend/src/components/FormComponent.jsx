@@ -13,7 +13,9 @@ function FormComponent({
   formData,
   setFormData,
   showForm,
-  setShowForm
+  setShowForm,
+  setShowNot,
+  setShowSelectPrg
 }) {
   // Prop'ları aldık
 
@@ -62,7 +64,18 @@ function FormComponent({
         );
       }
       setChat([])
-      navigate("/")
+      setShowForm(false)
+      setShowNot(true)
+      setFormData({
+      fullName: "",
+      phoneNumber: "",
+      email: "",
+      educationStatus: "",
+      profession: "",
+      nationality: "",
+      supportProgram: "",
+      dateOfBirth:""
+    });
       onFormSubmit(true); // Başarılı gönderildi
 
     } catch (error) {
@@ -140,25 +153,6 @@ function FormComponent({
                 required
               />
             {
-            !formData.supportProgram && 
-            <div className="select-wrapper">
-            <select
-                name="educationStatus"
-                value={formData.supportProgram}
-                onChange={handleChange}
-                required
-                disabled={formData.supportProgram}
-              >
-                {programs.map((opt, idx) => (
-              <option key={idx} value={opt.name}>
-                {opt.name}
-              </option>
-            ))}
-            </select>
-
-            </div>
-            }
-            {
             formData.supportProgram && 
             <input
               type="text"
@@ -190,7 +184,21 @@ function FormComponent({
                   KVKK aydınlatma metnini okudum, kabul ediyorum.
                 </label>
             </div>
-            <div className="flex justify-center">
+            <div style={{justifyContent:"space-around"}} className="flex justify-center gap-6">
+
+                {setShowSelectPrg &&    
+              <div className="input-section2">
+               <button onClick={()=>{
+                    
+                    setShowSelectPrg(true)
+                    setShowForm(false)
+                }} disabled={!formAccepted} className="sub-btn" type="submit">
+                  <FaArrowLeft className="arr-spec text-black text-lg" />
+                  Geri dön
+                </button>
+              </div>
+                }
+             
               <div className="input-section2">
                 <button disabled={!formAccepted} className="sub-btn" type="submit">
                   Gonder

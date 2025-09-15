@@ -14,7 +14,7 @@ const MainChat = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [showForm, setShowForm] = useState(false); // Bu state sadece formun gösterilip gizlenmesi için kalacak
   const [suggestedProgram, setSuggestedProgram] = useState(null);
-      const {setUserType, showDirectForm, setShowDirectForm,showSelectPrg,setShowSelectPrg,setChat,chat  } = useGlobal();
+      const {setUserType, showDirectForm, setShowDirectForm,showSelectPrg,setShowSelectPrg,setChat,chat,setShowNot  } = useGlobal();
   
   const [currentChatSessionId, setCurrentChatSessionId] = useState(() =>
     uuidv4()
@@ -85,7 +85,7 @@ const message = typeof opt === "string" ? opt : input;
     const assistantResponse = data.response;
 
     if (data.programId) {
-      setSuggestedProgram(`TÜBİTAK ${data.programId}`);
+      setSuggestedProgram(`${data.programId}`);
     } else {
       setSuggestedProgram(null);
     }
@@ -193,7 +193,7 @@ const message = typeof opt === "string" ? opt : input;
         ) : (
           <div className="program-list">
             {msg.recommended.map((p) => (
-              <div className="program-item" key={p.id}>
+              <div className="program-item" key={p.name}>
                 <div className="program-text">
                   <div className="program-name"><strong>{p.name}</strong></div>
                   {p.targetAudience && (
@@ -289,7 +289,9 @@ const message = typeof opt === "string" ? opt : input;
             setDateOfBirth={setDateOfBirth}
             chatSessionId={currentChatSessionId}
             showForm={showForm}
-            setShowForm={setShowForm}/> 
+            setShowForm={setShowForm}
+            setShowNot={setShowNot}
+            /> 
     </div>
   );
 };

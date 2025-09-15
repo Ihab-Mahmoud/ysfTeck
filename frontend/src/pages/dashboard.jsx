@@ -15,6 +15,7 @@ import Navbar from "../components/navbar.jsx";
 import { useGlobal } from "../utils/global-context.jsx";
 import FormComponent from "../components/FormComponent.jsx";
 import SelectPrg from "../components/SelectPrg.jsx";
+import Notification from "../components/Notification.jsx";
 
 
 
@@ -25,7 +26,7 @@ const Dashboard = () => {
   const isLoading = useNavigation.state === "loading";
   const [showSidebar, setShowSidebar] = useState(true);
 
-    const {setUserType, showDirectForm, setShowDirectForm,showSelectPrg,setShowSelectPrg,setChat,chat  } = useGlobal();
+    const {setUserType, showDirectForm, setShowDirectForm,showSelectPrg,setShowSelectPrg,setChat,chat,setShowNot,showNot  } = useGlobal();
     const [formData, setFormData] = useState({
       fullName: "",
       phoneNumber: "",
@@ -127,14 +128,19 @@ const Dashboard = () => {
             formData={formData}
             setFormData={setFormData}
             showForm={showDirectForm}
-            setShowForm={setShowDirectForm}/> 
+            setShowForm={setShowDirectForm}
+            setShowNot={setShowNot}
+            showNot={showNot}
+            setShowSelectPrg={setShowSelectPrg}
+            /> 
 
         <SelectPrg
             setFormData={setFormData}
             showSelectPrg={showSelectPrg}
             setShowSelectPrg={setShowSelectPrg}
-             setShowForm={setShowDirectForm}
+            setShowForm={setShowDirectForm}
         />
+        <Notification showNot={showNot} setShowNot={setShowNot} />
       <div style={{
         position:"absolute",
         bottom:"20px",

@@ -9,10 +9,10 @@ export const GlobalProvider = ({ children }) => {
   const [userType,setUserType]=useState("")
   const [showDirectForm, setShowDirectForm] = useState(false); 
   const [showSelectPrg,setShowSelectPrg]=useState(false)
-    const [chat, setChat] = useState([]);
-  
+  const [chat, setChat] = useState([]);
+  const [showNot,setShowNot]=useState(false)
   return (
-    <GlobalContext.Provider value={{ userType, setUserType,showDirectForm,setShowDirectForm,showSelectPrg,setShowSelectPrg,setChat,chat }}>
+    <GlobalContext.Provider value={{ userType, setUserType,showDirectForm,setShowDirectForm,showSelectPrg,setShowSelectPrg,setChat,chat,showNot,setShowNot }}>
       {children}
     </GlobalContext.Provider>
   );
