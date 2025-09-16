@@ -64,7 +64,7 @@ function FormComponent({
         );
       }
       setChat([])
-      setShowForm(false)
+      setShowForm(false)  
       setShowNot(true)
       setFormData({
       fullName: "",

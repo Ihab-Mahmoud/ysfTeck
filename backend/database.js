@@ -52,7 +52,6 @@ async function initializeDatabase() {
             stage INTEGER DEFAULT 0 -- 0: ask department, 1: ask dream job, 2: ready
         );
 
-      
 
 
     `);

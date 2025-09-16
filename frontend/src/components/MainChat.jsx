@@ -8,7 +8,8 @@ import { marked } from "marked";
 import { useGlobal } from "../utils/global-context";
 import { useOutletContext } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
-
+import { motion } from "framer-motion";
+import AnimatedText from "./AnimatedText";
 const MainChat = () => {
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
@@ -173,63 +174,69 @@ const message = typeof opt === "string" ? opt : input;
     <div className="container">
           <div className="chat-box" ref={ref}>
           {chat?.map((msg, i) => (
-  <div
+   <div
     key={i}
-    className={
-      msg.role === "user" ? "message-user" : "message-assistant"
-    }
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.4, delay: i * 0.05 }}
+    className={msg.role === "user" ? "message-user" : "message-assistant"}
   >
   {
   msg.role === "user" ? (
     <>{msg.text}</>
   ) : (
     // Assistant messages
-    msg?.recommended && Array.isArray(msg.recommended) ? (
-      <div className="assistant-block">
-        <p>Profilinize göre öne çıkan programlar:</p>
-
-        {msg.recommended.length === 0 ? (
-          <p>- Uygun program bulunamadı. Profili biraz daha detaylandırabilirsiniz.</p>
-        ) : (
-          <div className="program-list">
-            {msg.recommended.map((p) => (
-              <div className="program-item" key={p.name}>
-                <div className="program-text">
-                  <div className="program-name"><strong>{p.name}</strong></div>
-                  {p.targetAudience && (
-                    <div className="program-audience">
-                      • Hedef Kitlesi: {truncate(p.targetAudience, 180)}
-                    </div>
-                  )}
-                  <button
-
-                  className="program-id-btn"
-                  title={p.targetAudience || ""}
-                  onClick={() => sendMessage(p.name + " nedir ?")}
-                >
-                  {"Detayli bilgi"}
-                </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {msg.recommended[0]?.id && (
-          <p style={{ marginTop: 16 }}>
-            Bir programı seçerseniz destek programı numarasını (örn.{" "}
-            <strong>{msg.recommended[0].id}</strong>) veya adını yazarak detay
-            sorabilirsiniz.
-          </p>
-        )}
-      </div>
+   msg?.recommended && Array.isArray(msg.recommended) ? (
+  <div className="assistant-block">
+    <p>Profilinize göre öne çıkan programlar:</p>
+    {msg.recommended.length === 0 ? (
+      <p>- Uygun program bulunamadı. Profili biraz daha detaylandırabilirsiniz.</p>
     ) : (
-      // Fallback: no structured recommended data → render the raw markdown/text
-      <div
-        style={{ whiteSpace: "pre-wrap" }}
-        dangerouslySetInnerHTML={{ __html: marked(msg.text || "") }}
-      />
-    )
+      <div className="program-list">
+        {msg.recommended.map((p) => (
+          <div className="program-item" key={p.name}>
+            <div className="program-text">
+              <div className="program-name"><strong>{p.name}</strong></div>
+              {p.targetAudience && (
+                <div className="program-audience">
+                  • Hedef Kitlesi: {truncate(p.targetAudience, 180)}
+                </div>
+              )}
+              <button
+                className="program-id-btn"
+                title={p.targetAudience || ""}
+                onClick={() => sendMessage(p.name + " nedir ?")}
+              >
+                {"Detayli bilgi"}
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+
+    {msg.recommended[0]?.id && (
+      <p style={{ marginTop: 16 }}>
+        Bir programı seçerseniz destek programı numarasını (örn.{" "}
+        <strong>{msg.recommended[0].id}</strong>) veya adını yazarak detay
+        sorabilirsiniz.
+      </p>
+    )}
+  </div>
+) : (
+  // fallback: only animate if it's the last assistant text
+  i === chat.length - 1 && msg.role === "assistant" ? (
+     <>
+        <AnimatedText text={String(msg?.text || "")} speed={15} />
+
+      </>
+  ) : (
+    <div style={{ whiteSpace: "pre-wrap" }}>
+      {msg.text}
+    </div>
+  )
+)
+
   )
 }
 
